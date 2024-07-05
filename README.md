@@ -76,7 +76,7 @@ This lists various services that provide free access or credits towards API-base
         <!-- OpenRouter End -->
         <!-- GroqCloud Start -->
         <tr>
-            <td rowspan="5"><a href="https://console.groq.com">GroqCloud</a></td>
+            <td rowspan="7"><a href="https://console.groq.com">GroqCloud</a></td>
         </tr>
         <tr>
             <td></td>
