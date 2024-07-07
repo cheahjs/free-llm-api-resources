@@ -73,7 +73,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 70B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>12 requests/minute</td></tr>
-<tr><td>Misral 7B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td>Mistral 7B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x22B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td rowspan="35"><a href="https://developers.cloudflare.com/workers-ai">Cloudflare Workers AI</a></td><td rowspan="35">10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.</td><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
@@ -82,8 +82,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Discolm German 7B v1 (AWQ)</td><td></td></tr>
 <tr><td>Falcom 7B Instruct</td><td></td></tr>
 <tr><td>Gemma 2B Instruct (LoRA)</td><td></td></tr>
+<tr><td>Gemma 7B Instruct</td><td></td></tr>
 <tr><td>Gemma 7B Instruct (LoRA)</td><td></td></tr>
-<tr><td>Gemmma 7B Instruct</td><td></td></tr>
 <tr><td>Hermes 2 Pro Mistral 7B</td><td></td></tr>
 <tr><td>Llama 2 13B Chat (AWQ)</td><td></td></tr>
 <tr><td>Llama 2 7B Chat (FP16)</td><td></td></tr>
@@ -94,10 +94,10 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3 8B Instruct (AWQ)</td><td></td></tr>
 <tr><td>LlamaGuard 7B (AWQ)</td><td></td></tr>
 <tr><td>Misral 7B Instruct v0.1</td><td></td></tr>
-<tr><td>Misral 7B Instruct v0.1 (AWQ)</td><td></td></tr>
-<tr><td>Misral 7B Instruct v0.2</td><td></td></tr>
 <tr><td>Misral 7B Instruct v0.2 (LoRA)</td><td></td></tr>
 <tr><td>Mistral 7B Instruct v0.1</td><td></td></tr>
+<tr><td>Mistral 7B Instruct v0.1 (AWQ)</td><td></td></tr>
+<tr><td>Mistral 7B Instruct v0.2</td><td></td></tr>
 <tr><td>Neural Chat 7B v3.1 (AWQ)</td><td></td></tr>
 <tr><td>OpenChat 3.5 0106</td><td></td></tr>
 <tr><td>OpenHermes 2.5 Mistral 7B (AWQ)</td><td></td></tr>
