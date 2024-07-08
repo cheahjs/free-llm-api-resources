@@ -273,7 +273,7 @@ def main():
     openrouter_models = fetch_openrouter_models()
     for idx, model in enumerate(openrouter_models):
         #     markdown_table += f"|{'[OpenRouter](https://openrouter.ai)' if idx == 0 else '^'}|{ ' ' if idx == 0 else '^'}|{model['name']}|{get_human_limits(model)}|\n"
-        table += f"<tr>{f'<td rowspan="{len(openrouter_models)}">[OpenRouter](https://openrouter.ai)</td>' if idx == 0 else ''}{ f'<td rowspan="{len(openrouter_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
+        table += f"<tr>{f'<td rowspan="{len(openrouter_models)}"><a href="https://openrouter.ai">OpenRouter</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(openrouter_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
     # markdown_table += "|[Google AI Studio](https://aistudio.google.com)|Free tier Gemini API access not available within UK/CH/EEA/EU.<br>Data is used for training.|Gemini 1.5 Flash|15 requests/min<br>1500 requests/day<br>1 million tokens/min|\n"
     # markdown_table += "|^|^|Gemini 1.5 Pro|2 requests/min<br>50 requests/day<br>32000 tokens/min|\n"
