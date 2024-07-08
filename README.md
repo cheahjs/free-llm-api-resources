@@ -16,8 +16,8 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="6"><a href="https://console.groq.com">Groq</a></td><td rowspan="6"></td><td>Gemma 2 9B</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
-<tr><td>Gemmma 7B Instruct</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
+<tr><td rowspan="6"><a href="https://console.groq.com">Groq</a></td><td rowspan="6"></td><td>Gemma 2 9B Instruct</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
+<tr><td>Gemma 7B Instruct</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B</td><td>14400 requests/day<br>6000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B</td><td>14400 requests/day<br>30000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14400 requests/day<br>5000 tokens/minute</td></tr>
