@@ -24,7 +24,7 @@ MODEL_TO_NAME_MAPPING = {
     "@cf/openchat/openchat-3.5-0106": "OpenChat 3.5 0106",
     "@cf/qwen/qwen1.5-0.5b-chat": "Qwen 1.5 0.5B Chat",
     "@cf/qwen/qwen1.5-1.8b-chat": "Qwen 1.5 1.8B Chat",
-    "@cf/qwen/qwen1.5-14b-chat-awq": "Qwen1.5 14B Chat (AWQ)",
+    "@cf/qwen/qwen1.5-14b-chat-awq": "Qwen 1.5 14B Chat (AWQ)",
     "@cf/qwen/qwen1.5-7b-chat-awq": "Qwen 1.5 7B Chat (AWQ)",
     "@cf/thebloke/discolm-german-7b-v1-awq": "Discolm German 7B v1 (AWQ)",
     "@cf/tiiuae/falcon-7b-instruct": "Falcom 7B Instruct",
@@ -64,6 +64,7 @@ MODEL_TO_NAME_MAPPING = {
     "mixtral-8x7b-instruct": "Mixtral 8x7B Instruct",
     "nousresearch/nous-capybara-7b:free": "Nous Capybara 7B",
     "openchat/openchat-7b:free": "OpenChat 7B",
+    "qwen/qwen-2-7b-instruct:free": "Qwen 2 7B Instruct",
     "undi95/toppy-m-7b:free": "Toppy M 7B",
     "whisper-large-v3": "Whisper Large v3",
 }

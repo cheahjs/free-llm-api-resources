@@ -22,7 +22,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3 8B</td><td>14400 requests/day<br>30000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14400 requests/day<br>5000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7200 audio-seconds/minute<br>2000 requests/day</td></tr>
-<tr><td rowspan="11"><a href="https://openrouter.ai">OpenRouter</a></td><td rowspan="11"></td><td>Gemma 2 9B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td rowspan="12"><a href="https://openrouter.ai">OpenRouter</a></td><td rowspan="12"></td><td>Gemma 2 9B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Gemma 7B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Mistral 7B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
@@ -31,6 +31,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>OpenChat 7B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Phi-3 Medium 128k Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Phi-3 Mini 128k Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td>Qwen 2 7B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Toppy M 7B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Zephyr 7B Beta</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr>
@@ -104,8 +105,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-2</td><td></td></tr>
 <tr><td>Qwen 1.5 0.5B Chat</td><td></td></tr>
 <tr><td>Qwen 1.5 1.8B Chat</td><td></td></tr>
+<tr><td>Qwen 1.5 14B Chat (AWQ)</td><td></td></tr>
 <tr><td>Qwen 1.5 7B Chat (AWQ)</td><td></td></tr>
-<tr><td>Qwen1.5 14B Chat (AWQ)</td><td></td></tr>
 <tr><td>SQLCoder 7B 2</td><td></td></tr>
 <tr><td>Starling LM 7B Beta</td><td></td></tr>
 <tr><td>TinyLlama 1.1B Chat v1.0</td><td></td></tr>
