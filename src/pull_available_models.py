@@ -17,6 +17,7 @@ MODEL_TO_NAME_MAPPING = {
     "@cf/meta/llama-2-7b-chat-int8": "Llama 2 7B Chat (INT8)",
     "@cf/meta/llama-3-8b-instruct-awq": "Llama 3 8B Instruct (AWQ)",
     "@cf/meta/llama-3-8b-instruct": "Llama 3 8B Instruct",
+    "@cf/meta/llama-3.1-8b-instruct": "Llama 3.1 8B Instruct",
     "@cf/microsoft/phi-2": "Phi-2",
     "@cf/mistral/mistral-7b-instruct-v0.1-vllm": "Mistral 7B Instruct v0.1",
     "@cf/mistral/mistral-7b-instruct-v0.1": "Mistral 7B Instruct v0.1",
@@ -52,6 +53,9 @@ MODEL_TO_NAME_MAPPING = {
     "llama-2-13b-chat-hf": "Llama 2 13B Chat",
     "llama-3-70b-instruct": "Llama 3 70B Instruct",
     "llama-3-8b-instruct": "Llama 3 8B Instruct",
+    "llama-3.1-405b-reasoning": "Llama 3.1 405B",
+    "llama-3.1-70b-versatile": "Llama 3.1 70B",
+    "llama-3.1-8b-instant": "Llama 3.1 8B",
     "llama3-70b-8192": "Llama 3 70B",
     "llama3-8b-8192": "Llama 3 8B",
     "llama3-groq-70b-8192-tool-use-preview": "Llama 3 70B - Groq Tool Use Preview",
@@ -116,10 +120,15 @@ def get_groq_limits_for_model(model_id):
         },
         json={"model": model_id, "messages": [{"role": "user", "content": "Hi!"}]},
     )
-    r.raise_for_status()
-    rpd = int(r.headers["x-ratelimit-limit-requests"])
-    tpm = int(r.headers["x-ratelimit-limit-tokens"])
-    return {"requests/day": rpd, "tokens/minute": tpm}
+    try:
+        r.raise_for_status()
+        rpd = int(r.headers["x-ratelimit-limit-requests"])
+        tpm = int(r.headers["x-ratelimit-limit-tokens"])
+        return {"requests/day": rpd, "tokens/minute": tpm}
+    except Exception as e:
+        print(f"Failed to get limits for model {model_id}: {e}")
+        print(r.text)
+        return {"requests/day": "Unknown", "tokens/minute": "Unknown"}
 
 
 def fetch_groq_models():
