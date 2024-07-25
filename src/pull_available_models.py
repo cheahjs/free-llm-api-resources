@@ -61,6 +61,7 @@ MODEL_TO_NAME_MAPPING = {
     "llama3-groq-70b-8192-tool-use-preview": "Llama 3 70B - Groq Tool Use Preview",
     "llama3-groq-8b-8192-tool-use-preview": "Llama 3 8B - Groq Tool Use Preview",
     "meta-llama/llama-3-8b-instruct:free": "Llama 3 8B Instruct",
+    "meta-llama/llama-3.1-8b-instruct:free": "Llama 3.1 8B Instruct",
     "microsoft/phi-3-medium-128k-instruct:free": "Phi-3 Medium 128k Instruct",
     "microsoft/phi-3-mini-128k-instruct:free": "Phi-3 Mini 128k Instruct",
     "mistral-7b-instruct": "Mistral 7B Instruct",
