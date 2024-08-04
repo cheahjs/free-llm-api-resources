@@ -78,6 +78,7 @@ MODEL_TO_NAME_MAPPING = {
     "meta-llama/meta-llama-3.1-70b-instruct": "Llama 3.1 70B Instruct",
     "meta-llama/meta-llama-3.1-405b-instruct": "Llama 3.1 405B Instruct",
     "meta-llama/meta-llama-3.1-8b-instruct": "Llama 3.1 8B Instruct",
+    "qwen/qwen2-72b-instruct": "Qwen 2 72B Instruct",
 }
 MISSING_MODELS = set()
 
@@ -311,19 +312,16 @@ def fetch_hyperbolic_models():
                                     },
                                 },
                             },
-                            {
-                                "fieldFilter": {
-                                    "field": {"fieldPath": "hidden"},
-                                    "op": "EQUAL",
-                                    "value": {"booleanValue": False},
-                                },
-                            },
+                            # {
+                            #     "fieldFilter": {
+                            #         "field": {"fieldPath": "hidden"},
+                            #         "op": "NOT_EQUAL",
+                            #         "value": {"booleanValue": True},
+                            #     },
+                            # },
                         ],
                     },
                 },
-                "orderBy": [
-                    {"field": {"fieldPath": "__name__"}, "direction": "ASCENDING"}
-                ],
             }
         },
     )
@@ -333,10 +331,17 @@ def fetch_hyperbolic_models():
     ret_models = []
     for model in models:
         model_data = model["document"]["fields"]
+        if "hidden" in model_data and model_data["hidden"]["booleanValue"]:
+            continue
         ret_models.append(
             {
                 "id": model_data["model"]["stringValue"],
                 "name": get_model_name(model_data["model"]["stringValue"]),
+                "limits": {
+                    # https://discord.com/channels/1196951041971863664/1197273823192547500/1267279465226965065
+                    # Unclear if this is a global rate limit or a per-model rate limit
+                    "requests/minute": 200,
+                },
             }
         )
     return ret_models
@@ -428,7 +433,7 @@ def main():
     hyperbolic_models = fetch_hyperbolic_models()
     for idx, model in enumerate(hyperbolic_models):
         # markdown_table += f"|{'[Hyperbolic](https://app.hyperbolic.xyz/)' if idx == 0 else '^'}|{ ' ' if idx == 0 else '^'}|{model['name']}| |\n"
-        table += f"<tr>{f'<td rowspan="{len(hyperbolic_models)}"><a href="https://app.hyperbolic.xyz/">Hyperbolic (Free Testing Period)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(hyperbolic_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td></td></tr>\n"
+        table += f"<tr>{f'<td rowspan="{len(hyperbolic_models)}"><a href="https://app.hyperbolic.xyz/">Hyperbolic (Free Testing Period)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(hyperbolic_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
     ovh_models = fetch_ovh_models()
     for idx, model in enumerate(ovh_models):
