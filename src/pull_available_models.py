@@ -75,6 +75,9 @@ MODEL_TO_NAME_MAPPING = {
     "qwen/qwen-2-7b-instruct:free": "Qwen 2 7B Instruct",
     "undi95/toppy-m-7b:free": "Toppy M 7B",
     "whisper-large-v3": "Whisper Large v3",
+    "meta-llama/meta-llama-3.1-70b-instruct": "Llama 3.1 70B Instruct",
+    "meta-llama/meta-llama-3.1-405b-instruct": "Llama 3.1 405B Instruct",
+    "meta-llama/meta-llama-3.1-8b-instruct": "Llama 3.1 8B Instruct",
 }
 MISSING_MODELS = set()
 
@@ -263,6 +266,82 @@ def fetch_ovh_models():
     return ret_models
 
 
+def fetch_hyperbolic_models():
+    print("Fetching Hyperbolic models...")
+
+    r = requests.post(
+        "https://firestore.googleapis.com/v1/projects/ai-dashboard-cfd6a/databases/(default)/documents:runQuery",
+        headers={
+            "accept": "*/*",
+            "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
+            "content-type": "text/plain",
+            "dnt": "1",
+            "google-cloud-resource-prefix": "projects/ai-dashboard-cfd6a/databases/(default)",
+            "origin": "https://app.hyperbolic.xyz",
+            "priority": "u=1, i",
+            "referer": "https://app.hyperbolic.xyz/",
+            "sec-ch-ua": '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
+            "sec-ch-ua-mobile": "?0",
+            "sec-ch-ua-platform": '"macOS"',
+            "sec-fetch-dest": "empty",
+            "sec-fetch-mode": "cors",
+            "sec-fetch-site": "cross-site",
+            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
+            "x-goog-api-client": "gl-js/ fire/10.10.0_lite",
+            "x-goog-request-params": "project_id=ai-dashboard-cfd6a",
+        },
+        json={
+            "structuredQuery": {
+                "from": [{"collectionId": "models"}],
+                "where": {
+                    "compositeFilter": {
+                        "op": "AND",
+                        "filters": [
+                            {
+                                "fieldFilter": {
+                                    "field": {"fieldPath": "type"},
+                                    "op": "IN",
+                                    "value": {
+                                        "arrayValue": {
+                                            "values": [
+                                                {"stringValue": "llm"},
+                                                # {"stringValue": "vlm"},
+                                            ]
+                                        }
+                                    },
+                                },
+                            },
+                            {
+                                "fieldFilter": {
+                                    "field": {"fieldPath": "hidden"},
+                                    "op": "EQUAL",
+                                    "value": {"booleanValue": False},
+                                },
+                            },
+                        ],
+                    },
+                },
+                "orderBy": [
+                    {"field": {"fieldPath": "__name__"}, "direction": "ASCENDING"}
+                ],
+            }
+        },
+    )
+    r.raise_for_status()
+    models = r.json()
+    print(f"Fetched {len(models)} models from Hyperbolic")
+    ret_models = []
+    for model in models:
+        model_data = model["document"]["fields"]
+        ret_models.append(
+            {
+                "id": model_data["model"]["stringValue"],
+                "name": get_model_name(model_data["model"]["stringValue"]),
+            }
+        )
+    return ret_models
+
+
 def get_human_limits(model):
     if "limits" not in model:
         return ""
@@ -345,6 +424,11 @@ def main():
             <td>Various open models</td>
             <td></td>
         </tr>"""
+
+    hyperbolic_models = fetch_hyperbolic_models()
+    for idx, model in enumerate(hyperbolic_models):
+        # markdown_table += f"|{'[Hyperbolic](https://app.hyperbolic.xyz/)' if idx == 0 else '^'}|{ ' ' if idx == 0 else '^'}|{model['name']}| |\n"
+        table += f"<tr>{f'<td rowspan="{len(hyperbolic_models)}"><a href="https://app.hyperbolic.xyz/">Hyperbolic (Free Testing Period)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(hyperbolic_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td></td></tr>\n"
 
     ovh_models = fetch_ovh_models()
     for idx, model in enumerate(ovh_models):

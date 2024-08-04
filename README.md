@@ -76,7 +76,10 @@ This lists various services that provide free access or credits towards API-base
             <td>Dynamic Rate Limits.<br>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
             <td></td>
-        </tr><tr><td rowspan="7"><a href="https://endpoints.ai.cloud.ovh.net/">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="7">Token expires every 2 weeks.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
+        </tr><tr><td rowspan="3"><a href="https://app.hyperbolic.xyz/">Hyperbolic (Free Testing Period)</a></td><td rowspan="3"></td><td>Llama 3.1 70B Instruct</td><td></td></tr>
+<tr><td>Llama 3.1 405B Instruct</td><td></td></tr>
+<tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
+<tr><td rowspan="7"><a href="https://endpoints.ai.cloud.ovh.net/">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="7">Token expires every 2 weeks.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 70B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>12 requests/minute</td></tr>
@@ -132,12 +135,6 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><a href="https://app.hyperbolic.xyz/">Hyperbolic</a></td>
-            <td>$10</td>
-            <td></td>
-            <td>Various open models</td>
-        </tr>
         <tr>
             <td><a href="https://console.anthropic.com/">Anthropic</a></td>
             <td>$5 for 14 days</td>
