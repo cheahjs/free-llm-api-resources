@@ -60,6 +60,7 @@ MODEL_TO_NAME_MAPPING = {
     "llama3-8b-8192": "Llama 3 8B",
     "llama3-groq-70b-8192-tool-use-preview": "Llama 3 70B - Groq Tool Use Preview",
     "llama3-groq-8b-8192-tool-use-preview": "Llama 3 8B - Groq Tool Use Preview",
+    "llama-guard-3-8b": "Llama Guard 3 8B",
     "meta-llama/llama-3-8b-instruct:free": "Llama 3 8B Instruct",
     "meta-llama/llama-3.1-8b-instruct:free": "Llama 3.1 8B Instruct",
     "microsoft/phi-3-medium-128k-instruct:free": "Phi-3 Medium 128k Instruct",
@@ -119,7 +120,12 @@ def get_groq_limits_for_model(model_id):
             "Authorization": f'Bearer {os.environ["GROQ_API_KEY"]}',
             "Content-Type": "application/json",
         },
-        json={"model": model_id, "messages": [{"role": "user", "content": "Hi!"}]},
+        json={
+            "model": model_id,
+            "messages": [{"role": "user", "content": "Hi!"}],
+            "stream": True,
+        },
+        stream=True,
     )
     try:
         r.raise_for_status()

@@ -16,7 +16,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="10"><a href="https://console.groq.com">Groq</a></td><td rowspan="10"></td><td>Gemma 2 9B Instruct</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
+<tr><td rowspan="11"><a href="https://console.groq.com">Groq</a></td><td rowspan="11"></td><td>Gemma 2 9B Instruct</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Gemma 7B Instruct</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B</td><td>14400 requests/day<br>6000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B - Groq Tool Use Preview</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
@@ -24,6 +24,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3 8B - Groq Tool Use Preview</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 70B</td><td>14400 requests/day<br>131072 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14400 requests/day<br>131072 tokens/minute</td></tr>
+<tr><td>Llama Guard 3 8B</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14400 requests/day<br>5000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7200 audio-seconds/minute<br>2000 requests/day</td></tr>
 <tr><td rowspan="13"><a href="https://openrouter.ai">OpenRouter</a></td><td rowspan="13"></td><td>Gemma 2 9B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
@@ -132,6 +133,12 @@ This lists various services that provide free access or credits towards API-base
     </thead>
     <tbody>
         <tr>
+            <td><a href="https://app.hyperbolic.xyz/">Hyperbolic</a></td>
+            <td>$10</td>
+            <td></td>
+            <td>Various open models</td>
+        </tr>
+        <tr>
             <td><a href="https://console.anthropic.com/">Anthropic</a></td>
             <td>$5 for 14 days</td>
             <td>Phone number verification</td>
@@ -163,9 +170,9 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td><a href="https://unify.ai/">Unify</a></td>
-            <td>$10</td>
+            <td>$10 (+$40 for getting into contact)</td>
             <td></td>
-            <td>Routes to other providers, various open models and proprietary models (OpenAI, Anthropic, Mistral, Perplexity)</td>
+            <td>Routes to other providers, various open models and proprietary models (OpenAI, Gemini, Anthropic, Mistral, Perplexity, etc)</td>
         </tr>
         <tr>
             <td><a href="https://deepinfra.com/">DeepInfra</a></td>

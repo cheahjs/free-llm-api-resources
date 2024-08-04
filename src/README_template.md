@@ -21,6 +21,12 @@ This lists various services that provide free access or credits towards API-base
     </thead>
     <tbody>
         <tr>
+            <td><a href="https://app.hyperbolic.xyz/">Hyperbolic</a></td>
+            <td>$10</td>
+            <td></td>
+            <td>Various open models</td>
+        </tr>
+        <tr>
             <td><a href="https://console.anthropic.com/">Anthropic</a></td>
             <td>$5 for 14 days</td>
             <td>Phone number verification</td>
@@ -52,9 +58,9 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td><a href="https://unify.ai/">Unify</a></td>
-            <td>$10</td>
+            <td>$10 (+$40 for getting into contact)</td>
             <td></td>
-            <td>Routes to other providers, various open models and proprietary models (OpenAI, Anthropic, Mistral, Perplexity)</td>
+            <td>Routes to other providers, various open models and proprietary models (OpenAI, Gemini, Anthropic, Mistral, Perplexity, etc)</td>
         </tr>
         <tr>
             <td><a href="https://deepinfra.com/">DeepInfra</a></td>
