@@ -75,6 +75,7 @@ MODEL_TO_NAME_MAPPING = {
     "qwen/qwen-2-7b-instruct:free": "Qwen 2 7B Instruct",
     "undi95/toppy-m-7b:free": "Toppy M 7B",
     "whisper-large-v3": "Whisper Large v3",
+    "meta-llama/meta-llama-3-70b-instruct": "Llama 3 70B Instruct",
     "meta-llama/meta-llama-3.1-70b-instruct": "Llama 3.1 70B Instruct",
     "meta-llama/meta-llama-3.1-405b-instruct": "Llama 3.1 405B Instruct",
     "meta-llama/meta-llama-3.1-8b-instruct": "Llama 3.1 8B Instruct",
