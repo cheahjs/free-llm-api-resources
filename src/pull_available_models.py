@@ -78,6 +78,7 @@ MODEL_TO_NAME_MAPPING = {
     "meta-llama/meta-llama-3-70b-instruct": "Llama 3 70B Instruct",
     "meta-llama/meta-llama-3.1-70b-instruct": "Llama 3.1 70B Instruct",
     "meta-llama/meta-llama-3.1-405b-instruct": "Llama 3.1 405B Instruct",
+    "meta-llama/meta-llama-3.1-405b-fp8": "Llama 3.1 405B Base (FP8)",
     "meta-llama/meta-llama-3.1-8b-instruct": "Llama 3.1 8B Instruct",
     "qwen/qwen2-72b-instruct": "Qwen 2 72B Instruct",
 }
