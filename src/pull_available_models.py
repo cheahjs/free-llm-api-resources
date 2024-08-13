@@ -410,6 +410,13 @@ def main():
             <td>embedding-001</td>
             <td>1500 requests/min<br>100 content/batch</td>
         </tr>"""
+    
+    table += """<tr>
+        <td><a href="https://glhf.chat/">glhf.chat (Free Beta)</a></td>
+        <td></td>
+        <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
+        <td></td>
+    </tr>"""
 
     # markdown_table += "|[Cohere](https://cohere.com)|10 requests/min<br>1000 requests/month|Command-R||\n"
     # markdown_table += "|^|^|Command-R+||\n"
