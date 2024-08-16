@@ -18,6 +18,8 @@ MODEL_TO_NAME_MAPPING = {
     "@cf/meta/llama-3-8b-instruct-awq": "Llama 3 8B Instruct (AWQ)",
     "@cf/meta/llama-3-8b-instruct": "Llama 3 8B Instruct",
     "@cf/meta/llama-3.1-8b-instruct": "Llama 3.1 8B Instruct",
+    "@cf/meta/llama-3.1-8b-instruct-awq": "Llama 3.1 8B Instruct (AWQ)",
+    "@cf/meta/llama-3.1-8b-instruct-fp8": "Llama 3.1 8B Instruct (FP8)",
     "@cf/microsoft/phi-2": "Phi-2",
     "@cf/mistral/mistral-7b-instruct-v0.1-vllm": "Mistral 7B Instruct v0.1",
     "@cf/mistral/mistral-7b-instruct-v0.1": "Mistral 7B Instruct v0.1",
@@ -410,7 +412,7 @@ def main():
             <td>embedding-001</td>
             <td>1500 requests/min<br>100 content/batch</td>
         </tr>"""
-    
+
     table += """<tr>
         <td><a href="https://glhf.chat/">glhf.chat (Free Beta)</a></td>
         <td></td>

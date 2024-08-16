@@ -75,7 +75,7 @@ This lists various services that provide free access or credits towards API-base
             <td>Jamba/Jurrasic-2</td>
         </tr>
         <tr>
-            <td><a href="https://nlpcloud.com/home">AI21</a></td>
+            <td><a href="https://nlpcloud.com/home">NLP Cloud</a></td>
             <td>$15</td>
             <td>Phone number verification</td>
             <td>Various open models</td>
