@@ -376,12 +376,12 @@ def main():
     groq_models = fetch_groq_models()
     for idx, model in enumerate(groq_models):
         # markdown_table += f"|{'[Groq](https://console.groq.com)' if idx == 0 else '^'}|{ ' ' if idx == 0 else '^'}|{model['name']}|{get_human_limits(model)}|\n"
-        table += f"<tr>{f'<td rowspan="{len(groq_models)}"><a href="https://console.groq.com">Groq</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(groq_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
+        table += f"<tr>{f'<td rowspan="{len(groq_models)}"><a href="https://console.groq.com" target="_blank">Groq</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(groq_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
     openrouter_models = fetch_openrouter_models()
     for idx, model in enumerate(openrouter_models):
         #     markdown_table += f"|{'[OpenRouter](https://openrouter.ai)' if idx == 0 else '^'}|{ ' ' if idx == 0 else '^'}|{model['name']}|{get_human_limits(model)}|\n"
-        table += f"<tr>{f'<td rowspan="{len(openrouter_models)}"><a href="https://openrouter.ai">OpenRouter</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(openrouter_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
+        table += f"<tr>{f'<td rowspan="{len(openrouter_models)}"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(openrouter_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
     # markdown_table += "|[Google AI Studio](https://aistudio.google.com)|Free tier Gemini API access not available within UK/CH/EEA/EU.<br>Data is used for training.|Gemini 1.5 Flash|15 requests/min<br>1500 requests/day<br>1 million tokens/min|\n"
     # markdown_table += "|^|^|Gemini 1.5 Pro|2 requests/min<br>50 requests/day<br>32000 tokens/min|\n"
@@ -391,7 +391,7 @@ def main():
     #     "|^|^|embedding-001|1500 requests/min<br>100 contents/batch|\n"
     # )
     table += """<tr>
-            <td rowspan="5"><a href="https://aistudio.google.com">Google AI Studio</a></td>
+            <td rowspan="5"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="3">Free tier Gemini API access not available within UK/CH/EEA/EU/<br>Data is used for training.</td>
             <td>Gemini 1.5 Flash</td>
             <td>15 requests/min<br>1500 requests/day<br>1 million tokens/min</td>
@@ -419,7 +419,7 @@ def main():
         </tr>"""
 
     table += """<tr>
-        <td><a href="https://glhf.chat/">glhf.chat (Free Beta)</a></td>
+        <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
         <td></td>
         <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
         <td></td>
@@ -428,7 +428,7 @@ def main():
     # markdown_table += "|[Cohere](https://cohere.com)|10 requests/min<br>1000 requests/month|Command-R||\n"
     # markdown_table += "|^|^|Command-R+||\n"
     table += """<tr>
-            <td rowspan="2"><a href="https://cohere.com">Cohere</a></td>
+            <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
             <td rowspan="2">10 requests/min<br>1000 requests/month</td>
             <td>Command-R</td>
             <td>Shared Limit</td>
@@ -440,7 +440,7 @@ def main():
 
     # markdown_table += "|[HuggingFace Serverless Inference](https://huggingface.co/docs/api-inference/en/index)|Dynamic Rate Limits.<br>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.|Various open models||\n"
     table += """<tr>
-            <td><a href="https://huggingface.co/docs/api-inference/en/index">HuggingFace Serverless Inference</a></td>
+            <td><a href="https://huggingface.co/docs/api-inference/en/index" target="_blank">HuggingFace Serverless Inference</a></td>
             <td>Dynamic Rate Limits.<br>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
             <td></td>
@@ -449,17 +449,24 @@ def main():
     hyperbolic_models = fetch_hyperbolic_models()
     for idx, model in enumerate(hyperbolic_models):
         # markdown_table += f"|{'[Hyperbolic](https://app.hyperbolic.xyz/)' if idx == 0 else '^'}|{ ' ' if idx == 0 else '^'}|{model['name']}| |\n"
-        table += f"<tr>{f'<td rowspan="{len(hyperbolic_models)}"><a href="https://app.hyperbolic.xyz/">Hyperbolic (Free Testing Period)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(hyperbolic_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
+        table += f"<tr>{f'<td rowspan="{len(hyperbolic_models)}"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic (Free Testing Period)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(hyperbolic_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
     ovh_models = fetch_ovh_models()
     for idx, model in enumerate(ovh_models):
         # markdown_table += f"|{'[OVH AI Endpoints (Free Alpha)](https://endpoints.ai.cloud.ovh.net/)' if idx == 0 else '^'}|{ 'Token expires every 2 weeks.' if idx == 0 else '^'}|{model['name']}|{get_human_limits(model)}|\n"
-        table += f"<tr>{f'<td rowspan="{len(ovh_models)}"><a href="https://endpoints.ai.cloud.ovh.net/">OVH AI Endpoints (Free Alpha)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(ovh_models)}">Token expires every 2 weeks.</td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
+        table += f"<tr>{f'<td rowspan="{len(ovh_models)}"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(ovh_models)}">Token expires every 2 weeks.</td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
     cloudflare_models = fetch_cloudflare_models()
     for idx, model in enumerate(cloudflare_models):
         # markdown_table += f"|{'[Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)' if idx == 0 else '^'}|{ '10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.' if idx == 0 else '^'}|{model['name']}| |\n"
-        table += f"<tr>{f'<td rowspan="{len(cloudflare_models)}"><a href="https://developers.cloudflare.com/workers-ai">Cloudflare Workers AI</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(cloudflare_models)}">10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.</td>' if idx == 0 else ''}<td>{model['name']}</td><td></td></tr>\n"
+        table += f"<tr>{f'<td rowspan="{len(cloudflare_models)}"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(cloudflare_models)}">10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.</td>' if idx == 0 else ''}<td>{model['name']}</td><td></td></tr>\n"
+
+    table += """<tr>
+            <td><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td>
+            <td><a href="https://lambdalabs.com/blog/unveiling-hermes-3-the-first-fine-tuned-llama-3.1-405b-model-is-on-lambdas-cloud" target="_blank">Free for a limited time</a></td>
+            <td>Nous Hermes 3 Llama 3.1 405B (FP8)</td>
+            <td></td>
+        </tr>"""
 
     table += "</tbody></table>"
 
