@@ -51,6 +51,10 @@ This lists various services that provide free access or credits towards API-base
             <td>2 request/min<br>50 requests/day<br>32000 tokens/min</td>
         </tr>
         <tr>
+            <td>Gemini 1.5 Pro (Experimental 0801)</td>
+            <td>2 request/min<br>50 requests/day<br>1 million tokens/min</td>
+        </tr>
+        <tr>
             <td>Gemini 1.0 Pro</td>
             <td>15 requests/min<br>1500 requests/day<br>32000 tokens/min</td>
         </tr>
