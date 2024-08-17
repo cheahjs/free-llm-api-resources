@@ -81,7 +81,8 @@ This lists various services that provide free access or credits towards API-base
             <td>Dynamic Rate Limits.<br>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
             <td></td>
-        </tr><tr><td rowspan="5"><a href="https://app.hyperbolic.xyz/">Hyperbolic (Free Testing Period)</a></td><td rowspan="5"></td><td>Llama 3 70B Instruct</td><td>200 requests/minute</td></tr>
+        </tr><tr><td rowspan="6"><a href="https://app.hyperbolic.xyz/">Hyperbolic (Free Testing Period)</a></td><td rowspan="6"></td><td>Llama 3 70B Instruct</td><td>200 requests/minute</td></tr>
+<tr><td>Hermes 3 Llama 3.1 70B</td><td>200 requests/minute</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td>200 requests/minute</td></tr>
 <tr><td>Llama 3.1 405B Instruct</td><td>200 requests/minute</td></tr>
 <tr><td>Llama 3.1 405B Base (FP8)</td><td>200 requests/minute</td></tr>

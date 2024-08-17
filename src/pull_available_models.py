@@ -72,6 +72,7 @@ MODEL_TO_NAME_MAPPING = {
     "mixtral-8x22b-instruct": "Mixtral 8x22B Instruct",
     "mixtral-8x7b-32768": "Mixtral 8x7B",
     "mixtral-8x7b-instruct": "Mixtral 8x7B Instruct",
+    "nousresearch/hermes-3-llama-3.1-70b": "Hermes 3 Llama 3.1 70B",
     "nousresearch/nous-capybara-7b:free": "Nous Capybara 7B",
     "openchat/openchat-7b:free": "OpenChat 7B",
     "qwen/qwen-2-7b-instruct:free": "Qwen 2 7B Instruct",
