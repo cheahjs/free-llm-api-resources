@@ -44,19 +44,19 @@ This lists various services that provide free access or credits towards API-base
             <td rowspan="6"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="4">Free tier Gemini API access not available within UK/CH/EEA/EU/<br>Data is used for training.</td>
             <td>Gemini 1.5 Flash</td>
-            <td>15 requests/min<br>1500 requests/day<br>1 million tokens/min</td>
+            <td>1000000 tokens/minute<br>1500 requests/day<br>15 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Pro</td>
-            <td>2 request/min<br>50 requests/day<br>32000 tokens/min</td>
+            <td>32000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Pro (Experimental 0801)</td>
-            <td>2 request/min<br>50 requests/day<br>1 million tokens/min</td>
+            <td>1000000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.0 Pro</td>
-            <td>15 requests/min<br>1500 requests/day<br>32000 tokens/min</td>
+            <td>32000 tokens/minute<br>1500 requests/day<br>15 requests/minute</td>
         </tr>
         <tr>
             <td rowspan="2">Embeddings are available in UK/CH/EEA/EU</td>

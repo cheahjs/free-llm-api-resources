@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 
+from collections import defaultdict
+from pprint import pprint
 import requests
 import os
 from dotenv import load_dotenv
+from google.cloud import cloudquotas_v1
 
 load_dotenv()
 
@@ -158,7 +161,7 @@ def fetch_groq_models():
     )
     r.raise_for_status()
     models = r.json()["data"]
-    print(f"Fetched models: {models}")
+    pprint(models)
     ret_models = []
     for model in models:
         limits = get_groq_limits_for_model(model["id"])
@@ -349,8 +352,26 @@ def fetch_hyperbolic_models():
                 },
             }
         )
+    pprint(ret_models)
     return ret_models
 
+def fetch_gemini_limits():
+    print("Fetching Gemini limits...")
+    client = cloudquotas_v1.CloudQuotasClient()
+    request = cloudquotas_v1.ListQuotaInfosRequest(
+        parent=f"projects/{os.environ["GCP_PROJECT_ID"]}/locations/global/services/generativelanguage.googleapis.com")
+    pager = client.list_quota_infos(request=request)
+    models = defaultdict(dict)
+    for quota in pager:
+        if quota.metric == 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count':
+            for dimension in quota.dimensions_infos:
+                models[dimension.dimensions.get("model")][f"tokens/{quota.refresh_interval}"] = dimension.details.value
+        elif quota.metric == 'generativelanguage.googleapis.com/generate_content_free_tier_requests':
+            for dimension in quota.dimensions_infos:
+                models[dimension.dimensions.get("model")][f"requests/{quota.refresh_interval}"] = dimension.details.value
+    pprint(models)
+    return models
+    
 
 def get_human_limits(model):
     if "limits" not in model:
@@ -390,23 +411,24 @@ def main():
     # markdown_table += (
     #     "|^|^|embedding-001|1500 requests/min<br>100 contents/batch|\n"
     # )
-    table += """<tr>
+    gemini_models = fetch_gemini_limits()
+    table += f"""<tr>
             <td rowspan="6"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="4">Free tier Gemini API access not available within UK/CH/EEA/EU/<br>Data is used for training.</td>
             <td>Gemini 1.5 Flash</td>
-            <td>15 requests/min<br>1500 requests/day<br>1 million tokens/min</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Pro</td>
-            <td>2 request/min<br>50 requests/day<br>32000 tokens/min</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Pro (Experimental 0801)</td>
-            <td>2 request/min<br>50 requests/day<br>1 million tokens/min</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro-exp"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.0 Pro</td>
-            <td>15 requests/min<br>1500 requests/day<br>32000 tokens/min</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-1.0-pro"]})}</td>
         </tr>
         <tr>
             <td rowspan="2">Embeddings are available in UK/CH/EEA/EU</td>
