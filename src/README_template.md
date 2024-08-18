@@ -2,7 +2,7 @@
 
 This lists various services that provide free access or credits towards API-based LLM usage.
 
-**This repo explicitly excludes any services that are not legitimate (eg reverse engineers an existing chatbot)**
+**This list explicitly excludes any services that are not legitimate (eg reverse engineers an existing chatbot)**
 
 ## Free Providers
 
@@ -28,7 +28,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td><a href="https://console.mistral.ai/">Mistral</a></td>
-            <td>$5 for 14 days</td>
+            <td>2 weeks<br>1 request/second<br>500,000 tokens/minute<br>1,000,000,000 tokens/month</td>
             <td></td>
             <td>Mistral Open/Proprietary Models</td>
         </tr>
