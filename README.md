@@ -141,7 +141,12 @@ This lists various services that provide free access or credits towards API-base
             <td><a href="https://lambdalabs.com/blog/unveiling-hermes-3-the-first-fine-tuned-llama-3.1-405b-model-is-on-lambdas-cloud" target="_blank">Free for a limited time</a></td>
             <td>Nous Hermes 3 Llama 3.1 405B (FP8)</td>
             <td></td>
-        </tr></tbody></table>
+        </tr><tr>
+        <td><a href="https://codestral.mistral.ai/" target="_blank">Mistral (Codestral)</a></td>
+        <td>Currently free to use, monthly subscription based, requires phone number verification.</td>
+        <td>Codestral</td>
+        <td>30 requests/minute<br>2000 requests/day</td>
+    </tr></tbody></table>
 
 ## Providers with trial credits
 
