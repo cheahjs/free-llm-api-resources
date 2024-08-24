@@ -431,6 +431,13 @@ def main():
             <td>embedding-001</td>
             <td>1500 requests/min<br>100 content/batch</td>
         </tr>"""
+    
+    table += """<tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td>Very stringent payment verification for Google Cloud.</td>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 405B Instruct</a></td>
+        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>"""
 
     table += """<tr>
         <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
