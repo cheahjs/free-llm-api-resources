@@ -91,12 +91,15 @@ This lists various services that provide free access or credits towards API-base
             <td>Dynamic Rate Limits.<br>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
             <td></td>
-        </tr><tr><td rowspan="6"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic (Free Testing Period)</a></td><td rowspan="6"></td><td>Llama 3 70B Instruct</td><td>200 requests/minute</td></tr>
-<tr><td>Hermes 3 Llama 3.1 70B</td><td>200 requests/minute</td></tr>
-<tr><td>Llama 3.1 70B Instruct</td><td>200 requests/minute</td></tr>
-<tr><td>Llama 3.1 405B Instruct</td><td>200 requests/minute</td></tr>
+        </tr><tr><td rowspan="9"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic (Free Testing Period)</a></td><td rowspan="9"></td><td>Hermes 3 Llama 3.1 70B</td><td>200 requests/minute</td></tr>
+<tr><td>Hermes 3 Llama 3.1 70B (FP8)</td><td>200 requests/minute</td></tr>
+<tr><td>Llama 3 70B Instruct</td><td>200 requests/minute</td></tr>
 <tr><td>Llama 3.1 405B Base (FP8)</td><td>200 requests/minute</td></tr>
+<tr><td>Llama 3.1 405B Instruct</td><td>200 requests/minute</td></tr>
+<tr><td>Llama 3.1 70B Instruct</td><td>200 requests/minute</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td>200 requests/minute</td></tr>
+<tr><td>Yi 1.5 34B Chat</td><td>200 requests/minute</td></tr>
+<tr><td>Yi 34B Chat</td><td>200 requests/minute</td></tr>
 <tr><td rowspan="7"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="7">Token expires every 2 weeks.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 70B Instruct</td><td>12 requests/minute</td></tr>

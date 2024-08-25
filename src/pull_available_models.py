@@ -88,8 +88,19 @@ MODEL_TO_NAME_MAPPING = {
     "qwen/qwen2-72b-instruct": "Qwen 2 72B Instruct",
     "undi95/toppy-m-7b:free": "Toppy M 7B",
     "whisper-large-v3": "Whisper Large v3",
+    "01-ai/yi-34b-chat": "Yi 34B Chat",
+    "01-ai/yi-1.5-34b-chat": "Yi 1.5 34B Chat",
+    "nousresearch/hermes-3-llama-3.1-70b-fp8": "Hermes 3 Llama 3.1 70B (FP8)",
 }
 MISSING_MODELS = set()
+
+HYPERBOLIC_IGNORED_MODELS = {
+    "Wifhat",
+    "FLUX.1-dev",
+    "StableDiffusion",
+    "Monad",
+    "TTS"
+}
 
 
 def get_model_name(id):
@@ -136,6 +147,7 @@ def get_groq_limits_for_model(model_id):
         json={
             "model": model_id,
             "messages": [{"role": "user", "content": "Hi!"}],
+            "max_tokens": 1,
             "stream": True,
         },
         stream=True,
@@ -275,9 +287,21 @@ def fetch_ovh_models():
     ret_models = sorted(ret_models, key=lambda x: x["name"])
     return ret_models
 
-
 def fetch_hyperbolic_models():
     print("Fetching Hyperbolic models...")
+    firestore_models = fetch_hyperbolic_models_firestore()
+    api_models = fetch_hyperbolic_models_api()
+    for model in api_models:
+        if model["id"] not in [m["id"] for m in firestore_models]:
+            print(f"Adding model {model['id']} from API")
+            firestore_models.append(model)
+    for model in firestore_models:
+        if model["id"] not in [m["id"] for m in api_models]:
+            print(f"Warning: model {model['id']} from Firestore not in API")
+    return sorted(firestore_models, key=lambda x: x["name"])
+
+def fetch_hyperbolic_models_firestore():
+    print("Fetching Hyperbolic models from Firestore...")
 
     r = requests.post(
         "https://firestore.googleapis.com/v1/projects/ai-dashboard-cfd6a/databases/(default)/documents:runQuery",
@@ -336,7 +360,7 @@ def fetch_hyperbolic_models():
     )
     r.raise_for_status()
     models = r.json()
-    print(f"Fetched {len(models)} models from Hyperbolic")
+    print(f"Fetched {len(models)} models from Hyperbolic's Firestore")
     ret_models = []
     for model in models:
         model_data = model["document"]["fields"]
@@ -349,6 +373,34 @@ def fetch_hyperbolic_models():
                 "limits": {
                     # https://discord.com/channels/1196951041971863664/1197273823192547500/1267279465226965065
                     # Unclear if this is a global rate limit or a per-model rate limit
+                    "requests/minute": 200,
+                },
+            }
+        )
+    pprint(ret_models)
+    return ret_models
+
+def fetch_hyperbolic_models_api():
+    print("Fetching Hyperbolic models from API...")
+    r = requests.get(
+        "https://api.hyperbolic.xyz/v1/models",
+        headers={
+            "accept": "application/json",
+            "authorization": f"Bearer {os.environ['HYPERBOLIC_API_KEY']}",
+        })
+    r.raise_for_status()
+    models = r.json()["data"]
+    print(f"Fetched {len(models)} models from Hyperbolic's API")
+    ret_models = []
+    for model in models:
+        if model["id"] in HYPERBOLIC_IGNORED_MODELS:
+            print(f"Ignoring model {model['id']}")
+            continue
+        ret_models.append(
+            {
+                "id": model["id"],
+                "name": get_model_name(model["id"]),
+                "limits": {
                     "requests/minute": 200,
                 },
             }
@@ -382,7 +434,14 @@ def get_human_limits(model):
 
 
 def main():
-    # markdown_table = "|Provider|Provider Limits/Notes|Model Name|Model Limits|\n|---|---|---|---|\n"
+    gemini_models = fetch_gemini_limits()
+    openrouter_models = fetch_openrouter_models()
+    hyperbolic_models = fetch_hyperbolic_models()
+    ovh_models = fetch_ovh_models()
+    cloudflare_models = fetch_cloudflare_models()
+    groq_models = fetch_groq_models()
+
+
     table = """<table>
     <thead>
         <tr>
@@ -395,15 +454,12 @@ def main():
     <tbody>
 """
 
-    groq_models = fetch_groq_models()
     for idx, model in enumerate(groq_models):
         table += f"<tr>{f'<td rowspan="{len(groq_models)}"><a href="https://console.groq.com" target="_blank">Groq</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(groq_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
-    openrouter_models = fetch_openrouter_models()
     for idx, model in enumerate(openrouter_models):
         table += f"<tr>{f'<td rowspan="{len(openrouter_models)}"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(openrouter_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
-    gemini_models = fetch_gemini_limits()
     table += f"""<tr>
             <td rowspan="6"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="4">Free tier Gemini API access not available within UK/CH/EEA/EU/<br>Data is used for training.</td>
@@ -464,15 +520,12 @@ def main():
             <td></td>
         </tr>"""
 
-    hyperbolic_models = fetch_hyperbolic_models()
     for idx, model in enumerate(hyperbolic_models):
         table += f"<tr>{f'<td rowspan="{len(hyperbolic_models)}"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic (Free Testing Period)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(hyperbolic_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
-    ovh_models = fetch_ovh_models()
     for idx, model in enumerate(ovh_models):
         table += f"<tr>{f'<td rowspan="{len(ovh_models)}"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(ovh_models)}">Token expires every 2 weeks.</td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
-    cloudflare_models = fetch_cloudflare_models()
     for idx, model in enumerate(cloudflare_models):
         table += f"<tr>{f'<td rowspan="{len(cloudflare_models)}"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(cloudflare_models)}">10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.</td>' if idx == 0 else ''}<td>{model['name']}</td><td></td></tr>\n"
 
