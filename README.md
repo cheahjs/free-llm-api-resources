@@ -49,7 +49,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Gemini 1.5 Flash (Experimental)</td>
-            <td>1000000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
+            <td>1000000 tokens/minute<br>1500 requests/day<br>5 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Pro</td>
@@ -61,7 +61,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Gemini 1.5 Flash-8B (Experimental)</td>
-            <td>1000000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
+            <td>1000000 tokens/minute<br>1500 requests/day<br>15 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.0 Pro</td>
@@ -76,14 +76,18 @@ This lists various services that provide free access or credits towards API-base
             <td>embedding-001</td>
             <td>1500 requests/min<br>100 content/batch</td>
         </tr><tr>
-        <td rowspan="2"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td rowspan="2">Very stringent payment verification for Google Cloud.</td>
+        <td rowspan="3"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td rowspan="3">Very stringent payment verification for Google Cloud.</td>
         <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 405B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
     </tr>
     <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Experimental</a></td>
-        <td>Experimental Gemini model. (Not the same as the experimental models on AI Studio)<br>2 requests/minute</td>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
+        <td>Experimental Gemini model.<br>10 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
+        <td>Experimental Gemini model.<br>10 requests/minute</td>
     </tr><tr>
         <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
         <td></td>
