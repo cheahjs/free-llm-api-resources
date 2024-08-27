@@ -68,10 +68,14 @@ This lists various services that provide free access or credits towards API-base
             <td>embedding-001</td>
             <td>1500 requests/min<br>100 content/batch</td>
         </tr><tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td>Very stringent payment verification for Google Cloud.</td>
+        <td rowspan="2"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td rowspan="2">Very stringent payment verification for Google Cloud.</td>
         <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 405B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Experimental</a></td>
+        <td>Experimental Gemini model. (Not the same as the experimental models on AI Studio)<br>2 requests/minute</td>
     </tr><tr>
         <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
         <td></td>
@@ -92,8 +96,8 @@ This lists various services that provide free access or credits towards API-base
             <td>Various open models</td>
             <td></td>
         </tr><tr><td rowspan="9"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic (Free Testing Period)</a></td><td rowspan="9"></td><td>Hermes 3 Llama 3.1 70B</td><td>200 requests/minute</td></tr>
-<tr><td>Hermes 3 Llama 3.1 70B (FP8)</td><td>200 requests/minute</td></tr>
 <tr><td>Llama 3 70B Instruct</td><td>200 requests/minute</td></tr>
+<tr><td>Llama 3.1 405B</td><td>200 requests/minute</td></tr>
 <tr><td>Llama 3.1 405B Base (FP8)</td><td>200 requests/minute</td></tr>
 <tr><td>Llama 3.1 405B Instruct</td><td>200 requests/minute</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td>200 requests/minute</td></tr>

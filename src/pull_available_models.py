@@ -70,6 +70,7 @@ MODEL_TO_NAME_MAPPING = {
     "meta-llama/llama-3-8b-instruct:free": "Llama 3 8B Instruct",
     "meta-llama/llama-3.1-8b-instruct:free": "Llama 3.1 8B Instruct",
     "meta-llama/meta-llama-3-70b-instruct": "Llama 3 70B Instruct",
+    "meta-llama/meta-llama-3.1-405b": "Llama 3.1 405B",
     "meta-llama/meta-llama-3.1-405b-fp8": "Llama 3.1 405B Base (FP8)",
     "meta-llama/meta-llama-3.1-405b-instruct": "Llama 3.1 405B Instruct",
     "meta-llama/meta-llama-3.1-70b-instruct": "Llama 3.1 70B Instruct",
@@ -489,10 +490,14 @@ def main():
         </tr>"""
     
     table += """<tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td>Very stringent payment verification for Google Cloud.</td>
+        <td rowspan="2"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td rowspan="2">Very stringent payment verification for Google Cloud.</td>
         <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 405B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Experimental</a></td>
+        <td>Experimental Gemini model. (Not the same as the experimental models on AI Studio)<br>2 requests/minute</td>
     </tr>"""
 
     table += """<tr>
