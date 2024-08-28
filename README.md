@@ -83,11 +83,10 @@ This lists various services that provide free access or credits towards API-base
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
-        <td>Experimental Gemini model.<br>10 requests/minute</td>
+        <td rowspan="2">Experimental Gemini model.<br>10 requests/minute</td>
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
-        <td>Experimental Gemini model.<br>10 requests/minute</td>
     </tr><tr>
         <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
         <td></td>

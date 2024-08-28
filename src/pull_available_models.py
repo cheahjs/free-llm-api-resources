@@ -505,11 +505,10 @@ def main():
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
-        <td>Experimental Gemini model.<br>10 requests/minute</td>
+        <td rowspan="2">Experimental Gemini model.<br>10 requests/minute</td>
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
-        <td>Experimental Gemini model.<br>10 requests/minute</td>
     </tr>"""
 
     table += """<tr>
