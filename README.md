@@ -169,6 +169,15 @@ This lists various services that provide free access or credits towards API-base
         <td>Currently free to use, monthly subscription based, requires phone number verification.</td>
         <td>Codestral</td>
         <td>30 requests/minute<br>2000 requests/day</td>
+    </tr><tr>
+        <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
+        <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
+        <td>Llama 3.1 8B</td>
+        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
+    </tr>
+    <tr>
+        <td>Llama 3.1 70B</td>
+        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
     </tr></tbody></table>
 
 ## Providers with trial credits
