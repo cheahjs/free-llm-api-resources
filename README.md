@@ -43,7 +43,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Zephyr 7B Beta</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr>
             <td rowspan="8"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="6">Free tier Gemini API access not available within UK/CH/EEA/EU/<br>Data is used for training.</td>
+            <td rowspan="6">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 1.5 Flash</td>
             <td>1000000 tokens/minute<br>1500 requests/day<br>15 requests/minute</td>
         </tr>
@@ -68,7 +68,7 @@ This lists various services that provide free access or credits towards API-base
             <td>32000 tokens/minute<br>1500 requests/day<br>15 requests/minute</td>
         </tr>
         <tr>
-            <td rowspan="2">Embeddings are available in UK/CH/EEA/EU</td>
+            <td rowspan="2"></td>
             <td>text-embedding-004</td>
             <td>1500 requests/min<br>100 content/batch</td>
         </tr>

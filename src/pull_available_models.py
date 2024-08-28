@@ -463,7 +463,7 @@ def main():
 
     table += f"""<tr>
             <td rowspan="8"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="6">Free tier Gemini API access not available within UK/CH/EEA/EU/<br>Data is used for training.</td>
+            <td rowspan="6">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 1.5 Flash</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash"]})}</td>
         </tr>
@@ -488,7 +488,7 @@ def main():
             <td>{get_human_limits({"limits": gemini_models["gemini-1.0-pro"]})}</td>
         </tr>
         <tr>
-            <td rowspan="2">Embeddings are available in UK/CH/EEA/EU</td>
+            <td rowspan="2"></td>
             <td>text-embedding-004</td>
             <td>1500 requests/min<br>100 content/batch</td>
         </tr>
