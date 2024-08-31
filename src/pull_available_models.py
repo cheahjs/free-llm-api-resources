@@ -536,9 +536,6 @@ def main():
             <td></td>
         </tr>"""
 
-    for idx, model in enumerate(hyperbolic_models):
-        table += f"<tr>{f'<td rowspan="{len(hyperbolic_models)}"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic (Free Testing Period)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(hyperbolic_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
-
     for idx, model in enumerate(ovh_models):
         table += f"<tr>{f'<td rowspan="{len(ovh_models)}"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(ovh_models)}">Token expires every 2 weeks.</td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
@@ -587,13 +584,17 @@ def main():
 
     table += "</tbody></table>"
 
+    trial_table = ""
+    for idx, model in enumerate(hyperbolic_models):
+        trial_table += f"<tr>{f'<td rowspan="{len(hyperbolic_models)}"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(hyperbolic_models)}">$10</td><td rowspan="{len(hyperbolic_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td></tr>\n"
+
     print("Missing models:")
     print(list(MISSING_MODELS))
 
     with open("README_template.md", "r") as f:
         readme = f.read()
     with open("../README.md", "w") as f:
-        f.write(readme.replace("{{MODEL_LIST}}", table))
+        f.write(readme.replace("{{MODEL_LIST}}", table).replace("{{TRIAL_MODEL_LIST}}", trial_table))
     print("Wrote models to README.md")
 
 

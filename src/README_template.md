@@ -80,5 +80,5 @@ This lists various services that provide free access or credits towards API-base
             <td>Phone number verification</td>
             <td>Various open models</td>
         </tr>
-    </tbody>
+        {{TRIAL_MODEL_LIST}}</tbody>
 </table>
