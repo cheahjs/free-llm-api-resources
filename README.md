@@ -42,7 +42,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Zephyr 7B Beta</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr>
             <td rowspan="8"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="6">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="8">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 1.5 Flash</td>
             <td>1000000 tokens/minute<br>1500 requests/day<br>15 requests/minute</td>
         </tr>
@@ -69,11 +69,10 @@ This lists various services that provide free access or credits towards API-base
         <tr>
             <td rowspan="2"></td>
             <td>text-embedding-004</td>
-            <td>1500 requests/min<br>100 content/batch</td>
+            <td rowspan="2">150 batch requests/minute<br>1500 requests/minute<br>100 content/batch</td>
         </tr>
         <tr>
             <td>embedding-001</td>
-            <td>1500 requests/min<br>100 content/batch</td>
         </tr><tr>
         <td rowspan="3"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
         <td rowspan="3">Very stringent payment verification for Google Cloud.</td>
@@ -93,7 +92,7 @@ This lists various services that provide free access or credits towards API-base
         <td></td>
     </tr><tr>
             <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
-            <td rowspan="2">10 requests/min<br>1000 requests/month</td>
+            <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1000 requests/month</a></td>
             <td>Command-R</td>
             <td>Shared Limit</td>
         </tr>
