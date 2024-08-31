@@ -520,7 +520,7 @@ def main():
 
     table += """<tr>
             <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
-            <td rowspan="2">10 requests/min<br>1000 requests/month</td>
+            <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1000 requests/month</a></td>
             <td>Command-R</td>
             <td>Shared Limit</td>
         </tr>
