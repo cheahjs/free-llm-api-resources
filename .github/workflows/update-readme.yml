@@ -24,7 +24,7 @@ jobs:
       - id: "auth"
         uses: "google-github-actions/auth@v2"
         with:
-          workload_identity_provider: "projects/576328904266/locations/global/workloadIdentityPools/github/providers/github-actions"
+          workload_identity_provider: "projects/576328904266/locations/global/workloadIdentityPools/github/providers/cheahjs-org"
           project_id: ${{ secrets.GCP_PROJECT }}
       - name: Run script
         env:
