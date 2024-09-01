@@ -37,14 +37,15 @@ jobs:
         run: |
           python src/pull_available_models.py
       - name: Commit changes
-        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        id: commit-changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update README with latest models"
           branch: update-readme-${{ github.run_id }}
           create_branch: true
+          changes_detected: true
       - name: Create Pull Request
-        if: steps.changes.outputs.diff_count != '0'
+        if: steps.commit-changes.outputs.changes_detected
         uses: peter-evans/create-pull-request@v6
         with:
           title: "Update README with latest models"
