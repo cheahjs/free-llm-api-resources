@@ -36,7 +36,7 @@ jobs:
           GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
           GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path }}
         run: |
-          python src/pull_available_models.py
+          python -u src/pull_available_models.py
       - name: Remove credentials
         run: |
           rm ${{ steps.auth.outputs.credentials_file_path }}
