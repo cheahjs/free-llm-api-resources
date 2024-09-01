@@ -28,12 +28,18 @@ jobs:
       - name: Run script
         run: |
           python src/pull_available_models.py
+      - name: Check for changes
+        id: changes
+        run: |
+          git diff --exit-code
       - name: Commit changes
+        if: steps.changes.outputs.exit_code != '0'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update README with latest models"
           branch: update-readme
       - name: Create Pull Request
+        if: steps.changes.outputs.exit_code != '0'
         uses: peter-evans/create-pull-request@v5
         with:
           title: "Update README with latest models"
