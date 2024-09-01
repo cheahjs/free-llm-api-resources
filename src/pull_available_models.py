@@ -123,7 +123,7 @@ def get_groq_limits_for_stt_model(model_id):
             "model": model_id,
         },
         files={
-            "file": open("1-second-of-silence.mp3", "rb"),
+            "file": open(os.path.join(script_dir, "1-second-of-silence.mp3"), "rb"),
         },
     )
     r.raise_for_status()
