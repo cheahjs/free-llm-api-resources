@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from google.cloud import cloudquotas_v1
 
 load_dotenv()
+script_dir = os.path.dirname(os.path.abspath(__file__))
 
 MODEL_TO_NAME_MAPPING = {
     "@cf/deepseek-ai/deepseek-math-7b-instruct": "Deepseek Math 7B Instruct",
