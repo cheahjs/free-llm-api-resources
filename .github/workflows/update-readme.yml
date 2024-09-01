@@ -36,20 +36,13 @@ jobs:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path }}
         run: |
           python src/pull_available_models.py
-      - name: Check for changes
-        id: changes
-        run: |
-          git status --porcelain > changes.diff
-          echo "diff_count=$(cat changes.diff | wc -l)" >> $GITHUB_OUTPUT
-      - name: Create branch
-        if: steps.changes.outputs.diff_count != '0'
-        run: git checkout -b update-readme-${{ github.run_id }}
       - name: Commit changes
-        if: steps.changes.outputs.diff_count != '0'
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update README with latest models"
           branch: update-readme-${{ github.run_id }}
+          create_branch: true
       - name: Create Pull Request
         if: steps.changes.outputs.diff_count != '0'
         uses: peter-evans/create-pull-request@v6
