@@ -113,7 +113,7 @@ def get_model_name(id):
     return id
 
 
-def get_groq_limits_for_stt_model(model_id, script_dir):
+def get_groq_limits_for_stt_model(model_id):
     print(f"Getting limits for STT model {model_id}...")
     r = requests.post(
         "https://api.groq.com/openai/v1/audio/transcriptions",
@@ -138,7 +138,7 @@ def get_groq_limits_for_stt_model(model_id, script_dir):
 
 def get_groq_limits_for_model(model_id, script_dir):
     if "whisper" in model_id:
-        return get_groq_limits_for_stt_model(model_id, script_dir)
+        return get_groq_limits_for_stt_model(model_id)
     print(f"Getting limits for chat model {model_id}...")
     r = requests.post(
         "https://api.groq.com/openai/v1/chat/completions",
