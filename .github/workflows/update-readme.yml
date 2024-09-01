@@ -18,12 +18,11 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r src/requirements.txt
-          pip install google-auth
-      - id: 'auth'
-        uses: 'google-github-actions/auth@v1'
+      - id: "auth"
+        uses: "google-github-actions/auth@v2"
         with:
-          workload_identity_provider: 'projects/576328904266/locations/global/workloadIdentityPools/github/providers/github-actions'
-          project_id: ${{ secrets.GCP_PROJECT_ID }}
+          workload_identity_provider: "projects/576328904266/locations/global/workloadIdentityPools/github/providers/github-actions"
+          project_id: ${{ secrets.GCP_PROJECT }}
       - name: Run script
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
