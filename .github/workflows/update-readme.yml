@@ -37,6 +37,9 @@ jobs:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path }}
         run: |
           python src/pull_available_models.py
+      - name: Remove credentials
+        run: |
+          rm ${{ steps.auth.outputs.credentials_file_path }}
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
