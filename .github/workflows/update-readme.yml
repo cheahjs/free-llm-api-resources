@@ -40,7 +40,7 @@ jobs:
         id: changes
         run: |
           git status --porcelain > changes.diff
-          echo "diff=$(cat changes.diff)" >> $GITHUB_OUTPUT
+          echo "diff_count=$(cat changes.diff | wc -l)" >> $GITHUB_OUTPUT
       - name: Commit changes
         if: steps.changes.outputs.diff != ''
         uses: stefanzweifel/git-auto-commit-action@v5
