@@ -2,3 +2,4 @@ venv
 .venv
 .env
 .aider*
+*.json
