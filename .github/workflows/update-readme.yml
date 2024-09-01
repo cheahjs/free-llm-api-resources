@@ -39,7 +39,7 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff > changes.diff
+          git status --porcelain > changes.diff
           echo "diff=$(cat changes.diff)" >> $GITHUB_OUTPUT
       - name: Commit changes
         if: steps.changes.outputs.diff != ''
