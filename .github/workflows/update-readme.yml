@@ -43,7 +43,6 @@ jobs:
           commit_message: "Update README with latest models"
           branch: update-readme-${{ github.run_id }}
           create_branch: true
-          changes_detected: true
       - name: Create Pull Request
         if: steps.commit-changes.outputs.changes_detected
         uses: peter-evans/create-pull-request@v6
