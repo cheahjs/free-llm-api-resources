@@ -494,7 +494,6 @@ def main():
             <td>{get_human_limits({"limits": gemini_models["gemini-1.0-pro"]})}</td>
         </tr>
         <tr>
-            <td rowspan="2"></td>
             <td>text-embedding-004</td>
             <td rowspan="2">{get_human_limits({"limits": gemini_models["project-embedding"]})}<br>100 content/batch</td>
         </tr>
