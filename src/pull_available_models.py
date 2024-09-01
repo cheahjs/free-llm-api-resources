@@ -112,7 +112,7 @@ def get_model_name(id):
     return id
 
 
-def get_groq_limits_for_stt_model(model_id):
+def get_groq_limits_for_stt_model(model_id, script_dir):
     print(f"Getting limits for STT model {model_id}...")
     r = requests.post(
         "https://api.groq.com/openai/v1/audio/transcriptions",
@@ -135,9 +135,9 @@ def get_groq_limits_for_stt_model(model_id):
     }
 
 
-def get_groq_limits_for_model(model_id):
+def get_groq_limits_for_model(model_id, script_dir):
     if "whisper" in model_id:
-        return get_groq_limits_for_stt_model(model_id)
+        return get_groq_limits_for_stt_model(model_id, script_dir)
     print(f"Getting limits for chat model {model_id}...")
     r = requests.post(
         "https://api.groq.com/openai/v1/chat/completions",
@@ -174,11 +174,12 @@ def fetch_groq_models():
         },
     )
     r.raise_for_status()
+    script_dir = os.path.dirname(os.path.abspath(__file__))
     models = r.json()["data"]
     pprint(models)
     ret_models = []
     for model in models:
-        limits = get_groq_limits_for_model(model["id"])
+        limits = get_groq_limits_for_model(model["id"], script_dir)
         ret_models.append(
             {
                 "id": model["id"],
