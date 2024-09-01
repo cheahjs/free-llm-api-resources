@@ -31,15 +31,16 @@ jobs:
       - name: Check for changes
         id: changes
         run: |
-          git diff --exit-code
+          git diff > changes.diff
+          echo "diff=$(cat changes.diff)" >> $GITHUB_OUTPUT
       - name: Commit changes
-        if: steps.changes.outputs.exit_code != '0'
+        if: steps.changes.outputs.diff != ''
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update README with latest models"
           branch: update-readme-${{ github.run_id }}
       - name: Create Pull Request
-        if: steps.changes.outputs.exit_code != '0'
+        if: steps.changes.outputs.diff != ''
         uses: peter-evans/create-pull-request@v6
         with:
           title: "Update README with latest models"
