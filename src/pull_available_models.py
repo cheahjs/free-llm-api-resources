@@ -595,9 +595,10 @@ def main():
     print("Missing models:")
     print(list(MISSING_MODELS))
 
-    with open("README_template.md", "r") as f:
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    with open(os.path.join(script_dir, "README_template.md"), "r") as f:
         readme = f.read()
-    with open("../README.md", "w") as f:
+    with open(os.path.join(script_dir, "..", "README.md"), "w") as f:
         f.write(readme.replace("{{MODEL_LIST}}", table).replace("{{TRIAL_MODEL_LIST}}", trial_table))
     print("Wrote models to README.md")
 
