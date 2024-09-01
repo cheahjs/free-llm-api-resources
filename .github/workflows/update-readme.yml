@@ -44,5 +44,3 @@ jobs:
           branch: update-readme-${{ github.run_id }}
           base: main
           commit-message: "Update README with latest models"
-          committer: "GitHub Actions <actions@github.com>"
-          author: "GitHub Actions <actions@github.com>"
