@@ -36,18 +36,13 @@ jobs:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ steps.auth.outputs.credentials_file_path }}
         run: |
           python src/pull_available_models.py
-      - name: Commit changes
-        id: commit-changes
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update README with latest models"
-          branch: update-readme-${{ github.run_id }}
-          create_branch: true
       - name: Create Pull Request
-        if: steps.commit-changes.outputs.changes_detected
         uses: peter-evans/create-pull-request@v6
         with:
           title: "Update README with latest models"
           body: "This PR updates the README with the latest available models."
           branch: update-readme-${{ github.run_id }}
           base: main
+          commit-message: "Update README with latest models"
+          committer: "GitHub Actions <actions@github.com>"
+          author: "GitHub Actions <actions@github.com>"
