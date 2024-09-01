@@ -175,7 +175,6 @@ def fetch_groq_models():
         },
     )
     r.raise_for_status()
-    script_dir = os.path.dirname(os.path.abspath(__file__))
     models = r.json()["data"]
     pprint(models)
     ret_models = []
