@@ -42,13 +42,13 @@ jobs:
           git status --porcelain > changes.diff
           echo "diff_count=$(cat changes.diff | wc -l)" >> $GITHUB_OUTPUT
       - name: Commit changes
-        if: steps.changes.outputs.diff != ''
+        if: steps.changes.outputs.diff_count != '0'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update README with latest models"
           branch: update-readme-${{ github.run_id }}
       - name: Create Pull Request
-        if: steps.changes.outputs.diff != ''
+        if: steps.changes.outputs.diff_count != '0'
         uses: peter-evans/create-pull-request@v6
         with:
           title: "Update README with latest models"
