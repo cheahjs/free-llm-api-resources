@@ -519,7 +519,7 @@ def main():
 
     table += """<tr>
         <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
-        <td></td>
+        <td>Email for API access</td>
         <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
         <td></td>
     </tr>"""
