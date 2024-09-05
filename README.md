@@ -257,12 +257,13 @@ This lists various services that provide free access or credits towards API-base
             <td>Phone number verification</td>
             <td>Various open models</td>
         </tr>
-        <tr><td rowspan="7"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="7">$10</td><td rowspan="7"></td><td>Hermes 3 Llama 3.1 70B</td></tr>
+        <tr><td rowspan="8"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="8">$10</td><td rowspan="8"></td><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
 <tr><td>Llama 3.1 405B Base (FP8)</td></tr>
 <tr><td>Llama 3.1 405B Instruct</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
+<tr><td>Reflection 70B</td></tr>
 </tbody>
 </table>
