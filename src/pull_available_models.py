@@ -609,6 +609,13 @@ def main():
         <td></td>
     </tr>"""
 
+    table += """<tr>
+        <td><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>
+        <td>Waitlist</td>
+        <td>Access to Azure AI models from OpenAI, Anthropic, Mistral, Cohere, AI21, Phi.</td>
+        <td><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td>
+    </tr>"""
+
     table += "</tbody></table>"
 
     trial_table = ""

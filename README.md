@@ -184,6 +184,11 @@ This lists various services that provide free access or credits towards API-base
     <tr>
         <td>Llama 3.1 8B</td>
         <td></td>
+    </tr><tr>
+        <td><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>
+        <td>Waitlist</td>
+        <td>Access to Azure AI models from OpenAI, Anthropic, Mistral, Cohere, AI21, Phi.</td>
+        <td><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td>
     </tr></tbody></table>
 
 ## Providers with trial credits
