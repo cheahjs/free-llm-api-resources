@@ -264,5 +264,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 405B Instruct</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
+<tr><td>Reflection Llama 3.1 70B</td></tr>
 </tbody>
 </table>

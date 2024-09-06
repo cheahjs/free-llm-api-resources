@@ -94,7 +94,7 @@ MODEL_TO_NAME_MAPPING = {
     "01-ai/yi-1.5-34b-chat": "Yi 1.5 34B Chat",
     "nousresearch/hermes-3-llama-3.1-70b-fp8": "Hermes 3 Llama 3.1 70B (FP8)",
     "llava-v1.5-7b-4096-preview": "LLaVA 1.5 7B",
-    "mattshumer/reflection-70b": "Reflection 70B",
+    "mattshumer/reflection-llama-3.1-70b": "Reflection Llama 3.1 70B",
 }
 MISSING_MODELS = set()
 
