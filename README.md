@@ -29,7 +29,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3 8B</td><td>14400 requests/day<br>30000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B - Groq Tool Use Preview</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 70B</td><td>14400 requests/day<br>20000 tokens/minute</td></tr>
-<tr><td>Llama 3.1 8B</td><td>14400 requests/day<br>131072 tokens/minute</td></tr>
+<tr><td>Llama 3.1 8B</td><td>14400 requests/day<br>20000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14400 requests/day<br>5000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7200 audio-seconds/minute<br>2000 requests/day</td></tr>
