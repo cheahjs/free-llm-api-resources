@@ -33,7 +33,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama Guard 3 8B</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14400 requests/day<br>5000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7200 audio-seconds/minute<br>2000 requests/day</td></tr>
-<tr><td rowspan="11"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="11"></td><td>Gemma 2 9B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td rowspan="12"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="12"></td><td>Gemma 2 9B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Mistral 7B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
@@ -42,6 +42,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-3 Medium 128k Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Phi-3 Mini 128k Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Qwen 2 7B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td>Reflection Llama 3.1 70B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Toppy M 7B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Zephyr 7B Beta</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr>
@@ -257,7 +258,7 @@ This lists various services that provide free access or credits towards API-base
             <td>Phone number verification</td>
             <td>Various open models</td>
         </tr>
-        <tr><td rowspan="7"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="7">$10</td><td rowspan="7"></td><td>Hermes 3 Llama 3.1 70B</td></tr>
+        <tr><td rowspan="8"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="8">$10</td><td rowspan="8"></td><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
 <tr><td>Llama 3.1 405B Base (FP8)</td></tr>
