@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 
 from collections import defaultdict
-from pprint import pprint
+import logging
+import json
 import requests
 import os
 from dotenv import load_dotenv
@@ -95,7 +96,18 @@ MODEL_TO_NAME_MAPPING = {
     "nousresearch/hermes-3-llama-3.1-70b-fp8": "Hermes 3 Llama 3.1 70B (FP8)",
     "llava-v1.5-7b-4096-preview": "LLaVA 1.5 7B",
     "mattshumer/reflection-llama-3.1-70b": "Reflection Llama 3.1 70B",
+    "mattshumer/reflection-70b:free": "Reflection Llama 3.1 70B",
 }
+def create_logger(provider_name):
+    logger = logging.getLogger(provider_name)
+    logger.setLevel(logging.DEBUG)
+    handler = logging.StreamHandler()
+    formatter = logging.Formatter(f"{provider_name}: %(message)s")
+    handler.setFormatter(formatter)
+    logger.addHandler(handler)
+    return logger
+
+
 MISSING_MODELS = set()
 
 HYPERBOLIC_IGNORED_MODELS = {
@@ -115,8 +127,8 @@ def get_model_name(id):
     return id
 
 
-def get_groq_limits_for_stt_model(model_id):
-    print(f"Getting limits for STT model {model_id}...")
+def get_groq_limits_for_stt_model(model_id, logger):
+    logger.info(f"Getting limits for STT model {model_id}...")
     r = requests.post(
         "https://api.groq.com/openai/v1/audio/transcriptions",
         headers={
@@ -138,10 +150,10 @@ def get_groq_limits_for_stt_model(model_id):
     }
 
 
-def get_groq_limits_for_model(model_id, script_dir):
+def get_groq_limits_for_model(model_id, script_dir, logger):
     if "whisper" in model_id:
-        return get_groq_limits_for_stt_model(model_id)
-    print(f"Getting limits for chat model {model_id}...")
+        return get_groq_limits_for_stt_model(model_id, logger)
+    logger.info(f"Getting limits for chat model {model_id}...")
     r = requests.post(
         "https://api.groq.com/openai/v1/chat/completions",
         headers={
@@ -162,13 +174,13 @@ def get_groq_limits_for_model(model_id, script_dir):
         tpm = int(r.headers["x-ratelimit-limit-tokens"])
         return {"requests/day": rpd, "tokens/minute": tpm}
     except Exception as e:
-        print(f"Failed to get limits for model {model_id}: {e}")
-        print(r.text)
+        logger.error(f"Failed to get limits for model {model_id}: {e}")
+        logger.error(r.text)
         return {"requests/day": "Unknown", "tokens/minute": "Unknown"}
 
 
-def fetch_groq_models():
-    print("Fetching Groq models...")
+def fetch_groq_models(logger):
+    logger.info("Fetching Groq models...")
     r = requests.get(
         "https://api.groq.com/openai/v1/models",
         headers={
@@ -178,10 +190,10 @@ def fetch_groq_models():
     )
     r.raise_for_status()
     models = r.json()["data"]
-    pprint(models)
+    logger.debug(json.dumps(models, indent=4))
     ret_models = []
     for model in models:
-        limits = get_groq_limits_for_model(model["id"], script_dir)
+        limits = get_groq_limits_for_model(model["id"], script_dir, logger)
         ret_models.append(
             {
                 "id": model["id"],
@@ -193,8 +205,8 @@ def fetch_groq_models():
     return ret_models
 
 
-def fetch_openrouter_models():
-    print("Fetching OpenRouter models...")
+def fetch_openrouter_models(logger):
+    logger.info("Fetching OpenRouter models...")
     r = requests.get(
         "https://openrouter.ai/api/v1/models",
         headers={
@@ -203,7 +215,7 @@ def fetch_openrouter_models():
     )
     r.raise_for_status()
     models = r.json()["data"]
-    print(f"Fetched {len(models)} models from OpenRouter")
+    logger.info(f"Fetched {len(models)} models from OpenRouter")
     ret_models = []
     for model in models:
         pricing = float(model.get("pricing", {}).get("completion", "1")) + float(
@@ -227,8 +239,8 @@ def fetch_openrouter_models():
     return ret_models
 
 
-def fetch_cloudflare_models():
-    print("Fetching Cloudflare models...")
+def fetch_cloudflare_models(logger):
+    logger.info("Fetching Cloudflare models...")
     r = requests.get(
         f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CLOUDFLARE_ACCOUNT_ID']}/ai/models/search?search=Text+Generation",
         headers={
@@ -238,7 +250,7 @@ def fetch_cloudflare_models():
     )
     r.raise_for_status()
     models = r.json()["result"]
-    print(f"Fetched {len(models)} models from Cloudflare")
+    logger.info(f"Fetched {len(models)} models from Cloudflare")
     ret_models = []
     for model in models:
         ret_models.append(
@@ -251,8 +263,8 @@ def fetch_cloudflare_models():
     return ret_models
 
 
-def fetch_ovh_models():
-    print("Fetching OVH models...")
+def fetch_ovh_models(logger):
+    logger.info("Fetching OVH models...")
     r = requests.get(
         "https://endpoints-backend.ai.cloud.ovh.net/rest/v1/models_v2",
         params={"select": "*", "order": "id.desc", "offset": "0", "limit": "100"},
@@ -276,7 +288,7 @@ def fetch_ovh_models():
     models = list(
         filter(lambda x: x["available"] and x["category"] == "Assistant", r.json())
     )
-    print(f"Fetched {len(models)} models from OVH")
+    logger.info(f"Fetched {len(models)} models from OVH")
     ret_models = []
     for model in models:
         ret_models.append(
@@ -291,21 +303,21 @@ def fetch_ovh_models():
     ret_models = sorted(ret_models, key=lambda x: x["name"])
     return ret_models
 
-def fetch_hyperbolic_models():
-    print("Fetching Hyperbolic models...")
-    firestore_models = fetch_hyperbolic_models_firestore()
-    api_models = fetch_hyperbolic_models_api()
+def fetch_hyperbolic_models(logger):
+    logger.info("Fetching Hyperbolic models...")
+    firestore_models = fetch_hyperbolic_models_firestore(logger)
+    api_models = fetch_hyperbolic_models_api(logger)
     for model in api_models:
         if model["id"] not in [m["id"] for m in firestore_models]:
-            print(f"Adding model {model['id']} from API")
+            logger.debug(f"Adding model {model['id']} from API")
             firestore_models.append(model)
     for model in firestore_models:
         if model["id"] not in [m["id"] for m in api_models]:
-            print(f"Warning: model {model['id']} from Firestore not in API")
+            logger.warning(f"Model {model['id']} from Firestore not in API")
     return sorted(firestore_models, key=lambda x: x["name"])
 
-def fetch_hyperbolic_models_firestore():
-    print("Fetching Hyperbolic models from Firestore...")
+def fetch_hyperbolic_models_firestore(logger):
+    logger.info("Fetching Hyperbolic models from Firestore...")
 
     r = requests.post(
         "https://firestore.googleapis.com/v1/projects/ai-dashboard-cfd6a/databases/(default)/documents:runQuery",
@@ -364,7 +376,7 @@ def fetch_hyperbolic_models_firestore():
     )
     r.raise_for_status()
     models = r.json()
-    print(f"Fetched {len(models)} models from Hyperbolic's Firestore")
+    logger.info(f"Fetched {len(models)} models from Hyperbolic's Firestore")
     ret_models = []
     for model in models:
         model_data = model["document"]["fields"]
@@ -381,11 +393,11 @@ def fetch_hyperbolic_models_firestore():
                 },
             }
         )
-    pprint(ret_models)
+    logger.debug(json.dumps(ret_models, indent=4))
     return ret_models
 
-def fetch_hyperbolic_models_api():
-    print("Fetching Hyperbolic models from API...")
+def fetch_hyperbolic_models_api(logger):
+    logger.info("Fetching Hyperbolic models from API...")
     r = requests.get(
         "https://api.hyperbolic.xyz/v1/models",
         headers={
@@ -394,11 +406,11 @@ def fetch_hyperbolic_models_api():
         })
     r.raise_for_status()
     models = r.json()["data"]
-    print(f"Fetched {len(models)} models from Hyperbolic's API")
+    logger.info(f"Fetched {len(models)} models from Hyperbolic's API")
     ret_models = []
     for model in models:
         if model["id"] in HYPERBOLIC_IGNORED_MODELS:
-            print(f"Ignoring model {model['id']}")
+            logger.debug(f"Ignoring model {model['id']}")
             continue
         ret_models.append(
             {
@@ -409,11 +421,11 @@ def fetch_hyperbolic_models_api():
                 },
             }
         )
-    pprint(ret_models)
+    logger.debug(json.dumps(ret_models, indent=4))
     return ret_models
 
-def fetch_gemini_limits():
-    print("Fetching Gemini limits...")
+def fetch_gemini_limits(logger):
+    logger.info("Fetching Gemini limits...")
     client = cloudquotas_v1.CloudQuotasClient()
     request = cloudquotas_v1.ListQuotaInfosRequest(
         parent=f"projects/{os.environ["GCP_PROJECT_ID"]}/locations/global/services/generativelanguage.googleapis.com")
@@ -432,7 +444,7 @@ def fetch_gemini_limits():
         elif quota.metric == "generativelanguage.googleapis.com/batch_embed_text_requests":
             for dimension in quota.dimensions_infos:
                 models["project-embedding"][f"batch requests/{quota.refresh_interval}"] = dimension.details.value
-    pprint(models)
+    logger.debug(json.dumps(models, indent=4))
     return models
     
 
@@ -444,12 +456,20 @@ def get_human_limits(model):
 
 
 def main():
-    gemini_models = fetch_gemini_limits()
-    openrouter_models = fetch_openrouter_models()
-    hyperbolic_models = fetch_hyperbolic_models()
-    ovh_models = fetch_ovh_models()
-    cloudflare_models = fetch_cloudflare_models()
-    groq_models = fetch_groq_models()
+    logger = create_logger("Main")
+    groq_logger = create_logger("Groq")
+    openrouter_logger = create_logger("OpenRouter")
+    google_ai_studio_logger = create_logger("Google AI Studio")
+    ovh_logger = create_logger("OVH")
+    cloudflare_logger = create_logger("Cloudflare")
+    hyperbolic_logger = create_logger("Hyperbolic")
+
+    gemini_models = fetch_gemini_limits(google_ai_studio_logger)
+    openrouter_models = fetch_openrouter_models(openrouter_logger)
+    hyperbolic_models = fetch_hyperbolic_models(hyperbolic_logger)
+    ovh_models = fetch_ovh_models(ovh_logger)
+    cloudflare_models = fetch_cloudflare_models(cloudflare_logger)
+    groq_models = fetch_groq_models(groq_logger)
 
 
     table = """<table>
@@ -595,15 +615,16 @@ def main():
     for idx, model in enumerate(hyperbolic_models):
         trial_table += f"<tr>{f'<td rowspan="{len(hyperbolic_models)}"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(hyperbolic_models)}">$10</td><td rowspan="{len(hyperbolic_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td></tr>\n"
 
-    print("Missing models:")
-    print(list(MISSING_MODELS))
+    if MISSING_MODELS:
+        logger.warning("Missing models:")
+        logger.warning(list(MISSING_MODELS))
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(script_dir, "README_template.md"), "r") as f:
         readme = f.read()
     with open(os.path.join(script_dir, "..", "README.md"), "w") as f:
         f.write(readme.replace("{{MODEL_LIST}}", table).replace("{{TRIAL_MODEL_LIST}}", trial_table))
-    print("Wrote models to README.md")
+    logger.info("Wrote models to README.md")
 
 
 if __name__ == "__main__":
