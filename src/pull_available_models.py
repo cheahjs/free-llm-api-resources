@@ -387,9 +387,7 @@ def fetch_hyperbolic_models_firestore(logger):
                 "id": model_data["model"]["stringValue"],
                 "name": get_model_name(model_data["model"]["stringValue"]),
                 "limits": {
-                    # https://discord.com/channels/1196951041971863664/1197273823192547500/1267279465226965065
-                    # Unclear if this is a global rate limit or a per-model rate limit
-                    "requests/minute": 200,
+                    "requests/minute": 60,
                 },
             }
         )
