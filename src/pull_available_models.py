@@ -97,6 +97,7 @@ MODEL_TO_NAME_MAPPING = {
     "llava-v1.5-7b-4096-preview": "LLaVA 1.5 7B",
     "mattshumer/reflection-llama-3.1-70b": "Reflection Llama 3.1 70B",
     "mattshumer/reflection-70b:free": "Reflection Llama 3.1 70B",
+    "mattshumer/reflection-llama-3.1-70b-completions": "Reflection Llama 3.1 70B Completions",
 }
 def create_logger(provider_name):
     logger = logging.getLogger(provider_name)
