@@ -33,7 +33,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama Guard 3 8B</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14400 requests/day<br>5000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7200 audio-seconds/minute<br>2000 requests/day</td></tr>
-<tr><td rowspan="12"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="12"></td><td>Gemma 2 9B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td rowspan="13"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="13"></td><td>Gemma 2 9B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td>Hermes 3 Llama 3.1 405B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Mistral 7B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
