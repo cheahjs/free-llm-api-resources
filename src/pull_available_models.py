@@ -594,8 +594,8 @@ def main():
     </tr>"""
 
     table += """<tr>
-        <td rowspan="3"><a href="https://sambanova.ai/fast-api" target="_blank">SambaNova Fast API</a></td>
-        <td rowspan="3">Waitlist</td>
+        <td rowspan="3"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
+        <td rowspan="3"></td>
         <td>Llama 3.1 405B</td>
         <td></td>
     </tr>
