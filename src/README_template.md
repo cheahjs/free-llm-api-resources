@@ -25,12 +25,6 @@ This lists various services that provide free access or credits towards API-base
     </thead>
     <tbody>
         <tr>
-            <td><a href="https://console.anthropic.com/">Anthropic</a></td>
-            <td>$5 for 14 days</td>
-            <td>Phone number verification</td>
-            <td>Claude 3</td>
-        </tr>
-        <tr>
             <td><a href="https://console.mistral.ai/">Mistral</a></td>
             <td>2 weeks<br>1 request/second<br>500,000 tokens/minute<br>1,000,000,000 tokens/month</td>
             <td></td>
