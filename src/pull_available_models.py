@@ -99,6 +99,7 @@ MODEL_TO_NAME_MAPPING = {
     "mattshumer/reflection-llama-3.1-70b": "Reflection Llama 3.1 70B",
     "mattshumer/reflection-70b:free": "Reflection Llama 3.1 70B",
     "mattshumer/reflection-llama-3.1-70b-completions": "Reflection Llama 3.1 70B Completions",
+    "deepseek-ai/deepseek-v2.5": "DeepSeek v2.5",
 }
 
 
