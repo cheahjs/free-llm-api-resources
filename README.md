@@ -278,7 +278,8 @@ This lists various services that provide free access or credits towards API-base
             <td>Phone number verification</td>
             <td>Various open models</td>
         </tr>
-        <tr><td rowspan="9"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="9">$10</td><td rowspan="9"></td><td>Hermes 3 Llama 3.1 70B</td></tr>
+        <tr><td rowspan="9"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="9">$10</td><td rowspan="9"></td><td>DeepSeek v2.5</td></tr>
+<tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
 <tr><td>Llama 3.1 405B Base (FP8)</td></tr>
@@ -286,6 +287,5 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
 <tr><td>Reflection Llama 3.1 70B</td></tr>
-<tr><td>deepseek-ai/deepseek-v2.5</td></tr>
 </tbody>
 </table>
