@@ -185,12 +185,32 @@ This lists various services that provide free access or credits towards API-base
     <tr>
         <td>Llama 3.1 8B</td>
         <td></td>
-    </tr><tr>
-        <td><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>
-        <td>Waitlist</td>
-        <td>Access to Azure AI models from OpenAI, Anthropic, Mistral, Cohere, AI21, Phi.</td>
-        <td><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td>
-    </tr></tbody></table>
+    </tr><tr><td rowspan="25"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="25">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td><td>AI21-Jamba-Instruct</td><td></td></tr>
+<tr><td>Cohere Command R</td><td></td></tr>
+<tr><td>Cohere Command R+</td><td></td></tr>
+<tr><td>Cohere Embed v3 English</td><td></td></tr>
+<tr><td>Cohere Embed v3 Multilingual</td><td></td></tr>
+<tr><td>Meta-Llama-3-70B-Instruct</td><td></td></tr>
+<tr><td>Meta-Llama-3-8B-Instruct</td><td></td></tr>
+<tr><td>Meta-Llama-3.1-405B-Instruct</td><td></td></tr>
+<tr><td>Meta-Llama-3.1-70B-Instruct</td><td></td></tr>
+<tr><td>Meta-Llama-3.1-8B-Instruct</td><td></td></tr>
+<tr><td>Mistral Large</td><td></td></tr>
+<tr><td>Mistral Large (2407)</td><td></td></tr>
+<tr><td>Mistral Nemo</td><td></td></tr>
+<tr><td>Mistral Small</td><td></td></tr>
+<tr><td>OpenAI GPT-4o</td><td></td></tr>
+<tr><td>OpenAI GPT-4o mini</td><td></td></tr>
+<tr><td>OpenAI Text Embedding 3 (large)</td><td></td></tr>
+<tr><td>OpenAI Text Embedding 3 (small)</td><td></td></tr>
+<tr><td>Phi-3-medium instruct (128k)</td><td></td></tr>
+<tr><td>Phi-3-medium instruct (4k)</td><td></td></tr>
+<tr><td>Phi-3-mini instruct (128k)</td><td></td></tr>
+<tr><td>Phi-3-mini instruct (4k)</td><td></td></tr>
+<tr><td>Phi-3-small instruct (128k)</td><td></td></tr>
+<tr><td>Phi-3-small instruct (8k)</td><td></td></tr>
+<tr><td>Phi-3.5-mini instruct (128k)</td><td></td></tr>
+</tbody></table>
 
 ## Providers with trial credits
 
@@ -258,7 +278,7 @@ This lists various services that provide free access or credits towards API-base
             <td>Phone number verification</td>
             <td>Various open models</td>
         </tr>
-        <tr><td rowspan="8"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="8">$10</td><td rowspan="8"></td><td>Hermes 3 Llama 3.1 70B</td></tr>
+        <tr><td rowspan="9"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="9">$10</td><td rowspan="9"></td><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
 <tr><td>Llama 3.1 405B Base (FP8)</td></tr>
@@ -266,5 +286,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
 <tr><td>Reflection Llama 3.1 70B</td></tr>
+<tr><td>deepseek-ai/deepseek-v2.5</td></tr>
 </tbody>
 </table>

@@ -100,6 +100,8 @@ MODEL_TO_NAME_MAPPING = {
     "mattshumer/reflection-70b:free": "Reflection Llama 3.1 70B",
     "mattshumer/reflection-llama-3.1-70b-completions": "Reflection Llama 3.1 70B Completions",
 }
+
+
 def create_logger(provider_name):
     logger = logging.getLogger(provider_name)
     logger.setLevel(logging.DEBUG)
@@ -424,6 +426,23 @@ def fetch_hyperbolic_models_api(logger):
     logger.debug(json.dumps(ret_models, indent=4))
     return ret_models
 
+def fetch_github_models(logger):
+    logger.info("Fetching GitHub models...")
+    r = requests.get("https://models.inference.ai.azure.com/models")
+    r.raise_for_status()
+    models = r.json()
+    logger.info(f"Fetched {len(models)} models from GitHub")
+    ret_models = []
+    for model in models:
+        ret_models.append(
+            {
+                "id": model["name"],
+                "name": model["friendly_name"],
+            }
+        )
+    ret_models = sorted(ret_models, key=lambda x: x["name"])
+    return ret_models
+
 def fetch_gemini_limits(logger):
     logger.info("Fetching Gemini limits...")
     client = cloudquotas_v1.CloudQuotasClient()
@@ -462,6 +481,7 @@ def main():
     google_ai_studio_logger = create_logger("Google AI Studio")
     ovh_logger = create_logger("OVH")
     cloudflare_logger = create_logger("Cloudflare")
+    github_logger = create_logger("GitHub")
     hyperbolic_logger = create_logger("Hyperbolic")
 
     gemini_models = fetch_gemini_limits(google_ai_studio_logger)
@@ -469,6 +489,7 @@ def main():
     hyperbolic_models = fetch_hyperbolic_models(hyperbolic_logger)
     ovh_models = fetch_ovh_models(ovh_logger)
     cloudflare_models = fetch_cloudflare_models(cloudflare_logger)
+    github_models = fetch_github_models(github_logger)
     groq_models = fetch_groq_models(groq_logger)
 
 
@@ -608,13 +629,13 @@ def main():
         <td>Llama 3.1 8B</td>
         <td></td>
     </tr>"""
-
-    table += """<tr>
-        <td><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>
-        <td>Waitlist</td>
-        <td>Access to Azure AI models from OpenAI, Anthropic, Mistral, Cohere, AI21, Phi.</td>
-        <td><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td>
-    </tr>"""
+    for idx, model in enumerate(github_models):
+        table += "<tr>"
+        table += f'<td rowspan="{len(github_models)}"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>' if idx == 0 else ''
+        table += f'<td rowspan="{len(github_models)}">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td>' if idx == 0 else ''
+        table += f"<td>{model['name']}</td>"
+        table += "<td></td>"
+        table += "</tr>\n"
 
     table += "</tbody></table>"
 
