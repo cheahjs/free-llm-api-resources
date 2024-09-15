@@ -102,6 +102,8 @@ MODEL_TO_NAME_MAPPING = {
     "deepseek-ai/deepseek-v2.5": "DeepSeek V2.5",
     "mistralai/pixtral-12b-2409": "Pixtral 12B (2409)",
     "qwen/qwen2-vl-7b-instruct": "Qwen2-VL 7B Instruct",
+    "mistralai/pixtral-12b:free": "Pixtral 12B",
+    "qwen/qwen-2-vl-7b-instruct:free": "Qwen2-VL 7B Instruct",
 }
 
 
@@ -422,7 +424,7 @@ def fetch_hyperbolic_models_api(logger):
                 "id": model["id"],
                 "name": get_model_name(model["id"]),
                 "limits": {
-                    "requests/minute": 200,
+                    "requests/minute": 60,
                 },
             }
         )
