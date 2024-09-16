@@ -575,11 +575,10 @@ def main():
             <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
             <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1000 requests/month</a></td>
             <td>Command-R</td>
-            <td>Shared Limit</td>
+            <td rowspan="2">Shared Limit</td>
         </tr>
         <tr>
             <td>Command-R+</td>
-            <td>Shared Limit</td>
         </tr>"""
 
     table += """<tr>
@@ -646,8 +645,15 @@ def main():
 
     trial_table = ""
     for idx, model in enumerate(hyperbolic_models):
-        trial_table += f"<tr>{f'<td rowspan="{len(hyperbolic_models)}"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(hyperbolic_models)}">$10</td><td rowspan="{len(hyperbolic_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td></tr>\n"
-
+        trial_table += "<tr>"
+        if idx == 0:
+            trial_table += f'<td rowspan="{len(hyperbolic_models)}">'
+            trial_table += '<a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a>'
+            trial_table += '</td>'
+            trial_table += f'<td rowspan="{len(hyperbolic_models)}">$10</td>'
+            trial_table += f'<td rowspan="{len(hyperbolic_models)}"></td>'
+        trial_table += f"<td>{model['name']}</td>"
+        trial_table += "</tr>\n"
     if MISSING_MODELS:
         logger.warning("Missing models:")
         logger.warning(list(MISSING_MODELS))

@@ -101,11 +101,10 @@ This lists various services that provide free access or credits towards API-base
             <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
             <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1000 requests/month</a></td>
             <td>Command-R</td>
-            <td>Shared Limit</td>
+            <td rowspan="2">Shared Limit</td>
         </tr>
         <tr>
             <td>Command-R+</td>
-            <td>Shared Limit</td>
         </tr><tr>
             <td><a href="https://huggingface.co/docs/api-inference/en/index" target="_blank">HuggingFace Serverless Inference</a></td>
             <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
