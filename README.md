@@ -160,6 +160,11 @@ This lists various services that provide free access or credits towards API-base
             <td>Nous Hermes 3 Llama 3.1 405B (FP8)</td>
             <td></td>
         </tr><tr>
+        <td><a href="https://console.mistral.ai/" target="_blank">Mistral (Le Platforme)</a></td>
+        <td>Free tier (Experiment plan) requires opting into data training.</td>
+        <td>Open and Proprietary Mistral models</td>
+        <td>1 request/second<br>500,000 tokens/minute<br>1,000,000,000 tokens/month<</td>
+    </tr><tr>
         <td><a href="https://codestral.mistral.ai/" target="_blank">Mistral (Codestral)</a></td>
         <td>Currently free to use, monthly subscription based, requires phone number verification.</td>
         <td>Codestral</td>
@@ -225,12 +230,6 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <td><a href="https://console.mistral.ai/">Mistral</a></td>
-            <td>2 weeks<br>1 request/second<br>500,000 tokens/minute<br>1,000,000,000 tokens/month</td>
-            <td></td>
-            <td>Mistral Open/Proprietary Models</td>
-        </tr>
         <tr>
             <td><a href="https://together.ai">Together</a></td>
             <td>$5</td>
