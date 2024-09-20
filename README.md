@@ -278,6 +278,12 @@ This lists various services that provide free access or credits towards API-base
             <td>Phone number verification</td>
             <td>Various open models</td>
         </tr>
+        <tr>
+            <td><a href="https://console.upstage.ai/">Upstage</a></td>
+            <td>$10 for 3 months</td>
+            <td></td>
+            <td>Solar Pro/Mini</td>
+        </tr>
         <tr><td rowspan="12"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="12">$10</td><td rowspan="12"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
@@ -287,8 +293,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
 <tr><td>Pixtral 12B (2409)</td></tr>
+<tr><td>Qwen2-VL 72B Instruct</td></tr>
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
-<tr><td>qwen/qwen2-vl-72b-instruct</td></tr>
-<tr><td>qwen/qwen2.5-72b-instruct</td></tr>
+<tr><td>Qwen2.5 72B Instruct</td></tr>
 </tbody>
 </table>

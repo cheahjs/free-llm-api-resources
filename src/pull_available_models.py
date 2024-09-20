@@ -104,6 +104,8 @@ MODEL_TO_NAME_MAPPING = {
     "qwen/qwen2-vl-7b-instruct": "Qwen2-VL 7B Instruct",
     "mistralai/pixtral-12b:free": "Pixtral 12B",
     "qwen/qwen-2-vl-7b-instruct:free": "Qwen2-VL 7B Instruct",
+    'qwen/qwen2-vl-72b-instruct': "Qwen2-VL 72B Instruct",
+    'qwen/qwen2.5-72b-instruct': "Qwen2.5 72B Instruct",
 }
 
 
