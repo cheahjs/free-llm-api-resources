@@ -106,6 +106,10 @@ MODEL_TO_NAME_MAPPING = {
     "qwen/qwen-2-vl-7b-instruct:free": "Qwen2-VL 7B Instruct",
     'qwen/qwen2-vl-72b-instruct': "Qwen2-VL 72B Instruct",
     'qwen/qwen2.5-72b-instruct': "Qwen2.5 72B Instruct",
+    "llama-3.2-90b-text-preview": "Llama 3.2 90B",
+    "llama-3.2-3b-preview": "Llama 3.2 3B",
+    "llama-3.2-11b-text-preview": "Llama 3.2 11B",
+    "llama-3.2-1b-preview": "Llama 3.2 1B",
 }
 
 
