@@ -120,7 +120,10 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral 7B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x22B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
-<tr><td rowspan="37"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="37">10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.</td><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
+<tr><td rowspan="40"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="40">10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.</td><td>@cf/meta/llama-3.2-11b-vision-instruct</td><td></td></tr>
+<tr><td>@cf/meta/llama-3.2-1b-instruct</td><td></td></tr>
+<tr><td>@cf/meta/llama-3.2-3b-instruct</td><td></td></tr>
+<tr><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Math 7B Instruct</td><td></td></tr>
 <tr><td>Discolm German 7B v1 (AWQ)</td><td></td></tr>
@@ -287,7 +290,7 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Solar Pro/Mini</td>
         </tr>
-        <tr><td rowspan="12"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="12">$10</td><td rowspan="12"></td><td>DeepSeek V2.5</td></tr>
+        <tr><td rowspan="14"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="14">$10</td><td rowspan="14"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
@@ -299,5 +302,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2-VL 72B Instruct</td></tr>
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
+<tr><td>meta-llama/llama-3.2-3b-instruct</td></tr>
+<tr><td>meta-llama/llama-3.2-90b-vision-instruct</td></tr>
 </tbody>
 </table>
