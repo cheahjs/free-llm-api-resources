@@ -119,9 +119,9 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral 7B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x22B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
-<tr><td rowspan="40"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="40">10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.</td><td>@cf/meta/llama-3.2-11b-vision-instruct</td><td></td></tr>
-<tr><td>@cf/meta/llama-3.2-1b-instruct</td><td></td></tr>
-<tr><td>@cf/meta/llama-3.2-3b-instruct</td><td></td></tr>
+<tr><td rowspan="40"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="40">10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.</td><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Math 7B Instruct</td><td></td></tr>
@@ -301,7 +301,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2-VL 72B Instruct</td></tr>
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
-<tr><td>meta-llama/llama-3.2-3b-instruct</td></tr>
-<tr><td>meta-llama/llama-3.2-90b-vision-instruct</td></tr>
+<tr><td>Llama 3.2 3B Instruct</td></tr>
+<tr><td>Llama 3.2 90B Vision Instruct</td></tr>
 </tbody>
 </table>
