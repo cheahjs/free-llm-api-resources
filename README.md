@@ -41,6 +41,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Hermes 3 Llama 3.1 405B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td>Llama 3.2 11B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Mistral 7B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Mythomist 7B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>OpenChat 7B</td><td>20 requests/minute<br>200 requests/day</td></tr>
@@ -49,7 +50,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen 2 7B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Toppy M 7B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Zephyr 7B Beta</td><td>20 requests/minute<br>200 requests/day</td></tr>
-<tr><td>meta-llama/llama-3.2-11b-vision-instruct:free</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr>
             <td rowspan="8"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="8">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -119,10 +119,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral 7B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x22B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
-<tr><td rowspan="40"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="40">10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.</td><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
-<tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
-<tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
-<tr><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
+<tr><td rowspan="40"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="40">10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.</td><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Math 7B Instruct</td><td></td></tr>
 <tr><td>Discolm German 7B v1 (AWQ)</td><td></td></tr>
@@ -141,6 +138,9 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 8B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Llama 3.1 8B Instruct (FP8)</td><td></td></tr>
+<tr><td>Llama 3.2 11B Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
 <tr><td>LlamaGuard 7B (AWQ)</td><td></td></tr>
 <tr><td>Mistral 7B Instruct v0.1</td><td></td></tr>
 <tr><td>Mistral 7B Instruct v0.1 (AWQ)</td><td></td></tr>
@@ -297,11 +297,11 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 405B Instruct</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
+<tr><td>Llama 3.2 3B Instruct</td></tr>
+<tr><td>Llama 3.2 90B Instruct</td></tr>
 <tr><td>Pixtral 12B (2409)</td></tr>
 <tr><td>Qwen2-VL 72B Instruct</td></tr>
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
-<tr><td>Llama 3.2 3B Instruct</td></tr>
-<tr><td>Llama 3.2 90B Vision Instruct</td></tr>
 </tbody>
 </table>
