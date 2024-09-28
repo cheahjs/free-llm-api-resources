@@ -37,12 +37,6 @@ This lists various services that provide free access or credits towards API-base
             <td>Various open models</td>
         </tr>
         <tr>
-            <td><a href="https://octo.ai/">OctoAI</a></td>
-            <td>$10</td>
-            <td></td>
-            <td>Various open models</td>
-        </tr>
-        <tr>
             <td><a href="https://unify.ai/">Unify</a></td>
             <td>$10 (+$40 for getting into contact)</td>
             <td></td>
