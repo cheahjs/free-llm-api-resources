@@ -42,7 +42,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Hermes 3 Llama 3.1 405B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
-<tr><td>Llama 3.2 11B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td>Llama 3.2 11B Vision Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Mistral 7B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Mythomist 7B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>OpenChat 7B</td><td>20 requests/minute<br>200 requests/day</td></tr>
@@ -139,7 +139,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 8B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Llama 3.1 8B Instruct (FP8)</td><td></td></tr>
-<tr><td>Llama 3.2 11B Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
 <tr><td>LlamaGuard 7B (AWQ)</td><td></td></tr>
@@ -249,12 +249,6 @@ This lists various services that provide free access or credits towards API-base
             <td>Various open models</td>
         </tr>
         <tr>
-            <td><a href="https://octo.ai/">OctoAI</a></td>
-            <td>$10</td>
-            <td></td>
-            <td>Various open models</td>
-        </tr>
-        <tr>
             <td><a href="https://unify.ai/">Unify</a></td>
             <td>$10 (+$40 for getting into contact)</td>
             <td></td>
@@ -290,7 +284,7 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Solar Pro/Mini</td>
         </tr>
-        <tr><td rowspan="13"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="13">$10</td><td rowspan="13"></td><td>DeepSeek V2.5</td></tr>
+        <tr><td rowspan="15"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="15">$10</td><td rowspan="15"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
@@ -299,6 +293,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
 <tr><td>Llama 3.2 3B Instruct</td></tr>
+<tr><td>Llama 3.2 90B Vision</td></tr>
+<tr><td>Llama 3.2 90B Vision Instruct</td></tr>
 <tr><td>Pixtral 12B (2409)</td></tr>
 <tr><td>Qwen2-VL 72B Instruct</td></tr>
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
