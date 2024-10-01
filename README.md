@@ -38,11 +38,16 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama Guard 3 8B</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14400 requests/day<br>5000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7200 audio-seconds/minute<br>2000 requests/day</td></tr>
-<tr><td rowspan="13"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="13"></td><td>Gemma 2 9B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td rowspan="18"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="18"></td><td>Gemma 2 9B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Hermes 3 Llama 3.1 405B</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td>LFM 40B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td>Llama 3.1 405B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td>Llama 3.1 70B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3.2 11B Vision Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td>Llama 3.2 1B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td>Llama 3.2 3B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Mistral 7B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Mythomist 7B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>OpenChat 7B</td><td>20 requests/minute<br>200 requests/day</td></tr>
@@ -113,10 +118,12 @@ This lists various services that provide free access or credits towards API-base
             <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
             <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">300 requests/hour (with an account)</a></td>
-        </tr><tr><td rowspan="7"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="7">Token expires every 2 weeks.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
+        </tr><tr><td rowspan="9"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="9">Token expires every 2 weeks.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 70B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td>Llama 3.1 70B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td>Mathstral 7B v0.1</td><td>12 requests/minute</td></tr>
 <tr><td>Mistral 7B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x22B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>

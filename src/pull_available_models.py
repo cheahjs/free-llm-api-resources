@@ -118,6 +118,13 @@ MODEL_TO_NAME_MAPPING = {
     "meta-llama/llama-3.2-3b-instruct": "Llama 3.2 3B Instruct",
     "llama-3.2-11b-vision-preview": "Llama 3.2 11B Vision",
     "meta-llama/llama-3.2-90b-vision": "Llama 3.2 90B Vision",
+    "meta-llama/llama-3.1-70b-instruct:free": "Llama 3.1 70B Instruct",
+    "meta-llama/llama-3.2-1b-instruct:free": "Llama 3.2 1B Instruct",
+    "liquid/lfm-40b:free": "LFM 40B",
+    "meta-llama/llama-3.2-3b-instruct:free": "Llama 3.2 3B Instruct",
+    "meta-llama/llama-3.1-405b-instruct:free": "Llama 3.1 405B Instruct",
+    "mathstral-7b-v0.1": "Mathstral 7B v0.1",
+    "llama-3.1-70b-instruct": "Llama 3.1 70B Instruct",
 }
 
 
