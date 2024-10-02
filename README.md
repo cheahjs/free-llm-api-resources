@@ -40,7 +40,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Whisper Large v3</td><td>7200 audio-seconds/minute<br>2000 requests/day</td></tr>
 <tr><td rowspan="18"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="18"></td><td>Gemma 2 9B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Hermes 3 Llama 3.1 405B</td><td>20 requests/minute<br>200 requests/day</td></tr>
-<tr><td>LFM 40B</td><td>20 requests/minute<br>200 requests/day</td></tr>
+<tr><td>Liquid LFM 40B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3.1 405B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
@@ -89,10 +89,22 @@ This lists various services that provide free access or credits towards API-base
         <tr>
             <td>embedding-001</td>
         </tr><tr>
-        <td rowspan="3"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td rowspan="3">Very stringent payment verification for Google Cloud.</td>
+        <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td rowspan="6">Very stringent payment verification for Google Cloud.</td>
         <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 405B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
+        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td>
+        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td>
+        <td>Llama 3.2 API Service free during preview.<br>30 requests/minute</td>
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
@@ -168,9 +180,14 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Una Cybertron 7B v2 (BF16)</td><td></td></tr>
 <tr><td>Zephyr 7B Beta (AWQ)</td><td></td></tr>
 <tr>
-            <td><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td>
+            <td rowspan="2"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td>
             <td><a href="https://lambdalabs.com/blog/unveiling-hermes-3-the-first-fine-tuned-llama-3.1-405b-model-is-on-lambdas-cloud" target="_blank">Free for a limited time</a></td>
             <td>Nous Hermes 3 Llama 3.1 405B (FP8)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Liquid LFM 40B</td>
             <td></td>
         </tr><tr>
         <td><a href="https://console.mistral.ai/" target="_blank">Mistral (Le Platforme)</a></td>
@@ -229,7 +246,12 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-3-small instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3-small instruct (8k)</td><td></td></tr>
 <tr><td>Phi-3.5-mini instruct (128k)</td><td></td></tr>
-</tbody></table>
+<tr>
+        <td><a href="https://together.ai">Together</a></td>
+        <td></td>
+        <td>Llama 3.2 11B Vision Instruct</td>
+        <td><a href="https://www.together.ai/blog/llama-3-2-vision-stack">Free for 2024</a></td>
+    </tr></tbody></table>
 
 ## Providers with trial credits
 

@@ -120,7 +120,7 @@ MODEL_TO_NAME_MAPPING = {
     "meta-llama/llama-3.2-90b-vision": "Llama 3.2 90B Vision",
     "meta-llama/llama-3.1-70b-instruct:free": "Llama 3.1 70B Instruct",
     "meta-llama/llama-3.2-1b-instruct:free": "Llama 3.2 1B Instruct",
-    "liquid/lfm-40b:free": "LFM 40B",
+    "liquid/lfm-40b:free": "Liquid LFM 40B",
     "meta-llama/llama-3.2-3b-instruct:free": "Llama 3.2 3B Instruct",
     "meta-llama/llama-3.1-405b-instruct:free": "Llama 3.1 405B Instruct",
     "mathstral-7b-v0.1": "Mathstral 7B v0.1",
@@ -572,10 +572,22 @@ def main():
         </tr>"""
     
     table += """<tr>
-        <td rowspan="3"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td rowspan="3">Very stringent payment verification for Google Cloud.</td>
+        <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td rowspan="6">Very stringent payment verification for Google Cloud.</td>
         <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 405B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
+        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td>
+        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td>
+        <td>Llama 3.2 API Service free during preview.<br>30 requests/minute</td>
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
@@ -616,9 +628,14 @@ def main():
         table += f"<tr>{f'<td rowspan="{len(cloudflare_models)}"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(cloudflare_models)}">10000 neurons/day<br>Beta models have unlimited usage.<br>Typically 300 requests/min for text models.</td>' if idx == 0 else ''}<td>{model['name']}</td><td></td></tr>\n"
 
     table += """<tr>
-            <td><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td>
+            <td rowspan="2"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td>
             <td><a href="https://lambdalabs.com/blog/unveiling-hermes-3-the-first-fine-tuned-llama-3.1-405b-model-is-on-lambdas-cloud" target="_blank">Free for a limited time</a></td>
             <td>Nous Hermes 3 Llama 3.1 405B (FP8)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Liquid LFM 40B</td>
             <td></td>
         </tr>"""
     
@@ -668,6 +685,13 @@ def main():
         table += f"<td>{model['name']}</td>"
         table += "<td></td>"
         table += "</tr>\n"
+
+    table += """<tr>
+        <td><a href="https://together.ai">Together</a></td>
+        <td></td>
+        <td>Llama 3.2 11B Vision Instruct</td>
+        <td><a href="https://www.together.ai/blog/llama-3-2-vision-stack">Free for 2024</a></td>
+    </tr>"""
 
     table += "</tbody></table>"
 
