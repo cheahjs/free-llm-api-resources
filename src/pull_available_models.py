@@ -666,7 +666,7 @@ def main():
 
     table += """<tr>
         <td rowspan="3"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="3"></td>
+        <td rowspan="5"></td>
         <td>Llama 3.1 405B</td>
         <td></td>
     </tr>
@@ -676,6 +676,14 @@ def main():
     </tr>
     <tr>
         <td>Llama 3.1 8B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.2 3B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.2 1B</td>
         <td></td>
     </tr>"""
     for idx, model in enumerate(github_models):

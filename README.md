@@ -210,7 +210,7 @@ This lists various services that provide free access or credits towards API-base
         <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
     </tr><tr>
         <td rowspan="3"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="3"></td>
+        <td rowspan="5"></td>
         <td>Llama 3.1 405B</td>
         <td></td>
     </tr>
@@ -220,6 +220,14 @@ This lists various services that provide free access or credits towards API-base
     </tr>
     <tr>
         <td>Llama 3.1 8B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.2 3B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.2 1B</td>
         <td></td>
     </tr><tr><td rowspan="25"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="25">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td><td>AI21-Jamba-Instruct</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
