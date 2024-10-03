@@ -665,7 +665,7 @@ def main():
     </tr>"""
 
     table += """<tr>
-        <td rowspan="3"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
+        <td rowspan="5"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
         <td rowspan="5"></td>
         <td>Llama 3.1 405B</td>
         <td></td>

@@ -209,7 +209,7 @@ This lists various services that provide free access or credits towards API-base
         <td>Llama 3.1 70B</td>
         <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
     </tr><tr>
-        <td rowspan="3"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
+        <td rowspan="5"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
         <td rowspan="5"></td>
         <td>Llama 3.1 405B</td>
         <td></td>
