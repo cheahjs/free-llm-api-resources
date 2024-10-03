@@ -129,7 +129,7 @@ This lists various services that provide free access or credits towards API-base
             <td><a href="https://huggingface.co/docs/api-inference/en/index" target="_blank">HuggingFace Serverless Inference</a></td>
             <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
-            <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">300 requests/hour (with an account)</a></td>
+            <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">50 requests/hour (with an account)</a></td>
         </tr><tr><td rowspan="9"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="9">Token expires every 2 weeks.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 70B Instruct</td><td>12 requests/minute</td></tr>

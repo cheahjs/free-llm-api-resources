@@ -618,7 +618,7 @@ def main():
             <td><a href="https://huggingface.co/docs/api-inference/en/index" target="_blank">HuggingFace Serverless Inference</a></td>
             <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
-            <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">300 requests/hour (with an account)</a></td>
+            <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">50 requests/hour (with an account)</a></td>
         </tr>"""
 
     for idx, model in enumerate(ovh_models):
