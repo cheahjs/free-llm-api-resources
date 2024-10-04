@@ -538,8 +538,8 @@ def main():
         table += f"<tr>{f'<td rowspan="{len(openrouter_models)}"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(openrouter_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
 
     table += f"""<tr>
-            <td rowspan="8"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="8">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 1.5 Flash</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash"]})}</td>
         </tr>
@@ -548,16 +548,20 @@ def main():
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash-exp"]})}</td>
         </tr>
         <tr>
+            <td>Gemini 1.5 Flash-8B</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash-8b"]})}</td>
+        </tr>
+        <tr>
+            <td>Gemini 1.5 Flash-8B (Experimental)</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash-8b-exp"]})}</td>
+        </tr>
+        <tr>
             <td>Gemini 1.5 Pro</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Pro (Experimental)</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro-exp"]})}</td>
-        </tr>
-        <tr>
-            <td>Gemini 1.5 Flash-8B (Experimental)</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash-8b-exp"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.0 Pro</td>

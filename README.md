@@ -57,8 +57,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Toppy M 7B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Zephyr 7B Beta</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr>
-            <td rowspan="8"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="8">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 1.5 Flash</td>
             <td>1000000 tokens/minute<br>1500 requests/day<br>15 requests/minute</td>
         </tr>
@@ -67,16 +67,20 @@ This lists various services that provide free access or credits towards API-base
             <td>1000000 tokens/minute<br>1500 requests/day<br>5 requests/minute</td>
         </tr>
         <tr>
+            <td>Gemini 1.5 Flash-8B</td>
+            <td>1000000 tokens/minute<br>1500 requests/day<br>15 requests/minute</td>
+        </tr>
+        <tr>
+            <td>Gemini 1.5 Flash-8B (Experimental)</td>
+            <td>1000000 tokens/minute<br>1500 requests/day<br>15 requests/minute</td>
+        </tr>
+        <tr>
             <td>Gemini 1.5 Pro</td>
             <td>32000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Pro (Experimental)</td>
             <td>1000000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
-        </tr>
-        <tr>
-            <td>Gemini 1.5 Flash-8B (Experimental)</td>
-            <td>1000000 tokens/minute<br>1500 requests/day<br>15 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.0 Pro</td>
