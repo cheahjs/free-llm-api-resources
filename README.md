@@ -93,48 +93,86 @@ This lists various services that provide free access or credits towards API-base
         <tr>
             <td>embedding-001</td>
         </tr><tr>
-        <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td rowspan="6">Very stringent payment verification for Google Cloud.</td>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 405B Instruct</a></td>
-        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
-        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td>
-        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td>
-        <td>Llama 3.2 API Service free during preview.<br>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
-        <td rowspan="2">Experimental Gemini model.<br>10 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
-    </tr><tr>
-        <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
-        <td>Email for API access</td>
-        <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
-        <td></td>
-    </tr><tr>
-            <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
-            <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1000 requests/month</a></td>
-            <td>Command-R</td>
-            <td rowspan="2">Shared Limit</td>
+            <td rowspan="2"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td>
+            <td><a href="https://lambdalabs.com/blog/unveiling-hermes-3-the-first-fine-tuned-llama-3.1-405b-model-is-on-lambdas-cloud" target="_blank">Free for a limited time</a></td>
+            <td>Nous Hermes 3 Llama 3.1 405B (FP8)</td>
+            <td></td>
         </tr>
         <tr>
-            <td>Command-R+</td>
+            <td></td>
+            <td>Liquid LFM 40B</td>
+            <td></td>
         </tr><tr>
+        <td><a href="https://console.mistral.ai/" target="_blank">Mistral (Le Platforme)</a></td>
+        <td>Free tier (Experiment plan) requires opting into data training.</td>
+        <td>Open and Proprietary Mistral models</td>
+        <td>1 request/second<br>500,000 tokens/minute<br>1,000,000,000 tokens/month</td>
+    </tr><tr>
+        <td><a href="https://codestral.mistral.ai/" target="_blank">Mistral (Codestral)</a></td>
+        <td>Currently free to use, monthly subscription based, requires phone number verification.</td>
+        <td>Codestral</td>
+        <td>30 requests/minute<br>2000 requests/day</td>
+    </tr><tr>
             <td><a href="https://huggingface.co/docs/api-inference/en/index" target="_blank">HuggingFace Serverless Inference</a></td>
             <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
             <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">50 requests/hour (with an account)</a></td>
-        </tr><tr><td rowspan="9"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="9">Token expires every 2 weeks.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
+        </tr><tr>
+        <td rowspan="5"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
+        <td rowspan="5"></td>
+        <td>Llama 3.1 405B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.1 70B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.1 8B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.2 3B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.2 1B</td>
+        <td></td>
+    </tr><tr>
+        <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
+        <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
+        <td>Llama 3.1 8B</td>
+        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
+    </tr>
+    <tr>
+        <td>Llama 3.1 70B</td>
+        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
+    </tr><tr><td rowspan="25"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="25">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td><td>AI21-Jamba-Instruct</td><td></td></tr>
+<tr><td>Cohere Command R</td><td></td></tr>
+<tr><td>Cohere Command R+</td><td></td></tr>
+<tr><td>Cohere Embed v3 English</td><td></td></tr>
+<tr><td>Cohere Embed v3 Multilingual</td><td></td></tr>
+<tr><td>Meta-Llama-3-70B-Instruct</td><td></td></tr>
+<tr><td>Meta-Llama-3-8B-Instruct</td><td></td></tr>
+<tr><td>Meta-Llama-3.1-405B-Instruct</td><td></td></tr>
+<tr><td>Meta-Llama-3.1-70B-Instruct</td><td></td></tr>
+<tr><td>Meta-Llama-3.1-8B-Instruct</td><td></td></tr>
+<tr><td>Mistral Large</td><td></td></tr>
+<tr><td>Mistral Large (2407)</td><td></td></tr>
+<tr><td>Mistral Nemo</td><td></td></tr>
+<tr><td>Mistral Small</td><td></td></tr>
+<tr><td>OpenAI GPT-4o</td><td></td></tr>
+<tr><td>OpenAI GPT-4o mini</td><td></td></tr>
+<tr><td>OpenAI Text Embedding 3 (large)</td><td></td></tr>
+<tr><td>OpenAI Text Embedding 3 (small)</td><td></td></tr>
+<tr><td>Phi-3-medium instruct (128k)</td><td></td></tr>
+<tr><td>Phi-3-medium instruct (4k)</td><td></td></tr>
+<tr><td>Phi-3-mini instruct (128k)</td><td></td></tr>
+<tr><td>Phi-3-mini instruct (4k)</td><td></td></tr>
+<tr><td>Phi-3-small instruct (128k)</td><td></td></tr>
+<tr><td>Phi-3-small instruct (8k)</td><td></td></tr>
+<tr><td>Phi-3.5-mini instruct (128k)</td><td></td></tr>
+<tr><td rowspan="9"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="9">Token expires every 2 weeks.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 70B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>12 requests/minute</td></tr>
@@ -184,85 +222,47 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Una Cybertron 7B v2 (BF16)</td><td></td></tr>
 <tr><td>Zephyr 7B Beta (AWQ)</td><td></td></tr>
 <tr>
-            <td rowspan="2"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td>
-            <td><a href="https://lambdalabs.com/blog/unveiling-hermes-3-the-first-fine-tuned-llama-3.1-405b-model-is-on-lambdas-cloud" target="_blank">Free for a limited time</a></td>
-            <td>Nous Hermes 3 Llama 3.1 405B (FP8)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Liquid LFM 40B</td>
-            <td></td>
-        </tr><tr>
-        <td><a href="https://console.mistral.ai/" target="_blank">Mistral (Le Platforme)</a></td>
-        <td>Free tier (Experiment plan) requires opting into data training.</td>
-        <td>Open and Proprietary Mistral models</td>
-        <td>1 request/second<br>500,000 tokens/minute<br>1,000,000,000 tokens/month</td>
-    </tr><tr>
-        <td><a href="https://codestral.mistral.ai/" target="_blank">Mistral (Codestral)</a></td>
-        <td>Currently free to use, monthly subscription based, requires phone number verification.</td>
-        <td>Codestral</td>
-        <td>30 requests/minute<br>2000 requests/day</td>
-    </tr><tr>
-        <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
-        <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
-        <td>Llama 3.1 8B</td>
-        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 70B</td>
-        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
-    </tr><tr>
-        <td rowspan="5"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="5"></td>
-        <td>Llama 3.1 405B</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 70B</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 8B</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 3B</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 1B</td>
-        <td></td>
-    </tr><tr><td rowspan="25"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="25">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td><td>AI21-Jamba-Instruct</td><td></td></tr>
-<tr><td>Cohere Command R</td><td></td></tr>
-<tr><td>Cohere Command R+</td><td></td></tr>
-<tr><td>Cohere Embed v3 English</td><td></td></tr>
-<tr><td>Cohere Embed v3 Multilingual</td><td></td></tr>
-<tr><td>Meta-Llama-3-70B-Instruct</td><td></td></tr>
-<tr><td>Meta-Llama-3-8B-Instruct</td><td></td></tr>
-<tr><td>Meta-Llama-3.1-405B-Instruct</td><td></td></tr>
-<tr><td>Meta-Llama-3.1-70B-Instruct</td><td></td></tr>
-<tr><td>Meta-Llama-3.1-8B-Instruct</td><td></td></tr>
-<tr><td>Mistral Large</td><td></td></tr>
-<tr><td>Mistral Large (2407)</td><td></td></tr>
-<tr><td>Mistral Nemo</td><td></td></tr>
-<tr><td>Mistral Small</td><td></td></tr>
-<tr><td>OpenAI GPT-4o</td><td></td></tr>
-<tr><td>OpenAI GPT-4o mini</td><td></td></tr>
-<tr><td>OpenAI Text Embedding 3 (large)</td><td></td></tr>
-<tr><td>OpenAI Text Embedding 3 (small)</td><td></td></tr>
-<tr><td>Phi-3-medium instruct (128k)</td><td></td></tr>
-<tr><td>Phi-3-medium instruct (4k)</td><td></td></tr>
-<tr><td>Phi-3-mini instruct (128k)</td><td></td></tr>
-<tr><td>Phi-3-mini instruct (4k)</td><td></td></tr>
-<tr><td>Phi-3-small instruct (128k)</td><td></td></tr>
-<tr><td>Phi-3-small instruct (8k)</td><td></td></tr>
-<tr><td>Phi-3.5-mini instruct (128k)</td><td></td></tr>
-<tr>
         <td><a href="https://together.ai">Together</a></td>
         <td></td>
         <td>Llama 3.2 11B Vision Instruct</td>
         <td><a href="https://www.together.ai/blog/llama-3-2-vision-stack">Free for 2024</a></td>
+    </tr><tr>
+            <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
+            <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1000 requests/month</a></td>
+            <td>Command-R</td>
+            <td rowspan="2">Shared Limit</td>
+        </tr>
+        <tr>
+            <td>Command-R+</td>
+        </tr><tr>
+        <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td rowspan="6">Very stringent payment verification for Google Cloud.</td>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 405B Instruct</a></td>
+        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
+        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td>
+        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td>
+        <td>Llama 3.2 API Service free during preview.<br>30 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
+        <td rowspan="2">Experimental Gemini model.<br>10 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
+    </tr><tr>
+        <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
+        <td>Email for API access</td>
+        <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
+        <td></td>
     </tr></tbody></table>
 
 ## Providers with trial credits

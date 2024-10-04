@@ -532,10 +532,30 @@ def main():
 """
 
     for idx, model in enumerate(groq_models):
-        table += f"<tr>{f'<td rowspan="{len(groq_models)}"><a href="https://console.groq.com" target="_blank">Groq</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(groq_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
+        table += "<tr>"
+        
+        if idx == 0:
+            table += f'<td rowspan="{len(groq_models)}">'
+            table += '<a href="https://console.groq.com" target="_blank">Groq</a>'
+            table += '</td>'
+            table += f'<td rowspan="{len(groq_models)}"></td>'
+        
+        table += f"<td>{model['name']}</td>"
+        table += f"<td>{get_human_limits(model)}</td>"
+        table += "</tr>\n"
 
     for idx, model in enumerate(openrouter_models):
-        table += f"<tr>{f'<td rowspan="{len(openrouter_models)}"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(openrouter_models)}"></td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
+        table += "<tr>"
+        
+        if idx == 0:
+            table += f'<td rowspan="{len(openrouter_models)}">'
+            table += '<a href="https://openrouter.ai" target="_blank">OpenRouter</a>'
+            table += '</td>'
+            table += f'<td rowspan="{len(openrouter_models)}"></td>'
+        
+        table += f"<td>{model['name']}</td>"
+        table += f"<td>{get_human_limits(model)}</td>"
+        table += "</tr>\n"
 
     table += f"""<tr>
             <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
@@ -574,6 +594,122 @@ def main():
         <tr>
             <td>embedding-001</td>
         </tr>"""
+
+    table += """<tr>
+            <td rowspan="2"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td>
+            <td><a href="https://lambdalabs.com/blog/unveiling-hermes-3-the-first-fine-tuned-llama-3.1-405b-model-is-on-lambdas-cloud" target="_blank">Free for a limited time</a></td>
+            <td>Nous Hermes 3 Llama 3.1 405B (FP8)</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Liquid LFM 40B</td>
+            <td></td>
+        </tr>"""
+
+    table += """<tr>
+        <td><a href="https://console.mistral.ai/" target="_blank">Mistral (Le Platforme)</a></td>
+        <td>Free tier (Experiment plan) requires opting into data training.</td>
+        <td>Open and Proprietary Mistral models</td>
+        <td>1 request/second<br>500,000 tokens/minute<br>1,000,000,000 tokens/month</td>
+    </tr>"""
+
+    table += """<tr>
+        <td><a href="https://codestral.mistral.ai/" target="_blank">Mistral (Codestral)</a></td>
+        <td>Currently free to use, monthly subscription based, requires phone number verification.</td>
+        <td>Codestral</td>
+        <td>30 requests/minute<br>2000 requests/day</td>
+    </tr>"""
+
+    table += """<tr>
+            <td><a href="https://huggingface.co/docs/api-inference/en/index" target="_blank">HuggingFace Serverless Inference</a></td>
+            <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
+            <td>Various open models</td>
+            <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">50 requests/hour (with an account)</a></td>
+        </tr>"""
+    
+    table += """<tr>
+        <td rowspan="5"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
+        <td rowspan="5"></td>
+        <td>Llama 3.1 405B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.1 70B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.1 8B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.2 3B</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.2 1B</td>
+        <td></td>
+    </tr>"""
+
+    table += """<tr>
+        <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
+        <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
+        <td>Llama 3.1 8B</td>
+        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
+    </tr>
+    <tr>
+        <td>Llama 3.1 70B</td>
+        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
+    </tr>"""
+
+    for idx, model in enumerate(github_models):
+        table += "<tr>"
+        table += f'<td rowspan="{len(github_models)}"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>' if idx == 0 else ''
+        table += f'<td rowspan="{len(github_models)}">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td>' if idx == 0 else ''
+        table += f"<td>{model['name']}</td>"
+        table += "<td></td>"
+        table += "</tr>\n"
+
+    for idx, model in enumerate(ovh_models):
+        table += "<tr>"
+        if idx == 0:
+            table += '<td rowspan="' + str(len(ovh_models)) + '">'
+            table += '<a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a>'
+            table += '</td>'
+            table += '<td rowspan="' + str(len(ovh_models)) + '">Token expires every 2 weeks.</td>'
+        table += f"<td>{model['name']}</td>"
+        table += f"<td>{get_human_limits(model)}</td>"
+        table += "</tr>\n"
+
+    for idx, model in enumerate(cloudflare_models):
+        table += "<tr>"
+        if idx == 0:
+            table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
+            table += '<a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a>'
+            table += '</td>'
+            table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
+            table += '<a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10000 tokens/day</a>'
+            table += '</td>'
+        table += f"<td>{model['name']}</td>"
+        table += "<td></td>"
+        table += "</tr>\n"
+
+    table += """<tr>
+        <td><a href="https://together.ai">Together</a></td>
+        <td></td>
+        <td>Llama 3.2 11B Vision Instruct</td>
+        <td><a href="https://www.together.ai/blog/llama-3-2-vision-stack">Free for 2024</a></td>
+    </tr>"""
+
+    table += """<tr>
+            <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
+            <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1000 requests/month</a></td>
+            <td>Command-R</td>
+            <td rowspan="2">Shared Limit</td>
+        </tr>
+        <tr>
+            <td>Command-R+</td>
+        </tr>"""
     
     table += """<tr>
         <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
@@ -606,103 +742,6 @@ def main():
         <td>Email for API access</td>
         <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
         <td></td>
-    </tr>"""
-
-    table += """<tr>
-            <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
-            <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1000 requests/month</a></td>
-            <td>Command-R</td>
-            <td rowspan="2">Shared Limit</td>
-        </tr>
-        <tr>
-            <td>Command-R+</td>
-        </tr>"""
-
-    table += """<tr>
-            <td><a href="https://huggingface.co/docs/api-inference/en/index" target="_blank">HuggingFace Serverless Inference</a></td>
-            <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
-            <td>Various open models</td>
-            <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">50 requests/hour (with an account)</a></td>
-        </tr>"""
-
-    for idx, model in enumerate(ovh_models):
-        table += f"<tr>{f'<td rowspan="{len(ovh_models)}"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(ovh_models)}">Token expires every 2 weeks.</td>' if idx == 0 else ''}<td>{model['name']}</td><td>{get_human_limits(model)}</td></tr>\n"
-
-    for idx, model in enumerate(cloudflare_models):
-        table += f"<tr>{f'<td rowspan="{len(cloudflare_models)}"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td>' if idx == 0 else ''}{ f'<td rowspan="{len(cloudflare_models)}"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10000 tokens/day</a></td>' if idx == 0 else ''}<td>{model['name']}</td><td></td></tr>\n"
-
-    table += """<tr>
-            <td rowspan="2"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td>
-            <td><a href="https://lambdalabs.com/blog/unveiling-hermes-3-the-first-fine-tuned-llama-3.1-405b-model-is-on-lambdas-cloud" target="_blank">Free for a limited time</a></td>
-            <td>Nous Hermes 3 Llama 3.1 405B (FP8)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Liquid LFM 40B</td>
-            <td></td>
-        </tr>"""
-    
-    table += """<tr>
-        <td><a href="https://console.mistral.ai/" target="_blank">Mistral (Le Platforme)</a></td>
-        <td>Free tier (Experiment plan) requires opting into data training.</td>
-        <td>Open and Proprietary Mistral models</td>
-        <td>1 request/second<br>500,000 tokens/minute<br>1,000,000,000 tokens/month</td>
-    </tr>"""
-    
-    table += """<tr>
-        <td><a href="https://codestral.mistral.ai/" target="_blank">Mistral (Codestral)</a></td>
-        <td>Currently free to use, monthly subscription based, requires phone number verification.</td>
-        <td>Codestral</td>
-        <td>30 requests/minute<br>2000 requests/day</td>
-    </tr>"""
-
-    table += """<tr>
-        <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
-        <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
-        <td>Llama 3.1 8B</td>
-        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 70B</td>
-        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
-    </tr>"""
-
-    table += """<tr>
-        <td rowspan="5"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="5"></td>
-        <td>Llama 3.1 405B</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 70B</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 8B</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 3B</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 1B</td>
-        <td></td>
-    </tr>"""
-    for idx, model in enumerate(github_models):
-        table += "<tr>"
-        table += f'<td rowspan="{len(github_models)}"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>' if idx == 0 else ''
-        table += f'<td rowspan="{len(github_models)}">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td>' if idx == 0 else ''
-        table += f"<td>{model['name']}</td>"
-        table += "<td></td>"
-        table += "</tr>\n"
-
-    table += """<tr>
-        <td><a href="https://together.ai">Together</a></td>
-        <td></td>
-        <td>Llama 3.2 11B Vision Instruct</td>
-        <td><a href="https://www.together.ai/blog/llama-3-2-vision-stack">Free for 2024</a></td>
     </tr>"""
 
     table += "</tbody></table>"
