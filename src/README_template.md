@@ -72,5 +72,11 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Solar Pro/Mini</td>
         </tr>
+        <tr>
+            <td><a href="https://app.baseten.co/">Baseten</a></td>
+            <td>$30</td>
+            <td></td>
+            <td>Any supported model - pay by compute time</td>
+        </tr>
         {{TRIAL_MODEL_LIST}}</tbody>
 </table>

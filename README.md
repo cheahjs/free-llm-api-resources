@@ -325,6 +325,12 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Solar Pro/Mini</td>
         </tr>
+        <tr>
+            <td><a href="https://app.baseten.co/">Baseten</a></td>
+            <td>$30</td>
+            <td></td>
+            <td>Any supported model - pay by compute time</td>
+        </tr>
         <tr><td rowspan="15"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="15">$10</td><td rowspan="15"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
