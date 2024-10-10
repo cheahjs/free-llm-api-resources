@@ -610,8 +610,8 @@ def main():
         </tr>"""
 
     table += """<tr>
-        <td><a href="https://console.mistral.ai/" target="_blank">Mistral (Le Platforme)</a></td>
-        <td>Free tier (Experiment plan) requires opting into data training.</td>
+        <td><a href="https://console.mistral.ai/" target="_blank">Mistral (La Plateforme)</a></td>
+        <td>Free tier (Experiment plan) requires opting into data training, requires phone number verification.</td>
         <td>Open and Proprietary Mistral models</td>
         <td>1 request/second<br>500,000 tokens/minute<br>1,000,000,000 tokens/month</td>
     </tr>"""
