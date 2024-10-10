@@ -126,6 +126,7 @@ MODEL_TO_NAME_MAPPING = {
     "meta-llama/llama-3.1-405b-instruct:free": "Llama 3.1 405B Instruct",
     "mathstral-7b-v0.1": "Mathstral 7B v0.1",
     "llama-3.1-70b-instruct": "Llama 3.1 70B Instruct",
+    "gryphe/mythomax-l2-13b:free": "Mythomax L2 13B",
 }
 
 
