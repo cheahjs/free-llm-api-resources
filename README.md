@@ -20,7 +20,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="18"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="18"></td><td>Distil Whisper Large v3</td><td>7200 audio-seconds/minute<br>2000 requests/day</td></tr>
+<tr><td rowspan="19"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="19"></td><td>Distil Whisper Large v3</td><td>7200 audio-seconds/minute<br>2000 requests/day</td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Gemma 7B Instruct</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>LLaVA 1.5 7B</td><td>14400 requests/day<br>30000 tokens/minute</td></tr>
@@ -38,6 +38,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama Guard 3 8B</td><td>14400 requests/day<br>15000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14400 requests/day<br>5000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7200 audio-seconds/minute<br>2000 requests/day</td></tr>
+<tr><td>Whisper Large v3 Turbo</td><td>7200 audio-seconds/minute<br>2000 requests/day</td></tr>
 <tr><td rowspan="18"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="18"></td><td>Gemma 2 9B Instruct</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Hermes 3 Llama 3.1 405B</td><td>20 requests/minute<br>200 requests/day</td></tr>
 <tr><td>Liquid LFM 40B</td><td>20 requests/minute<br>200 requests/day</td></tr>

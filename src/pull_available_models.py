@@ -91,6 +91,7 @@ MODEL_TO_NAME_MAPPING = {
     "qwen/qwen2-72b-instruct": "Qwen 2 72B Instruct",
     "undi95/toppy-m-7b:free": "Toppy M 7B",
     "whisper-large-v3": "Whisper Large v3",
+    "whisper-large-v3-turbo": "Whisper Large v3 Turbo",
     "01-ai/yi-34b-chat": "Yi 34B Chat",
     "01-ai/yi-1.5-34b-chat": "Yi 1.5 34B Chat",
     "nousresearch/hermes-3-llama-3.1-70b-fp8": "Hermes 3 Llama 3.1 70B (FP8)",
