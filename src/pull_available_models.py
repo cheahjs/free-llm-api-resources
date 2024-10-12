@@ -499,7 +499,7 @@ def get_human_limits(model):
     if "limits" not in model:
         return ""
     limits = model["limits"]
-    return "<br>".join([f"{value} {key}" for key, value in limits.items()])
+    return "<br>".join([f"{value:,} {key}" for key, value in limits.items()])
 
 
 def main():
@@ -620,14 +620,14 @@ def main():
         <td><a href="https://codestral.mistral.ai/" target="_blank">Mistral (Codestral)</a></td>
         <td>Currently free to use, monthly subscription based, requires phone number verification.</td>
         <td>Codestral</td>
-        <td>30 requests/minute<br>2000 requests/day</td>
+        <td>30 requests/minute<br>2,000 requests/day</td>
     </tr>"""
 
     table += """<tr>
             <td><a href="https://huggingface.co/docs/api-inference/en/index" target="_blank">HuggingFace Serverless Inference</a></td>
             <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
-            <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1000 requests/day (with an account)</a></td>
+            <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
         </tr>"""
     
     table += """<tr>
@@ -657,11 +657,11 @@ def main():
         <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
         <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
         <td>Llama 3.1 8B</td>
-        <td>30 requests/minute<br>60000 tokens/minute<br>900 requests/hour<br>1000000 tokens/hour<br>14400 requests/day<br>1000000 tokens/day</td>
+        <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr>
     <tr>
         <td>Llama 3.1 70B</td>
-        <td>30 requests/minute<br>60000 tokens/minute<br>900 requests/hour<br>1000000 tokens/hour<br>14400 requests/day<br>1000000 tokens/day</td>
+        <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr>"""
 
     for idx, model in enumerate(github_models):
@@ -690,7 +690,7 @@ def main():
             table += '<a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a>'
             table += '</td>'
             table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
-            table += '<a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10000 tokens/day</a>'
+            table += '<a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 tokens/day</a>'
             table += '</td>'
         table += f"<td>{model['name']}</td>"
         table += "<td></td>"
@@ -705,7 +705,7 @@ def main():
 
     table += """<tr>
             <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
-            <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1000 requests/month</a></td>
+            <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1,000 requests/month</a></td>
             <td>Command-R</td>
             <td rowspan="2">Shared Limit</td>
         </tr>
