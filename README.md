@@ -174,7 +174,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-3-small instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3-small instruct (8k)</td><td></td></tr>
 <tr><td>Phi-3.5-mini instruct (128k)</td><td></td></tr>
-<tr><td rowspan="9"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="9">Token expires every 2 weeks.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td rowspan="9"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="9">Token expires every week.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 70B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>12 requests/minute</td></tr>

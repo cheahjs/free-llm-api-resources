@@ -678,7 +678,7 @@ def main():
             table += '<td rowspan="' + str(len(ovh_models)) + '">'
             table += '<a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a>'
             table += '</td>'
-            table += '<td rowspan="' + str(len(ovh_models)) + '">Token expires every 2 weeks.</td>'
+            table += '<td rowspan="' + str(len(ovh_models)) + '">Token expires every week.</td>'
         table += f"<td>{model['name']}</td>"
         table += f"<td>{get_human_limits(model)}</td>"
         table += "</tr>\n"
