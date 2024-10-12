@@ -144,11 +144,11 @@ This lists various services that provide free access or credits towards API-base
         <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
         <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
         <td>Llama 3.1 8B</td>
-        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
+        <td>30 requests/minute<br>60000 tokens/minute<br>900 requests/hour<br>1000000 tokens/hour<br>14400 requests/day<br>1000000 tokens/day</td>
     </tr>
     <tr>
         <td>Llama 3.1 70B</td>
-        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
+        <td>30 requests/minute<br>60000 tokens/minute<br>900 requests/hour<br>1000000 tokens/hour<br>14400 requests/day<br>1000000 tokens/day</td>
     </tr><tr><td rowspan="25"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="25">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td><td>AI21-Jamba-Instruct</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
 <tr><td>Cohere Command R+</td><td></td></tr>

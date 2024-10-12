@@ -657,11 +657,11 @@ def main():
         <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
         <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
         <td>Llama 3.1 8B</td>
-        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
+        <td>30 requests/minute<br>60000 tokens/minute<br>900 requests/hour<br>1000000 tokens/hour<br>14400 requests/day<br>1000000 tokens/day</td>
     </tr>
     <tr>
         <td>Llama 3.1 70B</td>
-        <td>30 requests/minute, 60000 tokens/minute<br>900 requests/hour, 1000000 tokens/hour<br>14400 requests/day, 1000000 tokens/day</td>
+        <td>30 requests/minute<br>60000 tokens/minute<br>900 requests/hour<br>1000000 tokens/hour<br>14400 requests/day<br>1000000 tokens/day</td>
     </tr>"""
 
     for idx, model in enumerate(github_models):
