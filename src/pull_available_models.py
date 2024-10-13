@@ -553,10 +553,9 @@ def main():
             table += f'<td rowspan="{len(openrouter_models)}">'
             table += '<a href="https://openrouter.ai" target="_blank">OpenRouter</a>'
             table += '</td>'
-            table += f'<td rowspan="{len(openrouter_models)}"></td>'
+            table += f'<td rowspan="{len(openrouter_models)}">{get_human_limits(model)}</td>'
         
         table += f"<td>{model['name']}</td>"
-        table += f"<td>{get_human_limits(model)}</td>"
         table += "</tr>\n"
 
     table += f"""<tr>
