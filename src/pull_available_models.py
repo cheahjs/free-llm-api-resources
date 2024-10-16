@@ -118,6 +118,7 @@ MODEL_TO_NAME_MAPPING = {
     "meta-llama/llama-3.2-90b-vision-instruct": "Llama 3.2 90B Vision Instruct",
     "meta-llama/llama-3.2-3b-instruct": "Llama 3.2 3B Instruct",
     "llama-3.2-11b-vision-preview": "Llama 3.2 11B Vision",
+    "llama-3.2-90b-vision-preview": "Llama 3.2 90B Vision",
     "meta-llama/llama-3.2-90b-vision": "Llama 3.2 90B Vision",
     "meta-llama/llama-3.1-70b-instruct:free": "Llama 3.1 70B Instruct",
     "meta-llama/llama-3.2-1b-instruct:free": "Llama 3.2 1B Instruct",
