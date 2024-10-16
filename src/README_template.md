@@ -50,7 +50,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td><a href="https://build.nvidia.com/explore/discover">NVIDIA NIM</a></td>
-            <td>1,000 API calls</td>
+            <td>1,000 API calls for 1 month</td>
             <td></td>
             <td>Various open models</td>
         </tr>
