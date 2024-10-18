@@ -28,7 +28,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3 70B - Groq Tool Use Preview</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B</td><td>14,400 requests/day<br>30,000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B - Groq Tool Use Preview</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
-<tr><td>Llama 3.1 70B</td><td>14,400 requests/day<br>20,000 tokens/minute</td></tr>
+<tr><td>Llama 3.1 70B</td><td>14,400 requests/day<br>18,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>20,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 11B (Text Only)</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 11B Vision</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
@@ -40,25 +40,25 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
-<tr><td rowspan="19"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="19">20 requests/minute<br>200 requests/day</td><td>Gemma 2 9B Instruct</td></tr>
-<tr><td>Hermes 3 Llama 3.1 405B</td></tr>
-<tr><td>Liquid LFM 40B</td></tr>
-<tr><td>Llama 3 8B Instruct</td></tr>
-<tr><td>Llama 3.1 405B Instruct</td></tr>
-<tr><td>Llama 3.1 70B Instruct</td></tr>
-<tr><td>Llama 3.1 8B Instruct</td></tr>
-<tr><td>Llama 3.2 11B Vision Instruct</td></tr>
-<tr><td>Llama 3.2 1B Instruct</td></tr>
-<tr><td>Llama 3.2 3B Instruct</td></tr>
-<tr><td>Mistral 7B Instruct</td></tr>
-<tr><td>Mythomax L2 13B</td></tr>
-<tr><td>Mythomist 7B</td></tr>
-<tr><td>OpenChat 7B</td></tr>
-<tr><td>Phi-3 Medium 128k Instruct</td></tr>
-<tr><td>Phi-3 Mini 128k Instruct</td></tr>
-<tr><td>Qwen 2 7B Instruct</td></tr>
-<tr><td>Toppy M 7B</td></tr>
-<tr><td>Zephyr 7B Beta</td></tr>
+<tr><td rowspan="19"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="19">20 requests/minute<br>200 requests/day</td><td>Gemma 2 9B Instruct</td><td></td></tr>
+<tr><td>Hermes 3 Llama 3.1 405B</td><td></td></tr>
+<tr><td>Liquid LFM 40B</td><td></td></tr>
+<tr><td>Llama 3 8B Instruct</td><td></td></tr>
+<tr><td>Llama 3.1 405B Instruct</td><td></td></tr>
+<tr><td>Llama 3.1 70B Instruct</td><td></td></tr>
+<tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
+<tr><td>Mistral 7B Instruct</td><td></td></tr>
+<tr><td>Mythomax L2 13B</td><td></td></tr>
+<tr><td>Mythomist 7B</td><td></td></tr>
+<tr><td>OpenChat 7B</td><td></td></tr>
+<tr><td>Phi-3 Medium 128k Instruct</td><td></td></tr>
+<tr><td>Phi-3 Mini 128k Instruct</td><td></td></tr>
+<tr><td>Qwen 2 7B Instruct</td><td></td></tr>
+<tr><td>Toppy M 7B</td><td></td></tr>
+<tr><td>Zephyr 7B Beta</td><td></td></tr>
 <tr>
             <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -238,12 +238,8 @@ This lists various services that provide free access or credits towards API-base
         <tr>
             <td>Command-R+</td>
         </tr><tr>
-        <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td rowspan="6">Very stringent payment verification for Google Cloud.</td>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 405B Instruct</a></td>
-        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
+        <td rowspan="5"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td rowspan="5">Very stringent payment verification for Google Cloud.</td>
         <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
     </tr>
