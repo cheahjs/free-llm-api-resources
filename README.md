@@ -28,7 +28,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3 70B - Groq Tool Use Preview</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B</td><td>14,400 requests/day<br>30,000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B - Groq Tool Use Preview</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
-<tr><td>Llama 3.1 70B</td><td>14,400 requests/day<br>18,000 tokens/minute</td></tr>
+<tr><td>Llama 3.1 70B</td><td>14,400 requests/day<br>12,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>20,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 11B (Text Only)</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 11B Vision</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
