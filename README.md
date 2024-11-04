@@ -332,6 +332,12 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Any supported model - pay by compute time</td>
         </tr>
+        <tr>
+            <td><a href="https://console.x.ai">xAI</a></td>
+            <td>$25/month until end of 2024</td>
+            <td></td>
+            <td>Grok</td>
+        </tr>
         <tr><td rowspan="13"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="13">$10</td><td rowspan="13"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
