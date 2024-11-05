@@ -128,6 +128,20 @@ MODEL_TO_NAME_MAPPING = {
     "mathstral-7b-v0.1": "Mathstral 7B v0.1",
     "llama-3.1-70b-instruct": "Llama 3.1 70B Instruct",
     "gryphe/mythomax-l2-13b:free": "Mythomax L2 13B",
+    "meta-llama/llama-3.2-90b-vision-instruct:free": "Llama 3.2 90B Vision Instruct",
+    "mamba-codestral-7b-v0-1": "Codestral Mamba 7B v0.1",
+    "hermes3-70b": "Hermes 3 70B",
+    "llama3.1-nemotron-70b-instruct": "Llama 3.1 Nemotron 70B Instruct",
+    "llama3.2-3b-instruct": "Llama 3.2 3B Instruct",
+    "llama3.1-8b-instruct": "Llama 3.1 8B Instruct",
+    "llama3.1-70b-instruct-fp8": "Llama 3.1 70B Instruct (FP8)",
+    "llama3.1-405b-instruct-fp8": "Llama 3.1 405B Instruct (FP8)",
+    "hermes3-405b": "Hermes 3 405B",
+    "deepseek-coder-v2-lite-instruct": "DeepSeek Coder v2 Lite Instruct",
+    "hermes3-8b": "Hermes 3 8B",
+    "dracarys2-72b-instruct": "Dracarys 2 72B Instruct",
+    "lfm-40b": "Liquid LFM 40B",
+   
 }
 
 
@@ -149,6 +163,11 @@ HYPERBOLIC_IGNORED_MODELS = {
     "StableDiffusion",
     "Monad",
     "TTS"
+}
+
+LAMBDA_IGNORED_MODELS = {
+    "lfm-40b-vllm",
+    "hermes3-405b-fp8-128k"
 }
 
 
@@ -496,6 +515,32 @@ def fetch_gemini_limits(logger):
     return models
     
 
+def fetch_lambda_models(logger):
+    logger.info("Fetching Lambda Labs models...")
+    r = requests.get(
+        "https://api.lambdalabs.com/v1/models",
+        headers={
+            "Authorization": f"Bearer {os.environ['LAMBDA_API_KEY']}",
+        },
+    )
+    r.raise_for_status()
+    models = r.json()["data"]
+    logger.info(f"Fetched {len(models)} models from Lambda Labs")
+    ret_models = []
+    for model in models:
+        if model["id"] in LAMBDA_IGNORED_MODELS:
+            logger.debug(f"Ignoring model {model['id']}")
+            continue
+        ret_models.append(
+            {
+                "id": model["id"],
+                "name": get_model_name(model["id"]),
+            }
+        )
+    ret_models = sorted(ret_models, key=lambda x: x["name"])
+    return ret_models
+
+
 def get_human_limits(model):
     if "limits" not in model:
         return ""
@@ -512,6 +557,7 @@ def main():
     cloudflare_logger = create_logger("Cloudflare")
     github_logger = create_logger("GitHub")
     hyperbolic_logger = create_logger("Hyperbolic")
+    lambda_logger = create_logger("Lambda Labs")
 
     gemini_models = fetch_gemini_limits(google_ai_studio_logger)
     openrouter_models = fetch_openrouter_models(openrouter_logger)
@@ -519,6 +565,7 @@ def main():
     ovh_models = fetch_ovh_models(ovh_logger)
     cloudflare_models = fetch_cloudflare_models(cloudflare_logger)
     github_models = fetch_github_models(github_logger)
+    lambda_models = fetch_lambda_models(lambda_logger)
     groq_models = fetch_groq_models(groq_logger)
 
 
@@ -598,17 +645,18 @@ def main():
             <td>embedding-001</td>
         </tr>"""
 
-    table += """<tr>
-            <td rowspan="2"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td>
-            <td><a href="https://lambdalabs.com/blog/unveiling-hermes-3-the-first-fine-tuned-llama-3.1-405b-model-is-on-lambdas-cloud" target="_blank">Free for a limited time</a></td>
-            <td>Nous Hermes 3 Llama 3.1 405B (FP8)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Liquid LFM 40B</td>
-            <td></td>
-        </tr>"""
+    for idx, model in enumerate(lambda_models):
+        table += "<tr>"
+        if idx == 0:
+            table += f'<td rowspan="{len(lambda_models)}">'
+            table += '<a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a>'
+            table += '</td>'
+            table += f'<td rowspan="{len(lambda_models)}">'
+            table += 'Requires credit card verification.'
+            table += '</td>'
+        table += f"<td>{model['name']}</td>"
+        table += "<td></td>"
+        table += "</tr>\n"
 
     table += """<tr>
         <td><a href="https://console.mistral.ai/" target="_blank">Mistral (La Plateforme)</a></td>
@@ -632,14 +680,22 @@ def main():
         </tr>"""
     
     table += """<tr>
-        <td rowspan="5"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="5"></td>
+        <td rowspan="7"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
+        <td rowspan="7"></td>
         <td>Llama 3.1 405B</td>
         <td>10 requests/minute</td>
     </tr>
     <tr>
+        <td>Llama 3.2 90B</td>
+        <td>1 request/minute</td>
+    </tr>
+    <tr>
         <td>Llama 3.1 70B</td>
         <td>20 requests/minute</td>
+    </tr>
+    <tr>
+        <td>Llama 3.2 11B</td>
+        <td>10 requests/minute</td>
     </tr>
     <tr>
         <td>Llama 3.1 8B</td>

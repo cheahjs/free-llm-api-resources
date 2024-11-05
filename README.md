@@ -50,6 +50,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 90B Vision Instruct</td><td></td></tr>
 <tr><td>Mistral 7B Instruct</td><td></td></tr>
 <tr><td>Mythomax L2 13B</td><td></td></tr>
 <tr><td>Mythomist 7B</td><td></td></tr>
@@ -59,7 +60,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen 2 7B Instruct</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
-<tr><td>meta-llama/llama-3.2-90b-vision-instruct:free</td><td></td></tr>
 <tr>
             <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -96,17 +96,18 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>embedding-001</td>
-        </tr><tr>
-            <td rowspan="2"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td>
-            <td><a href="https://lambdalabs.com/blog/unveiling-hermes-3-the-first-fine-tuned-llama-3.1-405b-model-is-on-lambdas-cloud" target="_blank">Free for a limited time</a></td>
-            <td>Nous Hermes 3 Llama 3.1 405B (FP8)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>Liquid LFM 40B</td>
-            <td></td>
-        </tr><tr>
+        </tr><tr><td rowspan="11"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td><td rowspan="11">Requires credit card verification.</td><td>DeepSeek Coder v2 Lite Instruct</td><td></td></tr>
+<tr><td>Dracarys 2 72B Instruct</td><td></td></tr>
+<tr><td>Hermes 3 405B</td><td></td></tr>
+<tr><td>Hermes 3 70B</td><td></td></tr>
+<tr><td>Hermes 3 8B</td><td></td></tr>
+<tr><td>Liquid LFM 40B</td><td></td></tr>
+<tr><td>Llama 3.1 405B Instruct (FP8)</td><td></td></tr>
+<tr><td>Llama 3.1 70B Instruct (FP8)</td><td></td></tr>
+<tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
+<tr><td>Llama 3.1 Nemotron 70B Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
+<tr>
         <td><a href="https://console.mistral.ai/" target="_blank">Mistral (La Plateforme)</a></td>
         <td>Free tier (Experiment plan) requires opting into data training, requires phone number verification.</td>
         <td>Open and Proprietary Mistral models</td>
@@ -122,14 +123,22 @@ This lists various services that provide free access or credits towards API-base
             <td>Various open models</td>
             <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
         </tr><tr>
-        <td rowspan="5"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="5"></td>
+        <td rowspan="7"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
+        <td rowspan="7"></td>
         <td>Llama 3.1 405B</td>
         <td>10 requests/minute</td>
     </tr>
     <tr>
+        <td>Llama 3.2 90B</td>
+        <td>1 request/minute</td>
+    </tr>
+    <tr>
         <td>Llama 3.1 70B</td>
         <td>20 requests/minute</td>
+    </tr>
+    <tr>
+        <td>Llama 3.2 11B</td>
+        <td>10 requests/minute</td>
     </tr>
     <tr>
         <td>Llama 3.1 8B</td>
@@ -177,6 +186,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-3-small instruct (8k)</td><td></td></tr>
 <tr><td>Phi-3.5-mini instruct (128k)</td><td></td></tr>
 <tr><td rowspan="10"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="10">Token expires every week.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td>Codestral Mamba 7B v0.1</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 70B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>12 requests/minute</td></tr>
@@ -185,7 +195,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral 7B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x22B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
-<tr><td>mamba-codestral-7b-v0-1</td><td>12 requests/minute</td></tr>
 <tr><td rowspan="40"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="40"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 tokens/day</a></td><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Math 7B Instruct</td><td></td></tr>
