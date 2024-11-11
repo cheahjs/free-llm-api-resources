@@ -141,7 +141,7 @@ MODEL_TO_NAME_MAPPING = {
     "hermes3-8b": "Hermes 3 8B",
     "dracarys2-72b-instruct": "Dracarys 2 72B Instruct",
     "lfm-40b": "Liquid LFM 40B",
-   
+    "qwen/qwen2.5-coder-32b-instruct": "Qwen2.5 Coder 32B Instruct",
 }
 
 

@@ -347,7 +347,7 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Grok</td>
         </tr>
-        <tr><td rowspan="13"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="13">$10</td><td rowspan="13"></td><td>DeepSeek V2.5</td></tr>
+        <tr><td rowspan="14"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="14">$10</td><td rowspan="14"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
@@ -360,5 +360,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2-VL 72B Instruct</td></tr>
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
+<tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
 </tbody>
 </table>
