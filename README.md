@@ -59,8 +59,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-3 Mini 128k Instruct</td><td></td></tr>
 <tr><td>Qwen 2 7B Instruct</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
+<tr><td>UnslopNemo 12B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
-<tr><td>thedrummer/unslopnemo-12b:free</td><td></td></tr>
 <tr>
             <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
