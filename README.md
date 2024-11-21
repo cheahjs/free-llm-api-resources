@@ -98,9 +98,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>embedding-001</td>
-        </tr><tr><td rowspan="11"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td><td rowspan="11">Requires credit card verification.</td><td>DeepSeek Coder v2 Lite Instruct</td><td></td></tr>
-<tr><td>Dracarys 2 72B Instruct</td><td></td></tr>
-<tr><td>Hermes 3 405B</td><td></td></tr>
+        </tr><tr><td rowspan="9"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td><td rowspan="9">Requires credit card verification.</td><td>Hermes 3 405B</td><td></td></tr>
 <tr><td>Hermes 3 70B</td><td></td></tr>
 <tr><td>Hermes 3 8B</td><td></td></tr>
 <tr><td>Liquid LFM 40B</td><td></td></tr>
