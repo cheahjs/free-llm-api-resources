@@ -33,11 +33,11 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3 8B - Groq Tool Use Preview</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>20,000 tokens/minute</td></tr>
-<tr><td>Llama 3.2 11B (Text Only)</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
+<tr><td>Llama 3.2 11B (Text Only)(deprecated)</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 11B Vision</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 1B</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 3B</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
-<tr><td>Llama 3.2 90B (Text Only)</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
+<tr><td>Llama 3.2 90B (Text Only)(deprecated)</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 90B Vision</td><td>3,500 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
