@@ -143,6 +143,11 @@ MODEL_TO_NAME_MAPPING = {
     "lfm-40b": "Liquid LFM 40B",
     "qwen/qwen2.5-coder-32b-instruct": "Qwen2.5 Coder 32B Instruct",
     "thedrummer/unslopnemo-12b:free": "UnslopNemo 12B",
+    "mistral-nemo-instruct-2407": "Mistral Nemo 2407",
+    "google/gemini-exp-1121:free": "Gemini Experimental 1121",
+    "meta-llama/llama-3.1-70b-instruct-fp8": "Llama 3.1 70B Instruct (FP8)",
+    "google/learnlm-1.5-pro-experimental:free": "LearnLM 1.5 Pro Experimental",
+    "google/gemini-exp-1114:free": "Gemini Experimental 1114",
 }
 
 
@@ -170,6 +175,12 @@ LAMBDA_IGNORED_MODELS = {
     "lfm-40b-vllm",
     "hermes3-405b-fp8-128k"
 }
+
+OPENROUTER_IGNORED_MODELS = {
+    'google/gemini-exp-1121:free',
+    'google/learnlm-1.5-pro-experimental:free',
+    'google/gemini-exp-1114:free'
+}  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 
 def get_model_name(id):
@@ -277,6 +288,9 @@ def fetch_openrouter_models(logger):
         if pricing != 0:
             continue
         if ":free" not in model["id"]:
+            continue
+        if model["id"] in OPENROUTER_IGNORED_MODELS:
+            logger.debug(f"Ignoring model {model['id']}")
             continue
         ret_models.append(
             {
