@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="20"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="20"></td><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
+<tr><td rowspan="18"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="18"></td><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Gemma 7B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>LLaVA 1.5 7B</td><td>14,400 requests/day<br>30,000 tokens/minute</td></tr>
@@ -33,11 +33,9 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3 8B - Groq Tool Use Preview</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>20,000 tokens/minute</td></tr>
-<tr><td>Llama 3.2 11B (Text Only)</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 11B Vision</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 1B</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 3B</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
-<tr><td>Llama 3.2 90B (Text Only)</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 90B Vision</td><td>3,500 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
@@ -98,7 +96,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>embedding-001</td>
-        </tr><tr><td rowspan="9"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td><td rowspan="9">Requires credit card verification.</td><td>Hermes 3 405B</td><td></td></tr>
+        </tr><tr><td rowspan="10"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td><td rowspan="10">Requires credit card verification.</td><td>Hermes 3 405B</td><td></td></tr>
 <tr><td>Hermes 3 70B</td><td></td></tr>
 <tr><td>Hermes 3 8B</td><td></td></tr>
 <tr><td>Liquid LFM 40B</td><td></td></tr>
@@ -107,6 +105,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 Nemotron 70B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
+<tr><td>qwen25-coder-32b-instruct</td><td></td></tr>
 <tr>
         <td><a href="https://console.mistral.ai/" target="_blank">Mistral (La Plateforme)</a></td>
         <td>Free tier (Experiment plan) requires opting into data training, requires phone number verification.</td>
