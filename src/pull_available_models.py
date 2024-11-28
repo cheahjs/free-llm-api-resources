@@ -148,6 +148,8 @@ MODEL_TO_NAME_MAPPING = {
     "meta-llama/llama-3.1-70b-instruct-fp8": "Llama 3.1 70B Instruct (FP8)",
     "google/learnlm-1.5-pro-experimental:free": "LearnLM 1.5 Pro Experimental",
     "google/gemini-exp-1114:free": "Gemini Experimental 1114",
+    "qwen25-coder-32b-instruct": "Qwen2.5 Coder 32B Instruct",
+    "qwen/qwq-32b-preview": "Qwen QwQ 32B Preview"
 }
 
 
@@ -748,9 +750,9 @@ def main():
         table += "<tr>"
         if idx == 0:
             table += '<td rowspan="' + str(len(ovh_models)) + '">'
-            table += '<a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a>'
+            table += '<a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a>'
             table += '</td>'
-            table += '<td rowspan="' + str(len(ovh_models)) + '">Token expires every week.</td>'
+            table += '<td rowspan="' + str(len(ovh_models)) + '"></td>'
         table += f"<td>{model['name']}</td>"
         table += f"<td>{get_human_limits(model)}</td>"
         table += "</tr>\n"

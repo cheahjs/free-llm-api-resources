@@ -105,7 +105,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 Nemotron 70B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
-<tr><td>qwen25-coder-32b-instruct</td><td></td></tr>
+<tr><td>Qwen2.5 Coder 32B Instruct</td><td></td></tr>
 <tr>
         <td><a href="https://console.mistral.ai/" target="_blank">Mistral (La Plateforme)</a></td>
         <td>Free tier (Experiment plan) requires opting into data training, requires phone number verification.</td>
@@ -184,7 +184,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-3-small instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3-small instruct (8k)</td><td></td></tr>
 <tr><td>Phi-3.5-mini instruct (128k)</td><td></td></tr>
-<tr><td rowspan="11"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Alpha)</a></td><td rowspan="11">Token expires every week.</td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td rowspan="11"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="11"></td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Codestral Mamba 7B v0.1</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 70B Instruct</td><td>12 requests/minute</td></tr>
@@ -354,10 +354,10 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 405B Base (FP8)</td></tr>
 <tr><td>Llama 3.1 405B Instruct</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td></tr>
-<tr><td>Llama 3.1 70B Instruct (FP8)</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
 <tr><td>Llama 3.2 3B Instruct</td></tr>
 <tr><td>Pixtral 12B (2409)</td></tr>
+<tr><td>Qwen QwQ 32B Preview</td></tr>
 <tr><td>Qwen2-VL 72B Instruct</td></tr>
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
