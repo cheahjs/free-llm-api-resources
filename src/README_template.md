@@ -26,7 +26,7 @@ This lists various services that provide free access or credits towards API-base
     <tbody>
         <tr>
             <td><a href="https://together.ai">Together</a></td>
-            <td>$5</td>
+            <td>$1</td>
             <td></td>
             <td>Various open models</td>
         </tr>
