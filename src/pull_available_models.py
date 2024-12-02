@@ -662,19 +662,6 @@ def main():
             <td>embedding-001</td>
         </tr>"""
 
-    for idx, model in enumerate(lambda_models):
-        table += "<tr>"
-        if idx == 0:
-            table += f'<td rowspan="{len(lambda_models)}">'
-            table += '<a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a>'
-            table += '</td>'
-            table += f'<td rowspan="{len(lambda_models)}">'
-            table += 'Requires credit card verification.'
-            table += '</td>'
-        table += f"<td>{model['name']}</td>"
-        table += "<td></td>"
-        table += "</tr>\n"
-
     table += """<tr>
         <td><a href="https://console.mistral.ai/" target="_blank">Mistral (La Plateforme)</a></td>
         <td>Free tier (Experiment plan) requires opting into data training, requires phone number verification.</td>

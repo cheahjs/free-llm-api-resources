@@ -96,17 +96,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>embedding-001</td>
-        </tr><tr><td rowspan="10"><a href="https://docs.lambdalabs.com/on-demand-cloud/using-the-lambda-chat-completions-api" target="_blank">Lambda Labs (Free Preview)</a></td><td rowspan="10">Requires credit card verification.</td><td>Hermes 3 405B</td><td></td></tr>
-<tr><td>Hermes 3 70B</td><td></td></tr>
-<tr><td>Hermes 3 8B</td><td></td></tr>
-<tr><td>Liquid LFM 40B</td><td></td></tr>
-<tr><td>Llama 3.1 405B Instruct (FP8)</td><td></td></tr>
-<tr><td>Llama 3.1 70B Instruct (FP8)</td><td></td></tr>
-<tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
-<tr><td>Llama 3.1 Nemotron 70B Instruct</td><td></td></tr>
-<tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
-<tr><td>Qwen2.5 Coder 32B Instruct</td><td></td></tr>
-<tr>
+        </tr><tr>
         <td><a href="https://console.mistral.ai/" target="_blank">Mistral (La Plateforme)</a></td>
         <td>Free tier (Experiment plan) requires opting into data training, requires phone number verification.</td>
         <td>Open and Proprietary Mistral models</td>
