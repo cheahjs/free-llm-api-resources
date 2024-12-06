@@ -625,8 +625,8 @@ def main():
         table += "</tr>\n"
 
     table += f"""<tr>
-            <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="10"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="10">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 1.5 Flash</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash"]})}</td>
         </tr>
@@ -649,6 +649,10 @@ def main():
         <tr>
             <td>Gemini 1.5 Pro (Experimental)</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro-exp"]})}</td>
+        </tr>
+        <tr>
+            <td>LearnLM 1.5 Pro (Experimental)</td>
+            <td>{get_human_limits({"limits": gemini_models["learnlm-1.5-pro-experimental"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.0 Pro</td>
