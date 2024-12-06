@@ -15,7 +15,7 @@ MODEL_TO_NAME_MAPPING = {
     "@cf/deepseek-ai/deepseek-math-7b-instruct": "Deepseek Math 7B Instruct",
     "@cf/defog/sqlcoder-7b-2": "SQLCoder 7B 2",
     "@cf/fblgit/una-cybertron-7b-v2-bf16": "Una Cybertron 7B v2 (BF16)",
-    "@cf/google/gemma-2b-it-lora": "Gemma 2B Instruct (LoRA)",
+    "@cf/google/gemma-2b-it-lora": "Gemma 2B Instruct (LoRA)", 
     "@cf/google/gemma-7b-it-lora": "Gemma 7B Instruct (LoRA)",
     "@cf/meta-llama/llama-2-7b-chat-hf-lora": "Llama 2 7B Chat (LoRA)",
     "@cf/meta/llama-2-7b-chat-fp16": "Llama 2 7B Chat (FP16)",
@@ -149,7 +149,12 @@ MODEL_TO_NAME_MAPPING = {
     "google/learnlm-1.5-pro-experimental:free": "LearnLM 1.5 Pro Experimental",
     "google/gemini-exp-1114:free": "Gemini Experimental 1114",
     "qwen25-coder-32b-instruct": "Qwen2.5 Coder 32B Instruct",
-    "qwen/qwq-32b-preview": "Qwen QwQ 32B Preview"
+    "qwen/qwq-32b-preview": "Qwen QwQ 32B Preview",
+    "meta-llama/llama-3.3-70b-instruct": "Llama 3.3 70B Instruct",
+    "llama-3.3-70b-versatile": "Llama 3.3 70B",
+    "google/gemini-exp-1206:free": "Gemini Experimental 1206", 
+    "llama3.1-nemotron-70b-instruct-fp8": "Llama 3.1 Nemotron 70B Instruct (FP8)",
+    "llama-3.3-70b-specdec": "Llama 3.3 70B (Speculative Decoding)"
 }
 
 
@@ -182,6 +187,7 @@ OPENROUTER_IGNORED_MODELS = {
     'google/gemini-exp-1121:free',
     'google/learnlm-1.5-pro-experimental:free',
     'google/gemini-exp-1114:free'
+    'google/gemini-exp-1206:free'
 }  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 

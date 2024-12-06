@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="17"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="17"></td><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
+<tr><td rowspan="19"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="19"></td><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Gemma 7B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
@@ -36,11 +36,15 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.2 1B</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 3B</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 90B Vision</td><td>3,500 requests/day<br>7,000 tokens/minute</td></tr>
+<tr><td>Llama 3.3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>Llama 3.3 70B (Speculative Decoding)</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
-<tr><td rowspan="17"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="17">20 requests/minute<br>200 requests/day</td><td>Gemma 2 9B Instruct</td><td></td></tr>
+<tr><td rowspan="19"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="19">20 requests/minute<br>200 requests/day</td><td>Gemini Experimental 1114</td><td></td></tr>
+<tr><td>Gemini Experimental 1206</td><td></td></tr>
+<tr><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Llama 3 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 405B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td></td></tr>
@@ -58,8 +62,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
 <tr>
-            <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="10"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="10">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 1.5 Flash</td>
             <td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td>
         </tr>
@@ -81,7 +85,11 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Gemini 1.5 Pro (Experimental)</td>
-            <td>1,000,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
+            <td>1,000,000 tokens/minute<br>100 requests/day<br>5 requests/minute</td>
+        </tr>
+        <tr>
+            <td>LearnLM 1.5 Pro (Experimental)</td>
+            <td>1,500 requests/day<br>15 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.0 Pro</td>
@@ -257,9 +265,9 @@ This lists various services that provide free access or credits towards API-base
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
     </tr><tr>
         <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
-        <td>Email for API access</td>
-        <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
         <td></td>
+        <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
+        <td><a href="https://glhf.chat/pages/faq#whats-the-rate-limit">480 requests/8 hours</a></td>
     </tr></tbody></table>
 
 ## Providers with trial credits
@@ -334,7 +342,7 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Grok</td>
         </tr>
-        <tr><td rowspan="15"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="15">$10</td><td rowspan="15"></td><td>DeepSeek V2.5</td></tr>
+        <tr><td rowspan="16"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="16">$10</td><td rowspan="16"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
@@ -343,6 +351,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
 <tr><td>Llama 3.2 3B Instruct</td></tr>
+<tr><td>Llama 3.3 70B Instruct</td></tr>
 <tr><td>Pixtral 12B (2409)</td></tr>
 <tr><td>Qwen QwQ 32B Preview</td></tr>
 <tr><td>Qwen2-VL 72B Instruct</td></tr>
