@@ -117,8 +117,8 @@ This lists various services that provide free access or credits towards API-base
             <td>Various open models</td>
             <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
         </tr><tr>
-        <td rowspan="7"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="7"></td>
+        <td rowspan="10"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
+        <td rowspan="1"></td>
         <td>Llama 3.1 405B</td>
         <td>10 requests/minute</td>
     </tr>
@@ -145,6 +145,18 @@ This lists various services that provide free access or credits towards API-base
     <tr>
         <td>Llama 3.2 1B</td>
         <td>30 requests/minute</td>
+    </tr>
+    <tr>
+        <td>Llama Guard 3 8B</td>
+        <td>30 requests/minute</td>
+    </tr>
+    <tr>
+        <td>Qwen 2.5 72B</td>
+        <td>20 requests/minute</td>
+    </tr>
+    <tr>
+        <td>Qwen 2.5 Coder 32B</td>
+        <td>20 requests/minute</td>
     </tr><tr>
         <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
         <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
@@ -190,8 +202,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral Nemo 2407</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x22B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
-<tr><td rowspan="41"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="41"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 tokens/day</a></td><td>@cf/meta/llama-3.3-70b-instruct-fp8-fast</td><td></td></tr>
-<tr><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
+<tr><td rowspan="41"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="41"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 tokens/day</a></td><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Math 7B Instruct</td><td></td></tr>
 <tr><td>Discolm German 7B v1 (AWQ)</td><td></td></tr>
@@ -213,6 +224,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
+<tr><td>Llama 3.3 70B Instruct (FP8)</td><td></td></tr>
 <tr><td>LlamaGuard 7B (AWQ)</td><td></td></tr>
 <tr><td>Mistral 7B Instruct v0.1</td><td></td></tr>
 <tr><td>Mistral 7B Instruct v0.1 (AWQ)</td><td></td></tr>

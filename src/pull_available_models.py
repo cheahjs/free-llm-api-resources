@@ -695,8 +695,8 @@ def main():
         </tr>"""
     
     table += """<tr>
-        <td rowspan="7"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="7"></td>
+        <td rowspan="10"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
+        <td rowspan="1"></td>
         <td>Llama 3.1 405B</td>
         <td>10 requests/minute</td>
     </tr>
@@ -723,6 +723,18 @@ def main():
     <tr>
         <td>Llama 3.2 1B</td>
         <td>30 requests/minute</td>
+    </tr>
+    <tr>
+        <td>Llama Guard 3 8B</td>
+        <td>30 requests/minute</td>
+    </tr>
+    <tr>
+        <td>Qwen 2.5 72B</td>
+        <td>20 requests/minute</td>
+    </tr>
+    <tr>
+        <td>Qwen 2.5 Coder 32B</td>
+        <td>20 requests/minute</td>
     </tr>"""
 
     table += """<tr>
