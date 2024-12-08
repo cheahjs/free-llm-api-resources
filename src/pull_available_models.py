@@ -154,7 +154,8 @@ MODEL_TO_NAME_MAPPING = {
     "llama-3.3-70b-versatile": "Llama 3.3 70B",
     "google/gemini-exp-1206:free": "Gemini Experimental 1206", 
     "llama3.1-nemotron-70b-instruct-fp8": "Llama 3.1 Nemotron 70B Instruct (FP8)",
-    "llama-3.3-70b-specdec": "Llama 3.3 70B (Speculative Decoding)"
+    "llama-3.3-70b-specdec": "Llama 3.3 70B (Speculative Decoding)",
+    "@cf/meta/llama-3.3-70b-instruct-fp8-fast": "Llama 3.3 70B Instruct (FP8)",
 }
 
 
