@@ -52,7 +52,7 @@ MODEL_TO_NAME_MAPPING = {
     "@hf/thebloke/zephyr-7b-beta-awq": "Zephyr 7B Beta (AWQ)",
     "codellama-13b-instruct-hf": "CodeLlama 13B Instruct",
     "distil-whisper-large-v3-en": "Distil Whisper Large v3",
-    "gemma-7b-it": "Gemma 7B Instruct",
+    "gemma-7b-it": "Gemma 7B Instruct (Deprecated)",
     "gemma2-9b-it": "Gemma 2 9B Instruct",
     "google/gemma-2-9b-it:free": "Gemma 2 9B Instruct",
     "google/gemma-7b-it:free": "Gemma 7B Instruct",
@@ -156,6 +156,7 @@ MODEL_TO_NAME_MAPPING = {
     "llama3.1-nemotron-70b-instruct-fp8": "Llama 3.1 Nemotron 70B Instruct (FP8)",
     "llama-3.3-70b-specdec": "Llama 3.3 70B (Speculative Decoding)",
     "@cf/meta/llama-3.3-70b-instruct-fp8-fast": "Llama 3.3 70B Instruct (FP8)",
+    "google/gemini-2.0-flash-exp:free": "Gemini 2.0 Flash Experimental",
 }
 
 
@@ -189,6 +190,7 @@ OPENROUTER_IGNORED_MODELS = {
     'google/learnlm-1.5-pro-experimental:free',
     'google/gemini-exp-1114:free'
     'google/gemini-exp-1206:free'
+    'google/gemini-2.0-flash-exp:free'
 }  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 
@@ -632,8 +634,12 @@ def main():
         table += "</tr>\n"
 
     table += f"""<tr>
-            <td rowspan="10"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="10">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td>Gemini 2.0 Flash</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash-exp"]})}</td>
+        </tr>
+        <tr>
             <td>Gemini 1.5 Flash</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash"]})}</td>
         </tr>
@@ -812,8 +818,11 @@ def main():
         <td>Llama 3.2 API Service free during preview.<br>30 requests/minute</td>
     </tr>
     <tr>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Experimental</a></td>
+        <td rowspan="3">Experimental Gemini model.<br>10 requests/minute</td>
+    </tr>
+    <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
-        <td rowspan="2">Experimental Gemini model.<br>10 requests/minute</td>
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
