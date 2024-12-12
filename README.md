@@ -322,6 +322,12 @@ This lists various services that provide free access or credits towards API-base
             <td>Routes to other providers, various open models and proprietary models (OpenAI, Gemini, Anthropic, Mistral, Perplexity, etc)</td>
         </tr>
         <tr>
+            <td><a href="https://dataoorts.com/">Dataoorts</a></td>
+            <td>$10.0</td>
+            <td></td>
+            <td>Various open Source models + your custom models</td>
+        </tr>
+        <tr>
             <td><a href="https://deepinfra.com/">DeepInfra</a></td>
             <td>$1.80</td>
             <td></td>
