@@ -123,7 +123,7 @@ This lists various services that provide free access or credits towards API-base
             <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
         </tr><tr>
         <td rowspan="10"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="1"></td>
+        <td rowspan="10"></td>
         <td>Llama 3.1 405B</td>
         <td>10 requests/minute</td>
     </tr>
@@ -262,8 +262,8 @@ This lists various services that provide free access or credits towards API-base
         <tr>
             <td>Command-R+</td>
         </tr><tr>
-        <td rowspan="5"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td rowspan="5">Very stringent payment verification for Google Cloud.</td>
+        <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td rowspan="6">Very stringent payment verification for Google Cloud.</td>
         <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
     </tr>
