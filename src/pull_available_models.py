@@ -15,7 +15,7 @@ MODEL_TO_NAME_MAPPING = {
     "@cf/deepseek-ai/deepseek-math-7b-instruct": "Deepseek Math 7B Instruct",
     "@cf/defog/sqlcoder-7b-2": "SQLCoder 7B 2",
     "@cf/fblgit/una-cybertron-7b-v2-bf16": "Una Cybertron 7B v2 (BF16)",
-    "@cf/google/gemma-2b-it-lora": "Gemma 2B Instruct (LoRA)",
+    "@cf/google/gemma-2b-it-lora": "Gemma 2B Instruct (LoRA)", 
     "@cf/google/gemma-7b-it-lora": "Gemma 7B Instruct (LoRA)",
     "@cf/meta-llama/llama-2-7b-chat-hf-lora": "Llama 2 7B Chat (LoRA)",
     "@cf/meta/llama-2-7b-chat-fp16": "Llama 2 7B Chat (FP16)",
@@ -52,7 +52,7 @@ MODEL_TO_NAME_MAPPING = {
     "@hf/thebloke/zephyr-7b-beta-awq": "Zephyr 7B Beta (AWQ)",
     "codellama-13b-instruct-hf": "CodeLlama 13B Instruct",
     "distil-whisper-large-v3-en": "Distil Whisper Large v3",
-    "gemma-7b-it": "Gemma 7B Instruct",
+    "gemma-7b-it": "Gemma 7B Instruct (Deprecated)",
     "gemma2-9b-it": "Gemma 2 9B Instruct",
     "google/gemma-2-9b-it:free": "Gemma 2 9B Instruct",
     "google/gemma-7b-it:free": "Gemma 7B Instruct",
@@ -149,7 +149,14 @@ MODEL_TO_NAME_MAPPING = {
     "google/learnlm-1.5-pro-experimental:free": "LearnLM 1.5 Pro Experimental",
     "google/gemini-exp-1114:free": "Gemini Experimental 1114",
     "qwen25-coder-32b-instruct": "Qwen2.5 Coder 32B Instruct",
-    "qwen/qwq-32b-preview": "Qwen QwQ 32B Preview"
+    "qwen/qwq-32b-preview": "Qwen QwQ 32B Preview",
+    "meta-llama/llama-3.3-70b-instruct": "Llama 3.3 70B Instruct",
+    "llama-3.3-70b-versatile": "Llama 3.3 70B",
+    "google/gemini-exp-1206:free": "Gemini Experimental 1206", 
+    "llama3.1-nemotron-70b-instruct-fp8": "Llama 3.1 Nemotron 70B Instruct (FP8)",
+    "llama-3.3-70b-specdec": "Llama 3.3 70B (Speculative Decoding)",
+    "@cf/meta/llama-3.3-70b-instruct-fp8-fast": "Llama 3.3 70B Instruct (FP8)",
+    "google/gemini-2.0-flash-exp:free": "Gemini 2.0 Flash Experimental",
 }
 
 
@@ -182,6 +189,8 @@ OPENROUTER_IGNORED_MODELS = {
     'google/gemini-exp-1121:free',
     'google/learnlm-1.5-pro-experimental:free',
     'google/gemini-exp-1114:free'
+    'google/gemini-exp-1206:free'
+    'google/gemini-2.0-flash-exp:free'
 }  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 
@@ -625,8 +634,12 @@ def main():
         table += "</tr>\n"
 
     table += f"""<tr>
-            <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td>Gemini 2.0 Flash</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash-exp"]})}</td>
+        </tr>
+        <tr>
             <td>Gemini 1.5 Flash</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash"]})}</td>
         </tr>
@@ -649,6 +662,10 @@ def main():
         <tr>
             <td>Gemini 1.5 Pro (Experimental)</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro-exp"]})}</td>
+        </tr>
+        <tr>
+            <td>LearnLM 1.5 Pro (Experimental)</td>
+            <td>{get_human_limits({"limits": gemini_models["learnlm-1.5-pro-experimental"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.0 Pro</td>
@@ -684,8 +701,8 @@ def main():
         </tr>"""
     
     table += """<tr>
-        <td rowspan="7"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="7"></td>
+        <td rowspan="10"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
+        <td rowspan="10"></td>
         <td>Llama 3.1 405B</td>
         <td>10 requests/minute</td>
     </tr>
@@ -712,6 +729,18 @@ def main():
     <tr>
         <td>Llama 3.2 1B</td>
         <td>30 requests/minute</td>
+    </tr>
+    <tr>
+        <td>Llama Guard 3 8B</td>
+        <td>30 requests/minute</td>
+    </tr>
+    <tr>
+        <td>Qwen 2.5 72B</td>
+        <td>20 requests/minute</td>
+    </tr>
+    <tr>
+        <td>Qwen 2.5 Coder 32B</td>
+        <td>20 requests/minute</td>
     </tr>"""
 
     table += """<tr>
@@ -775,8 +804,8 @@ def main():
         </tr>"""
     
     table += """<tr>
-        <td rowspan="5"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td rowspan="5">Very stringent payment verification for Google Cloud.</td>
+        <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td rowspan="6">Very stringent payment verification for Google Cloud.</td>
         <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
     </tr>
@@ -789,8 +818,11 @@ def main():
         <td>Llama 3.2 API Service free during preview.<br>30 requests/minute</td>
     </tr>
     <tr>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Experimental</a></td>
+        <td rowspan="3">Experimental Gemini model.<br>10 requests/minute</td>
+    </tr>
+    <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
-        <td rowspan="2">Experimental Gemini model.<br>10 requests/minute</td>
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
@@ -798,9 +830,9 @@ def main():
 
     table += """<tr>
         <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
-        <td>Email for API access</td>
-        <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
         <td></td>
+        <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
+        <td><a href="https://glhf.chat/pages/faq#whats-the-rate-limit">480 requests/8 hours</a></td>
     </tr>"""
 
     table += "</tbody></table>"
