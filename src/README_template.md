@@ -43,12 +43,6 @@ This lists various services that provide free access or credits towards API-base
             <td>Routes to other providers, various open models and proprietary models (OpenAI, Gemini, Anthropic, Mistral, Perplexity, etc)</td>
         </tr>
         <tr>
-            <td><a href="https://deepinfra.com/">DeepInfra</a></td>
-            <td>$1.80</td>
-            <td></td>
-            <td>Various open models</td>
-        </tr>
-        <tr>
             <td><a href="https://build.nvidia.com/explore/discover">NVIDIA NIM</a></td>
             <td>1,000 API calls for 1 month</td>
             <td></td>
