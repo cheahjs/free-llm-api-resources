@@ -49,24 +49,6 @@ This lists various services that provide free access or credits towards API-base
             <td>Various open models</td>
         </tr>
         <tr>
-            <td><a href="https://studio.ai21.com/">AI21</a></td>
-            <td>$10 for 3 months</td>
-            <td></td>
-            <td>Jamba/Jurrasic-2</td>
-        </tr>
-        <tr>
-            <td><a href="https://nlpcloud.com/home">NLP Cloud</a></td>
-            <td>$15</td>
-            <td>Phone number verification</td>
-            <td>Various open models</td>
-        </tr>
-        <tr>
-            <td><a href="https://console.upstage.ai/">Upstage</a></td>
-            <td>$10 for 3 months</td>
-            <td></td>
-            <td>Solar Pro/Mini</td>
-        </tr>
-        <tr>
             <td><a href="https://app.baseten.co/">Baseten</a></td>
             <td>$30</td>
             <td></td>
@@ -78,5 +60,27 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Grok</td>
         </tr>
-        {{TRIAL_MODEL_LIST}}</tbody>
+        <tr>
+            <td><a href="https://studio.nebius.ai/">Nebius</a></td>
+            <td>$1</td>
+            <td></td>
+            <td>Various open models</td>
+        </tr>{{TRIAL_MODEL_LIST}}<tr>
+            <td><a href="https://studio.ai21.com/">AI21</a></td>
+            <td>$10 for 3 months</td>
+            <td></td>
+            <td>Jamba/Jurrasic-2</td>
+        </tr>
+        <tr>
+            <td><a href="https://console.upstage.ai/">Upstage</a></td>
+            <td>$10 for 3 months</td>
+            <td></td>
+            <td>Solar Pro/Mini</td>
+        </tr>
+        <tr>
+            <td><a href="https://nlpcloud.com/home">NLP Cloud</a></td>
+            <td>$15</td>
+            <td>Phone number verification</td>
+            <td>Various open models</td>
+        </tr></tbody>
 </table>

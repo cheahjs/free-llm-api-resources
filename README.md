@@ -298,24 +298,6 @@ This lists various services that provide free access or credits towards API-base
             <td>Various open models</td>
         </tr>
         <tr>
-            <td><a href="https://studio.ai21.com/">AI21</a></td>
-            <td>$10 for 3 months</td>
-            <td></td>
-            <td>Jamba/Jurrasic-2</td>
-        </tr>
-        <tr>
-            <td><a href="https://nlpcloud.com/home">NLP Cloud</a></td>
-            <td>$15</td>
-            <td>Phone number verification</td>
-            <td>Various open models</td>
-        </tr>
-        <tr>
-            <td><a href="https://console.upstage.ai/">Upstage</a></td>
-            <td>$10 for 3 months</td>
-            <td></td>
-            <td>Solar Pro/Mini</td>
-        </tr>
-        <tr>
             <td><a href="https://app.baseten.co/">Baseten</a></td>
             <td>$30</td>
             <td></td>
@@ -327,7 +309,12 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Grok</td>
         </tr>
-        <tr><td rowspan="15"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="15">$10</td><td rowspan="15"></td><td>DeepSeek V2.5</td></tr>
+        <tr>
+            <td><a href="https://studio.nebius.ai/">Nebius</a></td>
+            <td>$1</td>
+            <td></td>
+            <td>Various open models</td>
+        </tr><tr><td rowspan="15"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="15">$10</td><td rowspan="15"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
@@ -342,5 +329,22 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
-</tbody>
+<tr>
+            <td><a href="https://studio.ai21.com/">AI21</a></td>
+            <td>$10 for 3 months</td>
+            <td></td>
+            <td>Jamba/Jurrasic-2</td>
+        </tr>
+        <tr>
+            <td><a href="https://console.upstage.ai/">Upstage</a></td>
+            <td>$10 for 3 months</td>
+            <td></td>
+            <td>Solar Pro/Mini</td>
+        </tr>
+        <tr>
+            <td><a href="https://nlpcloud.com/home">NLP Cloud</a></td>
+            <td>$15</td>
+            <td>Phone number verification</td>
+            <td>Various open models</td>
+        </tr></tbody>
 </table>
