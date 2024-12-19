@@ -120,48 +120,19 @@ This lists various services that provide free access or credits towards API-base
             <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
             <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
-        </tr><tr>
-        <td rowspan="10"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="10"></td>
-        <td>Llama 3.1 405B</td>
-        <td>10 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 90B</td>
-        <td>1 request/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 70B</td>
-        <td>20 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 11B</td>
-        <td>10 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 8B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 3B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 1B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama Guard 3 8B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Qwen 2.5 72B</td>
-        <td>20 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Qwen 2.5 Coder 32B</td>
-        <td>20 requests/minute</td>
-    </tr><tr>
+        </tr><tr><td rowspan="12"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="12"></td><td>Llama 3.1 8B</td><td>30 requests/minute</td></tr>
+<tr><td>Llama 3.1 70B</td><td>20 requests/minute</td></tr>
+<tr><td>Llama 3.1 405B</td><td>10 requests/minute</td></tr>
+<tr><td>Llama 3.2 1B</td><td>30 requests/minute</td></tr>
+<tr><td>Llama 3.2 3B</td><td>30 requests/minute</td></tr>
+<tr><td>Llama 3.2 11B</td><td>10 requests/minute</td></tr>
+<tr><td>Llama 3.2 90B</td><td>1 requests/minute</td></tr>
+<tr><td>Llama 3.3 70B</td><td>20 requests/minute</td></tr>
+<tr><td>Llama Guard 3 8B</td><td>30 requests/minute</td></tr>
+<tr><td>Qwen 2.5 72B</td><td>20 requests/minute</td></tr>
+<tr><td>Qwen 2.5 Coder 32B</td><td>20 requests/minute</td></tr>
+<tr><td>QwQ 32B Preview</td><td>10 requests/minute</td></tr>
+<tr>
         <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
         <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
         <td>Llama 3.1 8B</td>
@@ -356,7 +327,7 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Grok</td>
         </tr>
-        <tr><td rowspan="16"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="16">$10</td><td rowspan="16"></td><td>DeepSeek V2.5</td></tr>
+        <tr><td rowspan="15"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="15">$10</td><td rowspan="15"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
@@ -365,7 +336,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
 <tr><td>Llama 3.2 3B Instruct</td></tr>
-<tr><td>Llama 3.3 70B Instruct</td></tr>
 <tr><td>Pixtral 12B (2409)</td></tr>
 <tr><td>Qwen QwQ 32B Preview</td></tr>
 <tr><td>Qwen2-VL 72B Instruct</td></tr>
