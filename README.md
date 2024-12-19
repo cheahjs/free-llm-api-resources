@@ -287,7 +287,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td><a href="https://unify.ai/">Unify</a></td>
-            <td>$10 (+$40 for getting into contact)</td>
+            <td>$5 when you add a payment method</td>
             <td></td>
             <td>Routes to other providers, various open models and proprietary models (OpenAI, Gemini, Anthropic, Mistral, Perplexity, etc)</td>
         </tr>
