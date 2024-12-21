@@ -41,7 +41,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
-<tr><td rowspan="20"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="20">20 requests/minute<br>200 requests/day</td><td>Gemini 2.0 Flash Experimental</td><td></td></tr>
+<tr><td rowspan="21"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="21">20 requests/minute<br>200 requests/day</td><td>Gemini 2.0 Flash Experimental</td><td></td></tr>
 <tr><td>Gemini Experimental 1114</td><td></td></tr>
 <tr><td>Gemini Experimental 1206</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
@@ -61,6 +61,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen 2 7B Instruct</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
+<tr><td>google/gemini-2.0-flash-thinking-exp:free</td><td></td></tr>
 <tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -314,7 +315,7 @@ This lists various services that provide free access or credits towards API-base
             <td>$1</td>
             <td></td>
             <td>Various open models</td>
-        </tr><tr><td rowspan="15"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="15">$10</td><td rowspan="15"></td><td>DeepSeek V2.5</td></tr>
+        </tr><tr><td rowspan="17"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="17">$10</td><td rowspan="17"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
@@ -323,12 +324,14 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
 <tr><td>Llama 3.2 3B Instruct</td></tr>
+<tr><td>Llama 3.3 70B Instruct</td></tr>
 <tr><td>Pixtral 12B (2409)</td></tr>
 <tr><td>Qwen QwQ 32B Preview</td></tr>
 <tr><td>Qwen2-VL 72B Instruct</td></tr>
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
+<tr><td>meta-llama/meta-llama-3.1-405b-instruct-virtuals</td></tr>
 <tr>
             <td><a href="https://studio.ai21.com/">AI21</a></td>
             <td>$10 for 3 months</td>
