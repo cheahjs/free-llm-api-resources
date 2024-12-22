@@ -3,6 +3,7 @@
 from collections import defaultdict
 import logging
 import json
+from bs4 import BeautifulSoup
 import requests
 import os
 from dotenv import load_dotenv
@@ -159,6 +160,13 @@ MODEL_TO_NAME_MAPPING = {
     "llama-3.3-70b-specdec": "Llama 3.3 70B (Speculative Decoding)",
     "@cf/meta/llama-3.3-70b-instruct-fp8-fast": "Llama 3.3 70B Instruct (FP8)",
     "google/gemini-2.0-flash-exp:free": "Gemini 2.0 Flash Experimental",
+    "qwen2.5-coder-32b-instruct": "Qwen2.5 Coder 32B Instruct",
+    "bge-multilingual-gemma2": "BGE-Multilingual-Gemma2",
+    "pixtral-12b-2409": "Pixtral 12B (2409)",
+    "google/gemini-2.0-flash-thinking-exp:free": "Gemini 2.0 Flash Thinking Experimental",
+    "sentence-t5-xxl": "sentence-t5-xxl",
+    "meta-llama/meta-llama-3.1-405b-instruct-virtuals": "Llama 3.1 405B Instruct Virtuals",
+    "llama-3.1-8b-instruct": "Llama 3.1 8B Instruct",
 }
 
 
@@ -184,6 +192,7 @@ OPENROUTER_IGNORED_MODELS = {
     "google/gemini-exp-1114:free"
     "google/gemini-exp-1206:free"
     "google/gemini-2.0-flash-exp:free",
+    "google/gemini-2.0-flash-thinking-exp:free"
 }  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 
@@ -293,7 +302,7 @@ def fetch_openrouter_models(logger):
             continue
         if ":free" not in model["id"]:
             continue
-        if model["id"] in OPENROUTER_IGNORED_MODELS:
+        if model["id"].lower() in OPENROUTER_IGNORED_MODELS:
             logger.debug(f"Ignoring model {model['id']}")
             continue
         ret_models.append(
@@ -637,6 +646,77 @@ ONLY OUTPUT JSON!""",
     return ret_models
 
 
+def fetch_scaleway_models(logger):
+    logger.info("Fetching Scaleway models...")
+    r = requests.get(
+        "https://api.scaleway.ai/v1/models",
+        headers={"Authorization": f"Bearer {os.environ['SCALEWAY_API_KEY']}"},
+    )
+    r.raise_for_status()
+    models = r.json()["data"]
+    logger.info(f"Fetched {len(models)} models from Scaleway")
+    ret_models = []
+    for model in models:
+        ret_models.append(
+            {
+                "id": model["id"],
+                "name": get_model_name(model["id"]),
+            }
+        )
+    ret_models = sorted(ret_models, key=lambda x: x["name"])
+    logger.info("Fetching Scaleway rate limits")
+    r = requests.get(
+        "https://www.scaleway.com/en/docs/ai-data/generative-apis/reference-content/rate-limits/"
+    )
+    r.raise_for_status()
+    # Extract <main> content
+    soup = BeautifulSoup(r.text, "html.parser")
+    body = str(soup.find("main"))
+    prompt = f"""
+Here is the web page to extract data from:
+```html
+{body}
+```
+    """
+    client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
+    logger.info("Extracting model rate limits from the provided web page...")
+    chat_response = client.chat.complete(
+        model="mistral-large-latest",
+        messages=[
+            {
+                "role": "system",
+                "content": """Extract the model rate limits as only integers from the provided web page into JSON of the following format:
+```json
+{
+  "model name here": {
+    "requests/minute": 10,
+    "tokens/minute": 100
+  }
+}
+```
+ONLY OUTPUT JSON!""",
+            },
+            {
+                "role": "user",
+                "content": prompt,
+            },
+        ],
+        response_format={
+            "type": "json_object",
+        },
+        temperature=0,
+    )
+    logger.info(chat_response.choices[0].message.content)
+    extracted_data = json.loads(chat_response.choices[0].message.content)
+    for model in extracted_data:
+        for m in ret_models:
+            if m["id"] == model:
+                m["limits"] = extracted_data[model]
+                break
+
+    return ret_models
+
+
 def get_human_limits(model):
     if "limits" not in model:
         return ""
@@ -655,6 +735,7 @@ def main():
     hyperbolic_logger = create_logger("Hyperbolic")
     # lambda_logger = create_logger("Lambda Labs")
     samba_logger = create_logger("SambaNova")
+    scaleway_logger = create_logger("Scaleway")
 
     gemini_models = fetch_gemini_limits(google_ai_studio_logger)
     openrouter_models = fetch_openrouter_models(openrouter_logger)
@@ -664,6 +745,7 @@ def main():
     github_models = fetch_github_models(github_logger)
     # lambda_models = fetch_lambda_models(lambda_logger)
     samba_models = fetch_samba_models(samba_logger)
+    scaleway_models = fetch_scaleway_models(scaleway_logger)
     groq_models = fetch_groq_models(groq_logger)
 
     table = """<table>
@@ -820,6 +902,17 @@ def main():
             table += '<a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a>'
             table += "</td>"
             table += '<td rowspan="' + str(len(ovh_models)) + '"></td>'
+        table += f"<td>{model['name']}</td>"
+        table += f"<td>{get_human_limits(model)}</td>"
+        table += "</tr>\n"
+
+    for idx, model in enumerate(scaleway_models):
+        table += "<tr>"
+        if idx == 0:
+            table += '<td rowspan="' + str(len(scaleway_models)) + '">'
+            table += '<a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta)</a>'
+            table += "</td>"
+            table += '<td rowspan="' + str(len(scaleway_models)) + '"></td>'
         table += f"<td>{model['name']}</td>"
         table += f"<td>{get_human_limits(model)}</td>"
         table += "</tr>\n"

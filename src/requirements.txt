@@ -2,3 +2,4 @@ requests
 python-dotenv
 google-cloud-quotas
 mistralai
+beautifulsoup4
