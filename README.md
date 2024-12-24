@@ -133,13 +133,17 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen 2.5 Coder 32B</td><td>20 requests/minute</td></tr>
 <tr><td>QwQ 32B Preview</td><td>10 requests/minute</td></tr>
 <tr>
-        <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
-        <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
+        <td rowspan="3"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
+        <td rowspan="3">Waitlist<br>Free tier restricted to 8K context</td>
         <td>Llama 3.1 8B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr>
     <tr>
         <td>Llama 3.1 70B</td>
+        <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
+    </tr>
+    <tr>
+        <td>Llama 3.3 70B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr><tr><td rowspan="25"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="25">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td><td>AI21-Jamba-Instruct</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
