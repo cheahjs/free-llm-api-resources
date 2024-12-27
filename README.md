@@ -325,23 +325,22 @@ This lists various services that provide free access or credits towards API-base
             <td>$1</td>
             <td></td>
             <td>Various open models</td>
-        </tr><tr><td rowspan="17"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="17">$10</td><td rowspan="17"></td><td>DeepSeek V2.5</td></tr>
+        </tr><tr><td rowspan="16"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="16">$10</td><td rowspan="16"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
-<tr><td>Llama 3.1 405B Base</td></tr>
 <tr><td>Llama 3.1 405B Base (FP8)</td></tr>
 <tr><td>Llama 3.1 405B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Instruct Virtuals</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
 <tr><td>Llama 3.2 3B Instruct</td></tr>
-<tr><td>Llama 3.3 70B Instruct</td></tr>
 <tr><td>Pixtral 12B (2409)</td></tr>
 <tr><td>Qwen QwQ 32B Preview</td></tr>
 <tr><td>Qwen2-VL 72B Instruct</td></tr>
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
+<tr><td>deepseek-ai/deepseek-v3</td></tr>
 <tr>
             <td><a href="https://studio.ai21.com/">AI21</a></td>
             <td>$10 for 3 months</td>
