@@ -38,39 +38,15 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td><a href="https://unify.ai/">Unify</a></td>
-            <td>$10 (+$40 for getting into contact)</td>
+            <td>$5 when you add a payment method</td>
             <td></td>
             <td>Routes to other providers, various open models and proprietary models (OpenAI, Gemini, Anthropic, Mistral, Perplexity, etc)</td>
-        </tr>
-        <tr>
-            <td><a href="https://deepinfra.com/">DeepInfra</a></td>
-            <td>$1.80</td>
-            <td></td>
-            <td>Various open models</td>
         </tr>
         <tr>
             <td><a href="https://build.nvidia.com/explore/discover">NVIDIA NIM</a></td>
             <td>1,000 API calls for 1 month</td>
             <td></td>
             <td>Various open models</td>
-        </tr>
-        <tr>
-            <td><a href="https://studio.ai21.com/">AI21</a></td>
-            <td>$10 for 3 months</td>
-            <td></td>
-            <td>Jamba/Jurrasic-2</td>
-        </tr>
-        <tr>
-            <td><a href="https://nlpcloud.com/home">NLP Cloud</a></td>
-            <td>$15</td>
-            <td>Phone number verification</td>
-            <td>Various open models</td>
-        </tr>
-        <tr>
-            <td><a href="https://console.upstage.ai/">Upstage</a></td>
-            <td>$10 for 3 months</td>
-            <td></td>
-            <td>Solar Pro/Mini</td>
         </tr>
         <tr>
             <td><a href="https://app.baseten.co/">Baseten</a></td>
@@ -84,5 +60,33 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Grok</td>
         </tr>
-        {{TRIAL_MODEL_LIST}}</tbody>
+        <tr>
+            <td><a href="https://studio.nebius.ai/">Nebius</a></td>
+            <td>$1</td>
+            <td></td>
+            <td>Various open models</td>
+        </tr>
+        <tr>
+            <td><a href="https://novita.ai/?ref=ytblmjc&utm_source=affiliate">Novita</a></td>
+            <td>$0.5</td>
+            <td></td>
+            <td>Various open models</td>
+        </tr>{{TRIAL_MODEL_LIST}}<tr>
+            <td><a href="https://studio.ai21.com/">AI21</a></td>
+            <td>$10 for 3 months</td>
+            <td></td>
+            <td>Jamba/Jurrasic-2</td>
+        </tr>
+        <tr>
+            <td><a href="https://console.upstage.ai/">Upstage</a></td>
+            <td>$10 for 3 months</td>
+            <td></td>
+            <td>Solar Pro/Mini</td>
+        </tr>
+        <tr>
+            <td><a href="https://bailian.console.alibabacloud.com/">Alibaba Cloud (International) Model Studio</a></td>
+            <td>Token/time-limited trials on a per-model basis</td>
+            <td></td>
+            <td>Various open and proprietary Qwen models</td>
+        </tr></tbody>
 </table>

@@ -23,9 +23,8 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="19"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="19"></td><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
+<tr><td rowspan="18"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="18"></td><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
-<tr><td>Gemma 7B Instruct (Deprecated)</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B - Groq Tool Use Preview</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B</td><td>14,400 requests/day<br>30,000 tokens/minute</td></tr>
@@ -36,16 +35,13 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.2 1B</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 3B</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 90B Vision</td><td>3,500 requests/day<br>7,000 tokens/minute</td></tr>
-<tr><td>Llama 3.3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B (Speculative Decoding)</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
-<tr><td rowspan="20"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="20">20 requests/minute<br>200 requests/day</td><td>Gemini 2.0 Flash Experimental</td><td></td></tr>
-<tr><td>Gemini Experimental 1114</td><td></td></tr>
-<tr><td>Gemini Experimental 1206</td><td></td></tr>
-<tr><td>Gemma 2 9B Instruct</td><td></td></tr>
+<tr><td rowspan="17"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="17">20 requests/minute<br>200 requests/day</td><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Llama 3 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 405B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td></td></tr>
@@ -65,7 +61,7 @@ This lists various services that provide free access or credits towards API-base
 <tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
-            <td>Gemini 2.0 Flash</td>
+            <td>Gemini 2.0 Flash Experimental</td>
             <td>4,000,000 tokens/minute<br>10 requests/minute</td>
         </tr>
         <tr>
@@ -121,55 +117,30 @@ This lists various services that provide free access or credits towards API-base
             <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
             <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
-        </tr><tr>
-        <td rowspan="10"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="10"></td>
-        <td>Llama 3.1 405B</td>
-        <td>10 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 90B</td>
-        <td>1 request/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 70B</td>
-        <td>20 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 11B</td>
-        <td>10 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 8B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 3B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 1B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama Guard 3 8B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Qwen 2.5 72B</td>
-        <td>20 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Qwen 2.5 Coder 32B</td>
-        <td>20 requests/minute</td>
-    </tr><tr>
-        <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
-        <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
+        </tr><tr><td rowspan="12"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="12"></td><td>Llama 3.1 8B</td><td>30 requests/minute</td></tr>
+<tr><td>Llama 3.1 70B</td><td>20 requests/minute</td></tr>
+<tr><td>Llama 3.1 405B</td><td>10 requests/minute</td></tr>
+<tr><td>Llama 3.2 1B</td><td>30 requests/minute</td></tr>
+<tr><td>Llama 3.2 3B</td><td>30 requests/minute</td></tr>
+<tr><td>Llama 3.2 11B</td><td>10 requests/minute</td></tr>
+<tr><td>Llama 3.2 90B</td><td>1 requests/minute</td></tr>
+<tr><td>Llama 3.3 70B</td><td>20 requests/minute</td></tr>
+<tr><td>Llama Guard 3 8B</td><td>30 requests/minute</td></tr>
+<tr><td>Qwen 2.5 72B</td><td>20 requests/minute</td></tr>
+<tr><td>Qwen 2.5 Coder 32B</td><td>20 requests/minute</td></tr>
+<tr><td>QwQ 32B Preview</td><td>10 requests/minute</td></tr>
+<tr>
+        <td rowspan="3"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
+        <td rowspan="3">Waitlist<br>Free tier restricted to 8K context</td>
         <td>Llama 3.1 8B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr>
     <tr>
         <td>Llama 3.1 70B</td>
+        <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
+    </tr>
+    <tr>
+        <td>Llama 3.3 70B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr><tr><td rowspan="25"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="25">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td><td>AI21-Jamba-Instruct</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
@@ -207,6 +178,13 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral Nemo 2407</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x22B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td rowspan="7"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta)</a></td><td rowspan="7"></td><td>BGE-Multilingual-Gemma2</td><td>600 requests/minute<br>1,000,000 tokens/minute</td></tr>
+<tr><td>Llama 3.1 70B Instruct</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>
+<tr><td>Llama 3.1 8B Instruct</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>
+<tr><td>Mistral Nemo 2407</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>
+<tr><td>Pixtral 12B (2409)</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>
+<tr><td>Qwen2.5 Coder 32B Instruct</td><td></td></tr>
+<tr><td>sentence-t5-xxl</td><td>600 requests/minute<br>1,000,000 tokens/minute</td></tr>
 <tr><td rowspan="41"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="41"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 tokens/day</a></td><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Math 7B Instruct</td><td></td></tr>
@@ -317,39 +295,15 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td><a href="https://unify.ai/">Unify</a></td>
-            <td>$10 (+$40 for getting into contact)</td>
+            <td>$5 when you add a payment method</td>
             <td></td>
             <td>Routes to other providers, various open models and proprietary models (OpenAI, Gemini, Anthropic, Mistral, Perplexity, etc)</td>
-        </tr>
-        <tr>
-            <td><a href="https://deepinfra.com/">DeepInfra</a></td>
-            <td>$1.80</td>
-            <td></td>
-            <td>Various open models</td>
         </tr>
         <tr>
             <td><a href="https://build.nvidia.com/explore/discover">NVIDIA NIM</a></td>
             <td>1,000 API calls for 1 month</td>
             <td></td>
             <td>Various open models</td>
-        </tr>
-        <tr>
-            <td><a href="https://studio.ai21.com/">AI21</a></td>
-            <td>$10 for 3 months</td>
-            <td></td>
-            <td>Jamba/Jurrasic-2</td>
-        </tr>
-        <tr>
-            <td><a href="https://nlpcloud.com/home">NLP Cloud</a></td>
-            <td>$15</td>
-            <td>Phone number verification</td>
-            <td>Various open models</td>
-        </tr>
-        <tr>
-            <td><a href="https://console.upstage.ai/">Upstage</a></td>
-            <td>$10 for 3 months</td>
-            <td></td>
-            <td>Solar Pro/Mini</td>
         </tr>
         <tr>
             <td><a href="https://app.baseten.co/">Baseten</a></td>
@@ -363,12 +317,25 @@ This lists various services that provide free access or credits towards API-base
             <td></td>
             <td>Grok</td>
         </tr>
-        <tr><td rowspan="16"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="16">$10</td><td rowspan="16"></td><td>DeepSeek V2.5</td></tr>
+        <tr>
+            <td><a href="https://studio.nebius.ai/">Nebius</a></td>
+            <td>$1</td>
+            <td></td>
+            <td>Various open models</td>
+        </tr>
+        <tr>
+            <td><a href="https://novita.ai/?ref=ytblmjc&utm_source=affiliate">Novita</a></td>
+            <td>$0.5</td>
+            <td></td>
+            <td>Various open models</td>
+        </tr><tr><td rowspan="18"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="18">$10</td><td rowspan="18"></td><td>DeepSeek V2.5</td></tr>
+<tr><td>DeepSeek V3</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
 <tr><td>Llama 3.1 405B Base (FP8)</td></tr>
 <tr><td>Llama 3.1 405B Instruct</td></tr>
+<tr><td>Llama 3.1 405B Instruct Virtuals</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td></tr>
 <tr><td>Llama 3.2 3B Instruct</td></tr>
@@ -379,5 +346,28 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
-</tbody>
+<tr>
+            <td><a href="https://studio.ai21.com/">AI21</a></td>
+            <td>$10 for 3 months</td>
+            <td></td>
+            <td>Jamba/Jurrasic-2</td>
+        </tr>
+        <tr>
+            <td><a href="https://console.upstage.ai/">Upstage</a></td>
+            <td>$10 for 3 months</td>
+            <td></td>
+            <td>Solar Pro/Mini</td>
+        </tr>
+        <tr>
+            <td><a href="https://nlpcloud.com/home">NLP Cloud</a></td>
+            <td>$15</td>
+            <td>Phone number verification</td>
+            <td>Various open models</td>
+        </tr>
+        <tr>
+            <td><a href="https://bailian.console.alibabacloud.com/">Alibaba Cloud (International) Model Studio</a></td>
+            <td>Token/time-limited trials on a per-model basis</td>
+            <td></td>
+            <td>Various open and proprietary Qwen models</td>
+        </tr></tbody>
 </table>

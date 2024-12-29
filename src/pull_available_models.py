@@ -3,10 +3,13 @@
 from collections import defaultdict
 import logging
 import json
+from bs4 import BeautifulSoup
 import requests
 import os
 from dotenv import load_dotenv
 from google.cloud import cloudquotas_v1
+from mistralai import Mistral
+
 
 load_dotenv()
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -15,7 +18,7 @@ MODEL_TO_NAME_MAPPING = {
     "@cf/deepseek-ai/deepseek-math-7b-instruct": "Deepseek Math 7B Instruct",
     "@cf/defog/sqlcoder-7b-2": "SQLCoder 7B 2",
     "@cf/fblgit/una-cybertron-7b-v2-bf16": "Una Cybertron 7B v2 (BF16)",
-    "@cf/google/gemma-2b-it-lora": "Gemma 2B Instruct (LoRA)", 
+    "@cf/google/gemma-2b-it-lora": "Gemma 2B Instruct (LoRA)",
     "@cf/google/gemma-7b-it-lora": "Gemma 7B Instruct (LoRA)",
     "@cf/meta-llama/llama-2-7b-chat-hf-lora": "Llama 2 7B Chat (LoRA)",
     "@cf/meta/llama-2-7b-chat-fp16": "Llama 2 7B Chat (FP16)",
@@ -105,8 +108,8 @@ MODEL_TO_NAME_MAPPING = {
     "qwen/qwen2-vl-7b-instruct": "Qwen2-VL 7B Instruct",
     "mistralai/pixtral-12b:free": "Pixtral 12B",
     "qwen/qwen-2-vl-7b-instruct:free": "Qwen2-VL 7B Instruct",
-    'qwen/qwen2-vl-72b-instruct': "Qwen2-VL 72B Instruct",
-    'qwen/qwen2.5-72b-instruct': "Qwen2.5 72B Instruct",
+    "qwen/qwen2-vl-72b-instruct": "Qwen2-VL 72B Instruct",
+    "qwen/qwen2.5-72b-instruct": "Qwen2.5 72B Instruct",
     "llama-3.2-90b-text-preview": "Llama 3.2 90B (Text Only)",
     "llama-3.2-3b-preview": "Llama 3.2 3B",
     "llama-3.2-11b-text-preview": "Llama 3.2 11B (Text Only)",
@@ -152,11 +155,19 @@ MODEL_TO_NAME_MAPPING = {
     "qwen/qwq-32b-preview": "Qwen QwQ 32B Preview",
     "meta-llama/llama-3.3-70b-instruct": "Llama 3.3 70B Instruct",
     "llama-3.3-70b-versatile": "Llama 3.3 70B",
-    "google/gemini-exp-1206:free": "Gemini Experimental 1206", 
+    "google/gemini-exp-1206:free": "Gemini Experimental 1206",
     "llama3.1-nemotron-70b-instruct-fp8": "Llama 3.1 Nemotron 70B Instruct (FP8)",
     "llama-3.3-70b-specdec": "Llama 3.3 70B (Speculative Decoding)",
     "@cf/meta/llama-3.3-70b-instruct-fp8-fast": "Llama 3.3 70B Instruct (FP8)",
     "google/gemini-2.0-flash-exp:free": "Gemini 2.0 Flash Experimental",
+    "qwen2.5-coder-32b-instruct": "Qwen2.5 Coder 32B Instruct",
+    "bge-multilingual-gemma2": "BGE-Multilingual-Gemma2",
+    "pixtral-12b-2409": "Pixtral 12B (2409)",
+    "google/gemini-2.0-flash-thinking-exp:free": "Gemini 2.0 Flash Thinking Experimental",
+    "sentence-t5-xxl": "sentence-t5-xxl",
+    "meta-llama/meta-llama-3.1-405b-instruct-virtuals": "Llama 3.1 405B Instruct Virtuals",
+    "llama-3.1-8b-instruct": "Llama 3.1 8B Instruct",
+    "deepseek-ai/deepseek-v3": "DeepSeek V3",
 }
 
 
@@ -172,25 +183,17 @@ def create_logger(provider_name):
 
 MISSING_MODELS = set()
 
-HYPERBOLIC_IGNORED_MODELS = {
-    "Wifhat",
-    "FLUX.1-dev",
-    "StableDiffusion",
-    "Monad",
-    "TTS"
-}
+HYPERBOLIC_IGNORED_MODELS = {"Wifhat", "FLUX.1-dev", "StableDiffusion", "Monad", "TTS"}
 
-LAMBDA_IGNORED_MODELS = {
-    "lfm-40b-vllm",
-    "hermes3-405b-fp8-128k"
-}
+LAMBDA_IGNORED_MODELS = {"lfm-40b-vllm", "hermes3-405b-fp8-128k"}
 
 OPENROUTER_IGNORED_MODELS = {
-    'google/gemini-exp-1121:free',
-    'google/learnlm-1.5-pro-experimental:free',
-    'google/gemini-exp-1114:free'
-    'google/gemini-exp-1206:free'
-    'google/gemini-2.0-flash-exp:free'
+    "google/gemini-exp-1121:free",
+    "google/learnlm-1.5-pro-experimental:free",
+    "google/gemini-exp-1114:free",
+    "google/gemini-exp-1206:free",
+    "google/gemini-2.0-flash-exp:free",
+    "google/gemini-2.0-flash-thinking-exp:free",
 }  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 
@@ -300,7 +303,7 @@ def fetch_openrouter_models(logger):
             continue
         if ":free" not in model["id"]:
             continue
-        if model["id"] in OPENROUTER_IGNORED_MODELS:
+        if model["id"].lower() in OPENROUTER_IGNORED_MODELS:
             logger.debug(f"Ignoring model {model['id']}")
             continue
         ret_models.append(
@@ -381,6 +384,7 @@ def fetch_ovh_models(logger):
     ret_models = sorted(ret_models, key=lambda x: x["name"])
     return ret_models
 
+
 def fetch_hyperbolic_models(logger):
     logger.info("Fetching Hyperbolic models...")
     firestore_models = fetch_hyperbolic_models_firestore(logger)
@@ -393,6 +397,7 @@ def fetch_hyperbolic_models(logger):
         if model["id"] not in [m["id"] for m in api_models]:
             logger.warning(f"Model {model['id']} from Firestore not in API")
     return sorted(firestore_models, key=lambda x: x["name"])
+
 
 def fetch_hyperbolic_models_firestore(logger):
     logger.info("Fetching Hyperbolic models from Firestore...")
@@ -472,6 +477,7 @@ def fetch_hyperbolic_models_firestore(logger):
     logger.debug(json.dumps(ret_models, indent=4))
     return ret_models
 
+
 def fetch_hyperbolic_models_api(logger):
     logger.info("Fetching Hyperbolic models from API...")
     r = requests.get(
@@ -479,7 +485,8 @@ def fetch_hyperbolic_models_api(logger):
         headers={
             "accept": "application/json",
             "authorization": f"Bearer {os.environ['HYPERBOLIC_API_KEY']}",
-        })
+        },
+    )
     r.raise_for_status()
     models = r.json()["data"]
     logger.info(f"Fetched {len(models)} models from Hyperbolic's API")
@@ -500,6 +507,7 @@ def fetch_hyperbolic_models_api(logger):
     logger.debug(json.dumps(ret_models, indent=4))
     return ret_models
 
+
 def fetch_github_models(logger):
     logger.info("Fetching GitHub models...")
     r = requests.get("https://models.inference.ai.azure.com/models")
@@ -517,29 +525,48 @@ def fetch_github_models(logger):
     ret_models = sorted(ret_models, key=lambda x: x["name"])
     return ret_models
 
+
 def fetch_gemini_limits(logger):
     logger.info("Fetching Gemini limits...")
     client = cloudquotas_v1.CloudQuotasClient()
     request = cloudquotas_v1.ListQuotaInfosRequest(
-        parent=f"projects/{os.environ["GCP_PROJECT_ID"]}/locations/global/services/generativelanguage.googleapis.com")
+        parent=f"projects/{os.environ["GCP_PROJECT_ID"]}/locations/global/services/generativelanguage.googleapis.com"
+    )
     pager = client.list_quota_infos(request=request)
     models = defaultdict(dict)
     for quota in pager:
-        if quota.metric == 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count':
+        if (
+            quota.metric
+            == "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
+        ):
             for dimension in quota.dimensions_infos:
-                models[dimension.dimensions.get("model")][f"tokens/{quota.refresh_interval}"] = dimension.details.value
-        elif quota.metric == 'generativelanguage.googleapis.com/generate_content_free_tier_requests':
+                models[dimension.dimensions.get("model")][
+                    f"tokens/{quota.refresh_interval}"
+                ] = dimension.details.value
+        elif (
+            quota.metric
+            == "generativelanguage.googleapis.com/generate_content_free_tier_requests"
+        ):
             for dimension in quota.dimensions_infos:
-                models[dimension.dimensions.get("model")][f"requests/{quota.refresh_interval}"] = dimension.details.value
+                models[dimension.dimensions.get("model")][
+                    f"requests/{quota.refresh_interval}"
+                ] = dimension.details.value
         elif quota.metric == "generativelanguage.googleapis.com/embed_text_requests":
             for dimension in quota.dimensions_infos:
-                models["project-embedding"][f"requests/{quota.refresh_interval}"] = dimension.details.value
-        elif quota.metric == "generativelanguage.googleapis.com/batch_embed_text_requests":
+                models["project-embedding"][
+                    f"requests/{quota.refresh_interval}"
+                ] = dimension.details.value
+        elif (
+            quota.metric
+            == "generativelanguage.googleapis.com/batch_embed_text_requests"
+        ):
             for dimension in quota.dimensions_infos:
-                models["project-embedding"][f"batch requests/{quota.refresh_interval}"] = dimension.details.value
+                models["project-embedding"][
+                    f"batch requests/{quota.refresh_interval}"
+                ] = dimension.details.value
     logger.debug(json.dumps(models, indent=4))
     return models
-    
+
 
 def fetch_lambda_models(logger):
     logger.info("Fetching Lambda Labs models...")
@@ -567,6 +594,130 @@ def fetch_lambda_models(logger):
     return ret_models
 
 
+def fetch_samba_models(logger):
+    logger.info("Fetching SambaNova models...")
+    r = requests.get("https://community.sambanova.ai/t/rate-limits/321")
+    r.raise_for_status()
+    prompt = f"""
+Here is the web page to extract data from:
+```html
+{r.text}
+```
+    """
+    client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
+    logger.info("Extracting model rate limits from the provided web page...")
+    chat_response = client.chat.complete(
+        model="mistral-large-latest",
+        messages=[
+            {
+                "role": "system",
+                "content": """Extract the model rate limits as only integers from the provided web page into JSON:
+```json
+{
+  "Llama 3.1 405B": 10,
+  "Llama 3.2 90B": 1
+}
+```
+ONLY OUTPUT JSON!""",
+            },
+            {
+                "role": "user",
+                "content": prompt,
+            },
+        ],
+        response_format={
+            "type": "json_object",
+        },
+        temperature=0,
+    )
+    logger.info(chat_response.choices[0].message.content)
+    extracted_data = json.loads(chat_response.choices[0].message.content)
+    ret_models = []
+    for model in extracted_data:
+        ret_models.append(
+            {
+                "id": model,
+                "name": model,
+                "limits": {
+                    "requests/minute": extracted_data[model],
+                },
+            }
+        )
+
+    return ret_models
+
+
+def fetch_scaleway_models(logger):
+    logger.info("Fetching Scaleway models...")
+    r = requests.get(
+        "https://api.scaleway.ai/v1/models",
+        headers={"Authorization": f"Bearer {os.environ['SCALEWAY_API_KEY']}"},
+    )
+    r.raise_for_status()
+    models = r.json()["data"]
+    logger.info(f"Fetched {len(models)} models from Scaleway")
+    ret_models = []
+    for model in models:
+        ret_models.append(
+            {
+                "id": model["id"],
+                "name": get_model_name(model["id"]),
+            }
+        )
+    ret_models = sorted(ret_models, key=lambda x: x["name"])
+    logger.info("Fetching Scaleway rate limits")
+    r = requests.get(
+        "https://www.scaleway.com/en/docs/ai-data/generative-apis/reference-content/rate-limits/"
+    )
+    r.raise_for_status()
+    # Extract <main> content
+    soup = BeautifulSoup(r.text, "html.parser")
+    body = str(soup.find("main"))
+    prompt = f"""
+Here is the web page to extract data from:
+```html
+{body}
+```
+    """
+    client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
+    logger.info("Extracting model rate limits from the provided web page...")
+    chat_response = client.chat.complete(
+        model="mistral-large-latest",
+        messages=[
+            {
+                "role": "system",
+                "content": """Extract the model rate limits as only integers from the provided web page into JSON of the following format:
+```json
+{
+  "model name here": {
+    "requests/minute": 10,
+    "tokens/minute": 100
+  }
+}
+```
+ONLY OUTPUT JSON!""",
+            },
+            {
+                "role": "user",
+                "content": prompt,
+            },
+        ],
+        response_format={
+            "type": "json_object",
+        },
+        temperature=0,
+    )
+    logger.info(chat_response.choices[0].message.content)
+    extracted_data = json.loads(chat_response.choices[0].message.content)
+    for model in extracted_data:
+        for m in ret_models:
+            if m["id"] == model:
+                m["limits"] = extracted_data[model]
+                break
+
+    return ret_models
+
+
 def get_human_limits(model):
     if "limits" not in model:
         return ""
@@ -583,7 +734,9 @@ def main():
     cloudflare_logger = create_logger("Cloudflare")
     github_logger = create_logger("GitHub")
     hyperbolic_logger = create_logger("Hyperbolic")
-    lambda_logger = create_logger("Lambda Labs")
+    # lambda_logger = create_logger("Lambda Labs")
+    samba_logger = create_logger("SambaNova")
+    scaleway_logger = create_logger("Scaleway")
 
     gemini_models = fetch_gemini_limits(google_ai_studio_logger)
     openrouter_models = fetch_openrouter_models(openrouter_logger)
@@ -591,9 +744,10 @@ def main():
     ovh_models = fetch_ovh_models(ovh_logger)
     cloudflare_models = fetch_cloudflare_models(cloudflare_logger)
     github_models = fetch_github_models(github_logger)
-    lambda_models = fetch_lambda_models(lambda_logger)
+    # lambda_models = fetch_lambda_models(lambda_logger)
+    samba_models = fetch_samba_models(samba_logger)
+    scaleway_models = fetch_scaleway_models(scaleway_logger)
     groq_models = fetch_groq_models(groq_logger)
-
 
     table = """<table>
     <thead>
@@ -609,26 +763,28 @@ def main():
 
     for idx, model in enumerate(groq_models):
         table += "<tr>"
-        
+
         if idx == 0:
             table += f'<td rowspan="{len(groq_models)}">'
             table += '<a href="https://console.groq.com" target="_blank">Groq</a>'
-            table += '</td>'
+            table += "</td>"
             table += f'<td rowspan="{len(groq_models)}"></td>'
-        
+
         table += f"<td>{model['name']}</td>"
         table += f"<td>{get_human_limits(model)}</td>"
         table += "</tr>\n"
 
     for idx, model in enumerate(openrouter_models):
         table += "<tr>"
-        
+
         if idx == 0:
             table += f'<td rowspan="{len(openrouter_models)}">'
             table += '<a href="https://openrouter.ai" target="_blank">OpenRouter</a>'
-            table += '</td>'
-            table += f'<td rowspan="{len(openrouter_models)}">{get_human_limits(model)}</td>'
-        
+            table += "</td>"
+            table += (
+                f'<td rowspan="{len(openrouter_models)}">{get_human_limits(model)}</td>'
+            )
+
         table += f"<td>{model['name']}</td>"
         table += "<td></td>"
         table += "</tr>\n"
@@ -636,7 +792,7 @@ def main():
     table += f"""<tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
-            <td>Gemini 2.0 Flash</td>
+            <td>Gemini 2.0 Flash Experimental</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash-exp"]})}</td>
         </tr>
         <tr>
@@ -699,65 +855,47 @@ def main():
             <td>Various open models</td>
             <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
         </tr>"""
-    
-    table += """<tr>
-        <td rowspan="10"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td>
-        <td rowspan="10"></td>
-        <td>Llama 3.1 405B</td>
-        <td>10 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 90B</td>
-        <td>1 request/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 70B</td>
-        <td>20 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 11B</td>
-        <td>10 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 8B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 3B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama 3.2 1B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Llama Guard 3 8B</td>
-        <td>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Qwen 2.5 72B</td>
-        <td>20 requests/minute</td>
-    </tr>
-    <tr>
-        <td>Qwen 2.5 Coder 32B</td>
-        <td>20 requests/minute</td>
-    </tr>"""
+
+    for idx, model in enumerate(samba_models):
+        table += "<tr>"
+
+        if idx == 0:
+            table += f'<td rowspan="{len(samba_models)}">'
+            table += '<a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a>'
+            table += "</td>"
+            table += f'<td rowspan="{len(samba_models)}"></td>'
+
+        table += f"<td>{model['name']}</td>"
+        table += f"<td>{get_human_limits(model)}</td>"
+        table += "</tr>\n"
 
     table += """<tr>
-        <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
-        <td rowspan="2">Waitlist<br>Free tier restricted to 8K context</td>
+        <td rowspan="3"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
+        <td rowspan="3">Waitlist<br>Free tier restricted to 8K context</td>
         <td>Llama 3.1 8B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr>
     <tr>
         <td>Llama 3.1 70B</td>
+        <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
+    </tr>
+    <tr>
+        <td>Llama 3.3 70B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr>"""
 
     for idx, model in enumerate(github_models):
         table += "<tr>"
-        table += f'<td rowspan="{len(github_models)}"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>' if idx == 0 else ''
-        table += f'<td rowspan="{len(github_models)}">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td>' if idx == 0 else ''
+        table += (
+            f'<td rowspan="{len(github_models)}"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>'
+            if idx == 0
+            else ""
+        )
+        table += (
+            f'<td rowspan="{len(github_models)}">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td>'
+            if idx == 0
+            else ""
+        )
         table += f"<td>{model['name']}</td>"
         table += "<td></td>"
         table += "</tr>\n"
@@ -767,8 +905,19 @@ def main():
         if idx == 0:
             table += '<td rowspan="' + str(len(ovh_models)) + '">'
             table += '<a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a>'
-            table += '</td>'
+            table += "</td>"
             table += '<td rowspan="' + str(len(ovh_models)) + '"></td>'
+        table += f"<td>{model['name']}</td>"
+        table += f"<td>{get_human_limits(model)}</td>"
+        table += "</tr>\n"
+
+    for idx, model in enumerate(scaleway_models):
+        table += "<tr>"
+        if idx == 0:
+            table += '<td rowspan="' + str(len(scaleway_models)) + '">'
+            table += '<a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta)</a>'
+            table += "</td>"
+            table += '<td rowspan="' + str(len(scaleway_models)) + '"></td>'
         table += f"<td>{model['name']}</td>"
         table += f"<td>{get_human_limits(model)}</td>"
         table += "</tr>\n"
@@ -778,10 +927,10 @@ def main():
         if idx == 0:
             table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
             table += '<a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a>'
-            table += '</td>'
+            table += "</td>"
             table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
             table += '<a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 tokens/day</a>'
-            table += '</td>'
+            table += "</td>"
         table += f"<td>{model['name']}</td>"
         table += "<td></td>"
         table += "</tr>\n"
@@ -802,7 +951,7 @@ def main():
         <tr>
             <td>Command-R+</td>
         </tr>"""
-    
+
     table += """<tr>
         <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
         <td rowspan="6">Very stringent payment verification for Google Cloud.</td>
@@ -842,8 +991,10 @@ def main():
         trial_table += "<tr>"
         if idx == 0:
             trial_table += f'<td rowspan="{len(hyperbolic_models)}">'
-            trial_table += '<a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a>'
-            trial_table += '</td>'
+            trial_table += (
+                '<a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a>'
+            )
+            trial_table += "</td>"
             trial_table += f'<td rowspan="{len(hyperbolic_models)}">$10</td>'
             trial_table += f'<td rowspan="{len(hyperbolic_models)}"></td>'
         trial_table += f"<td>{model['name']}</td>"
@@ -860,7 +1011,11 @@ WARNING: DO NOT EDIT THIS FILE DIRECTLY. IT IS GENERATED BY src/pull_available_m
 --->
 """
     with open(os.path.join(script_dir, "..", "README.md"), "w") as f:
-        f.write((warning + readme).replace("{{MODEL_LIST}}", table).replace("{{TRIAL_MODEL_LIST}}", trial_table))
+        f.write(
+            (warning + readme)
+            .replace("{{MODEL_LIST}}", table)
+            .replace("{{TRIAL_MODEL_LIST}}", trial_table)
+        )
     logger.info("Wrote models to README.md")
 
 
