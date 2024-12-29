@@ -363,5 +363,11 @@ This lists various services that provide free access or credits towards API-base
             <td>$15</td>
             <td>Phone number verification</td>
             <td>Various open models</td>
+        </tr>
+        <tr>
+            <td><a href="https://bailian.console.alibabacloud.com/">Alibaba Cloud (International) Model Studio</a></td>
+            <td>Token/time-limited trials on a per-model basis</td>
+            <td></td>
+            <td>Various open and proprietary Qwen models</td>
         </tr></tbody>
 </table>
