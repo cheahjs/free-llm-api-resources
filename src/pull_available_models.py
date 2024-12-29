@@ -190,10 +190,10 @@ LAMBDA_IGNORED_MODELS = {"lfm-40b-vllm", "hermes3-405b-fp8-128k"}
 OPENROUTER_IGNORED_MODELS = {
     "google/gemini-exp-1121:free",
     "google/learnlm-1.5-pro-experimental:free",
-    "google/gemini-exp-1114:free"
-    "google/gemini-exp-1206:free"
+    "google/gemini-exp-1114:free",
+    "google/gemini-exp-1206:free",
     "google/gemini-2.0-flash-exp:free",
-    "google/gemini-2.0-flash-thinking-exp:free"
+    "google/gemini-2.0-flash-thinking-exp:free",
 }  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 
