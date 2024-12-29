@@ -167,6 +167,7 @@ MODEL_TO_NAME_MAPPING = {
     "sentence-t5-xxl": "sentence-t5-xxl",
     "meta-llama/meta-llama-3.1-405b-instruct-virtuals": "Llama 3.1 405B Instruct Virtuals",
     "llama-3.1-8b-instruct": "Llama 3.1 8B Instruct",
+    "deepseek-ai/deepseek-v3": "DeepSeek V3",
 }
 
 
@@ -791,7 +792,7 @@ def main():
     table += f"""<tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
-            <td>Gemini 2.0 Flash</td>
+            <td>Gemini 2.0 Flash Experimental</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash-exp"]})}</td>
         </tr>
         <tr>

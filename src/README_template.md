@@ -65,6 +65,12 @@ This lists various services that provide free access or credits towards API-base
             <td>$1</td>
             <td></td>
             <td>Various open models</td>
+        </tr>
+        <tr>
+            <td><a href="https://novita.ai/?ref=ytblmjc&utm_source=affiliate">Novita</a></td>
+            <td>$0.5</td>
+            <td></td>
+            <td>Various open models</td>
         </tr>{{TRIAL_MODEL_LIST}}<tr>
             <td><a href="https://studio.ai21.com/">AI21</a></td>
             <td>$10 for 3 months</td>
