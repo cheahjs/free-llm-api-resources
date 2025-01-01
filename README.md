@@ -142,31 +142,45 @@ This lists various services that provide free access or credits towards API-base
     <tr>
         <td>Llama 3.3 70B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
-    </tr><tr><td rowspan="25"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="25">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td><td>AI21-Jamba-Instruct</td><td></td></tr>
+    </tr><tr><td rowspan="39"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="39">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
+<tr><td>AI21 Jamba 1.5 Mini</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
+<tr><td>Cohere Command R 08-2024</td><td></td></tr>
 <tr><td>Cohere Command R+</td><td></td></tr>
+<tr><td>Cohere Command R+ 08-2024</td><td></td></tr>
 <tr><td>Cohere Embed v3 English</td><td></td></tr>
 <tr><td>Cohere Embed v3 Multilingual</td><td></td></tr>
+<tr><td>JAIS 30b Chat</td><td></td></tr>
+<tr><td>Llama-3.2-11B-Vision-Instruct</td><td></td></tr>
+<tr><td>Llama-3.2-90B-Vision-Instruct</td><td></td></tr>
+<tr><td>Llama-3.3-70B-Instruct</td><td></td></tr>
 <tr><td>Meta-Llama-3-70B-Instruct</td><td></td></tr>
 <tr><td>Meta-Llama-3-8B-Instruct</td><td></td></tr>
 <tr><td>Meta-Llama-3.1-405B-Instruct</td><td></td></tr>
 <tr><td>Meta-Llama-3.1-70B-Instruct</td><td></td></tr>
 <tr><td>Meta-Llama-3.1-8B-Instruct</td><td></td></tr>
+<tr><td>Ministral 3B</td><td></td></tr>
 <tr><td>Mistral Large</td><td></td></tr>
 <tr><td>Mistral Large (2407)</td><td></td></tr>
+<tr><td>Mistral Large 24.11</td><td></td></tr>
 <tr><td>Mistral Nemo</td><td></td></tr>
 <tr><td>Mistral Small</td><td></td></tr>
 <tr><td>OpenAI GPT-4o</td><td></td></tr>
 <tr><td>OpenAI GPT-4o mini</td><td></td></tr>
 <tr><td>OpenAI Text Embedding 3 (large)</td><td></td></tr>
 <tr><td>OpenAI Text Embedding 3 (small)</td><td></td></tr>
+<tr><td>OpenAI o1</td><td></td></tr>
+<tr><td>OpenAI o1-mini</td><td></td></tr>
+<tr><td>OpenAI o1-preview</td><td></td></tr>
 <tr><td>Phi-3-medium instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3-medium instruct (4k)</td><td></td></tr>
 <tr><td>Phi-3-mini instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3-mini instruct (4k)</td><td></td></tr>
 <tr><td>Phi-3-small instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3-small instruct (8k)</td><td></td></tr>
+<tr><td>Phi-3.5-MoE instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3.5-mini instruct (128k)</td><td></td></tr>
+<tr><td>Phi-3.5-vision instruct (128k)</td><td></td></tr>
 <tr><td rowspan="11"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="11"></td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Codestral Mamba 7B v0.1</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
@@ -223,7 +237,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen 1.5 7B Chat (AWQ)</td><td></td></tr>
 <tr><td>SQLCoder 7B 2</td><td></td></tr>
 <tr><td>Starling LM 7B Beta</td><td></td></tr>
-<tr><td>TinyLlama 1.1B Chat v1.0</td></td></tr>
+<tr><td>TinyLlama 1.1B Chat v1.0</td><td></td></tr>
 <tr><td>Una Cybertron 7B v2 (BF16)</td><td></td></tr>
 <tr><td>Zephyr 7B Beta (AWQ)</td><td></td></tr>
 <tr>

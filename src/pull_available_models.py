@@ -510,7 +510,11 @@ def fetch_hyperbolic_models_api(logger):
 
 def fetch_github_models(logger):
     logger.info("Fetching GitHub models...")
-    r = requests.get("https://models.inference.ai.azure.com/models")
+    r = requests.get("https://github.com/marketplace/models", headers={
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "x-requested-with": "XMLHttpRequest",
+    })
     r.raise_for_status()
     models = r.json()
     logger.info(f"Fetched {len(models)} models from GitHub")
