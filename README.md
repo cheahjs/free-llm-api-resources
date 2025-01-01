@@ -312,12 +312,6 @@ This lists various services that provide free access or credits towards API-base
             <td>Any supported model - pay by compute time</td>
         </tr>
         <tr>
-            <td><a href="https://console.x.ai">xAI</a></td>
-            <td>$25/month until end of 2024</td>
-            <td></td>
-            <td>Grok</td>
-        </tr>
-        <tr>
             <td><a href="https://studio.nebius.ai/">Nebius</a></td>
             <td>$1</td>
             <td></td>
