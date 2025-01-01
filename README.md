@@ -223,7 +223,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen 1.5 7B Chat (AWQ)</td><td></td></tr>
 <tr><td>SQLCoder 7B 2</td><td></td></tr>
 <tr><td>Starling LM 7B Beta</td><td></td></tr>
-<tr><td>TinyLlama 1.1B Chat v1.0</td><td></td></tr>
+<tr><td>TinyLlama 1.1B Chat v1.0</td></td></tr>
 <tr><td>Una Cybertron 7B v2 (BF16)</td><td></td></tr>
 <tr><td>Zephyr 7B Beta (AWQ)</td><td></td></tr>
 <tr>
@@ -283,7 +283,7 @@ This lists various services that provide free access or credits towards API-base
     <tbody>
         <tr>
             <td><a href="https://together.ai">Together</a></td>
-            <td>$1</td>
+            <td>$1 when you add a payment method</td>
             <td></td>
             <td>Various open models</td>
         </tr>
