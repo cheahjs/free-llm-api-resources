@@ -896,7 +896,7 @@ def main():
             else ""
         )
         table += (
-            f'<td rowspan="{len(github_models)}">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td>'
+            f'<td rowspan="{len(github_models)}">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td>'
             if idx == 0
             else ""
         )
