@@ -131,7 +131,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>QwQ 32B Preview</td><td>10 requests/minute</td></tr>
 <tr>
         <td rowspan="3"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
-        <td rowspan="3">Waitlist<br>Free tier restricted to 8K context</td>
+        <td rowspan="3">Free tier restricted to 8K context</td>
         <td>Llama 3.1 8B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr>
