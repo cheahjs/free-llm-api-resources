@@ -12,6 +12,7 @@ permissions:
 
 jobs:
   check-readme-changes:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     
     steps:
