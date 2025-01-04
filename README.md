@@ -142,31 +142,45 @@ This lists various services that provide free access or credits towards API-base
     <tr>
         <td>Llama 3.3 70B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
-    </tr><tr><td rowspan="25"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="25">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td><td>AI21-Jamba-Instruct</td><td></td></tr>
+    </tr><tr><td rowspan="39"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="39">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
+<tr><td>AI21 Jamba 1.5 Mini</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
+<tr><td>Cohere Command R 08-2024</td><td></td></tr>
 <tr><td>Cohere Command R+</td><td></td></tr>
+<tr><td>Cohere Command R+ 08-2024</td><td></td></tr>
 <tr><td>Cohere Embed v3 English</td><td></td></tr>
 <tr><td>Cohere Embed v3 Multilingual</td><td></td></tr>
+<tr><td>JAIS 30b Chat</td><td></td></tr>
+<tr><td>Llama-3.2-11B-Vision-Instruct</td><td></td></tr>
+<tr><td>Llama-3.2-90B-Vision-Instruct</td><td></td></tr>
+<tr><td>Llama-3.3-70B-Instruct</td><td></td></tr>
 <tr><td>Meta-Llama-3-70B-Instruct</td><td></td></tr>
 <tr><td>Meta-Llama-3-8B-Instruct</td><td></td></tr>
 <tr><td>Meta-Llama-3.1-405B-Instruct</td><td></td></tr>
 <tr><td>Meta-Llama-3.1-70B-Instruct</td><td></td></tr>
 <tr><td>Meta-Llama-3.1-8B-Instruct</td><td></td></tr>
+<tr><td>Ministral 3B</td><td></td></tr>
 <tr><td>Mistral Large</td><td></td></tr>
 <tr><td>Mistral Large (2407)</td><td></td></tr>
+<tr><td>Mistral Large 24.11</td><td></td></tr>
 <tr><td>Mistral Nemo</td><td></td></tr>
 <tr><td>Mistral Small</td><td></td></tr>
 <tr><td>OpenAI GPT-4o</td><td></td></tr>
 <tr><td>OpenAI GPT-4o mini</td><td></td></tr>
 <tr><td>OpenAI Text Embedding 3 (large)</td><td></td></tr>
 <tr><td>OpenAI Text Embedding 3 (small)</td><td></td></tr>
+<tr><td>OpenAI o1</td><td></td></tr>
+<tr><td>OpenAI o1-mini</td><td></td></tr>
+<tr><td>OpenAI o1-preview</td><td></td></tr>
 <tr><td>Phi-3-medium instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3-medium instruct (4k)</td><td></td></tr>
 <tr><td>Phi-3-mini instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3-mini instruct (4k)</td><td></td></tr>
 <tr><td>Phi-3-small instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3-small instruct (8k)</td><td></td></tr>
+<tr><td>Phi-3.5-MoE instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3.5-mini instruct (128k)</td><td></td></tr>
+<tr><td>Phi-3.5-vision instruct (128k)</td><td></td></tr>
 <tr><td rowspan="11"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="11"></td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Codestral Mamba 7B v0.1</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
@@ -262,11 +276,6 @@ This lists various services that provide free access or credits towards API-base
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
-    </tr><tr>
-        <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
-        <td></td>
-        <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
-        <td><a href="https://glhf.chat/pages/faq#whats-the-rate-limit">480 requests/8 hours</a></td>
     </tr></tbody></table>
 
 ## Providers with trial credits
@@ -283,7 +292,7 @@ This lists various services that provide free access or credits towards API-base
     <tbody>
         <tr>
             <td><a href="https://together.ai">Together</a></td>
-            <td>$1</td>
+            <td>$1 when you add a payment method</td>
             <td></td>
             <td>Various open models</td>
         </tr>
@@ -310,12 +319,6 @@ This lists various services that provide free access or credits towards API-base
             <td>$30</td>
             <td></td>
             <td>Any supported model - pay by compute time</td>
-        </tr>
-        <tr>
-            <td><a href="https://console.x.ai">xAI</a></td>
-            <td>$25/month until end of 2024</td>
-            <td></td>
-            <td>Grok</td>
         </tr>
         <tr>
             <td><a href="https://studio.nebius.ai/">Nebius</a></td>

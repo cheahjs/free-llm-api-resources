@@ -26,7 +26,7 @@ This lists various services that provide free access or credits towards API-base
     <tbody>
         <tr>
             <td><a href="https://together.ai">Together</a></td>
-            <td>$1</td>
+            <td>$1 when you add a payment method</td>
             <td></td>
             <td>Various open models</td>
         </tr>
@@ -55,12 +55,6 @@ This lists various services that provide free access or credits towards API-base
             <td>Any supported model - pay by compute time</td>
         </tr>
         <tr>
-            <td><a href="https://console.x.ai">xAI</a></td>
-            <td>$25/month until end of 2024</td>
-            <td></td>
-            <td>Grok</td>
-        </tr>
-        <tr>
             <td><a href="https://studio.nebius.ai/">Nebius</a></td>
             <td>$1</td>
             <td></td>
@@ -82,6 +76,12 @@ This lists various services that provide free access or credits towards API-base
             <td>$10 for 3 months</td>
             <td></td>
             <td>Solar Pro/Mini</td>
+        </tr>
+        <tr>
+            <td><a href="https://nlpcloud.com/home">NLP Cloud</a></td>
+            <td>$15</td>
+            <td>Phone number verification</td>
+            <td>Various open models</td>
         </tr>
         <tr>
             <td><a href="https://bailian.console.alibabacloud.com/">Alibaba Cloud (International) Model Studio</a></td>

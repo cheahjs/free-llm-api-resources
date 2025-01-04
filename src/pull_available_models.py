@@ -510,7 +510,11 @@ def fetch_hyperbolic_models_api(logger):
 
 def fetch_github_models(logger):
     logger.info("Fetching GitHub models...")
-    r = requests.get("https://models.inference.ai.azure.com/models")
+    r = requests.get("https://github.com/marketplace/models", headers={
+        "Accept": "application/json",
+        "Content-Type": "application/json",
+        "x-requested-with": "XMLHttpRequest",
+    })
     r.raise_for_status()
     models = r.json()
     logger.info(f"Fetched {len(models)} models from GitHub")
@@ -892,7 +896,7 @@ def main():
             else ""
         )
         table += (
-            f'<td rowspan="{len(github_models)}">Waitlist<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier</a></td>'
+            f'<td rowspan="{len(github_models)}">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td>'
             if idx == 0
             else ""
         )
@@ -975,13 +979,6 @@ def main():
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
-    </tr>"""
-
-    table += """<tr>
-        <td><a href="https://glhf.chat/" target="_blank">glhf.chat (Free Beta)</a></td>
-        <td></td>
-        <td>Any model on Hugging Face runnable on vLLM and fits on a A100 node (~640GB VRAM), including Llama 3.1 405B at FP8</td>
-        <td><a href="https://glhf.chat/pages/faq#whats-the-rate-limit">480 requests/8 hours</a></td>
     </tr>"""
 
     table += "</tbody></table>"
