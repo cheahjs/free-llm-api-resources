@@ -1,0 +1,56 @@
+name: README Change Validator
+
+on:
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'src/README_template.md'
+      - 'src/pull_available_models.py'
+
+permissions:
+  issues: write
+
+jobs:
+  check-readme-changes:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history to compare changes
+
+      - name: Get changed files
+        id: changed-files
+        run: |
+          README_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -c "README.md" || true)
+          TEMPLATE_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -c "src/README_template.md" || true)
+          SCRIPT_CHANGED=$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | grep -c "src/pull_available_models.py" || true)
+          
+          echo "readme_changed=$README_CHANGED" >> $GITHUB_OUTPUT
+          echo "template_changed=$TEMPLATE_CHANGED" >> $GITHUB_OUTPUT
+          echo "script_changed=$SCRIPT_CHANGED" >> $GITHUB_OUTPUT
+
+      - name: Validate README changes
+        run: |
+          if [ "${{ steps.changed-files.outputs.readme_changed }}" -gt 0 ] && \
+             [ "${{ steps.changed-files.outputs.template_changed }}" -eq 0 ] && \
+             [ "${{ steps.changed-files.outputs.script_changed }}" -eq 0 ]; then
+            echo "Error: README.md was modified without corresponding changes in src/README_template.md or src/pull_available_models.py"
+            echo "Please update the template or script instead of modifying README.md directly."
+            exit 1
+          fi
+
+      - name: Add PR comment if check fails
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: '❌ README.md was modified without corresponding changes in `src/README_template.md` or `src/pull_available_models.py`\n\nPlease update the template or script instead of modifying README.md directly.'
+            })

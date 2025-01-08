@@ -765,19 +765,6 @@ def main():
     <tbody>
 """
 
-    for idx, model in enumerate(groq_models):
-        table += "<tr>"
-
-        if idx == 0:
-            table += f'<td rowspan="{len(groq_models)}">'
-            table += '<a href="https://console.groq.com" target="_blank">Groq</a>'
-            table += "</td>"
-            table += f'<td rowspan="{len(groq_models)}"></td>'
-
-        table += f"<td>{model['name']}</td>"
-        table += f"<td>{get_human_limits(model)}</td>"
-        table += "</tr>\n"
-
     for idx, model in enumerate(openrouter_models):
         table += "<tr>"
 
@@ -875,7 +862,7 @@ def main():
 
     table += """<tr>
         <td rowspan="3"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
-        <td rowspan="3">Waitlist<br>Free tier restricted to 8K context</td>
+        <td rowspan="3">Free tier restricted to 8K context</td>
         <td>Llama 3.1 8B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr>
@@ -888,29 +875,15 @@ def main():
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr>"""
 
-    for idx, model in enumerate(github_models):
+    for idx, model in enumerate(groq_models):
         table += "<tr>"
-        table += (
-            f'<td rowspan="{len(github_models)}"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>'
-            if idx == 0
-            else ""
-        )
-        table += (
-            f'<td rowspan="{len(github_models)}">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td>'
-            if idx == 0
-            else ""
-        )
-        table += f"<td>{model['name']}</td>"
-        table += "<td></td>"
-        table += "</tr>\n"
 
-    for idx, model in enumerate(ovh_models):
-        table += "<tr>"
         if idx == 0:
-            table += '<td rowspan="' + str(len(ovh_models)) + '">'
-            table += '<a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a>'
+            table += f'<td rowspan="{len(groq_models)}">'
+            table += '<a href="https://console.groq.com" target="_blank">Groq</a>'
             table += "</td>"
-            table += '<td rowspan="' + str(len(ovh_models)) + '"></td>'
+            table += f'<td rowspan="{len(groq_models)}"></td>'
+
         table += f"<td>{model['name']}</td>"
         table += f"<td>{get_human_limits(model)}</td>"
         table += "</tr>\n"
@@ -926,17 +899,15 @@ def main():
         table += f"<td>{get_human_limits(model)}</td>"
         table += "</tr>\n"
 
-    for idx, model in enumerate(cloudflare_models):
+    for idx, model in enumerate(ovh_models):
         table += "<tr>"
         if idx == 0:
-            table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
-            table += '<a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a>'
+            table += '<td rowspan="' + str(len(ovh_models)) + '">'
+            table += '<a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a>'
             table += "</td>"
-            table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
-            table += '<a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 tokens/day</a>'
-            table += "</td>"
+            table += '<td rowspan="' + str(len(ovh_models)) + '"></td>'
         table += f"<td>{model['name']}</td>"
-        table += "<td></td>"
+        table += f"<td>{get_human_limits(model)}</td>"
         table += "</tr>\n"
 
     table += """<tr>
@@ -955,6 +926,35 @@ def main():
         <tr>
             <td>Command-R+</td>
         </tr>"""
+    
+    for idx, model in enumerate(github_models):
+        table += "<tr>"
+        table += (
+            f'<td rowspan="{len(github_models)}"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>'
+            if idx == 0
+            else ""
+        )
+        table += (
+            f'<td rowspan="{len(github_models)}">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td>'
+            if idx == 0
+            else ""
+        )
+        table += f"<td>{model['name']}</td>"
+        table += "<td></td>"
+        table += "</tr>\n"
+    
+    for idx, model in enumerate(cloudflare_models):
+        table += "<tr>"
+        if idx == 0:
+            table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
+            table += '<a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a>'
+            table += "</td>"
+            table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
+            table += '<a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 tokens/day</a>'
+            table += "</td>"
+        table += f"<td>{model['name']}</td>"
+        table += "<td></td>"
+        table += "</tr>\n"
 
     table += """<tr>
         <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
