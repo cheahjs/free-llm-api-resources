@@ -173,8 +173,9 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Command-R+</td>
-        </tr><tr><td rowspan="39"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="39">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
+        </tr><tr><td rowspan="40"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="40">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
 <tr><td>AI21 Jamba 1.5 Mini</td><td></td></tr>
+<tr><td>Codestral 25.01</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
 <tr><td>Cohere Command R 08-2024</td><td></td></tr>
 <tr><td>Cohere Command R+</td><td></td></tr>
