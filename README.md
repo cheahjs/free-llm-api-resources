@@ -173,7 +173,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Command-R+</td>
-        </tr><tr><td rowspan="40"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="40">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
+        </tr><tr><td rowspan="41"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="41">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
 <tr><td>AI21 Jamba 1.5 Mini</td><td></td></tr>
 <tr><td>Codestral 25.01</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
@@ -213,6 +213,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-3.5-MoE instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3.5-mini instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3.5-vision instruct (128k)</td><td></td></tr>
+<tr><td>Phi-4</td><td></td></tr>
 <tr><td rowspan="41"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="41"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 tokens/day</a></td><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Math 7B Instruct</td><td></td></tr>
