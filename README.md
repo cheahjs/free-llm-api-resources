@@ -157,10 +157,14 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mixtral 8x22B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
 <tr>
-        <td><a href="https://together.ai">Together</a></td>
-        <td></td>
+        <td rowspan="2"><a href="https://together.ai">Together</a></td>
+        <td rowspan="2"></td>
         <td>Llama 3.2 11B Vision Instruct</td>
-        <td><a href="https://www.together.ai/blog/llama-3-2-vision-stack">Free for 2024</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.3 70B Instruct</td>
+        <td></td>
     </tr><tr>
             <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
             <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1,000 requests/month</a></td>

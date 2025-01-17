@@ -909,10 +909,14 @@ def main():
         table += "</tr>\n"
 
     table += """<tr>
-        <td><a href="https://together.ai">Together</a></td>
-        <td></td>
+        <td rowspan="2"><a href="https://together.ai">Together</a></td>
+        <td rowspan="2"></td>
         <td>Llama 3.2 11B Vision Instruct</td>
-        <td><a href="https://www.together.ai/blog/llama-3-2-vision-stack">Free for 2024</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.3 70B Instruct</td>
+        <td></td>
     </tr>"""
 
     table += """<tr>
