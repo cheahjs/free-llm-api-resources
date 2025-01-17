@@ -99,18 +99,8 @@ This lists various services that provide free access or credits towards API-base
             <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
             <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
-        </tr><tr><td rowspan="12"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="12"></td><td>Llama 3.1 8B</td><td>30 requests/minute</td></tr>
-<tr><td>Llama 3.1 70B</td><td>20 requests/minute</td></tr>
-<tr><td>Llama 3.1 405B</td><td>10 requests/minute</td></tr>
-<tr><td>Llama 3.2 1B</td><td>30 requests/minute</td></tr>
-<tr><td>Llama 3.2 3B</td><td>30 requests/minute</td></tr>
-<tr><td>Llama 3.2 11B</td><td>10 requests/minute</td></tr>
+        </tr><tr><td rowspan="2"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="2"></td><td>Llama 3.1 405B</td><td>10 requests/minute</td></tr>
 <tr><td>Llama 3.2 90B</td><td>1 requests/minute</td></tr>
-<tr><td>Llama 3.3 70B</td><td>20 requests/minute</td></tr>
-<tr><td>Llama Guard 3 8B</td><td>30 requests/minute</td></tr>
-<tr><td>Qwen 2.5 72B</td><td>20 requests/minute</td></tr>
-<tr><td>Qwen 2.5 Coder 32B</td><td>20 requests/minute</td></tr>
-<tr><td>QwQ 32B Preview</td><td>10 requests/minute</td></tr>
 <tr>
         <td rowspan="3"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
         <td rowspan="3">Free tier restricted to 8K context</td>
