@@ -168,6 +168,8 @@ MODEL_TO_NAME_MAPPING = {
     "meta-llama/meta-llama-3.1-405b-instruct-virtuals": "Llama 3.1 405B Instruct Virtuals",
     "llama-3.1-8b-instruct": "Llama 3.1 8B Instruct",
     "deepseek-ai/deepseek-v3": "DeepSeek V3",
+    "llava-next-mistral-7b": "Llava Next Mistral 7B",
+    "llama-3.3-70b-instruct": "Llama 3.3 70B Instruct",
 }
 
 
@@ -861,13 +863,9 @@ def main():
         table += "</tr>\n"
 
     table += """<tr>
-        <td rowspan="3"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
-        <td rowspan="3">Free tier restricted to 8K context</td>
+        <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
+        <td rowspan="2">Free tier restricted to 8K context</td>
         <td>Llama 3.1 8B</td>
-        <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 70B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr>
     <tr>
@@ -911,10 +909,14 @@ def main():
         table += "</tr>\n"
 
     table += """<tr>
-        <td><a href="https://together.ai">Together</a></td>
-        <td></td>
+        <td rowspan="2"><a href="https://together.ai">Together</a></td>
+        <td rowspan="2"></td>
         <td>Llama 3.2 11B Vision Instruct</td>
-        <td><a href="https://www.together.ai/blog/llama-3-2-vision-stack">Free for 2024</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Llama 3.3 70B Instruct</td>
+        <td></td>
     </tr>"""
 
     table += """<tr>
