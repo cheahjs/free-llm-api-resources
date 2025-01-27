@@ -678,7 +678,7 @@ def fetch_scaleway_models(logger):
     ret_models = sorted(ret_models, key=lambda x: x["name"])
     logger.info("Fetching Scaleway rate limits")
     r = requests.get(
-        "https://www.scaleway.com/en/docs/ai-data/generative-apis/reference-content/rate-limits/"
+        "https://www.scaleway.com/en/docs/generative-apis/reference-content/rate-limits/"
     )
     r.raise_for_status()
     # Extract <main> content
