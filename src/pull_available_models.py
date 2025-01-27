@@ -170,6 +170,10 @@ MODEL_TO_NAME_MAPPING = {
     "deepseek-ai/deepseek-v3": "DeepSeek V3",
     "llava-next-mistral-7b": "Llava Next Mistral 7B",
     "llama-3.3-70b-instruct": "Llama 3.3 70B Instruct",
+    "google/gemini-2.0-flash-thinking-exp-1219:free": "Gemini 2.0 Flash Thinking Experimental 1219",
+    "sophosympatheia/rogue-rose-103b-v0.2:free": "Rogue Rose 103B v0.2",
+    "deepseek-ai/deepseek-r1": "DeepSeek R1",
+    "deepseek-ai/deepseek-r1-zero": "DeepSeek R1-Zero",
 }
 
 
@@ -196,6 +200,7 @@ OPENROUTER_IGNORED_MODELS = {
     "google/gemini-exp-1206:free",
     "google/gemini-2.0-flash-exp:free",
     "google/gemini-2.0-flash-thinking-exp:free",
+    "google/gemini-2.0-flash-thinking-exp-1219:free",
 }  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 
