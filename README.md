@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="19"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="19">20 requests/minute<br>200 requests/day</td><td>Gemma 2 9B Instruct</td><td></td></tr>
+<tr><td rowspan="18"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="18">20 requests/minute<br>200 requests/day</td><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Llama 3 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 405B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td></td></tr>
@@ -38,10 +38,9 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-3 Medium 128k Instruct</td><td></td></tr>
 <tr><td>Phi-3 Mini 128k Instruct</td><td></td></tr>
 <tr><td>Qwen 2 7B Instruct</td><td></td></tr>
+<tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
-<tr><td>google/gemini-2.0-flash-thinking-exp-1219:free</td><td></td></tr>
-<tr><td>sophosympatheia/rogue-rose-103b-v0.2:free</td><td></td></tr>
 <tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -126,8 +125,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B</td><td>14,400 requests/day<br>20,000 tokens/minute</td></tr>
-<tr><td>Llama 3.1 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>20,000 tokens/minute</td></tr>
+<tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 11B Vision</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 1B</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.2 3B</td><td>7,000 requests/day<br>7,000 tokens/minute</td></tr>
@@ -138,6 +136,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
+<tr><td>deepseek-r1-distill-llama-70b</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td rowspan="8"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta)</a></td><td rowspan="8"></td><td>BGE-Multilingual-Gemma2</td><td>100 requests/minute<br>200,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>
@@ -335,7 +334,9 @@ This lists various services that provide free access or credits towards API-base
             <td>$0.5</td>
             <td></td>
             <td>Various open models</td>
-        </tr><tr><td rowspan="20"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="20">$10</td><td rowspan="20"></td><td>DeepSeek V2.5</td></tr>
+        </tr><tr><td rowspan="21"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="21">$10</td><td rowspan="21"></td><td>DeepSeek R1</td></tr>
+<tr><td>DeepSeek R1-Zero</td></tr>
+<tr><td>DeepSeek V2.5</td></tr>
 <tr><td>DeepSeek V3</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
@@ -353,8 +354,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
-<tr><td>deepseek-ai/deepseek-r1</td></tr>
-<tr><td>deepseek-ai/deepseek-r1-zero</td></tr>
+<tr><td>test_zzz</td></tr>
 <tr>
             <td><a href="https://studio.ai21.com/">AI21</a></td>
             <td>$10 for 3 months</td>
