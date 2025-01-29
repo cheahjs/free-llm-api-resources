@@ -803,34 +803,26 @@ def main():
         table += "</tr>\n"
 
     table += f"""<tr>
-            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 2.0 Flash Experimental</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash-exp"]})}</td>
+        </tr>
+        <tr>
+            <td>Gemini 2.0 (Experimental)</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro-exp"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Flash</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash"]})}</td>
         </tr>
         <tr>
-            <td>Gemini 1.5 Flash (Experimental)</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash-exp"]})}</td>
-        </tr>
-        <tr>
             <td>Gemini 1.5 Flash-8B</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash-8b"]})}</td>
         </tr>
         <tr>
-            <td>Gemini 1.5 Flash-8B (Experimental)</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash-8b-exp"]})}</td>
-        </tr>
-        <tr>
             <td>Gemini 1.5 Pro</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro"]})}</td>
-        </tr>
-        <tr>
-            <td>Gemini 1.5 Pro (Experimental)</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro-exp"]})}</td>
         </tr>
         <tr>
             <td>LearnLM 1.5 Pro (Experimental)</td>
