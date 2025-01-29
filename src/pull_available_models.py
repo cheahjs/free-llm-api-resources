@@ -9,6 +9,7 @@ import os
 from dotenv import load_dotenv
 from google.cloud import cloudquotas_v1
 from mistralai import Mistral
+from concurrent.futures import ThreadPoolExecutor
 
 
 load_dotenv()
@@ -174,6 +175,10 @@ MODEL_TO_NAME_MAPPING = {
     "sophosympatheia/rogue-rose-103b-v0.2:free": "Rogue Rose 103B v0.2",
     "deepseek-ai/deepseek-r1": "DeepSeek R1",
     "deepseek-ai/deepseek-r1-zero": "DeepSeek R1-Zero",
+    "deepseek/deepseek-r1:free": "DeepSeek R1",
+    "deepseek-r1-distill-llama-70b": "DeepSeek R1 Distill Llama 70B",
+    "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b": "DeepSeek R1 Distill Qwen 32B",
+    "deepseek-ai/janus-pro-7b": "DeepSeek Janus Pro 7B",
 }
 
 
@@ -189,7 +194,14 @@ def create_logger(provider_name):
 
 MISSING_MODELS = set()
 
-HYPERBOLIC_IGNORED_MODELS = {"Wifhat", "FLUX.1-dev", "StableDiffusion", "Monad", "TTS"}
+HYPERBOLIC_IGNORED_MODELS = {
+    "Wifhat",
+    "FLUX.1-dev",
+    "StableDiffusion",
+    "Monad",
+    "TTS",
+    "deepseek-ai/Janus-Pro-7B",
+}
 
 LAMBDA_IGNORED_MODELS = {"lfm-40b-vllm", "hermes3-405b-fp8-128k"}
 
@@ -517,11 +529,14 @@ def fetch_hyperbolic_models_api(logger):
 
 def fetch_github_models(logger):
     logger.info("Fetching GitHub models...")
-    r = requests.get("https://github.com/marketplace/models", headers={
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-        "x-requested-with": "XMLHttpRequest",
-    })
+    r = requests.get(
+        "https://github.com/marketplace/models",
+        headers={
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "x-requested-with": "XMLHttpRequest",
+        },
+    )
     r.raise_for_status()
     models = r.json()
     logger.info(f"Fetched {len(models)} models from GitHub")
@@ -933,7 +948,7 @@ def main():
         <tr>
             <td>Command-R+</td>
         </tr>"""
-    
+
     for idx, model in enumerate(github_models):
         table += "<tr>"
         table += (
@@ -949,7 +964,7 @@ def main():
         table += f"<td>{model['name']}</td>"
         table += "<td></td>"
         table += "</tr>\n"
-    
+
     for idx, model in enumerate(cloudflare_models):
         table += "<tr>"
         if idx == 0:
