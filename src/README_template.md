@@ -88,5 +88,11 @@ This lists various services that provide free access or credits towards API-base
             <td>Token/time-limited trials on a per-model basis</td>
             <td></td>
             <td>Various open and proprietary Qwen models</td>
+        </tr>
+        <tr>
+            <td><a href="https://enverge.ai">Enverge.ai</a></td>
+            <td>2 weeks of worth of L40s GPUs usage</td>
+            <td>email</td>
+            <td>Various open models. Best for fine-tuning</td>
         </tr></tbody>
 </table>
