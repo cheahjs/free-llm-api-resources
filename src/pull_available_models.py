@@ -861,19 +861,6 @@ def main():
             <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
         </tr>"""
 
-    for idx, model in enumerate(samba_models):
-        table += "<tr>"
-
-        if idx == 0:
-            table += f'<td rowspan="{len(samba_models)}">'
-            table += '<a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a>'
-            table += "</td>"
-            table += f'<td rowspan="{len(samba_models)}"></td>'
-
-        table += f"<td>{model['name']}</td>"
-        table += f"<td>{get_human_limits(model)}</td>"
-        table += "</tr>\n"
-
     table += """<tr>
         <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
         <td rowspan="2">Free tier restricted to 8K context</td>
@@ -1010,6 +997,20 @@ def main():
             trial_table += f'<td rowspan="{len(hyperbolic_models)}"></td>'
         trial_table += f"<td>{model['name']}</td>"
         trial_table += "</tr>\n"
+
+    for idx, model in enumerate(samba_models):
+        table += "<tr>"
+
+        if idx == 0:
+            table += f'<td rowspan="{len(samba_models)}">'
+            table += '<a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a>'
+            table += "</td>"
+            table += f'<td rowspan="{len(samba_models)}">$5 for 3 months</td>'
+
+        table += f"<td>{model['name']}</td>"
+        table += f"<td>{get_human_limits(model)}</td>"
+        table += "</tr>\n"
+
     if MISSING_MODELS:
         logger.warning("Missing models:")
         logger.warning(list(MISSING_MODELS))
