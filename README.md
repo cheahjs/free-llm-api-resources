@@ -258,10 +258,10 @@ This lists various services that provide free access or credits towards API-base
         <td rowspan="3">Experimental Gemini model.<br>10 requests/minute</td>
     </tr>
     <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Thinking Experimental</a></td>
     </tr>
     <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Experimental</a></td>
     </tr></tbody></table><tr><td rowspan="12"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="12">$5 for 3 months</td><td>Llama 3.1 8B</td><td>30 requests/minute</td></tr>
 <tr><td>Llama 3.1 70B</td><td>20 requests/minute</td></tr>
 <tr><td>Llama 3.1 405B</td><td>10 requests/minute</td></tr>

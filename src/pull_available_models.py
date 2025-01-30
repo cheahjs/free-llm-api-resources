@@ -10,10 +10,15 @@ from dotenv import load_dotenv
 from google.cloud import cloudquotas_v1
 from mistralai import Mistral
 from concurrent.futures import ThreadPoolExecutor
+import time
 
 
 load_dotenv()
 script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Global clients
+mistral_client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
+last_mistral_request_time = 0
 
 MODEL_TO_NAME_MAPPING = {
     "@cf/deepseek-ai/deepseek-math-7b-instruct": "Deepseek Math 7B Instruct",
@@ -620,6 +625,20 @@ def fetch_lambda_models(logger):
     return ret_models
 
 
+def rate_limited_mistral_chat(client, **kwargs):
+    global last_mistral_request_time
+    
+    # Ensure at least 1 second between requests
+    current_time = time.time()
+    time_since_last = current_time - last_mistral_request_time
+    if time_since_last < 1:
+        time.sleep(1 - time_since_last)
+    
+    response = client.chat.complete(**kwargs)
+    last_mistral_request_time = time.time()
+    return response
+
+
 def fetch_samba_models(logger):
     logger.info("Fetching SambaNova models...")
     r = requests.get("https://community.sambanova.ai/t/rate-limits/321")
@@ -630,9 +649,9 @@ Here is the web page to extract data from:
 {r.text}
 ```
     """
-    client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
     logger.info("Extracting model rate limits from the provided web page...")
-    chat_response = client.chat.complete(
+    chat_response = rate_limited_mistral_chat(
+        mistral_client,
         model="mistral-large-latest",
         messages=[
             {
@@ -705,9 +724,9 @@ Here is the web page to extract data from:
 {body}
 ```
     """
-    client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
     logger.info("Extracting model rate limits from the provided web page...")
-    chat_response = client.chat.complete(
+    chat_response = rate_limited_mistral_chat(
+        mistral_client,
         model="mistral-large-latest",
         messages=[
             {
@@ -997,10 +1016,10 @@ def main():
         <td rowspan="3">Experimental Gemini model.<br>10 requests/minute</td>
     </tr>
     <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Thinking Experimental</a></td>
     </tr>
     <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Experimental</a></td>
     </tr>"""
 
     table += "</tbody></table>"
