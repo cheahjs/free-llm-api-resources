@@ -764,16 +764,37 @@ def main():
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
 
-    gemini_models = fetch_gemini_limits(google_ai_studio_logger)
-    openrouter_models = fetch_openrouter_models(openrouter_logger)
-    hyperbolic_models = fetch_hyperbolic_models(hyperbolic_logger)
-    ovh_models = fetch_ovh_models(ovh_logger)
-    cloudflare_models = fetch_cloudflare_models(cloudflare_logger)
-    github_models = fetch_github_models(github_logger)
-    # lambda_models = fetch_lambda_models(lambda_logger)
-    samba_models = fetch_samba_models(samba_logger)
-    scaleway_models = fetch_scaleway_models(scaleway_logger)
-    groq_models = fetch_groq_models(groq_logger)
+    fetch_concurrently = os.getenv("FETCH_CONCURRENTLY", "false").lower() == "true"
+
+    if fetch_concurrently:
+        with ThreadPoolExecutor() as executor:
+            futures = [
+                executor.submit(fetch_gemini_limits, google_ai_studio_logger),
+                executor.submit(fetch_openrouter_models, openrouter_logger),
+                executor.submit(fetch_hyperbolic_models, hyperbolic_logger),
+                executor.submit(fetch_ovh_models, ovh_logger),
+                executor.submit(fetch_cloudflare_models, cloudflare_logger),
+                executor.submit(fetch_github_models, github_logger),
+                executor.submit(fetch_samba_models, samba_logger),
+                executor.submit(fetch_scaleway_models, scaleway_logger),
+            ]
+            gemini_models, openrouter_models, hyperbolic_models, ovh_models, \
+            cloudflare_models, github_models, samba_models, scaleway_models = \
+            [f.result() for f in futures]
+            
+            # Fetch groq models after others complete
+            groq_models = fetch_groq_models(groq_logger)
+    else:
+        gemini_models = fetch_gemini_limits(google_ai_studio_logger)
+        openrouter_models = fetch_openrouter_models(openrouter_logger)
+        hyperbolic_models = fetch_hyperbolic_models(hyperbolic_logger)
+        ovh_models = fetch_ovh_models(ovh_logger)
+        cloudflare_models = fetch_cloudflare_models(cloudflare_logger)
+        github_models = fetch_github_models(github_logger)
+        # lambda_models = fetch_lambda_models(lambda_logger)
+        samba_models = fetch_samba_models(samba_logger)
+        scaleway_models = fetch_scaleway_models(scaleway_logger)
+        groq_models = fetch_groq_models(groq_logger)
 
     table = """<table>
     <thead>
@@ -1013,7 +1034,7 @@ def main():
 
     if MISSING_MODELS:
         logger.warning("Missing models:")
-        logger.warning(list(MISSING_MODELS))
+        logger.warning("\n".join([f'"{model}": "{model}",' for model in MISSING_MODELS]))
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(script_dir, "README_template.md"), "r") as f:
