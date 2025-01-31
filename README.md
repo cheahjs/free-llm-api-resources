@@ -118,7 +118,9 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
-<tr><td rowspan="8"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta)</a></td><td rowspan="8"></td><td>BGE-Multilingual-Gemma2</td><td>100 requests/minute<br>200,000 tokens/minute</td></tr>
+<tr><td rowspan="10"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta)</a></td><td rowspan="10"></td><td>BGE-Multilingual-Gemma2</td><td>100 requests/minute<br>200,000 tokens/minute</td></tr>
+<tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
+<tr><td>DeepSeek R1 Distill Llama 8B</td><td></td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B Instruct</td><td></td></tr>

@@ -184,6 +184,7 @@ MODEL_TO_NAME_MAPPING = {
     "deepseek-r1-distill-llama-70b": "DeepSeek R1 Distill Llama 70B",
     "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b": "DeepSeek R1 Distill Qwen 32B",
     "deepseek-ai/janus-pro-7b": "DeepSeek Janus Pro 7B",
+    "deepseek-r1-distill-llama-8b": "DeepSeek R1 Distill Llama 8B",
 }
 
 
@@ -294,15 +295,19 @@ def fetch_groq_models(logger):
     models = r.json()["data"]
     logger.debug(json.dumps(models, indent=4))
     ret_models = []
-    for model in models:
-        limits = get_groq_limits_for_model(model["id"], script_dir, logger)
-        ret_models.append(
-            {
+    with ThreadPoolExecutor() as executor:
+        futures = []
+        for model in models:
+            future = executor.submit(get_groq_limits_for_model, model["id"], script_dir, logger)
+            futures.append((model, future))
+        
+        for model, future in futures:
+            limits = future.result()
+            ret_models.append({
                 "id": model["id"],
                 "name": get_model_name(model["id"]),
                 "limits": limits,
-            }
-        )
+            })
     ret_models = sorted(ret_models, key=lambda x: x["name"])
     return ret_models
 
@@ -1053,7 +1058,7 @@ def main():
 
     if MISSING_MODELS:
         logger.warning("Missing models:")
-        logger.warning("\n".join([f'"{model}": "{model}",' for model in MISSING_MODELS]))
+        logger.warning("\n" + "\n".join([f'"{model}": "{model}",' for model in MISSING_MODELS]))
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(script_dir, "README_template.md"), "r") as f:
