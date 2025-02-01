@@ -266,19 +266,7 @@ This lists various services that provide free access or credits towards API-base
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Experimental</a></td>
-    </tr></tbody></table><tr><td rowspan="12"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="12">$5 for 3 months</td><td>Llama 3.1 8B</td><td>30 requests/minute</td></tr>
-<tr><td>Llama 3.1 70B</td><td>20 requests/minute</td></tr>
-<tr><td>Llama 3.1 405B</td><td>10 requests/minute</td></tr>
-<tr><td>Llama 3.2 1B</td><td>30 requests/minute</td></tr>
-<tr><td>Llama 3.2 3B</td><td>30 requests/minute</td></tr>
-<tr><td>Llama 3.2 11B</td><td>10 requests/minute</td></tr>
-<tr><td>Llama 3.2 90B</td><td>1 requests/minute</td></tr>
-<tr><td>Llama 3.3 70B</td><td>20 requests/minute</td></tr>
-<tr><td>Llama Guard 3 8B</td><td>30 requests/minute</td></tr>
-<tr><td>Qwen 2.5 72B</td><td>20 requests/minute</td></tr>
-<tr><td>Qwen 2.5 Coder 32B</td><td>20 requests/minute</td></tr>
-<tr><td>QwQ 32B Preview</td><td>10 requests/minute</td></tr>
-
+    </tr></tbody></table>
 
 ## Providers with trial credits
 
@@ -353,6 +341,18 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
+<tr><td rowspan="12"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="12">$5 for 3 months</td><td>Llama 3.1 8B</td><td>30 requests/minute</td></tr>
+<tr><td>Llama 3.1 70B</td><td>20 requests/minute</td></tr>
+<tr><td>Llama 3.1 405B</td><td>10 requests/minute</td></tr>
+<tr><td>Llama 3.2 1B</td><td>30 requests/minute</td></tr>
+<tr><td>Llama 3.2 3B</td><td>30 requests/minute</td></tr>
+<tr><td>Llama 3.2 11B</td><td>10 requests/minute</td></tr>
+<tr><td>Llama 3.2 90B</td><td>1 requests/minute</td></tr>
+<tr><td>Llama 3.3 70B</td><td>20 requests/minute</td></tr>
+<tr><td>Llama Guard 3 8B</td><td>30 requests/minute</td></tr>
+<tr><td>Qwen 2.5 72B</td><td>20 requests/minute</td></tr>
+<tr><td>Qwen 2.5 Coder 32B</td><td>20 requests/minute</td></tr>
+<tr><td>QwQ 32B Preview</td><td>10 requests/minute</td></tr>
 <tr>
             <td><a href="https://studio.ai21.com/">AI21</a></td>
             <td>$10 for 3 months</td>
