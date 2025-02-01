@@ -158,7 +158,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Command-R+</td>
-        </tr><tr><td rowspan="42"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="42">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
+        </tr><tr><td rowspan="43"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="43">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
 <tr><td>AI21 Jamba 1.5 Mini</td><td></td></tr>
 <tr><td>Codestral 25.01</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
@@ -190,6 +190,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>OpenAI o1</td><td></td></tr>
 <tr><td>OpenAI o1-mini</td><td></td></tr>
 <tr><td>OpenAI o1-preview</td><td></td></tr>
+<tr><td>OpenAI o3-mini</td><td></td></tr>
 <tr><td>Phi-3-medium instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3-medium instruct (4k)</td><td></td></tr>
 <tr><td>Phi-3-mini instruct (128k)</td><td></td></tr>
@@ -332,13 +333,12 @@ This lists various services that provide free access or credits towards API-base
             <td>$0.5</td>
             <td></td>
             <td>Various open models</td>
-        </tr><tr><td rowspan="20"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="20">$10</td><td rowspan="20"></td><td>DeepSeek R1</td></tr>
+        </tr><tr><td rowspan="19"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="19">$10</td><td rowspan="19"></td><td>DeepSeek R1</td></tr>
 <tr><td>DeepSeek R1-Zero</td></tr>
 <tr><td>DeepSeek V2.5</td></tr>
 <tr><td>DeepSeek V3</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
-<tr><td>Llama 3.1 405B Base</td></tr>
 <tr><td>Llama 3.1 405B Base (FP8)</td></tr>
 <tr><td>Llama 3.1 405B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Instruct Virtuals</td></tr>
