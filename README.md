@@ -246,11 +246,11 @@ This lists various services that provide free access or credits towards API-base
 <tr>
         <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
         <td rowspan="6">Very stringent payment verification for Google Cloud.</td>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
     </tr>
     <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.1-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
     </tr>
     <tr>
@@ -333,12 +333,13 @@ This lists various services that provide free access or credits towards API-base
             <td>$0.5</td>
             <td></td>
             <td>Various open models</td>
-        </tr><tr><td rowspan="19"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="19">$10</td><td rowspan="19"></td><td>DeepSeek R1</td></tr>
+        </tr><tr><td rowspan="20"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="20">$10</td><td rowspan="20"></td><td>DeepSeek R1</td></tr>
 <tr><td>DeepSeek R1-Zero</td></tr>
 <tr><td>DeepSeek V2.5</td></tr>
 <tr><td>DeepSeek V3</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
+<tr><td>Llama 3.1 405B Base</td></tr>
 <tr><td>Llama 3.1 405B Base (FP8)</td></tr>
 <tr><td>Llama 3.1 405B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Instruct Virtuals</td></tr>
