@@ -88,5 +88,11 @@ This lists various services that provide free access or credits towards API-base
             <td>Token/time-limited trials on a per-model basis</td>
             <td></td>
             <td>Various open and proprietary Qwen models</td>
+        </tr>
+        <tr>
+            <td><a href="https://modal.com">Modal</a></td>
+            <td>$30/month</td>
+            <td></td>
+            <td>Any supported model - pay by compute time</td>
         </tr></tbody>
 </table>
