@@ -219,6 +219,7 @@ OPENROUTER_IGNORED_MODELS = {
     "google/gemini-2.0-flash-exp:free",
     "google/gemini-2.0-flash-thinking-exp:free",
     "google/gemini-2.0-flash-thinking-exp-1219:free",
+    "google/gemini-flash-1.5-exp:free",
 }  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 
@@ -953,13 +954,17 @@ def main():
         table += "</tr>\n"
 
     table += """<tr>
-        <td rowspan="2"><a href="https://together.ai">Together</a></td>
-        <td rowspan="2"></td>
+        <td rowspan="3"><a href="https://together.ai">Together</a></td>
+        <td rowspan="3"></td>
         <td>Llama 3.2 11B Vision Instruct</td>
         <td></td>
     </tr>
     <tr>
         <td>Llama 3.3 70B Instruct</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>DeepSeek R1 Distil Llama 70B</td>
         <td></td>
     </tr>"""
 

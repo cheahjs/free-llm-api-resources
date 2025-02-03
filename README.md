@@ -142,13 +142,17 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mixtral 8x22B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
 <tr>
-        <td rowspan="2"><a href="https://together.ai">Together</a></td>
-        <td rowspan="2"></td>
+        <td rowspan="3"><a href="https://together.ai">Together</a></td>
+        <td rowspan="3"></td>
         <td>Llama 3.2 11B Vision Instruct</td>
         <td></td>
     </tr>
     <tr>
         <td>Llama 3.3 70B Instruct</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>DeepSeek R1 Distil Llama 70B</td>
         <td></td>
     </tr><tr>
             <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
