@@ -185,6 +185,8 @@ MODEL_TO_NAME_MAPPING = {
     "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b": "DeepSeek R1 Distill Qwen 32B",
     "deepseek-ai/janus-pro-7b": "DeepSeek Janus Pro 7B",
     "deepseek-r1-distill-llama-8b": "DeepSeek R1 Distill Llama 8B",
+    "nvidia/llama-3.1-nemotron-70b-instruct:free": "Llama 3.1 Nemotron 70B Instruct",
+    "deepseek/deepseek-r1-distill-llama-70b:free": "DeepSeek R1 Distill Llama 70B",
 }
 
 
@@ -397,7 +399,7 @@ def fetch_ovh_models(logger):
     )
     r.raise_for_status()
     models = list(
-        filter(lambda x: x["available"] and x["category"] == "Assistant", r.json())
+        filter(lambda x: x["available"] and "LLM" in x["category"], r.json())
     )
     logger.info(f"Fetched {len(models)} models from OVH")
     ret_models = []

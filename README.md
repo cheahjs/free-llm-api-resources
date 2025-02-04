@@ -23,12 +23,14 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="19"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="19">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="21"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="21">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Llama 3 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 405B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
+<tr><td>Llama 3.1 Nemotron 70B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
