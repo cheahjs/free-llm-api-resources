@@ -9,10 +9,16 @@ import os
 from dotenv import load_dotenv
 from google.cloud import cloudquotas_v1
 from mistralai import Mistral
+from concurrent.futures import ThreadPoolExecutor
+import time
 
 
 load_dotenv()
 script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Global clients
+mistral_client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
+last_mistral_request_time = 0
 
 MODEL_TO_NAME_MAPPING = {
     "@cf/deepseek-ai/deepseek-math-7b-instruct": "Deepseek Math 7B Instruct",
@@ -174,6 +180,13 @@ MODEL_TO_NAME_MAPPING = {
     "sophosympatheia/rogue-rose-103b-v0.2:free": "Rogue Rose 103B v0.2",
     "deepseek-ai/deepseek-r1": "DeepSeek R1",
     "deepseek-ai/deepseek-r1-zero": "DeepSeek R1-Zero",
+    "deepseek/deepseek-r1:free": "DeepSeek R1",
+    "deepseek-r1-distill-llama-70b": "DeepSeek R1 Distill Llama 70B",
+    "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b": "DeepSeek R1 Distill Qwen 32B",
+    "deepseek-ai/janus-pro-7b": "DeepSeek Janus Pro 7B",
+    "deepseek-r1-distill-llama-8b": "DeepSeek R1 Distill Llama 8B",
+    "nvidia/llama-3.1-nemotron-70b-instruct:free": "Llama 3.1 Nemotron 70B Instruct",
+    "deepseek/deepseek-r1-distill-llama-70b:free": "DeepSeek R1 Distill Llama 70B",
 }
 
 
@@ -189,7 +202,14 @@ def create_logger(provider_name):
 
 MISSING_MODELS = set()
 
-HYPERBOLIC_IGNORED_MODELS = {"Wifhat", "FLUX.1-dev", "StableDiffusion", "Monad", "TTS"}
+HYPERBOLIC_IGNORED_MODELS = {
+    "Wifhat",
+    "FLUX.1-dev",
+    "StableDiffusion",
+    "Monad",
+    "TTS",
+    "deepseek-ai/Janus-Pro-7B",
+}
 
 LAMBDA_IGNORED_MODELS = {"lfm-40b-vllm", "hermes3-405b-fp8-128k"}
 
@@ -201,6 +221,7 @@ OPENROUTER_IGNORED_MODELS = {
     "google/gemini-2.0-flash-exp:free",
     "google/gemini-2.0-flash-thinking-exp:free",
     "google/gemini-2.0-flash-thinking-exp-1219:free",
+    "google/gemini-flash-1.5-exp:free",
 }  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 
@@ -277,15 +298,19 @@ def fetch_groq_models(logger):
     models = r.json()["data"]
     logger.debug(json.dumps(models, indent=4))
     ret_models = []
-    for model in models:
-        limits = get_groq_limits_for_model(model["id"], script_dir, logger)
-        ret_models.append(
-            {
+    with ThreadPoolExecutor() as executor:
+        futures = []
+        for model in models:
+            future = executor.submit(get_groq_limits_for_model, model["id"], script_dir, logger)
+            futures.append((model, future))
+        
+        for model, future in futures:
+            limits = future.result()
+            ret_models.append({
                 "id": model["id"],
                 "name": get_model_name(model["id"]),
                 "limits": limits,
-            }
-        )
+            })
     ret_models = sorted(ret_models, key=lambda x: x["name"])
     return ret_models
 
@@ -374,7 +399,7 @@ def fetch_ovh_models(logger):
     )
     r.raise_for_status()
     models = list(
-        filter(lambda x: x["available"] and x["category"] == "Assistant", r.json())
+        filter(lambda x: x["available"] and "LLM" in x["category"], r.json())
     )
     logger.info(f"Fetched {len(models)} models from OVH")
     ret_models = []
@@ -517,11 +542,14 @@ def fetch_hyperbolic_models_api(logger):
 
 def fetch_github_models(logger):
     logger.info("Fetching GitHub models...")
-    r = requests.get("https://github.com/marketplace/models", headers={
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-        "x-requested-with": "XMLHttpRequest",
-    })
+    r = requests.get(
+        "https://github.com/marketplace/models",
+        headers={
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "x-requested-with": "XMLHttpRequest",
+        },
+    )
     r.raise_for_status()
     models = r.json()
     logger.info(f"Fetched {len(models)} models from GitHub")
@@ -605,6 +633,20 @@ def fetch_lambda_models(logger):
     return ret_models
 
 
+def rate_limited_mistral_chat(client, **kwargs):
+    global last_mistral_request_time
+    
+    # Ensure at least 1 second between requests
+    current_time = time.time()
+    time_since_last = current_time - last_mistral_request_time
+    if time_since_last < 1:
+        time.sleep(1 - time_since_last)
+    
+    response = client.chat.complete(**kwargs)
+    last_mistral_request_time = time.time()
+    return response
+
+
 def fetch_samba_models(logger):
     logger.info("Fetching SambaNova models...")
     r = requests.get("https://community.sambanova.ai/t/rate-limits/321")
@@ -615,9 +657,9 @@ Here is the web page to extract data from:
 {r.text}
 ```
     """
-    client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
     logger.info("Extracting model rate limits from the provided web page...")
-    chat_response = client.chat.complete(
+    chat_response = rate_limited_mistral_chat(
+        mistral_client,
         model="mistral-large-latest",
         messages=[
             {
@@ -690,9 +732,9 @@ Here is the web page to extract data from:
 {body}
 ```
     """
-    client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
     logger.info("Extracting model rate limits from the provided web page...")
-    chat_response = client.chat.complete(
+    chat_response = rate_limited_mistral_chat(
+        mistral_client,
         model="mistral-large-latest",
         messages=[
             {
@@ -749,16 +791,37 @@ def main():
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
 
-    gemini_models = fetch_gemini_limits(google_ai_studio_logger)
-    openrouter_models = fetch_openrouter_models(openrouter_logger)
-    hyperbolic_models = fetch_hyperbolic_models(hyperbolic_logger)
-    ovh_models = fetch_ovh_models(ovh_logger)
-    cloudflare_models = fetch_cloudflare_models(cloudflare_logger)
-    github_models = fetch_github_models(github_logger)
-    # lambda_models = fetch_lambda_models(lambda_logger)
-    samba_models = fetch_samba_models(samba_logger)
-    scaleway_models = fetch_scaleway_models(scaleway_logger)
-    groq_models = fetch_groq_models(groq_logger)
+    fetch_concurrently = os.getenv("FETCH_CONCURRENTLY", "false").lower() == "true"
+
+    if fetch_concurrently:
+        with ThreadPoolExecutor() as executor:
+            futures = [
+                executor.submit(fetch_gemini_limits, google_ai_studio_logger),
+                executor.submit(fetch_openrouter_models, openrouter_logger),
+                executor.submit(fetch_hyperbolic_models, hyperbolic_logger),
+                executor.submit(fetch_ovh_models, ovh_logger),
+                executor.submit(fetch_cloudflare_models, cloudflare_logger),
+                executor.submit(fetch_github_models, github_logger),
+                executor.submit(fetch_samba_models, samba_logger),
+                executor.submit(fetch_scaleway_models, scaleway_logger),
+            ]
+            gemini_models, openrouter_models, hyperbolic_models, ovh_models, \
+            cloudflare_models, github_models, samba_models, scaleway_models = \
+            [f.result() for f in futures]
+            
+            # Fetch groq models after others complete
+            groq_models = fetch_groq_models(groq_logger)
+    else:
+        gemini_models = fetch_gemini_limits(google_ai_studio_logger)
+        openrouter_models = fetch_openrouter_models(openrouter_logger)
+        hyperbolic_models = fetch_hyperbolic_models(hyperbolic_logger)
+        ovh_models = fetch_ovh_models(ovh_logger)
+        cloudflare_models = fetch_cloudflare_models(cloudflare_logger)
+        github_models = fetch_github_models(github_logger)
+        # lambda_models = fetch_lambda_models(lambda_logger)
+        samba_models = fetch_samba_models(samba_logger)
+        scaleway_models = fetch_scaleway_models(scaleway_logger)
+        groq_models = fetch_groq_models(groq_logger)
 
     table = """<table>
     <thead>
@@ -788,34 +851,26 @@ def main():
         table += "</tr>\n"
 
     table += f"""<tr>
-            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 2.0 Flash Experimental</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash-exp"]})}</td>
+        </tr>
+        <tr>
+            <td>Gemini 2.0 (Experimental)</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro-exp"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Flash</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash"]})}</td>
         </tr>
         <tr>
-            <td>Gemini 1.5 Flash (Experimental)</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash-exp"]})}</td>
-        </tr>
-        <tr>
             <td>Gemini 1.5 Flash-8B</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash-8b"]})}</td>
         </tr>
         <tr>
-            <td>Gemini 1.5 Flash-8B (Experimental)</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-flash-8b-exp"]})}</td>
-        </tr>
-        <tr>
             <td>Gemini 1.5 Pro</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro"]})}</td>
-        </tr>
-        <tr>
-            <td>Gemini 1.5 Pro (Experimental)</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro-exp"]})}</td>
         </tr>
         <tr>
             <td>LearnLM 1.5 Pro (Experimental)</td>
@@ -853,19 +908,6 @@ def main():
             <td>Various open models</td>
             <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
         </tr>"""
-
-    for idx, model in enumerate(samba_models):
-        table += "<tr>"
-
-        if idx == 0:
-            table += f'<td rowspan="{len(samba_models)}">'
-            table += '<a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a>'
-            table += "</td>"
-            table += f'<td rowspan="{len(samba_models)}"></td>'
-
-        table += f"<td>{model['name']}</td>"
-        table += f"<td>{get_human_limits(model)}</td>"
-        table += "</tr>\n"
 
     table += """<tr>
         <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
@@ -914,13 +956,17 @@ def main():
         table += "</tr>\n"
 
     table += """<tr>
-        <td rowspan="2"><a href="https://together.ai">Together</a></td>
-        <td rowspan="2"></td>
+        <td rowspan="3"><a href="https://together.ai">Together</a></td>
+        <td rowspan="3"></td>
         <td>Llama 3.2 11B Vision Instruct</td>
         <td></td>
     </tr>
     <tr>
         <td>Llama 3.3 70B Instruct</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>DeepSeek R1 Distil Llama 70B</td>
         <td></td>
     </tr>"""
 
@@ -933,7 +979,7 @@ def main():
         <tr>
             <td>Command-R+</td>
         </tr>"""
-    
+
     for idx, model in enumerate(github_models):
         table += "<tr>"
         table += (
@@ -949,7 +995,7 @@ def main():
         table += f"<td>{model['name']}</td>"
         table += "<td></td>"
         table += "</tr>\n"
-    
+
     for idx, model in enumerate(cloudflare_models):
         table += "<tr>"
         if idx == 0:
@@ -966,11 +1012,11 @@ def main():
     table += """<tr>
         <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
         <td rowspan="6">Very stringent payment verification for Google Cloud.</td>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
     </tr>
     <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama3-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.1-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
     </tr>
     <tr>
@@ -982,10 +1028,10 @@ def main():
         <td rowspan="3">Experimental Gemini model.<br>10 requests/minute</td>
     </tr>
     <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Flash Experimental</a></td>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Thinking Experimental</a></td>
     </tr>
     <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini Pro Experimental</a></td>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Experimental</a></td>
     </tr>"""
 
     table += "</tbody></table>"
@@ -1003,9 +1049,23 @@ def main():
             trial_table += f'<td rowspan="{len(hyperbolic_models)}"></td>'
         trial_table += f"<td>{model['name']}</td>"
         trial_table += "</tr>\n"
+
+    for idx, model in enumerate(samba_models):
+        trial_table += "<tr>"
+
+        if idx == 0:
+            trial_table += f'<td rowspan="{len(samba_models)}">'
+            trial_table += '<a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a>'
+            trial_table += "</td>"
+            trial_table += f'<td rowspan="{len(samba_models)}">$5 for 3 months</td>'
+
+        trial_table += f"<td>{model['name']}</td>"
+        trial_table += f"<td>{get_human_limits(model)}</td>"
+        trial_table += "</tr>\n"
+
     if MISSING_MODELS:
         logger.warning("Missing models:")
-        logger.warning(list(MISSING_MODELS))
+        logger.warning("\n" + "\n".join([f'"{model}": "{model}",' for model in MISSING_MODELS]))
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(script_dir, "README_template.md"), "r") as f:
