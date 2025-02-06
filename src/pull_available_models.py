@@ -187,6 +187,10 @@ MODEL_TO_NAME_MAPPING = {
     "deepseek-r1-distill-llama-8b": "DeepSeek R1 Distill Llama 8B",
     "nvidia/llama-3.1-nemotron-70b-instruct:free": "Llama 3.1 Nemotron 70B Instruct",
     "deepseek/deepseek-r1-distill-llama-70b:free": "DeepSeek R1 Distill Llama 70B",
+    "qwen/qwen2.5-vl-72b-instruct:free": "Qwen2.5 VL 72B Instruct",
+    "google/gemini-2.0-flash-lite-preview-02-05:free": "Gemini 2.0 Flash Lite Preview 02-05",
+    "qwen/qwen-vl-plus:free": "Qwen VL Plus",
+    "google/gemini-2.0-pro-exp-02-05:free": "Gemini 2.0 Pro Experimental 02-05",
 }
 
 
@@ -222,6 +226,7 @@ OPENROUTER_IGNORED_MODELS = {
     "google/gemini-2.0-flash-thinking-exp:free",
     "google/gemini-2.0-flash-thinking-exp-1219:free",
     "google/gemini-flash-1.5-exp:free",
+    "google/gemini-2.0-pro-exp-02-05:free",
 }  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 
@@ -851,14 +856,22 @@ def main():
         table += "</tr>\n"
 
     table += f"""<tr>
-            <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
-            <td>Gemini 2.0 Flash Experimental</td>
+            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td>Gemini 2.0 Flash</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash"]})}</td>
+        </tr>
+        <tr>
+            <td>Gemini 2.0 Flash-Lite</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash-lite"]})}</td>
+        </tr>
+        <tr>
+            <td>Gemini 2.0 Flash (Experimental)</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash-exp"]})}</td>
         </tr>
         <tr>
-            <td>Gemini 2.0 (Experimental)</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro-exp"]})}</td>
+            <td>Gemini 2.0 Pro (Experimental)</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-2.0-pro-exp"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Flash</td>

@@ -23,8 +23,9 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="21"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="21">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="24"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="24">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
+<tr><td>Gemini 2.0 Flash Lite Preview 02-05</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Llama 3 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 405B Instruct</td><td></td></tr>
@@ -41,18 +42,28 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-3 Medium 128k Instruct</td><td></td></tr>
 <tr><td>Phi-3 Mini 128k Instruct</td><td></td></tr>
 <tr><td>Qwen 2 7B Instruct</td><td></td></tr>
+<tr><td>Qwen VL Plus</td><td></td></tr>
+<tr><td>Qwen2.5 VL 72B Instruct</td><td></td></tr>
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
 <tr>
-            <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
-            <td>Gemini 2.0 Flash Experimental</td>
+            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td>Gemini 2.0 Flash</td>
+            <td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td>
+        </tr>
+        <tr>
+            <td>Gemini 2.0 Flash-Lite</td>
+            <td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td>
+        </tr>
+        <tr>
+            <td>Gemini 2.0 Flash (Experimental)</td>
             <td>4,000,000 tokens/minute<br>10 requests/minute</td>
         </tr>
         <tr>
-            <td>Gemini 2.0 (Experimental)</td>
-            <td>1,000,000 tokens/minute<br>100 requests/day<br>5 requests/minute</td>
+            <td>Gemini 2.0 Pro (Experimental)</td>
+            <td>32,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Flash</td>
