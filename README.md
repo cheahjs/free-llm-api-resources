@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="21"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="21">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="25"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="25">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Llama 3 8B Instruct</td><td></td></tr>
@@ -44,6 +44,10 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
+<tr><td>google/gemini-2.0-flash-lite-preview-02-05:free</td><td></td></tr>
+<tr><td>google/gemini-2.0-pro-exp-02-05:free</td><td></td></tr>
+<tr><td>qwen/qwen-vl-plus:free</td><td></td></tr>
+<tr><td>qwen/qwen2.5-vl-72b-instruct:free</td><td></td></tr>
 <tr>
             <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
