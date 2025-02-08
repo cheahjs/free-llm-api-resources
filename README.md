@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="24"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="24">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="26"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="26">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>Gemini 2.0 Flash Lite Preview 02-05</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
@@ -47,6 +47,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
+<tr><td>deepseek/deepseek-chat:free</td><td></td></tr>
+<tr><td>meta-llama/llama-3.3-70b-instruct:free</td><td></td></tr>
 <tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -338,7 +340,7 @@ This lists various services that provide free access or credits towards API-base
             <td>$0.5</td>
             <td></td>
             <td>Various open models</td>
-        </tr><tr><td rowspan="20"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="20">$10</td><td rowspan="20"></td><td>DeepSeek R1</td></tr>
+        </tr><tr><td rowspan="21"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="21">$10</td><td rowspan="21"></td><td>DeepSeek R1</td></tr>
 <tr><td>DeepSeek R1-Zero</td></tr>
 <tr><td>DeepSeek V2.5</td></tr>
 <tr><td>DeepSeek V3</td></tr>
@@ -358,6 +360,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
+<tr><td>test</td></tr>
 <tr><td rowspan="12"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="12">$5 for 3 months</td><td>Llama 3.1 8B</td><td>30 requests/minute</td></tr>
 <tr><td>Llama 3.1 70B</td><td>20 requests/minute</td></tr>
 <tr><td>Llama 3.1 405B</td><td>10 requests/minute</td></tr>
