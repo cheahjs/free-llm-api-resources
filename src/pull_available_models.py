@@ -657,54 +657,19 @@ def rate_limited_mistral_chat(client, **kwargs):
 
 def fetch_samba_models(logger):
     logger.info("Fetching SambaNova models...")
-    r = requests.get("https://community.sambanova.ai/t/rate-limits/321")
+    r = requests.get("https://cloud.sambanova.ai/api/pricing")
     r.raise_for_status()
-    prompt = f"""
-Here is the web page to extract data from:
-```html
-{r.text}
-```
-    """
-    logger.info("Extracting model rate limits from the provided web page...")
-    chat_response = rate_limited_mistral_chat(
-        mistral_client,
-        model="mistral-large-latest",
-        messages=[
-            {
-                "role": "system",
-                "content": """Extract the model rate limits as only integers from the provided web page into JSON:
-```json
-{
-  "Llama 3.1 405B": 10,
-  "Llama 3.2 90B": 1
-}
-```
-ONLY OUTPUT JSON!""",
-            },
-            {
-                "role": "user",
-                "content": prompt,
-            },
-        ],
-        response_format={
-            "type": "json_object",
-        },
-        temperature=0,
-    )
-    logger.info(chat_response.choices[0].message.content)
-    extracted_data = json.loads(chat_response.choices[0].message.content)
+    models = r.json()["prices"]
+    logger.info(f"Fetched {len(models)} models from SambaNova")
     ret_models = []
-    for model in extracted_data:
+    for model in models:
         ret_models.append(
             {
-                "id": model,
-                "name": model,
-                "limits": {
-                    "requests/minute": extracted_data[model],
-                },
+                "id": model["model_id"],
+                "name": model["model_name"],
             }
         )
-
+    ret_models = sorted(ret_models, key=lambda x: x["name"])
     return ret_models
 
 
