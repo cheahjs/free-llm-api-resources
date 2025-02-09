@@ -355,20 +355,20 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
-<tr><td rowspan="14"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="14">$5 for 3 months</td><td>Llama 3.1 405B</td><td></td></tr>
-<tr><td>Llama 3.1 70B</td><td></td></tr>
-<tr><td>Llama 3.1 8B</td><td></td></tr>
-<tr><td>Llama 3.2 11B Vision</td><td></td></tr>
-<tr><td>Llama 3.2 1B</td><td></td></tr>
-<tr><td>Llama 3.2 3B</td><td></td></tr>
-<tr><td>Llama 3.2 90B Vision</td><td></td></tr>
-<tr><td>Llama 3.3 70B</td><td></td></tr>
-<tr><td>Llama-Guard-3-8B</td><td></td></tr>
-<tr><td>Qwen/QwQ-32B-Preview</td><td></td></tr>
-<tr><td>Qwen/Qwen2.5-72B-Instruct</td><td></td></tr>
-<tr><td>Qwen/Qwen2.5-Coder-32B-Instruct</td><td></td></tr>
-<tr><td>allenai/Llama-3.1-Tulu-3-405B</td><td></td></tr>
-<tr><td>deepseek-ai/DeepSeek-R1-Distill-Llama-70B</td><td></td></tr>
+<tr><td rowspan="14"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="14">$5 for 3 months</td><td></td><td>Llama 3.1 405B</td></tr>
+<tr><td></td><td>Llama 3.1 70B</td></tr>
+<tr><td></td><td>Llama 3.1 8B</td></tr>
+<tr><td></td><td>Llama 3.2 11B Vision</td></tr>
+<tr><td></td><td>Llama 3.2 1B</td></tr>
+<tr><td></td><td>Llama 3.2 3B</td></tr>
+<tr><td></td><td>Llama 3.2 90B Vision</td></tr>
+<tr><td></td><td>Llama 3.3 70B</td></tr>
+<tr><td></td><td>Llama-Guard-3-8B</td></tr>
+<tr><td></td><td>Qwen/QwQ-32B-Preview</td></tr>
+<tr><td></td><td>Qwen/Qwen2.5-72B-Instruct</td></tr>
+<tr><td></td><td>Qwen/Qwen2.5-Coder-32B-Instruct</td></tr>
+<tr><td></td><td>allenai/Llama-3.1-Tulu-3-405B</td></tr>
+<tr><td></td><td>deepseek-ai/DeepSeek-R1-Distill-Llama-70B</td></tr>
 <tr>
             <td><a href="https://studio.ai21.com/">AI21</a></td>
             <td>$10 for 3 months</td>

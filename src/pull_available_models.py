@@ -1040,8 +1040,8 @@ def main():
             trial_table += "</td>"
             trial_table += f'<td rowspan="{len(samba_models)}">$5 for 3 months</td>'
 
-        trial_table += f"<td>{model['name']}</td>"
         trial_table += f"<td>{get_human_limits(model)}</td>"
+        trial_table += f"<td>{model['name']}</td>"
         trial_table += "</tr>\n"
 
     if MISSING_MODELS:
