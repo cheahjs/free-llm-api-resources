@@ -23,20 +23,14 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="26"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="26">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="20"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="20">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek V3</td><td></td></tr>
 <tr><td>Gemini 2.0 Flash Lite Preview 02-05</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Llama 3 8B Instruct</td><td></td></tr>
-<tr><td>Llama 3.1 405B Instruct</td><td></td></tr>
-<tr><td>Llama 3.1 70B Instruct</td><td></td></tr>
-<tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 Nemotron 70B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
-<tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
-<tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
-<tr><td>Llama 3.2 90B Vision Instruct</td><td></td></tr>
 <tr><td>Llama 3.3 70B Instruct</td><td></td></tr>
 <tr><td>Mistral 7B Instruct</td><td></td></tr>
 <tr><td>Mythomax L2 13B</td><td></td></tr>
