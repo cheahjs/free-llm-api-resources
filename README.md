@@ -23,8 +23,9 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="24"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="24">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="26"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="26">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
+<tr><td>DeepSeek V3</td><td></td></tr>
 <tr><td>Gemini 2.0 Flash Lite Preview 02-05</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Llama 3 8B Instruct</td><td></td></tr>
@@ -36,6 +37,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 90B Vision Instruct</td><td></td></tr>
+<tr><td>Llama 3.3 70B Instruct</td><td></td></tr>
 <tr><td>Mistral 7B Instruct</td><td></td></tr>
 <tr><td>Mythomax L2 13B</td><td></td></tr>
 <tr><td>OpenChat 7B</td><td></td></tr>
@@ -131,7 +133,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
-<tr><td rowspan="10"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta)</a></td><td rowspan="10"></td><td>BGE-Multilingual-Gemma2</td><td>100 requests/minute<br>200,000 tokens/minute</td></tr>
+<tr><td rowspan="11"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta until 12 March 2025)</a></td><td rowspan="11"></td><td>BGE-Multilingual-Gemma2</td><td>100 requests/minute<br>200,000 tokens/minute</td></tr>
+<tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 8B</td><td></td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>

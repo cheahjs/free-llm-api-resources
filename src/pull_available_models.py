@@ -191,6 +191,9 @@ MODEL_TO_NAME_MAPPING = {
     "google/gemini-2.0-flash-lite-preview-02-05:free": "Gemini 2.0 Flash Lite Preview 02-05",
     "qwen/qwen-vl-plus:free": "Qwen VL Plus",
     "google/gemini-2.0-pro-exp-02-05:free": "Gemini 2.0 Pro Experimental 02-05",
+    "deepseek-r1": "DeepSeek R1",
+    "meta-llama/llama-3.3-70b-instruct:free": "Llama 3.3 70B Instruct",
+    "deepseek/deepseek-chat:free": "DeepSeek V3",
 }
 
 
@@ -950,7 +953,7 @@ def main():
         table += "<tr>"
         if idx == 0:
             table += '<td rowspan="' + str(len(scaleway_models)) + '">'
-            table += '<a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta)</a>'
+            table += '<a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta until 12 March 2025)</a>'
             table += "</td>"
             table += '<td rowspan="' + str(len(scaleway_models)) + '"></td>'
         table += f"<td>{model['name']}</td>"
