@@ -187,6 +187,13 @@ MODEL_TO_NAME_MAPPING = {
     "deepseek-r1-distill-llama-8b": "DeepSeek R1 Distill Llama 8B",
     "nvidia/llama-3.1-nemotron-70b-instruct:free": "Llama 3.1 Nemotron 70B Instruct",
     "deepseek/deepseek-r1-distill-llama-70b:free": "DeepSeek R1 Distill Llama 70B",
+    "qwen/qwen2.5-vl-72b-instruct:free": "Qwen2.5 VL 72B Instruct",
+    "google/gemini-2.0-flash-lite-preview-02-05:free": "Gemini 2.0 Flash Lite Preview 02-05",
+    "qwen/qwen-vl-plus:free": "Qwen VL Plus",
+    "google/gemini-2.0-pro-exp-02-05:free": "Gemini 2.0 Pro Experimental 02-05",
+    "deepseek-r1": "DeepSeek R1",
+    "meta-llama/llama-3.3-70b-instruct:free": "Llama 3.3 70B Instruct",
+    "deepseek/deepseek-chat:free": "DeepSeek V3",
 }
 
 
@@ -222,6 +229,7 @@ OPENROUTER_IGNORED_MODELS = {
     "google/gemini-2.0-flash-thinking-exp:free",
     "google/gemini-2.0-flash-thinking-exp-1219:free",
     "google/gemini-flash-1.5-exp:free",
+    "google/gemini-2.0-pro-exp-02-05:free",
 }  # Ignore gemini experimental free models because rate limits mean they are unusable.
 
 
@@ -649,54 +657,19 @@ def rate_limited_mistral_chat(client, **kwargs):
 
 def fetch_samba_models(logger):
     logger.info("Fetching SambaNova models...")
-    r = requests.get("https://community.sambanova.ai/t/rate-limits/321")
+    r = requests.get("https://cloud.sambanova.ai/api/pricing")
     r.raise_for_status()
-    prompt = f"""
-Here is the web page to extract data from:
-```html
-{r.text}
-```
-    """
-    logger.info("Extracting model rate limits from the provided web page...")
-    chat_response = rate_limited_mistral_chat(
-        mistral_client,
-        model="mistral-large-latest",
-        messages=[
-            {
-                "role": "system",
-                "content": """Extract the model rate limits as only integers from the provided web page into JSON:
-```json
-{
-  "Llama 3.1 405B": 10,
-  "Llama 3.2 90B": 1
-}
-```
-ONLY OUTPUT JSON!""",
-            },
-            {
-                "role": "user",
-                "content": prompt,
-            },
-        ],
-        response_format={
-            "type": "json_object",
-        },
-        temperature=0,
-    )
-    logger.info(chat_response.choices[0].message.content)
-    extracted_data = json.loads(chat_response.choices[0].message.content)
+    models = r.json()["prices"]
+    logger.info(f"Fetched {len(models)} models from SambaNova")
     ret_models = []
-    for model in extracted_data:
+    for model in models:
         ret_models.append(
             {
-                "id": model,
-                "name": model,
-                "limits": {
-                    "requests/minute": extracted_data[model],
-                },
+                "id": model["model_id"],
+                "name": model["model_name"],
             }
         )
-
+    ret_models = sorted(ret_models, key=lambda x: x["name"])
     return ret_models
 
 
@@ -851,14 +824,22 @@ def main():
         table += "</tr>\n"
 
     table += f"""<tr>
-            <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
-            <td>Gemini 2.0 Flash Experimental</td>
+            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td>Gemini 2.0 Flash</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash"]})}</td>
+        </tr>
+        <tr>
+            <td>Gemini 2.0 Flash-Lite</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash-lite"]})}</td>
+        </tr>
+        <tr>
+            <td>Gemini 2.0 Flash (Experimental)</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash-exp"]})}</td>
         </tr>
         <tr>
-            <td>Gemini 2.0 (Experimental)</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-1.5-pro-exp"]})}</td>
+            <td>Gemini 2.0 Pro (Experimental)</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-2.0-pro-exp"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Flash</td>
@@ -906,7 +887,7 @@ def main():
             <td><a href="https://huggingface.co/docs/api-inference/en/index" target="_blank">HuggingFace Serverless Inference</a></td>
             <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
-            <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
+            <td><a href="https://huggingface.co/docs/api-inference/pricing" target="_blank">Variable credits per month, currently $0.10</a></td>
         </tr>"""
 
     table += """<tr>
@@ -937,7 +918,7 @@ def main():
         table += "<tr>"
         if idx == 0:
             table += '<td rowspan="' + str(len(scaleway_models)) + '">'
-            table += '<a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta)</a>'
+            table += '<a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta until 12 March 2025)</a>'
             table += "</td>"
             table += '<td rowspan="' + str(len(scaleway_models)) + '"></td>'
         table += f"<td>{model['name']}</td>"
@@ -1059,8 +1040,8 @@ def main():
             trial_table += "</td>"
             trial_table += f'<td rowspan="{len(samba_models)}">$5 for 3 months</td>'
 
-        trial_table += f"<td>{model['name']}</td>"
         trial_table += f"<td>{get_human_limits(model)}</td>"
+        trial_table += f"<td>{model['name']}</td>"
         trial_table += "</tr>\n"
 
     if MISSING_MODELS:

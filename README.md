@@ -23,36 +23,43 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="21"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="21">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="20"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="20">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
+<tr><td>DeepSeek V3</td><td></td></tr>
+<tr><td>Gemini 2.0 Flash Lite Preview 02-05</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Llama 3 8B Instruct</td><td></td></tr>
-<tr><td>Llama 3.1 405B Instruct</td><td></td></tr>
-<tr><td>Llama 3.1 70B Instruct</td><td></td></tr>
-<tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 Nemotron 70B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
-<tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
-<tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
-<tr><td>Llama 3.2 90B Vision Instruct</td><td></td></tr>
+<tr><td>Llama 3.3 70B Instruct</td><td></td></tr>
 <tr><td>Mistral 7B Instruct</td><td></td></tr>
 <tr><td>Mythomax L2 13B</td><td></td></tr>
 <tr><td>OpenChat 7B</td><td></td></tr>
 <tr><td>Phi-3 Medium 128k Instruct</td><td></td></tr>
 <tr><td>Phi-3 Mini 128k Instruct</td><td></td></tr>
 <tr><td>Qwen 2 7B Instruct</td><td></td></tr>
+<tr><td>Qwen VL Plus</td><td></td></tr>
+<tr><td>Qwen2.5 VL 72B Instruct</td><td></td></tr>
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
 <tr>
-            <td rowspan="9"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="9">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
-            <td>Gemini 2.0 Flash Experimental</td>
+            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td>Gemini 2.0 Flash</td>
+            <td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td>
+        </tr>
+        <tr>
+            <td>Gemini 2.0 Flash-Lite</td>
+            <td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td>
+        </tr>
+        <tr>
+            <td>Gemini 2.0 Flash (Experimental)</td>
             <td>4,000,000 tokens/minute<br>10 requests/minute</td>
         </tr>
         <tr>
-            <td>Gemini 2.0 (Experimental)</td>
-            <td>1,000,000 tokens/minute<br>100 requests/day<br>5 requests/minute</td>
+            <td>Gemini 2.0 Pro (Experimental)</td>
+            <td>32,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Flash</td>
@@ -94,7 +101,7 @@ This lists various services that provide free access or credits towards API-base
             <td><a href="https://huggingface.co/docs/api-inference/en/index" target="_blank">HuggingFace Serverless Inference</a></td>
             <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
             <td>Various open models</td>
-            <td><a href="https://huggingface.co/docs/api-inference/rate-limits" target="_blank">1,000 requests/day (with an account)</a></td>
+            <td><a href="https://huggingface.co/docs/api-inference/pricing" target="_blank">Variable credits per month, currently $0.10</a></td>
         </tr><tr>
         <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
         <td rowspan="2">Free tier restricted to 8K context</td>
@@ -120,7 +127,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
-<tr><td rowspan="10"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta)</a></td><td rowspan="10"></td><td>BGE-Multilingual-Gemma2</td><td>100 requests/minute<br>200,000 tokens/minute</td></tr>
+<tr><td rowspan="11"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta until 12 March 2025)</a></td><td rowspan="11"></td><td>BGE-Multilingual-Gemma2</td><td>100 requests/minute<br>200,000 tokens/minute</td></tr>
+<tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 8B</td><td></td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>
@@ -347,18 +355,20 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
-<tr><td rowspan="12"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="12">$5 for 3 months</td><td>Llama 3.1 8B</td><td>30 requests/minute</td></tr>
-<tr><td>Llama 3.1 70B</td><td>20 requests/minute</td></tr>
-<tr><td>Llama 3.1 405B</td><td>10 requests/minute</td></tr>
-<tr><td>Llama 3.2 1B</td><td>30 requests/minute</td></tr>
-<tr><td>Llama 3.2 3B</td><td>30 requests/minute</td></tr>
-<tr><td>Llama 3.2 11B</td><td>10 requests/minute</td></tr>
-<tr><td>Llama 3.2 90B</td><td>1 requests/minute</td></tr>
-<tr><td>Llama 3.3 70B</td><td>20 requests/minute</td></tr>
-<tr><td>Llama Guard 3 8B</td><td>30 requests/minute</td></tr>
-<tr><td>Qwen 2.5 72B</td><td>20 requests/minute</td></tr>
-<tr><td>Qwen 2.5 Coder 32B</td><td>20 requests/minute</td></tr>
-<tr><td>QwQ 32B Preview</td><td>10 requests/minute</td></tr>
+<tr><td rowspan="14"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="14">$5 for 3 months</td><td></td><td>Llama 3.1 405B</td></tr>
+<tr><td></td><td>Llama 3.1 70B</td></tr>
+<tr><td></td><td>Llama 3.1 8B</td></tr>
+<tr><td></td><td>Llama 3.2 11B Vision</td></tr>
+<tr><td></td><td>Llama 3.2 1B</td></tr>
+<tr><td></td><td>Llama 3.2 3B</td></tr>
+<tr><td></td><td>Llama 3.2 90B Vision</td></tr>
+<tr><td></td><td>Llama 3.3 70B</td></tr>
+<tr><td></td><td>Llama-Guard-3-8B</td></tr>
+<tr><td></td><td>Qwen/QwQ-32B-Preview</td></tr>
+<tr><td></td><td>Qwen/Qwen2.5-72B-Instruct</td></tr>
+<tr><td></td><td>Qwen/Qwen2.5-Coder-32B-Instruct</td></tr>
+<tr><td></td><td>allenai/Llama-3.1-Tulu-3-405B</td></tr>
+<tr><td></td><td>deepseek-ai/DeepSeek-R1-Distill-Llama-70B</td></tr>
 <tr>
             <td><a href="https://studio.ai21.com/">AI21</a></td>
             <td>$10 for 3 months</td>
