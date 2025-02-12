@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="20"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="20">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="22"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="22">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek V3</td><td></td></tr>
 <tr><td>Gemini 2.0 Flash Lite Preview 02-05</td><td></td></tr>
@@ -33,6 +33,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
 <tr><td>Llama 3.3 70B Instruct</td><td></td></tr>
 <tr><td>Mistral 7B Instruct</td><td></td></tr>
+<tr><td>Mistral Nemo</td><td></td></tr>
+<tr><td>Mistral Small 24B Instruct 2501</td><td></td></tr>
 <tr><td>Mythomax L2 13B</td><td></td></tr>
 <tr><td>OpenChat 7B</td><td></td></tr>
 <tr><td>Phi-3 Medium 128k Instruct</td><td></td></tr>
@@ -111,7 +113,9 @@ This lists various services that provide free access or credits towards API-base
     <tr>
         <td>Llama 3.3 70B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
-    </tr><tr><td rowspan="16"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="16"></td><td>DeepSeek R1 Distill Llama 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
+    </tr><tr><td rowspan="19"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="19"></td><td>Allam 2 7B</td><td>7,000 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>DeepSeek R1 Distill Llama 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>DeepSeek R1 Distill Qwen 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
@@ -125,6 +129,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.3 70B (Speculative Decoding)</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
+<tr><td>Qwen 2.5 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td rowspan="11"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta until 12 March 2025)</a></td><td rowspan="11"></td><td>BGE-Multilingual-Gemma2</td><td>100 requests/minute<br>200,000 tokens/minute</td></tr>
@@ -335,9 +340,7 @@ This lists various services that provide free access or credits towards API-base
             <td>$0.5</td>
             <td></td>
             <td>Various open models</td>
-        </tr><tr><td rowspan="20"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="20">$10</td><td rowspan="20"></td><td>DeepSeek R1</td></tr>
-<tr><td>DeepSeek R1-Zero</td></tr>
-<tr><td>DeepSeek V2.5</td></tr>
+        </tr><tr><td rowspan="18"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="18">$1</td><td rowspan="18"></td><td>DeepSeek V2.5</td></tr>
 <tr><td>DeepSeek V3</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>

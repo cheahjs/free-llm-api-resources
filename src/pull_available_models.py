@@ -194,6 +194,11 @@ MODEL_TO_NAME_MAPPING = {
     "deepseek-r1": "DeepSeek R1",
     "meta-llama/llama-3.3-70b-instruct:free": "Llama 3.3 70B Instruct",
     "deepseek/deepseek-chat:free": "DeepSeek V3",
+    "deepseek-r1-distill-qwen-32b": "DeepSeek R1 Distill Qwen 32B",
+    "mistralai/mistral-nemo:free": "Mistral Nemo",
+    "allam-2-7b": "Allam 2 7B",
+    "mistralai/mistral-small-24b-instruct-2501:free": "Mistral Small 24B Instruct 2501",
+    "qwen-2.5-32b": "Qwen 2.5 32B",
 }
 
 
@@ -216,6 +221,10 @@ HYPERBOLIC_IGNORED_MODELS = {
     "Monad",
     "TTS",
     "deepseek-ai/Janus-Pro-7B",
+    "test",
+    # Ignore DeepSeek R1 and R1-Zero because they are not available in the free tier.
+    "deepseek-ai/DeepSeek-R1",
+    "deepseek-ai/DeepSeek-R1-Zero",
 }
 
 LAMBDA_IGNORED_MODELS = {"lfm-40b-vllm", "hermes3-405b-fp8-128k"}
@@ -1026,7 +1035,7 @@ def main():
                 '<a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a>'
             )
             trial_table += "</td>"
-            trial_table += f'<td rowspan="{len(hyperbolic_models)}">$10</td>'
+            trial_table += f'<td rowspan="{len(hyperbolic_models)}">$1</td>'
             trial_table += f'<td rowspan="{len(hyperbolic_models)}"></td>'
         trial_table += f"<td>{model['name']}</td>"
         trial_table += "</tr>\n"
