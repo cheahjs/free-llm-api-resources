@@ -199,6 +199,9 @@ MODEL_TO_NAME_MAPPING = {
     "allam-2-7b": "Allam 2 7B",
     "mistralai/mistral-small-24b-instruct-2501:free": "Mistral Small 24B Instruct 2501",
     "qwen-2.5-32b": "Qwen 2.5 32B",
+    "cognitivecomputations/dolphin3.0-r1-mistral-24b:free": "Dolphin 3.0 R1 Mistral 24B",
+    "qwen-2.5-coder-32b": "Qwen 2.5 Coder 32B",
+    "cognitivecomputations/dolphin3.0-mistral-24b:free": "Dolphin 3.0 Mistral 24B",
 }
 
 
