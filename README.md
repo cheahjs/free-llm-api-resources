@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="23"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="23">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="25"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="25">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek V3</td><td></td></tr>
 <tr><td>Dolphin 3.0 Mistral 24B</td><td></td></tr>
@@ -31,8 +31,10 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Gemini 2.0 Flash Lite Preview 02-05</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Llama 3 8B Instruct</td><td></td></tr>
+<tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 Nemotron 70B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
 <tr><td>Llama 3.3 70B Instruct</td><td></td></tr>
 <tr><td>Mistral 7B Instruct</td><td></td></tr>
 <tr><td>Mistral Nemo</td><td></td></tr>
@@ -353,7 +355,7 @@ This lists various services that provide free access or credits towards API-base
             <td>$0.5</td>
             <td></td>
             <td>Various open models</td>
-        </tr><tr><td rowspan="17"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="17">$1</td><td rowspan="17"></td><td>DeepSeek V3</td></tr>
+        </tr><tr><td rowspan="16"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="16">$1</td><td rowspan="16"></td><td>DeepSeek V3</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
@@ -367,7 +369,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Pixtral 12B (2409)</td></tr>
 <tr><td>Qwen QwQ 32B Preview</td></tr>
 <tr><td>Qwen2-VL 72B Instruct</td></tr>
-<tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
 <tr><td rowspan="15"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="15">$5 for 3 months</td><td></td><td>Llama 3.1 405B</td></tr>
