@@ -194,6 +194,14 @@ MODEL_TO_NAME_MAPPING = {
     "deepseek-r1": "DeepSeek R1",
     "meta-llama/llama-3.3-70b-instruct:free": "Llama 3.3 70B Instruct",
     "deepseek/deepseek-chat:free": "DeepSeek V3",
+    "deepseek-r1-distill-qwen-32b": "DeepSeek R1 Distill Qwen 32B",
+    "mistralai/mistral-nemo:free": "Mistral Nemo",
+    "allam-2-7b": "Allam 2 7B",
+    "mistralai/mistral-small-24b-instruct-2501:free": "Mistral Small 24B Instruct 2501",
+    "qwen-2.5-32b": "Qwen 2.5 32B",
+    "cognitivecomputations/dolphin3.0-r1-mistral-24b:free": "Dolphin 3.0 R1 Mistral 24B",
+    "qwen-2.5-coder-32b": "Qwen 2.5 Coder 32B",
+    "cognitivecomputations/dolphin3.0-mistral-24b:free": "Dolphin 3.0 Mistral 24B",
 }
 
 
@@ -216,6 +224,10 @@ HYPERBOLIC_IGNORED_MODELS = {
     "Monad",
     "TTS",
     "deepseek-ai/Janus-Pro-7B",
+    "test",
+    # Ignore DeepSeek R1 and R1-Zero because they are not available in the free tier.
+    "deepseek-ai/DeepSeek-R1",
+    "deepseek-ai/DeepSeek-R1-Zero",
 }
 
 LAMBDA_IGNORED_MODELS = {"lfm-40b-vllm", "hermes3-405b-fp8-128k"}
@@ -977,6 +989,20 @@ def main():
         table += "<td></td>"
         table += "</tr>\n"
 
+    table += """<tr>
+        <td><a href="https://chutes.ai/">Chutes</a></td>
+        <td>Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>
+        <td>Various open models</td>
+        <td></td>
+    </tr>"""
+
+    table += """<tr>
+        <td><a href="https://targon.com/">Targon</a></td>
+        <td>Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>
+        <td>Various open models</td>
+        <td></td>
+    </tr>"""
+
     for idx, model in enumerate(cloudflare_models):
         table += "<tr>"
         if idx == 0:
@@ -991,8 +1017,8 @@ def main():
         table += "</tr>\n"
 
     table += """<tr>
-        <td rowspan="6"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td rowspan="6">Very stringent payment verification for Google Cloud.</td>
+        <td rowspan="7"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td rowspan="7">Very stringent payment verification for Google Cloud.</td>
         <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
     </tr>
@@ -1003,6 +1029,10 @@ def main():
     <tr>
         <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td>
         <td>Llama 3.2 API Service free during preview.<br>30 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.3-70b-instruct-maas" target="_blank">Llama 3.3 70B Instruct</a></td>
+        <td>Llama 3.3 API Service free during preview.<br>30 requests/minute</td>
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Experimental</a></td>
@@ -1026,7 +1056,7 @@ def main():
                 '<a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a>'
             )
             trial_table += "</td>"
-            trial_table += f'<td rowspan="{len(hyperbolic_models)}">$10</td>'
+            trial_table += f'<td rowspan="{len(hyperbolic_models)}">$1</td>'
             trial_table += f'<td rowspan="{len(hyperbolic_models)}"></td>'
         trial_table += f"<td>{model['name']}</td>"
         trial_table += "</tr>\n"
