@@ -353,7 +353,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td><a href="https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate">Novita</a></td>
-            <td>$0.5<br>$20 for DeepSeek models with <a href="https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate">referral code</a> + GitHub account connection</td>
+            <td>$0.5 for 1 year<br>$20 for 3 months for DeepSeek models with <a href="https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate">referral code</a> + GitHub account connection</td>
             <td></td>
             <td>Various open models</td>
         </tr><tr><td rowspan="17"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="17">$1</td><td rowspan="17"></td><td>DeepSeek V3</td></tr>
