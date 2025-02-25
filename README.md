@@ -135,8 +135,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen 2.5 Coder 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
-<tr><td rowspan="11"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta until 12 March 2025)</a></td><td rowspan="11"></td><td>BGE-Multilingual-Gemma2</td><td>100 requests/minute<br>200,000 tokens/minute</td></tr>
-<tr><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="10"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta until 12 March 2025)</a></td><td rowspan="10"></td><td>BGE-Multilingual-Gemma2</td><td>100 requests/minute<br>200,000 tokens/minute</td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 8B</td><td></td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>
@@ -146,7 +145,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Pixtral 12B (2409)</td><td>300 requests/minute<br>100,000 tokens/minute</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td><td></td></tr>
 <tr><td>sentence-t5-xxl</td><td>100 requests/minute<br>200,000 tokens/minute</td></tr>
-<tr><td rowspan="12"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="12"></td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td rowspan="13"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="13"></td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Codestral Mamba 7B v0.1</td><td>12 requests/minute</td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
@@ -158,6 +157,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral 7B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mistral Nemo 2407</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td>deepseek-r1-671b</td><td>12 requests/minute</td></tr>
 <tr>
         <td rowspan="3"><a href="https://together.ai">Together</a></td>
         <td rowspan="3"></td>
