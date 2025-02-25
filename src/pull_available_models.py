@@ -996,13 +996,6 @@ def main():
         <td></td>
     </tr>"""
 
-    table += """<tr>
-        <td><a href="https://targon.com/">Targon</a></td>
-        <td>Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>
-        <td>Various open models</td>
-        <td></td>
-    </tr>"""
-
     for idx, model in enumerate(cloudflare_models):
         table += "<tr>"
         if idx == 0:
