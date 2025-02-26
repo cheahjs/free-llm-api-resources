@@ -202,6 +202,9 @@ MODEL_TO_NAME_MAPPING = {
     "cognitivecomputations/dolphin3.0-r1-mistral-24b:free": "Dolphin 3.0 R1 Mistral 24B",
     "qwen-2.5-coder-32b": "Qwen 2.5 Coder 32B",
     "cognitivecomputations/dolphin3.0-mistral-24b:free": "Dolphin 3.0 Mistral 24B",
+    "deepseek-r1-671b": "DeepSeek R1",
+    "@cf/meta/llama-guard-3-8b": "Llama Guard 3 8B",
+    "mistral-saba-24b": "Mistral Saba 24B",
 }
 
 
@@ -836,8 +839,8 @@ def main():
         table += "</tr>\n"
 
     table += f"""<tr>
-            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="10"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="10">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 2.0 Flash</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash"]})}</td>
         </tr>
@@ -868,10 +871,6 @@ def main():
         <tr>
             <td>LearnLM 1.5 Pro (Experimental)</td>
             <td>{get_human_limits({"limits": gemini_models["learnlm-1.5-pro-experimental"]})}</td>
-        </tr>
-        <tr>
-            <td>Gemini 1.0 Pro</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-1.0-pro"]})}</td>
         </tr>
         <tr>
             <td>text-embedding-004</td>
