@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="25"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="25">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="29"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="29">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek V3</td><td></td></tr>
 <tr><td>Dolphin 3.0 Mistral 24B</td><td></td></tr>
@@ -43,11 +43,15 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>OpenChat 7B</td><td></td></tr>
 <tr><td>Phi-3 Medium 128k Instruct</td><td></td></tr>
 <tr><td>Phi-3 Mini 128k Instruct</td><td></td></tr>
+<tr><td>Qwen 2 7B Instruct</td><td></td></tr>
 <tr><td>Qwen VL Plus</td><td></td></tr>
 <tr><td>Qwen2.5 VL 72B Instruct</td><td></td></tr>
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
+<tr><td>moonshotai/moonlight-16b-a3b-instruct:free</td><td></td></tr>
+<tr><td>nousresearch/deephermes-3-llama-3-8b-preview:free</td><td></td></tr>
+<tr><td>qwen/qwen-2.5-coder-32b-instruct:free</td><td></td></tr>
 <tr>
             <td rowspan="10"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="10">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -175,7 +179,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Command-R+</td>
-        </tr><tr><td rowspan="43"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="43">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
+        </tr><tr><td rowspan="45"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="45">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
 <tr><td>AI21 Jamba 1.5 Mini</td><td></td></tr>
 <tr><td>Codestral 25.01</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
@@ -218,6 +222,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-3.5-mini instruct (128k)</td><td></td></tr>
 <tr><td>Phi-3.5-vision instruct (128k)</td><td></td></tr>
 <tr><td>Phi-4</td><td></td></tr>
+<tr><td>Phi-4-mini-instruct</td><td></td></tr>
+<tr><td>Phi-4-multimodal-instruct</td><td></td></tr>
 <tr>
         <td><a href="https://chutes.ai/">Chutes</a></td>
         <td>Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>
@@ -365,7 +371,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2-VL 7B Instruct</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
-<tr><td rowspan="15"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="15">$5 for 3 months</td><td></td><td>Llama 3.1 405B</td></tr>
+<tr><td rowspan="17"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="17">$5 for 3 months</td><td></td><td>Llama 3.1 405B</td></tr>
 <tr><td></td><td>Llama 3.1 70B</td></tr>
 <tr><td></td><td>Llama 3.1 8B</td></tr>
 <tr><td></td><td>Llama 3.2 11B Vision</td></tr>
@@ -380,6 +386,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td></td><td>allenai/Llama-3.1-Tulu-3-405B</td></tr>
 <tr><td></td><td>deepseek-ai/DeepSeek-R1</td></tr>
 <tr><td></td><td>deepseek-ai/DeepSeek-R1-Distill-Llama-70B</td></tr>
+<tr><td></td><td>tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3</td></tr>
+<tr><td></td><td>tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3</td></tr>
 <tr>
             <td><a href="https://studio.ai21.com/">AI21</a></td>
             <td>$10 for 3 months</td>
