@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="30"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="30">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
+<tr><td rowspan="31"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="31">20 requests/minute<br>200 requests/day</td><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek V3</td><td></td></tr>
 <tr><td>Dolphin 3.0 Mistral 24B</td><td></td></tr>
@@ -49,6 +49,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
+<tr><td>deepseek/deepseek-r1-zero:free</td><td></td></tr>
 <tr><td>moonshotai/moonlight-16b-a3b-instruct:free</td><td></td></tr>
 <tr><td>nousresearch/deephermes-3-llama-3-8b-preview:free</td><td></td></tr>
 <tr><td>qwen/qwen-2.5-coder-32b-instruct:free</td><td></td></tr>
@@ -148,18 +149,20 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Pixtral 12B (2409)</td><td>300 requests/minute<br>200,000 tokens/minute</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td><td></td></tr>
 <tr><td>sentence-t5-xxl</td><td></td></tr>
-<tr><td rowspan="12"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="12"></td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td rowspan="14"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="14"></td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Codestral Mamba 7B v0.1</td><td>12 requests/minute</td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3 8B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td>Llama 3.1 8B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3.3 70B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llava Next Mistral 7B</td><td>12 requests/minute</td></tr>
 <tr><td>Mathstral 7B v0.1</td><td>12 requests/minute</td></tr>
 <tr><td>Mistral 7B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mistral Nemo 2407</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td>mistral-7b-instruct-v0.3</td><td>12 requests/minute</td></tr>
 <tr>
         <td rowspan="3"><a href="https://together.ai">Together</a></td>
         <td rowspan="3"></td>
