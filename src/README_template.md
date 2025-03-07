@@ -61,8 +61,8 @@ This lists various services that provide free access or credits towards API-base
             <td>Various open models</td>
         </tr>
         <tr>
-            <td><a href="https://novita.ai/?ref=ytblmjc&utm_source=affiliate">Novita</a></td>
-            <td>$0.5</td>
+            <td><a href="https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate">Novita</a></td>
+            <td>$0.5 for 1 year<br>$20 for 3 months for DeepSeek models with <a href="https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate">referral code</a> + GitHub account connection</td>
             <td></td>
             <td>Various open models</td>
         </tr>{{TRIAL_MODEL_LIST}}<tr>
