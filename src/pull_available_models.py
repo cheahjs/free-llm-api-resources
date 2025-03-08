@@ -205,6 +205,15 @@ MODEL_TO_NAME_MAPPING = {
     "deepseek-r1-671b": "DeepSeek R1",
     "@cf/meta/llama-guard-3-8b": "Llama Guard 3 8B",
     "mistral-saba-24b": "Mistral Saba 24B",
+    "deepseek/deepseek-r1-zero:free": "DeepSeek R1 Zero",
+    "nousresearch/deephermes-3-llama-3-8b-preview:free": "DeepHermes 3 Llama 3 8B Preview",
+    "qwen-qwq-32b": "Qwen QwQ 32B",
+    "qwen/qwq-32b": "Qwen QwQ 32B",
+    "qwen/qwq-32b:free": "Qwen QwQ 32B",
+    "qwen/qwen2.5-vl-7b-instruct": "Qwen2.5 VL 7B Instruct",
+    "qwen/qwen-2.5-coder-32b-instruct:free": "Qwen2.5 Coder 32B Instruct",
+    "mistral-7b-instruct-v0.3": "Mistral 7B Instruct v0.3",
+    "moonshotai/moonlight-16b-a3b-instruct:free": "Moonlight-16B-A3B-Instruct",
 }
 
 
@@ -324,16 +333,20 @@ def fetch_groq_models(logger):
     with ThreadPoolExecutor() as executor:
         futures = []
         for model in models:
-            future = executor.submit(get_groq_limits_for_model, model["id"], script_dir, logger)
+            future = executor.submit(
+                get_groq_limits_for_model, model["id"], script_dir, logger
+            )
             futures.append((model, future))
-        
+
         for model, future in futures:
             limits = future.result()
-            ret_models.append({
-                "id": model["id"],
-                "name": get_model_name(model["id"]),
-                "limits": limits,
-            })
+            ret_models.append(
+                {
+                    "id": model["id"],
+                    "name": get_model_name(model["id"]),
+                    "limits": limits,
+                }
+            )
     ret_models = sorted(ret_models, key=lambda x: x["name"])
     return ret_models
 
@@ -421,9 +434,7 @@ def fetch_ovh_models(logger):
         },
     )
     r.raise_for_status()
-    models = list(
-        filter(lambda x: x["available"] and "LLM" in x["category"], r.json())
-    )
+    models = list(filter(lambda x: x["available"] and "LLM" in x["category"], r.json()))
     logger.info(f"Fetched {len(models)} models from OVH")
     ret_models = []
     for model in models:
@@ -615,9 +626,9 @@ def fetch_gemini_limits(logger):
                 ] = dimension.details.value
         elif quota.metric == "generativelanguage.googleapis.com/embed_text_requests":
             for dimension in quota.dimensions_infos:
-                models["project-embedding"][
-                    f"requests/{quota.refresh_interval}"
-                ] = dimension.details.value
+                models["project-embedding"][f"requests/{quota.refresh_interval}"] = (
+                    dimension.details.value
+                )
         elif (
             quota.metric
             == "generativelanguage.googleapis.com/batch_embed_text_requests"
@@ -658,13 +669,13 @@ def fetch_lambda_models(logger):
 
 def rate_limited_mistral_chat(client, **kwargs):
     global last_mistral_request_time
-    
+
     # Ensure at least 1 second between requests
     current_time = time.time()
     time_since_last = current_time - last_mistral_request_time
     if time_since_last < 1:
         time.sleep(1 - time_since_last)
-    
+
     response = client.chat.complete(**kwargs)
     last_mistral_request_time = time.time()
     return response
@@ -793,10 +804,17 @@ def main():
                 executor.submit(fetch_samba_models, samba_logger),
                 executor.submit(fetch_scaleway_models, scaleway_logger),
             ]
-            gemini_models, openrouter_models, hyperbolic_models, ovh_models, \
-            cloudflare_models, github_models, samba_models, scaleway_models = \
-            [f.result() for f in futures]
-            
+            (
+                gemini_models,
+                openrouter_models,
+                hyperbolic_models,
+                ovh_models,
+                cloudflare_models,
+                github_models,
+                samba_models,
+                scaleway_models,
+            ) = [f.result() for f in futures]
+
             # Fetch groq models after others complete
             groq_models = fetch_groq_models(groq_logger)
     else:
@@ -1068,7 +1086,9 @@ def main():
 
     if MISSING_MODELS:
         logger.warning("Missing models:")
-        logger.warning("\n" + "\n".join([f'"{model}": "{model}",' for model in MISSING_MODELS]))
+        logger.warning(
+            "\n" + "\n".join([f'"{model}": "{model}",' for model in MISSING_MODELS])
+        )
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(script_dir, "README_template.md"), "r") as f:
