@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="30"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="30">20 requests/minute<br>200 requests/day</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
+<tr><td rowspan="32"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="32">20 requests/minute<br>200 requests/day</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
 <tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek R1 Zero</td><td></td></tr>
@@ -37,6 +37,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.1 Nemotron 70B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 11B Vision Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
+<tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
 <tr><td>Llama 3.3 70B Instruct</td><td></td></tr>
 <tr><td>Mistral 7B Instruct</td><td></td></tr>
 <tr><td>Mistral Nemo</td><td></td></tr>
@@ -53,6 +54,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
+<tr><td>deepseek/deepseek-r1-distill-qwen-32b:free</td><td></td></tr>
 <tr>
             <td rowspan="10"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="10">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -117,7 +119,8 @@ This lists various services that provide free access or credits towards API-base
     <tr>
         <td>Llama 3.3 70B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
-    </tr><tr><td rowspan="21"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="21"></td><td>DeepSeek R1 Distill Llama 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
+    </tr><tr><td rowspan="22"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="22"></td><td>Allam 2 7B</td><td>7,000 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>DeepSeek R1 Distill Llama 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>DeepSeek R1 Distill Qwen 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
