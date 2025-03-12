@@ -151,17 +151,12 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Pixtral 12B (2409)</td><td>300 requests/minute<br>200,000 tokens/minute</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td><td></td></tr>
 <tr><td>sentence-t5-xxl</td><td></td></tr>
-<tr><td rowspan="14"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="14"></td><td>CodeLlama 13B Instruct</td><td>12 requests/minute</td></tr>
-<tr><td>Codestral Mamba 7B v0.1</td><td>12 requests/minute</td></tr>
+<tr><td rowspan="9"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="9"></td><td>Codestral Mamba 7B v0.1</td><td>12 requests/minute</td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td>12 requests/minute</td></tr>
-<tr><td>Llama 2 13B Chat</td><td>12 requests/minute</td></tr>
-<tr><td>Llama 3 8B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3.3 70B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llava Next Mistral 7B</td><td>12 requests/minute</td></tr>
-<tr><td>Mathstral 7B v0.1</td><td>12 requests/minute</td></tr>
-<tr><td>Mistral 7B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Mistral 7B Instruct v0.3</td><td>12 requests/minute</td></tr>
 <tr><td>Mistral Nemo 2407</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
