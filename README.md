@@ -61,8 +61,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
 <tr>
-            <td rowspan="10"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="10">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 2.0 Flash</td>
             <td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td>
         </tr>
@@ -95,8 +95,12 @@ This lists various services that provide free access or credits towards API-base
             <td>1,500 requests/day<br>15 requests/minute</td>
         </tr>
         <tr>
+            <td>Gemma 3 27B Instruct</td>
+            <td></td>
+        </tr>
+        <tr>
             <td>text-embedding-004</td>
-            <td rowspan="2">150 batch requests/minute<br>1,500 requests/minute<br>100 content/batch</td>
+            <td rowspan="3">150 batch requests/minute<br>1,500 requests/minute<br>100 content/batch</td>
         </tr>
         <tr>
             <td>embedding-001</td>

@@ -214,6 +214,13 @@ MODEL_TO_NAME_MAPPING = {
     "qwen/qwen-2.5-coder-32b-instruct:free": "Qwen2.5 Coder 32B Instruct",
     "mistral-7b-instruct-v0.3": "Mistral 7B Instruct v0.3",
     "moonshotai/moonlight-16b-a3b-instruct:free": "Moonlight-16B-A3B-Instruct",
+    "google/gemma-3-27b-it:free": "Gemma 3 27B Instruct",
+    "qwen/qwen-2.5-72b-instruct:free": "Qwen 2.5 72B Instruct",
+    "rekaai/reka-flash-3:free": "Reka Flash 3",
+    "deepseek/deepseek-r1-distill-qwen-32b:free": "DeepSeek R1 Distill Qwen 32B",
+    "deepseek/deepseek-r1-distill-qwen-14b:free": "DeepSeek R1 Distill Qwen 14B",
+    "qwen/qwen2.5-vl-72b-instruct": "Qwen2.5 VL 72B Instruct",
+    "qwen/qwq-32b-preview:free": "Qwen QwQ 32B Preview",
 }
 
 
@@ -857,8 +864,8 @@ def main():
         table += "</tr>\n"
 
     table += f"""<tr>
-            <td rowspan="10"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="10">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 2.0 Flash</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash"]})}</td>
         </tr>
@@ -891,8 +898,12 @@ def main():
             <td>{get_human_limits({"limits": gemini_models["learnlm-1.5-pro-experimental"]})}</td>
         </tr>
         <tr>
+            <td>Gemma 3 27B Instruct</td>
+            <td>{get_human_limits({"limits": gemini_models["gemma-3-27b-it"]})}</td>
+        </tr>
+        <tr>
             <td>text-embedding-004</td>
-            <td rowspan="2">{get_human_limits({"limits": gemini_models["project-embedding"]})}<br>100 content/batch</td>
+            <td rowspan="3">{get_human_limits({"limits": gemini_models["project-embedding"]})}<br>100 content/batch</td>
         </tr>
         <tr>
             <td>embedding-001</td>
@@ -939,17 +950,6 @@ def main():
             table += "</td>"
             table += f'<td rowspan="{len(groq_models)}"></td>'
 
-        table += f"<td>{model['name']}</td>"
-        table += f"<td>{get_human_limits(model)}</td>"
-        table += "</tr>\n"
-
-    for idx, model in enumerate(scaleway_models):
-        table += "<tr>"
-        if idx == 0:
-            table += '<td rowspan="' + str(len(scaleway_models)) + '">'
-            table += '<a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs (Free Beta until 12 March 2025)</a>'
-            table += "</td>"
-            table += '<td rowspan="' + str(len(scaleway_models)) + '"></td>'
         table += f"<td>{model['name']}</td>"
         table += f"<td>{get_human_limits(model)}</td>"
         table += "</tr>\n"
@@ -1080,6 +1080,17 @@ def main():
             trial_table += "</td>"
             trial_table += f'<td rowspan="{len(samba_models)}">$5 for 3 months</td>'
 
+        trial_table += f"<td>{get_human_limits(model)}</td>"
+        trial_table += f"<td>{model['name']}</td>"
+        trial_table += "</tr>\n"
+
+    for idx, model in enumerate(scaleway_models):
+        trial_table += "<tr>"
+        if idx == 0:
+            trial_table += '<td rowspan="' + str(len(scaleway_models)) + '">'
+            trial_table += '<a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs</a>'
+            trial_table += "</td>"
+            trial_table += '<td rowspan="' + str(len(scaleway_models)) + '">1,000,000 free tokens</td>'
         trial_table += f"<td>{get_human_limits(model)}</td>"
         trial_table += f"<td>{model['name']}</td>"
         trial_table += "</tr>\n"
