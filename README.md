@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="32"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="32">20 requests/minute<br>200 requests/day</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
+<tr><td rowspan="37"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="37">20 requests/minute<br>200 requests/day</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
 <tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek R1 Zero</td><td></td></tr>
@@ -54,7 +54,12 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
+<tr><td>deepseek/deepseek-r1-distill-qwen-14b:free</td><td></td></tr>
 <tr><td>deepseek/deepseek-r1-distill-qwen-32b:free</td><td></td></tr>
+<tr><td>google/gemma-3-27b-it:free</td><td></td></tr>
+<tr><td>qwen/qwen-2.5-72b-instruct:free</td><td></td></tr>
+<tr><td>qwen/qwq-32b-preview:free</td><td></td></tr>
+<tr><td>rekaai/reka-flash-3:free</td><td></td></tr>
 <tr>
             <td rowspan="10"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="10">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -375,7 +380,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
 <tr><td>Qwen2.5 VL 7B Instruct</td></tr>
 <tr><td>qwen/qwen2.5-vl-72b-instruct</td></tr>
-<tr><td rowspan="18"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="18">$5 for 3 months</td><td></td><td>Llama 3.1 405B</td></tr>
+<tr><td rowspan="19"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="19">$5 for 3 months</td><td></td><td>Llama 3.1 405B</td></tr>
 <tr><td></td><td>Llama 3.1 70B</td></tr>
 <tr><td></td><td>Llama 3.1 8B</td></tr>
 <tr><td></td><td>Llama 3.2 11B Vision</td></tr>
@@ -386,6 +391,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td></td><td>Llama-Guard-3-8B</td></tr>
 <tr><td></td><td>Qwen/QwQ-32B</td></tr>
 <tr><td></td><td>Qwen/QwQ-32B-Preview</td></tr>
+<tr><td></td><td>Qwen/Qwen2-Audio-7B-Instruct</td></tr>
 <tr><td></td><td>Qwen/Qwen2.5-72B-Instruct</td></tr>
 <tr><td></td><td>Qwen/Qwen2.5-Coder-32B-Instruct</td></tr>
 <tr><td></td><td>allenai/Llama-3.1-Tulu-3-405B</td></tr>
