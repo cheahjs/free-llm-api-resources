@@ -1080,7 +1080,7 @@ def main():
             trial_table += "</td>"
             trial_table += f'<td rowspan="{len(samba_models)}">$5 for 3 months</td>'
 
-        trial_table += f"<td>{get_human_limits(model)}</td>"
+        trial_table += f"<td></td>"
         trial_table += f"<td>{model['name']}</td>"
         trial_table += "</tr>\n"
 
@@ -1091,7 +1091,7 @@ def main():
             trial_table += '<a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs</a>'
             trial_table += "</td>"
             trial_table += '<td rowspan="' + str(len(scaleway_models)) + '">1,000,000 free tokens</td>'
-        trial_table += f"<td>{get_human_limits(model)}</td>"
+        trial_table += f"<td></td>"
         trial_table += f"<td>{model['name']}</td>"
         trial_table += "</tr>\n"
 

@@ -393,14 +393,14 @@ This lists various services that provide free access or credits towards API-base
 <tr><td></td><td>deepseek-ai/DeepSeek-R1-Distill-Llama-70B</td></tr>
 <tr><td></td><td>tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3</td></tr>
 <tr><td></td><td>tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3</td></tr>
-<tr><td rowspan="10"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs</a></td><td rowspan="10">1,000,000 free tokens</td><td>300 requests/minute<br>400,000 tokens/minute</td><td>BGE-Multilingual-Gemma2</td></tr>
+<tr><td rowspan="10"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs</a></td><td rowspan="10">1,000,000 free tokens</td><td></td><td>BGE-Multilingual-Gemma2</td></tr>
 <tr><td></td><td>DeepSeek R1 Distill Llama 70B</td></tr>
 <tr><td></td><td>DeepSeek R1 Distill Llama 8B</td></tr>
-<tr><td>300 requests/minute<br>200,000 tokens/minute</td><td>Llama 3.1 70B Instruct</td></tr>
-<tr><td>300 requests/minute<br>200,000 tokens/minute</td><td>Llama 3.1 8B Instruct</td></tr>
+<tr><td></td><td>Llama 3.1 70B Instruct</td></tr>
+<tr><td></td><td>Llama 3.1 8B Instruct</td></tr>
 <tr><td></td><td>Llama 3.3 70B Instruct</td></tr>
-<tr><td>300 requests/minute<br>200,000 tokens/minute</td><td>Mistral Nemo 2407</td></tr>
-<tr><td>300 requests/minute<br>200,000 tokens/minute</td><td>Pixtral 12B (2409)</td></tr>
+<tr><td></td><td>Mistral Nemo 2407</td></tr>
+<tr><td></td><td>Pixtral 12B (2409)</td></tr>
 <tr><td></td><td>Qwen2.5 Coder 32B Instruct</td></tr>
 <tr><td></td><td>sentence-t5-xxl</td></tr>
 <tr>
