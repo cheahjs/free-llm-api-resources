@@ -96,11 +96,11 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Gemma 3 27B Instruct</td>
-            <td></td>
+            <td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td>
         </tr>
         <tr>
             <td>text-embedding-004</td>
-            <td rowspan="3">150 batch requests/minute<br>1,500 requests/minute<br>100 content/batch</td>
+            <td rowspan="2">150 batch requests/minute<br>1,500 requests/minute<br>100 content/batch</td>
         </tr>
         <tr>
             <td>embedding-001</td>

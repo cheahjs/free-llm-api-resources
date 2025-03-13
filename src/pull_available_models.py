@@ -899,11 +899,11 @@ def main():
         </tr>
         <tr>
             <td>Gemma 3 27B Instruct</td>
-            <td>{get_human_limits({"limits": gemini_models["gemma-3-27b-it"]})}</td>
+            <td>{get_human_limits({"limits": gemini_models["gemma-3-27b"]})}</td>
         </tr>
         <tr>
             <td>text-embedding-004</td>
-            <td rowspan="3">{get_human_limits({"limits": gemini_models["project-embedding"]})}<br>100 content/batch</td>
+            <td rowspan="2">{get_human_limits({"limits": gemini_models["project-embedding"]})}<br>100 content/batch</td>
         </tr>
         <tr>
             <td>embedding-001</td>
