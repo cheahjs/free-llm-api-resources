@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="40"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="40">20 requests/minute<br>200 requests/day</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
+<tr><td rowspan="42"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="42">20 requests/minute<br>200 requests/day</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
 <tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Qwen 14B</td><td></td></tr>
@@ -63,6 +63,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>google/gemma-3-12b-it:free</td><td></td></tr>
 <tr><td>google/gemma-3-1b-it:free</td><td></td></tr>
 <tr><td>google/gemma-3-4b-it:free</td><td></td></tr>
+<tr><td>open-r1/olympiccoder-32b:free</td><td></td></tr>
+<tr><td>open-r1/olympiccoder-7b:free</td><td></td></tr>
 <tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
