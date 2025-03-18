@@ -221,6 +221,11 @@ MODEL_TO_NAME_MAPPING = {
     "deepseek/deepseek-r1-distill-qwen-14b:free": "DeepSeek R1 Distill Qwen 14B",
     "qwen/qwen2.5-vl-72b-instruct": "Qwen2.5 VL 72B Instruct",
     "qwen/qwq-32b-preview:free": "Qwen QwQ 32B Preview",
+    "google/gemma-3-12b-it:free": "Gemma 3 12B Instruct",
+    "google/gemma-3-1b-it:free": "Gemma 3 1B Instruct",
+    "google/gemma-3-4b-it:free": "Gemma 3 4B Instruct",
+    "open-r1/olympiccoder-32b:free": "OlympicCoder 32B",
+    "open-r1/olympiccoder-7b:free": "OlympicCoder 7B",
 }
 
 
@@ -981,13 +986,16 @@ def main():
     </tr>"""
 
     table += """<tr>
-            <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
-            <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1,000 requests/month</a></td>
+            <td rowspan="3"><a href="https://cohere.com" target="_blank">Cohere</a></td>
+            <td rowspan="3"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1,000 requests/month</a></td>
             <td>Command-R</td>
-            <td rowspan="2">Shared Limit</td>
+            <td rowspan="3">Shared Limit</td>
         </tr>
         <tr>
             <td>Command-R+</td>
+        </tr>
+        <tr>
+            <td>Command-A</td>
         </tr>"""
 
     for idx, model in enumerate(github_models):
@@ -1020,7 +1028,7 @@ def main():
             table += '<a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a>'
             table += "</td>"
             table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
-            table += '<a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 tokens/day</a>'
+            table += '<a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 neurons/day</a>'
             table += "</td>"
         table += f"<td>{model['name']}</td>"
         table += "<td></td>"
@@ -1052,7 +1060,7 @@ def main():
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Thinking Experimental</a></td>
     </tr>
     <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Experimental</a></td>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Pro Experimental</a></td>
     </tr>"""
 
     table += "</tbody></table>"

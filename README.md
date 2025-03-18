@@ -34,7 +34,10 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Dolphin 3.0 R1 Mistral 24B</td><td></td></tr>
 <tr><td>Gemini 2.0 Flash Lite Preview 02-05</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
+<tr><td>Gemma 3 12B Instruct</td><td></td></tr>
+<tr><td>Gemma 3 1B Instruct</td><td></td></tr>
 <tr><td>Gemma 3 27B Instruct</td><td></td></tr>
+<tr><td>Gemma 3 4B Instruct</td><td></td></tr>
 <tr><td>Llama 3 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 Nemotron 70B Instruct</td><td></td></tr>
@@ -47,6 +50,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral Small 24B Instruct 2501</td><td></td></tr>
 <tr><td>Moonlight-16B-A3B-Instruct</td><td></td></tr>
 <tr><td>Mythomax L2 13B</td><td></td></tr>
+<tr><td>OlympicCoder 32B</td><td></td></tr>
+<tr><td>OlympicCoder 7B</td><td></td></tr>
 <tr><td>OpenChat 7B</td><td></td></tr>
 <tr><td>Phi-3 Medium 128k Instruct</td><td></td></tr>
 <tr><td>Phi-3 Mini 128k Instruct</td><td></td></tr>
@@ -60,11 +65,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
-<tr><td>google/gemma-3-12b-it:free</td><td></td></tr>
-<tr><td>google/gemma-3-1b-it:free</td><td></td></tr>
-<tr><td>google/gemma-3-4b-it:free</td><td></td></tr>
-<tr><td>open-r1/olympiccoder-32b:free</td><td></td></tr>
-<tr><td>open-r1/olympiccoder-7b:free</td><td></td></tr>
 <tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -77,11 +77,11 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Gemini 2.0 Flash (Experimental)</td>
-            <td>4,000,000 tokens/minute<br>10 requests/minute</td>
+            <td>4,000,000 tokens/minute<br>1,500 requests/day<br>10 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 2.0 Pro (Experimental)</td>
-            <td>32,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
+            <td>5,000,000 tokens/day<br>2,000,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Flash</td>
@@ -178,13 +178,16 @@ This lists various services that provide free access or credits towards API-base
         <td>DeepSeek R1 Distil Llama 70B</td>
         <td></td>
     </tr><tr>
-            <td rowspan="2"><a href="https://cohere.com" target="_blank">Cohere</a></td>
-            <td rowspan="2"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1,000 requests/month</a></td>
+            <td rowspan="3"><a href="https://cohere.com" target="_blank">Cohere</a></td>
+            <td rowspan="3"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1,000 requests/month</a></td>
             <td>Command-R</td>
-            <td rowspan="2">Shared Limit</td>
+            <td rowspan="3">Shared Limit</td>
         </tr>
         <tr>
             <td>Command-R+</td>
+        </tr>
+        <tr>
+            <td>Command-A</td>
         </tr><tr><td rowspan="46"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="46">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
 <tr><td>AI21 Jamba 1.5 Mini</td><td></td></tr>
 <tr><td>Codestral 25.01</td><td></td></tr>
@@ -236,7 +239,7 @@ This lists various services that provide free access or credits towards API-base
         <td>Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>
         <td>Various open models</td>
         <td></td>
-    </tr><tr><td rowspan="43"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="43"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 tokens/day</a></td><td>DeepSeek R1 Distill Qwen 32B</td><td></td></tr>
+    </tr><tr><td rowspan="43"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="43"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 neurons/day</a></td><td>DeepSeek R1 Distill Qwen 32B</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Math 7B Instruct</td><td></td></tr>
@@ -305,7 +308,7 @@ This lists various services that provide free access or credits towards API-base
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Thinking Experimental</a></td>
     </tr>
     <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Experimental</a></td>
+        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Pro Experimental</a></td>
     </tr></tbody></table>
 
 ## Providers with trial credits
