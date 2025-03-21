@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="42"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="42">20 requests/minute<br>200 requests/day</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
+<tr><td rowspan="43"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="43">20 requests/minute<br>200 requests/day</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
 <tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Qwen 14B</td><td></td></tr>
@@ -65,6 +65,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
+<tr><td>mistralai/mistral-small-3.1-24b-instruct:free</td><td></td></tr>
 <tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -133,7 +134,7 @@ This lists various services that provide free access or credits towards API-base
     <tr>
         <td>Llama 3.3 70B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
-    </tr><tr><td rowspan="22"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="22"></td><td>Allam 2 7B</td><td>7,000 requests/day<br>6,000 tokens/minute</td></tr>
+    </tr><tr><td rowspan="21"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="21"></td><td>Allam 2 7B</td><td>7,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>DeepSeek R1 Distill Qwen 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
@@ -149,7 +150,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.3 70B (Speculative Decoding)</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Mistral Saba 24B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Mixtral 8x7B</td><td>14,400 requests/day<br>5,000 tokens/minute</td></tr>
 <tr><td>Qwen 2.5 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Qwen 2.5 Coder 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Qwen QwQ 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
@@ -188,7 +188,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Command-A</td>
-        </tr><tr><td rowspan="46"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="46">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
+        </tr><tr><td rowspan="47"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="47">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
 <tr><td>AI21 Jamba 1.5 Mini</td><td></td></tr>
 <tr><td>Codestral 25.01</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
@@ -214,6 +214,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral Large 24.11</td><td></td></tr>
 <tr><td>Mistral Nemo</td><td></td></tr>
 <tr><td>Mistral Small</td><td></td></tr>
+<tr><td>Mistral Small 3.1</td><td></td></tr>
 <tr><td>OpenAI GPT-4o</td><td></td></tr>
 <tr><td>OpenAI GPT-4o mini</td><td></td></tr>
 <tr><td>OpenAI Text Embedding 3 (large)</td><td></td></tr>
