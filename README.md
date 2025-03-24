@@ -365,7 +365,7 @@ This lists various services that provide free access or credits towards API-base
             <td>$0.5 for 1 year<br>$20 for 3 months for DeepSeek models with <a href="https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate">referral code</a> + GitHub account connection</td>
             <td></td>
             <td>Various open models</td>
-        </tr><tr><td rowspan="17"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="17">$1</td><td rowspan="17"></td><td>DeepSeek V3</td></tr>
+        </tr><tr><td rowspan="16"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="16">$1</td><td rowspan="16"></td><td>DeepSeek V3</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
@@ -380,7 +380,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen QwQ 32B Preview</td></tr>
 <tr><td>Qwen2.5 72B Instruct</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
-<tr><td>Qwen2.5 VL 72B Instruct</td></tr>
 <tr><td>Qwen2.5 VL 7B Instruct</td></tr>
 <tr><td rowspan="19"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="19">$5 for 3 months</td><td></td><td>Llama 3.1 405B</td></tr>
 <tr><td></td><td>Llama 3.1 70B</td></tr>
