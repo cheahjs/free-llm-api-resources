@@ -23,16 +23,20 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="43"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="43">20 requests/minute<br>200 requests/day</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
+<tr><td rowspan="51"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="51">20 requests/minute<br>200 requests/day</td><td>Bytedance UI Tars 72B</td><td></td></tr>
+<tr><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
 <tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Qwen 14B</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Qwen 32B</td><td></td></tr>
 <tr><td>DeepSeek R1 Zero</td><td></td></tr>
 <tr><td>DeepSeek V3</td><td></td></tr>
+<tr><td>DeepSeek V3 0324</td><td></td></tr>
 <tr><td>Dolphin 3.0 Mistral 24B</td><td></td></tr>
 <tr><td>Dolphin 3.0 R1 Mistral 24B</td><td></td></tr>
+<tr><td>Featherless Qwerky 72B</td><td></td></tr>
 <tr><td>Gemini 2.0 Flash Lite Preview 02-05</td><td></td></tr>
+<tr><td>Gemini 2.5 Pro Experimental 03-25</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Gemma 3 12B Instruct</td><td></td></tr>
 <tr><td>Gemma 3 1B Instruct</td><td></td></tr>
@@ -48,6 +52,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral 7B Instruct</td><td></td></tr>
 <tr><td>Mistral Nemo</td><td></td></tr>
 <tr><td>Mistral Small 24B Instruct 2501</td><td></td></tr>
+<tr><td>Mistral Small 3.1 24B Instruct</td><td></td></tr>
+<tr><td>Molmo 7B D</td><td></td></tr>
 <tr><td>Moonlight-16B-A3B-Instruct</td><td></td></tr>
 <tr><td>Mythomax L2 13B</td><td></td></tr>
 <tr><td>OlympicCoder 32B</td><td></td></tr>
@@ -57,6 +63,9 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-3 Mini 128k Instruct</td><td></td></tr>
 <tr><td>Qwen 2 7B Instruct</td><td></td></tr>
 <tr><td>Qwen 2.5 72B Instruct</td><td></td></tr>
+<tr><td>Qwen 2.5 VL 32B Instruct</td><td></td></tr>
+<tr><td>Qwen 2.5 VL 3B Instruct</td><td></td></tr>
+<tr><td>Qwen 2.5 VL 7B Instruct</td><td></td></tr>
 <tr><td>Qwen QwQ 32B</td><td></td></tr>
 <tr><td>Qwen QwQ 32B Preview</td><td></td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td><td></td></tr>
@@ -65,10 +74,13 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
-<tr><td>mistralai/mistral-small-3.1-24b-instruct:free</td><td></td></tr>
 <tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td>Gemini 2.5 Pro (Experimental)</td>
+            <td>5,000,000 tokens/day<br>2,000,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
+        </tr>
+        <tr>
             <td>Gemini 2.0 Flash</td>
             <td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td>
         </tr>
@@ -79,10 +91,6 @@ This lists various services that provide free access or credits towards API-base
         <tr>
             <td>Gemini 2.0 Flash (Experimental)</td>
             <td>4,000,000 tokens/minute<br>1,500 requests/day<br>10 requests/minute</td>
-        </tr>
-        <tr>
-            <td>Gemini 2.0 Pro (Experimental)</td>
-            <td>5,000,000 tokens/day<br>2,000,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Flash</td>
@@ -155,7 +163,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen QwQ 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
-<tr><td rowspan="9"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="9"></td><td>Codestral Mamba 7B v0.1</td><td>12 requests/minute</td></tr>
+<tr><td rowspan="10"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="10"></td><td>Codestral Mamba 7B v0.1</td><td>12 requests/minute</td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3.1 70B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td>12 requests/minute</td></tr>
@@ -164,6 +172,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral 7B Instruct v0.3</td><td>12 requests/minute</td></tr>
 <tr><td>Mistral Nemo 2407</td><td>12 requests/minute</td></tr>
 <tr><td>Mixtral 8x7B Instruct</td><td>12 requests/minute</td></tr>
+<tr><td>Qwen2.5 Coder 32B Instruct</td><td>12 requests/minute</td></tr>
 <tr>
         <td rowspan="3"><a href="https://together.ai">Together</a></td>
         <td rowspan="3"></td>
@@ -365,7 +374,8 @@ This lists various services that provide free access or credits towards API-base
             <td>$0.5 for 1 year<br>$20 for 3 months for DeepSeek models with <a href="https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate">referral code</a> + GitHub account connection</td>
             <td></td>
             <td>Various open models</td>
-        </tr><tr><td rowspan="17"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="17">$1</td><td rowspan="17"></td><td>DeepSeek V3</td></tr>
+        </tr><tr><td rowspan="18"><a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a></td><td rowspan="18">$1</td><td rowspan="18"></td><td>DeepSeek V3</td></tr>
+<tr><td>DeepSeek V3 0324</td></tr>
 <tr><td>Hermes 3 Llama 3.1 70B</td></tr>
 <tr><td>Llama 3 70B Instruct</td></tr>
 <tr><td>Llama 3.1 405B Base</td></tr>
@@ -382,7 +392,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen2.5 Coder 32B Instruct</td></tr>
 <tr><td>Qwen2.5 VL 72B Instruct</td></tr>
 <tr><td>Qwen2.5 VL 7B Instruct</td></tr>
-<tr><td rowspan="19"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="19">$5 for 3 months</td><td></td><td>Llama 3.1 405B</td></tr>
+<tr><td rowspan="21"><a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a></td><td rowspan="21">$5 for 3 months</td><td></td><td>E5-Mistral-7B-Instruct</td></tr>
+<tr><td></td><td>Llama 3.1 405B</td></tr>
 <tr><td></td><td>Llama 3.1 70B</td></tr>
 <tr><td></td><td>Llama 3.1 8B</td></tr>
 <tr><td></td><td>Llama 3.2 11B Vision</td></tr>
@@ -399,6 +410,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td></td><td>allenai/Llama-3.1-Tulu-3-405B</td></tr>
 <tr><td></td><td>deepseek-ai/DeepSeek-R1</td></tr>
 <tr><td></td><td>deepseek-ai/DeepSeek-R1-Distill-Llama-70B</td></tr>
+<tr><td></td><td>deepseek-ai/DeepSeek-V3-0324</td></tr>
 <tr><td></td><td>tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3</td></tr>
 <tr><td></td><td>tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3</td></tr>
 <tr><td rowspan="10"><a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs</a></td><td rowspan="10">1,000,000 free tokens</td><td></td><td>BGE-Multilingual-Gemma2</td></tr>

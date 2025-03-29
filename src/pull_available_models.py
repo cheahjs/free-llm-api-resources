@@ -226,6 +226,16 @@ MODEL_TO_NAME_MAPPING = {
     "google/gemma-3-4b-it:free": "Gemma 3 4B Instruct",
     "open-r1/olympiccoder-32b:free": "OlympicCoder 32B",
     "open-r1/olympiccoder-7b:free": "OlympicCoder 7B",
+    "featherless/qwerky-72b:free": "Featherless Qwerky 72B",
+    "qwen/qwen2.5-vl-32b-instruct:free": "Qwen 2.5 VL 32B Instruct",
+    "deepseek/deepseek-chat-v3-0324:free": "DeepSeek V3 0324",
+    "qwen/qwen-2.5-vl-7b-instruct:free": "Qwen 2.5 VL 7B Instruct",
+    "deepseek-ai/deepseek-v3-0324": "DeepSeek V3 0324",
+    "allenai/molmo-7b-d:free": "Molmo 7B D",
+    "qwen/qwen2.5-vl-3b-instruct:free": "Qwen 2.5 VL 3B Instruct",
+    "google/gemini-2.5-pro-exp-03-25:free": "Gemini 2.5 Pro Experimental 03-25",
+    "mistralai/mistral-small-3.1-24b-instruct:free": "Mistral Small 3.1 24B Instruct",
+    "bytedance-research/ui-tars-72b:free": "Bytedance UI Tars 72B",
 }
 
 
@@ -303,6 +313,8 @@ def get_groq_limits_for_stt_model(model_id, logger):
 def get_groq_limits_for_model(model_id, script_dir, logger):
     if "whisper" in model_id:
         return get_groq_limits_for_stt_model(model_id, logger)
+    if "tts" in model_id:
+        return None
     logger.info(f"Getting limits for chat model {model_id}...")
     r = requests.post(
         "https://api.groq.com/openai/v1/chat/completions",
@@ -352,6 +364,8 @@ def fetch_groq_models(logger):
 
         for model, future in futures:
             limits = future.result()
+            if limits is None:
+                continue
             ret_models.append(
                 {
                     "id": model["id"],
@@ -871,6 +885,10 @@ def main():
     table += f"""<tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td>Gemini 2.5 Pro (Experimental)</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-2.0-pro-exp"]})}</td>
+        </tr>
+        <tr>
             <td>Gemini 2.0 Flash</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash"]})}</td>
         </tr>
@@ -881,10 +899,6 @@ def main():
         <tr>
             <td>Gemini 2.0 Flash (Experimental)</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-flash-exp"]})}</td>
-        </tr>
-        <tr>
-            <td>Gemini 2.0 Pro (Experimental)</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-2.0-pro-exp"]})}</td>
         </tr>
         <tr>
             <td>Gemini 1.5 Flash</td>
