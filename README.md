@@ -35,7 +35,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Dolphin 3.0 Mistral 24B</td><td></td></tr>
 <tr><td>Dolphin 3.0 R1 Mistral 24B</td><td></td></tr>
 <tr><td>Featherless Qwerky 72B</td><td></td></tr>
-<tr><td>Gemini 2.0 Flash Lite Preview 02-05</td><td></td></tr>
 <tr><td>Gemini 2.5 Pro Experimental 03-25</td><td></td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td></td></tr>
 <tr><td>Gemma 3 12B Instruct</td><td></td></tr>
@@ -74,6 +73,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
+<tr><td>deepseek/deepseek-v3-base:free</td><td></td></tr>
 <tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
