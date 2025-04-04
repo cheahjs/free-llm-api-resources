@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="49"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="49">20 requests/minute<br>200 requests/day</td><td>Bytedance UI Tars 72B</td><td></td></tr>
+<tr><td rowspan="48"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="48">20 requests/minute<br>200 requests/day</td><td>Bytedance UI Tars 72B</td><td></td></tr>
 <tr><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
 <tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
@@ -58,7 +58,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>OpenChat 7B</td><td></td></tr>
 <tr><td>Phi-3 Medium 128k Instruct</td><td></td></tr>
 <tr><td>Phi-3 Mini 128k Instruct</td><td></td></tr>
-<tr><td>Qwen 2 7B Instruct</td><td></td></tr>
 <tr><td>Qwen 2.5 72B Instruct</td><td></td></tr>
 <tr><td>Qwen 2.5 VL 32B Instruct</td><td></td></tr>
 <tr><td>Qwen 2.5 VL 3B Instruct</td><td></td></tr>
