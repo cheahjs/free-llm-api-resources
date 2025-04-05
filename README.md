@@ -140,7 +140,7 @@ This lists various services that provide free access or credits towards API-base
     <tr>
         <td>Llama 3.3 70B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
-    </tr><tr><td rowspan="21"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="21"></td><td>Allam 2 7B</td><td>7,000 requests/day<br>6,000 tokens/minute</td></tr>
+    </tr><tr><td rowspan="22"><a href="https://console.groq.com" target="_blank">Groq</a></td><td rowspan="22"></td><td>Allam 2 7B</td><td>7,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>DeepSeek R1 Distill Qwen 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
@@ -161,6 +161,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Qwen QwQ 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
+<tr><td>meta-llama/llama-4-scout-17b-16e-instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td rowspan="11"><a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a></td><td rowspan="11"></td><td>DeepSeek R1 Distill Llama 70B</td><td>12 requests/minute</td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Llava Next Mistral 7B</td><td>12 requests/minute</td></tr>
