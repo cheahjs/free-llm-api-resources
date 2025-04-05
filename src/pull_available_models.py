@@ -236,6 +236,14 @@ MODEL_TO_NAME_MAPPING = {
     "google/gemini-2.5-pro-exp-03-25:free": "Gemini 2.5 Pro Experimental 03-25",
     "mistralai/mistral-small-3.1-24b-instruct:free": "Mistral Small 3.1 24B Instruct",
     "bytedance-research/ui-tars-72b:free": "Bytedance UI Tars 72B",
+    "meta-llama-3_3-70b-instruct": "Llama 3.3 70B Instruct",
+    "mixtral-8x7b-instruct-v0.1": "Mixtral 8x7B Instruct v0.1",
+    "deepseek/deepseek-v3-base:free": "DeepSeek V3 Base",
+    "qwen2.5-vl-72b-instruct": "Qwen 2.5 VL 72B Instruct",
+    "meta-llama-3_1-70b-instruct": "Llama 3.1 70B Instruct",
+    "qwen/qwen-2.5-7b-instruct:free": "Qwen 2.5 7B Instruct",
+    "mamba-codestral-7b-v0.1": "Mamba Codestral 7B v0.1",
+    "meta-llama/llama-4-scout-17b-16e-instruct": "Llama 4 Scout 17B 16E Instruct",
 }
 
 
@@ -259,6 +267,7 @@ HYPERBOLIC_IGNORED_MODELS = {
     "TTS",
     "deepseek-ai/Janus-Pro-7B",
     "test",
+    "SDXL1.0-base",
     # Ignore DeepSeek R1 and R1-Zero because they are not available in the free tier.
     "deepseek-ai/DeepSeek-R1",
     "deepseek-ai/DeepSeek-R1-Zero",
@@ -1078,6 +1087,13 @@ def main():
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Pro Experimental</a></td>
+    </tr>"""
+
+    table += """<tr>
+        <td><a href="https://build.nvidia.com/explore/discover">NVIDIA NIM</a></td>
+        <td>Phone number verification required.</td>
+        <td>40 RPM</td>
+        <td>Various open models</td>
     </tr>"""
 
     table += "</tbody></table>"
