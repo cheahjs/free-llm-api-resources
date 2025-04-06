@@ -246,12 +246,22 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-4</td><td></td></tr>
 <tr><td>Phi-4-mini-instruct</td><td></td></tr>
 <tr><td>Phi-4-multimodal-instruct</td><td></td></tr>
-<tr>
-        <td><a href="https://chutes.ai/">Chutes</a></td>
-        <td>Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>
-        <td>Various open models</td>
-        <td></td>
-    </tr><tr><td rowspan="44"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="44"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 neurons/day</a></td><td>DeepSeek R1 Distill Qwen 32B</td><td></td></tr>
+<tr><td rowspan="15"><a href="https://chutes.ai/" target="_blank">Chutes</a></td><td rowspan="15">Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
+<tr><td>DeepSeek V3 0324</td><td></td></tr>
+<tr><td>DeepSeek V3 Base</td><td></td></tr>
+<tr><td>Dolphin 3.0 Mistral 24B</td><td></td></tr>
+<tr><td>Dolphin 3.0 R1 Mistral 24B</td><td></td></tr>
+<tr><td>Gemma 3 12B Instruct</td><td></td></tr>
+<tr><td>Gemma 3 1B Instruct</td><td></td></tr>
+<tr><td>Gemma 3 4B Instruct</td><td></td></tr>
+<tr><td>Llama 4 Maverick 17B 128E Instruct FP8</td><td></td></tr>
+<tr><td>Llama 4 Scout 17B 16E Instruct</td><td></td></tr>
+<tr><td>Mistral Small 3.1 24B Instruct 2503</td><td></td></tr>
+<tr><td>OlympicCoder 32B</td><td></td></tr>
+<tr><td>OlympicCoder 7B</td><td></td></tr>
+<tr><td>Qwen 2.5 VL 32B Instruct</td><td></td></tr>
+<tr><td>Reka Flash 3</td><td></td></tr>
+<tr><td rowspan="44"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="44"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 neurons/day</a></td><td>DeepSeek R1 Distill Qwen 32B</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Math 7B Instruct</td><td></td></tr>

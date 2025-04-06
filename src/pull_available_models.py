@@ -247,6 +247,20 @@ MODEL_TO_NAME_MAPPING = {
     "@cf/meta/llama-4-scout-17b-16e-instruct": "Llama 4 Scout Instruct",
     "meta-llama/llama-4-scout:free": "Llama 4 Scout",
     "meta-llama/llama-4-maverick:free": "Llama 4 Maverick",
+    "rekaai/reka-flash-3": "Reka Flash 3",
+    "cognitivecomputations/dolphin3.0-mistral-24b": "Dolphin 3.0 Mistral 24B",
+    "unsloth/gemma-3-12b-it": "Gemma 3 12B Instruct",
+    "chutesai/llama-4-maverick-17b-128e-instruct-fp8": "Llama 4 Maverick 17B 128E Instruct FP8",
+    "unsloth/gemma-3-1b-it": "Gemma 3 1B Instruct",
+    "deepseek-ai/deepseek-v3-base": "DeepSeek V3 Base",
+    "unsloth/gemma-3-4b-it": "Gemma 3 4B Instruct",
+    "open-r1/olympiccoder-32b": "OlympicCoder 32B",
+    "chutesai/llama-4-scout-17b-16e-instruct": "Llama 4 Scout 17B 16E Instruct",
+    "cognitivecomputations/dolphin3.0-r1-mistral-24b": "Dolphin 3.0 R1 Mistral 24B",
+    "open-r1/olympiccoder-7b": "OlympicCoder 7B",
+    "nousresearch/deephermes-3-llama-3-8b-preview": "DeepHermes 3 Llama 3 8B Preview",
+    "chutesai/mistral-small-3.1-24b-instruct-2503": "Mistral Small 3.1 24B Instruct 2503",
+    "qwen/qwen2.5-vl-32b-instruct": "Qwen 2.5 VL 32B Instruct",
 }
 
 
@@ -808,6 +822,35 @@ ONLY OUTPUT JSON!""",
     return ret_models
 
 
+def fetch_chutes_models(logger):
+    logger.info("Fetching Chutes models...")
+    r = requests.get(
+        "https://api.chutes.ai/chutes/?include_public=true&limit=1000",
+        headers={
+            "Content-Type": "application/json",
+        },
+    )
+    r.raise_for_status()
+    models = r.json()["items"]
+    logger.info(f"Fetched {len(models)} models from Chutes")
+    
+    # Filter for free models based on per_million_token price
+    free_models = []
+    for model in models:
+        price_info = model.get("current_estimated_price", {})
+        # Check if per_million_tokens field exists and is set to 0 for USD
+        if (price_info.get("per_million_tokens", {}).get("usd", 1) == 0):
+            model_name = model.get("name", "Unknown model")
+            free_models.append({
+                "id": model_name,
+                "name": get_model_name(model_name),
+                "description": model.get("tagline", "")
+            })
+    
+    logger.info(f"Found {len(free_models)} free models from Chutes")
+    return sorted(free_models, key=lambda x: x["name"])
+
+
 def get_human_limits(model):
     if "limits" not in model:
         return ""
@@ -827,6 +870,7 @@ def main():
     # lambda_logger = create_logger("Lambda Labs")
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
+    chutes_logger = create_logger("Chutes")
 
     fetch_concurrently = os.getenv("FETCH_CONCURRENTLY", "false").lower() == "true"
 
@@ -841,6 +885,7 @@ def main():
                 executor.submit(fetch_github_models, github_logger),
                 executor.submit(fetch_samba_models, samba_logger),
                 executor.submit(fetch_scaleway_models, scaleway_logger),
+                executor.submit(fetch_chutes_models, chutes_logger),
             ]
             (
                 gemini_models,
@@ -851,6 +896,7 @@ def main():
                 github_models,
                 samba_models,
                 scaleway_models,
+                chutes_models,
             ) = [f.result() for f in futures]
 
             # Fetch groq models after others complete
@@ -865,6 +911,7 @@ def main():
         # lambda_models = fetch_lambda_models(lambda_logger)
         samba_models = fetch_samba_models(samba_logger)
         scaleway_models = fetch_scaleway_models(scaleway_logger)
+        chutes_models = fetch_chutes_models(chutes_logger)
         groq_models = fetch_groq_models(groq_logger)
 
     table = """<table>
@@ -1040,12 +1087,16 @@ def main():
         table += "<td></td>"
         table += "</tr>\n"
 
-    table += """<tr>
-        <td><a href="https://chutes.ai/">Chutes</a></td>
-        <td>Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>
-        <td>Various open models</td>
-        <td></td>
-    </tr>"""
+    for idx, model in enumerate(chutes_models):
+        table += "<tr>"
+        if idx == 0:
+            table += '<td rowspan="' + str(len(chutes_models)) + '">'
+            table += '<a href="https://chutes.ai/" target="_blank">Chutes</a>'
+            table += "</td>"
+            table += '<td rowspan="' + str(len(chutes_models)) + '">Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>'
+        table += f"<td>{model['name']}</td>"
+        table += "<td></td>"
+        table += "</tr>\n"
 
     for idx, model in enumerate(cloudflare_models):
         table += "<tr>"
