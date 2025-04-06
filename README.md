@@ -246,7 +246,12 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-4</td><td></td></tr>
 <tr><td>Phi-4-mini-instruct</td><td></td></tr>
 <tr><td>Phi-4-multimodal-instruct</td><td></td></tr>
-<tr><td rowspan="44"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="44"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 neurons/day</a></td><td>DeepSeek R1 Distill Qwen 32B</td><td></td></tr>
+<tr>
+        <td><a href="https://chutes.ai/">Chutes</a></td>
+        <td>Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>
+        <td>Various open models</td>
+        <td></td>
+    </tr><tr><td rowspan="44"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="44"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 neurons/day</a></td><td>DeepSeek R1 Distill Qwen 32B</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Math 7B Instruct</td><td></td></tr>

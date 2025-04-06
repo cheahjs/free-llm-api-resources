@@ -1040,6 +1040,13 @@ def main():
         table += "<td></td>"
         table += "</tr>\n"
 
+    table += """<tr>
+        <td><a href="https://chutes.ai/">Chutes</a></td>
+        <td>Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>
+        <td>Various open models</td>
+        <td></td>
+    </tr>"""
+
     for idx, model in enumerate(cloudflare_models):
         table += "<tr>"
         if idx == 0:
