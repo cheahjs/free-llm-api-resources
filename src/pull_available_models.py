@@ -243,7 +243,10 @@ MODEL_TO_NAME_MAPPING = {
     "meta-llama-3_1-70b-instruct": "Llama 3.1 70B Instruct",
     "qwen/qwen-2.5-7b-instruct:free": "Qwen 2.5 7B Instruct",
     "mamba-codestral-7b-v0.1": "Mamba Codestral 7B v0.1",
-    "meta-llama/llama-4-scout-17b-16e-instruct": "Llama 4 Scout 17B 16E Instruct",
+    "meta-llama/llama-4-scout-17b-16e-instruct": "Llama 4 Scout Instruct",
+    "@cf/meta/llama-4-scout-17b-16e-instruct": "Llama 4 Scout Instruct",
+    "meta-llama/llama-4-scout:free": "Llama 4 Scout",
+    "meta-llama/llama-4-maverick:free": "Llama 4 Maverick",
 }
 
 
@@ -1092,8 +1095,8 @@ def main():
     table += """<tr>
         <td><a href="https://build.nvidia.com/explore/discover">NVIDIA NIM</a></td>
         <td>Phone number verification required.</td>
-        <td>40 RPM</td>
         <td>Various open models</td>
+        <td>40 requests/minute</td>
     </tr>"""
 
     table += "</tbody></table>"

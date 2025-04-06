@@ -48,6 +48,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
 <tr><td>Llama 3.3 70B Instruct</td><td></td></tr>
+<tr><td>Llama 4 Maverick</td><td></td></tr>
+<tr><td>Llama 4 Scout</td><td></td></tr>
 <tr><td>Mistral 7B Instruct</td><td></td></tr>
 <tr><td>Mistral Nemo</td><td></td></tr>
 <tr><td>Mistral Small 24B Instruct 2501</td><td></td></tr>
@@ -72,8 +74,6 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
-<tr><td>meta-llama/llama-4-maverick:free</td><td></td></tr>
-<tr><td>meta-llama/llama-4-scout:free</td><td></td></tr>
 <tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
@@ -156,7 +156,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.2 90B Vision</td><td>3,500 requests/day<br>7,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B (Speculative Decoding)</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 4 Scout 17B 16E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Mistral Saba 24B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Qwen 2.5 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
@@ -251,7 +251,7 @@ This lists various services that provide free access or credits towards API-base
         <td>Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>
         <td>Various open models</td>
         <td></td>
-    </tr><tr><td rowspan="43"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="43"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 neurons/day</a></td><td>DeepSeek R1 Distill Qwen 32B</td><td></td></tr>
+    </tr><tr><td rowspan="44"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="44"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 neurons/day</a></td><td>DeepSeek R1 Distill Qwen 32B</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Base (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Coder 6.7B Instruct (AWQ)</td><td></td></tr>
 <tr><td>Deepseek Math 7B Instruct</td><td></td></tr>
@@ -275,6 +275,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Llama 3.2 1B Instruct</td><td></td></tr>
 <tr><td>Llama 3.2 3B Instruct</td><td></td></tr>
 <tr><td>Llama 3.3 70B Instruct (FP8)</td><td></td></tr>
+<tr><td>Llama 4 Scout Instruct</td><td></td></tr>
 <tr><td>Llama Guard 3 8B</td><td></td></tr>
 <tr><td>LlamaGuard 7B (AWQ)</td><td></td></tr>
 <tr><td>Mistral 7B Instruct v0.1</td><td></td></tr>
@@ -327,8 +328,8 @@ This lists various services that provide free access or credits towards API-base
     </tr><tr>
         <td><a href="https://build.nvidia.com/explore/discover">NVIDIA NIM</a></td>
         <td>Phone number verification required.</td>
-        <td>40 RPM</td>
         <td>Various open models</td>
+        <td>40 requests/minute</td>
     </tr></tbody></table>
 
 ## Providers with trial credits
