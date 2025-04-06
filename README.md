@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="49"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="49">20 requests/minute<br>200 requests/day</td><td>Bytedance UI Tars 72B</td><td></td></tr>
+<tr><td rowspan="51"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="51">20 requests/minute<br>200 requests/day</td><td>Bytedance UI Tars 72B</td><td></td></tr>
 <tr><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
 <tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
@@ -72,6 +72,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Rogue Rose 103B v0.2</td><td></td></tr>
 <tr><td>Toppy M 7B</td><td></td></tr>
 <tr><td>Zephyr 7B Beta</td><td></td></tr>
+<tr><td>meta-llama/llama-4-maverick:free</td><td></td></tr>
+<tr><td>meta-llama/llama-4-scout:free</td><td></td></tr>
 <tr>
             <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
             <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
