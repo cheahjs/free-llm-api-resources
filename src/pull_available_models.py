@@ -432,7 +432,7 @@ def fetch_openrouter_models(logger):
                 "name": get_model_name(model["id"]),
                 "limits": {
                     "requests/minute": 20,
-                    "requests/day": 200,
+                    "requests/day": 50,
                 },
             }
         )
