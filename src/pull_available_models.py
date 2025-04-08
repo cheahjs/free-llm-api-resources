@@ -261,6 +261,14 @@ MODEL_TO_NAME_MAPPING = {
     "nousresearch/deephermes-3-llama-3-8b-preview": "DeepHermes 3 Llama 3 8B Preview",
     "chutesai/mistral-small-3.1-24b-instruct-2503": "Mistral Small 3.1 24B Instruct 2503",
     "qwen/qwen2.5-vl-32b-instruct": "Qwen 2.5 VL 32B Instruct",
+    "nvidia/llama-3_1-nemotron-ultra-253b-v1": "Llama 3.1 Nemotron Ultra 253B v1",
+    "nvidia/llama-3.1-nemotron-ultra-253b-v1:free": "Llama 3.1 Nemotron Ultra 253B v1",
+    "nvidia/llama-3.1-nemotron-nano-8b-v1": "Llama 3.1 Nemotron Nano 8B v1",
+    "mistral-small-3.1-24b-instruct-2503": "Mistral Small 3.1 24B Instruct 2503",
+    "nvidia/llama-3_3-nemotron-super-49b-v1": "Llama 3.3 Nemotron Super 49B v1",
+    "gemma-3-27b-it": "Gemma 3 27B Instruct",
+    "nvidia/llama-3.3-nemotron-super-49b-v1:free": "Llama 3.3 Nemotron Super 49B v1",
+    "nvidia/llama-3.1-nemotron-nano-8b-v1:free": "Llama 3.1 Nemotron Nano 8B v1",
 }
 
 
@@ -942,10 +950,14 @@ def main():
         table += "</tr>\n"
 
     table += f"""<tr>
-            <td rowspan="11"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="11">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="14"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="14">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 2.5 Pro (Experimental)</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-pro-exp"]})}</td>
+        </tr>
+        <tr>
+            <td>Gemini 2.5 Flash (Preview)</td>
+            <td>{get_human_limits({"limits": gemini_models["gemini-2.5-flash-preview"]})}</td>
         </tr>
         <tr>
             <td>Gemini 2.0 Flash</td>
@@ -978,6 +990,14 @@ def main():
         <tr>
             <td>Gemma 3 27B Instruct</td>
             <td>{get_human_limits({"limits": gemini_models["gemma-3-27b"]})}</td>
+        </tr>
+        <tr>
+            <td>Gemma 3 12B Instruct</td>
+            <td>{get_human_limits({"limits": gemini_models["gemma-3-12b"]})}</td>
+        </tr>
+        <tr>
+            <td>Gemma 3 4B Instruct</td>
+            <td>{get_human_limits({"limits": gemini_models["gemma-3-4b"]})}</td>
         </tr>
         <tr>
             <td>text-embedding-004</td>
