@@ -269,6 +269,7 @@ MODEL_TO_NAME_MAPPING = {
     "gemma-3-27b-it": "Gemma 3 27B Instruct",
     "nvidia/llama-3.3-nemotron-super-49b-v1:free": "Llama 3.3 Nemotron Super 49B v1",
     "nvidia/llama-3.1-nemotron-nano-8b-v1:free": "Llama 3.1 Nemotron Nano 8B v1",
+    "meta-llama/llama-4-maverick-17b-128e-instruct": "Llama 4 Maverick 17B 128E Instruct",
 }
 
 
@@ -950,14 +951,10 @@ def main():
         table += "</tr>\n"
 
     table += f"""<tr>
-            <td rowspan="14"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="14">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
+            <td rowspan="13"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
+            <td rowspan="13">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
             <td>Gemini 2.5 Pro (Experimental)</td>
             <td>{get_human_limits({"limits": gemini_models["gemini-2.0-pro-exp"]})}</td>
-        </tr>
-        <tr>
-            <td>Gemini 2.5 Flash (Preview)</td>
-            <td>{get_human_limits({"limits": gemini_models["gemini-2.5-flash-preview"]})}</td>
         </tr>
         <tr>
             <td>Gemini 2.0 Flash</td>
@@ -1006,11 +1003,18 @@ def main():
         <tr>
             <td>embedding-001</td>
         </tr>"""
+    
+    table += """<tr>
+        <td><a href="https://build.nvidia.com/explore/discover">NVIDIA NIM</a></td>
+        <td>Phone number verification required.<br>Models tend to be context window limited.</td>
+        <td><a href="https://build.nvidia.com/models" target="_blank">Various open models</a></td>
+        <td>40 requests/minute</td>
+    </tr>"""
 
     table += """<tr>
         <td><a href="https://console.mistral.ai/" target="_blank">Mistral (La Plateforme)</a></td>
         <td>Free tier (Experiment plan) requires opting into data training, requires phone number verification.</td>
-        <td>Open and Proprietary Mistral models</td>
+        <td><a href="https://docs.mistral.ai/getting-started/models/models_overview/" target="_blank">Open and Proprietary Mistral models</a></td>
         <td>1 request/second<br>500,000 tokens/minute<br>1,000,000,000 tokens/month</td>
     </tr>"""
 
@@ -1029,8 +1033,12 @@ def main():
         </tr>"""
 
     table += """<tr>
-        <td rowspan="2"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
-        <td rowspan="2">Free tier restricted to 8K context</td>
+        <td rowspan="3"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
+        <td rowspan="3">Free tier restricted to 8K context</td>
+        <td>Llama 4 Scout</td>
+        <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
+    </tr>
+    <tr>
         <td>Llama 3.1 8B</td>
         <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
     </tr>
@@ -1079,16 +1087,31 @@ def main():
     </tr>"""
 
     table += """<tr>
-            <td rowspan="3"><a href="https://cohere.com" target="_blank">Cohere</a></td>
-            <td rowspan="3"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/min<br>1,000 requests/month</a></td>
+            <td rowspan="8"><a href="https://cohere.com" target="_blank">Cohere</a></td>
+            <td rowspan="8"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/minute<br>1,000 requests/month</a></td>
             <td>Command-R</td>
-            <td rowspan="3">Shared Limit</td>
+            <td rowspan="8">Shared Limit</td>
         </tr>
         <tr>
             <td>Command-R+</td>
         </tr>
         <tr>
+            <td>Command-R7B</td>
+        </tr>
+        <tr>
             <td>Command-A</td>
+        </tr>
+        <tr>
+            <td>Aya Expanse 8B</td>
+        </tr>
+        <tr>
+            <td>Aya Expanse 32B</td>
+        </tr>
+        <tr>
+            <td>Aya Vision 8B</td>
+        </tr>
+        <tr>
+            <td>Aya Vision 32B</td>
         </tr>"""
 
     for idx, model in enumerate(github_models):
@@ -1161,13 +1184,6 @@ def main():
     </tr>
     <tr>
         <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Pro Experimental</a></td>
-    </tr>"""
-
-    table += """<tr>
-        <td><a href="https://build.nvidia.com/explore/discover">NVIDIA NIM</a></td>
-        <td>Phone number verification required.</td>
-        <td>Various open models</td>
-        <td>40 requests/minute</td>
     </tr>"""
 
     table += "</tbody></table>"
