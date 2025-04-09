@@ -943,7 +943,7 @@ def main():
             table += '<a href="https://openrouter.ai" target="_blank">OpenRouter</a>'
             table += "</td>"
             table += (
-                f'<td rowspan="{len(openrouter_models)}">{get_human_limits(model)}</td>'
+                f'<td rowspan="{len(openrouter_models)}">{get_human_limits(model)}<br>1000 requests/day with $10 credit balance</td>'
             )
 
         table += f"<td>{model['name']}</td>"
