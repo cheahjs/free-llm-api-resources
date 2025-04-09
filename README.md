@@ -210,7 +210,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Command-A</td>
-        </tr><tr><td rowspan="47"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="47">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
+        </tr><tr><td rowspan="48"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="48">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
 <tr><td>AI21 Jamba 1.5 Mini</td><td></td></tr>
 <tr><td>Codestral 25.01</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
@@ -221,6 +221,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Cohere Embed v3 Multilingual</td><td></td></tr>
 <tr><td>DeepSeek-R1</td><td></td></tr>
 <tr><td>DeepSeek-V3</td><td></td></tr>
+<tr><td>DeepSeek-V3-0324</td><td></td></tr>
 <tr><td>JAIS 30b Chat</td><td></td></tr>
 <tr><td>Llama-3.2-11B-Vision-Instruct</td><td></td></tr>
 <tr><td>Llama-3.2-90B-Vision-Instruct</td><td></td></tr>
