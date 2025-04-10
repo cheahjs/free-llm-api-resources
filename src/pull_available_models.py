@@ -270,6 +270,8 @@ MODEL_TO_NAME_MAPPING = {
     "nvidia/llama-3.3-nemotron-super-49b-v1:free": "Llama 3.3 Nemotron Super 49B v1",
     "nvidia/llama-3.1-nemotron-nano-8b-v1:free": "Llama 3.1 Nemotron Nano 8B v1",
     "meta-llama/llama-4-maverick-17b-128e-instruct": "Llama 4 Maverick 17B 128E Instruct",
+    "moonshotai/kimi-vl-a3b-thinking:free": "Kimi VL A3B Thinking",
+    "moonshotai/kimi-vl-a3b-thinking": "Kimi VL A3B Thinking",
 }
 
 
@@ -513,99 +515,6 @@ def fetch_ovh_models(logger):
 
 
 def fetch_hyperbolic_models(logger):
-    logger.info("Fetching Hyperbolic models...")
-    firestore_models = fetch_hyperbolic_models_firestore(logger)
-    api_models = fetch_hyperbolic_models_api(logger)
-    for model in api_models:
-        if model["id"] not in [m["id"] for m in firestore_models]:
-            logger.debug(f"Adding model {model['id']} from API")
-            firestore_models.append(model)
-    for model in firestore_models:
-        if model["id"] not in [m["id"] for m in api_models]:
-            logger.warning(f"Model {model['id']} from Firestore not in API")
-    return sorted(firestore_models, key=lambda x: x["name"])
-
-
-def fetch_hyperbolic_models_firestore(logger):
-    logger.info("Fetching Hyperbolic models from Firestore...")
-
-    r = requests.post(
-        "https://firestore.googleapis.com/v1/projects/ai-dashboard-cfd6a/databases/(default)/documents:runQuery",
-        headers={
-            "accept": "*/*",
-            "accept-language": "en-GB,en-US;q=0.9,en;q=0.8",
-            "content-type": "text/plain",
-            "dnt": "1",
-            "google-cloud-resource-prefix": "projects/ai-dashboard-cfd6a/databases/(default)",
-            "origin": "https://app.hyperbolic.xyz",
-            "priority": "u=1, i",
-            "referer": "https://app.hyperbolic.xyz/",
-            "sec-ch-ua": '"Not)A;Brand";v="99", "Google Chrome";v="127", "Chromium";v="127"',
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": '"macOS"',
-            "sec-fetch-dest": "empty",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-site": "cross-site",
-            "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36",
-            "x-goog-api-client": "gl-js/ fire/10.10.0_lite",
-            "x-goog-request-params": "project_id=ai-dashboard-cfd6a",
-        },
-        json={
-            "structuredQuery": {
-                "from": [{"collectionId": "models"}],
-                "where": {
-                    "compositeFilter": {
-                        "op": "AND",
-                        "filters": [
-                            {
-                                "fieldFilter": {
-                                    "field": {"fieldPath": "type"},
-                                    "op": "IN",
-                                    "value": {
-                                        "arrayValue": {
-                                            "values": [
-                                                {"stringValue": "llm"},
-                                                # {"stringValue": "vlm"},
-                                            ]
-                                        }
-                                    },
-                                },
-                            },
-                            # {
-                            #     "fieldFilter": {
-                            #         "field": {"fieldPath": "hidden"},
-                            #         "op": "NOT_EQUAL",
-                            #         "value": {"booleanValue": True},
-                            #     },
-                            # },
-                        ],
-                    },
-                },
-            }
-        },
-    )
-    r.raise_for_status()
-    models = r.json()
-    logger.info(f"Fetched {len(models)} models from Hyperbolic's Firestore")
-    ret_models = []
-    for model in models:
-        model_data = model["document"]["fields"]
-        if "hidden" in model_data and model_data["hidden"]["booleanValue"]:
-            continue
-        ret_models.append(
-            {
-                "id": model_data["model"]["stringValue"],
-                "name": get_model_name(model_data["model"]["stringValue"]),
-                "limits": {
-                    "requests/minute": 60,
-                },
-            }
-        )
-    logger.debug(json.dumps(ret_models, indent=4))
-    return ret_models
-
-
-def fetch_hyperbolic_models_api(logger):
     logger.info("Fetching Hyperbolic models from API...")
     r = requests.get(
         "https://api.hyperbolic.xyz/v1/models",
@@ -632,7 +541,7 @@ def fetch_hyperbolic_models_api(logger):
             }
         )
     logger.debug(json.dumps(ret_models, indent=4))
-    return ret_models
+    return sorted(ret_models, key=lambda x: x["name"])
 
 
 def fetch_github_models(logger):

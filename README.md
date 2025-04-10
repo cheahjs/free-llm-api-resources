@@ -23,7 +23,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="50"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="50">20 requests/minute<br>50 requests/day<br>1000 requests/day with $10 credit balance</td><td>Bytedance UI Tars 72B</td><td></td></tr>
+<tr><td rowspan="51"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="51">20 requests/minute<br>50 requests/day<br>1000 requests/day with $10 credit balance</td><td>Bytedance UI Tars 72B</td><td></td></tr>
 <tr><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
 <tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td></td></tr>
@@ -42,6 +42,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Gemma 3 1B Instruct</td><td></td></tr>
 <tr><td>Gemma 3 27B Instruct</td><td></td></tr>
 <tr><td>Gemma 3 4B Instruct</td><td></td></tr>
+<tr><td>Kimi VL A3B Thinking</td><td></td></tr>
 <tr><td>Llama 3.1 8B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 Nemotron 70B Instruct</td><td></td></tr>
 <tr><td>Llama 3.1 Nemotron Nano 8B v1</td><td></td></tr>
@@ -279,7 +280,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-4</td><td></td></tr>
 <tr><td>Phi-4-mini-instruct</td><td></td></tr>
 <tr><td>Phi-4-multimodal-instruct</td><td></td></tr>
-<tr><td rowspan="21"><a href="https://chutes.ai/" target="_blank">Chutes</a></td><td rowspan="21">Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
+<tr><td rowspan="22"><a href="https://chutes.ai/" target="_blank">Chutes</a></td><td rowspan="22">Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
 <tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1-Zero</td><td></td></tr>
 <tr><td>DeepSeek V3</td><td></td></tr>
@@ -290,6 +291,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Gemma 3 12B Instruct</td><td></td></tr>
 <tr><td>Gemma 3 1B Instruct</td><td></td></tr>
 <tr><td>Gemma 3 4B Instruct</td><td></td></tr>
+<tr><td>Kimi VL A3B Thinking</td><td></td></tr>
 <tr><td>Llama 3.1 Nemotron Nano 8B v1</td><td></td></tr>
 <tr><td>Llama 3.1 Nemotron Ultra 253B v1</td><td></td></tr>
 <tr><td>Llama 3.3 Nemotron Super 49B v1</td><td></td></tr>
