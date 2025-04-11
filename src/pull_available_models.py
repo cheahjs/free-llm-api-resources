@@ -272,6 +272,10 @@ MODEL_TO_NAME_MAPPING = {
     "meta-llama/llama-4-maverick-17b-128e-instruct": "Llama 4 Maverick 17B 128E Instruct",
     "moonshotai/kimi-vl-a3b-thinking:free": "Kimi VL A3B Thinking",
     "moonshotai/kimi-vl-a3b-thinking": "Kimi VL A3B Thinking",
+    "@cf/mistralai/mistral-small-3.1-24b-instruct": "Mistral Small 3.1 24B Instruct",
+    "@cf/google/gemma-3-12b-it": "Gemma 3 12B Instruct",
+    "@cf/qwen/qwq-32b": "Qwen QwQ 32B",
+    "@cf/qwen/qwen2.5-coder-32b-instruct": "Qwen 2.5 Coder 32B Instruct",
 }
 
 
@@ -852,10 +856,10 @@ def main():
             table += '<a href="https://openrouter.ai" target="_blank">OpenRouter</a>'
             table += "</td>"
             table += (
-                f'<td rowspan="{len(openrouter_models)}">{get_human_limits(model)}<br>1000 requests/day with $10 credit balance</td>'
+                f'<td rowspan="{len(openrouter_models)}"><a href="https://openrouter.ai/docs/api-reference/limits" target="_blank">{get_human_limits(model)}<br>1000 requests/day with $10 credit balance</a></td>'
             )
 
-        table += f"<td>{model['name']}</td>"
+        table += f"<td><a href='https://openrouter.ai/{model['id']}' target='_blank'>{model['name']}</a></td>"
         table += "<td></td>"
         table += "</tr>\n"
 
@@ -983,15 +987,15 @@ def main():
     table += """<tr>
         <td rowspan="3"><a href="https://together.ai">Together</a></td>
         <td rowspan="3"></td>
-        <td>Llama 3.2 11B Vision Instruct</td>
+        <td><a href="https://www.together.ai/models/llama-3-2-11b-free" target="_blank">Llama 3.2 11B Vision Instruct</a></td>
         <td></td>
     </tr>
     <tr>
-        <td>Llama 3.3 70B Instruct</td>
+        <td><a href="https://www.together.ai/models/llama-3-3-70b-free" target="_blank">Llama 3.3 70B Instruct</a></td>
         <td></td>
     </tr>
     <tr>
-        <td>DeepSeek R1 Distil Llama 70B</td>
+        <td><a href="https://www.together.ai/models/deepseek-r1-distilled-llama-70b-free" target="_blank">DeepSeek R1 Distil Llama 70B</a></td>
         <td></td>
     </tr>"""
 
@@ -1064,8 +1068,16 @@ def main():
         table += "</tr>\n"
 
     table += """<tr>
-        <td rowspan="8"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td rowspan="8">Very stringent payment verification for Google Cloud.</td>
+        <td rowspan="10"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
+        <td rowspan="10">Very stringent payment verification for Google Cloud.</td>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-4-maverick-17b-128e-instruct-maas" target="_blank">Llama 4 Maverick Instruct</a></td>
+        <td>Llama 4 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
+        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-4-scout-70b-instruct-maas" target="_blank">Llama 4 Scout Instruct</a></td>
+        <td>Llama 4 API Service free during preview.<br>60 requests/minute</td>
+    </tr>
+    <tr>
         <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
         <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
     </tr>
