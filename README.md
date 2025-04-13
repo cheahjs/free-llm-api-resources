@@ -160,7 +160,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td rowspan="3"><a href="https://together.ai" target="_blank">Together</a></td><td rowspan="3">Up to 60 requests/minute</td><td><a href='https://together.ai/llama-3-2-11b-free' target='_blank'>Llama 3.2 11B Vision Instruct</a></td><td></td></tr>
 <tr><td><a href='https://together.ai/llama-3-3-70b-free' target='_blank'>Llama 3.3 70B Instruct</a></td><td></td></tr>
 <tr><td><a href='https://together.ai/deepseek-r1-distilled-llama-70b-free' target='_blank'>DeepSeek R1 Distil Llama 70B</a></td><td></td></tr>
-<tr><td rowspan="8"><a href="https://cohere.com" target="_blank">Cohere</a></td><td rowspan="8"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/minute<br>1,000 requests/month</a></td><td>Command-A</td><td rowspan="{len(cohere_models)}">Shared Limit</td></tr>
+<tr><td rowspan="8"><a href="https://cohere.com" target="_blank">Cohere</a></td><td rowspan="8"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/minute<br>1,000 requests/month</a></td><td>Command-A</td><td rowspan="8">Shared Limit</td></tr>
 <tr><td>Command-R7B</td></tr>
 <tr><td>Command-R+</td></tr>
 <tr><td>Command-R</td></tr>

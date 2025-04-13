@@ -796,7 +796,7 @@ def main():
             table += f'<td rowspan="{len(cohere_models)}"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/minute<br>1,000 requests/month</a></td>'
         table += f"<td>{model['name']}</td>"
         if idx == 0:
-            table += '<td rowspan="{len(cohere_models)}">Shared Limit</td>'
+            table += f'<td rowspan="{len(cohere_models)}">Shared Limit</td>'
         table += "</tr>\n"
 
     for idx, model in enumerate(github_models):
