@@ -581,26 +581,83 @@ def main():
             table += f'<td rowspan="{len(openrouter_models)}"><a href="https://openrouter.ai/docs/api-reference/limits" target="_blank">{get_human_limits(model)}<br>1000 requests/day with $10 credit balance</a></td>'
 
         table += f"<td><a href='https://openrouter.ai/{model['id']}' target='_blank'>{model['name']}</a></td>"
-        table += "<td></td>"
+        if idx == 0:
+            table += f'<td rowspan="{len(openrouter_models)}">Shared Quota</td>'
         table += "</tr>\n"
 
     gemini_text_models = [
-        {"id": "gemini-2.5-pro-exp-03-25", "name": "Gemini 2.5 Pro (Experimental)", "limits": gemini_models["gemini-2.0-pro-exp"]},
-        {"id": "gemini-2.0-flash", "name": "Gemini 2.0 Flash", "limits": gemini_models["gemini-2.0-flash"]},
-        {"id": "gemini-2.0-flash-lite", "name": "Gemini 2.0 Flash-Lite", "limits": gemini_models["gemini-2.0-flash-lite"]},
-        {"id": "gemini-2.0-flash-exp", "name": "Gemini 2.0 Flash (Experimental)", "limits": gemini_models["gemini-2.0-flash-exp"]},
-        {"id": "gemini-1.5-flash", "name": "Gemini 1.5 Flash", "limits": gemini_models["gemini-1.5-flash"]},
-        {"id": "gemini-1.5-flash-8b", "name": "Gemini 1.5 Flash-8B", "limits": gemini_models["gemini-1.5-flash-8b"]},
-        {"id": "gemini-1.5-pro", "name": "Gemini 1.5 Pro", "limits": gemini_models["gemini-1.5-pro"]},
-        {"id": "learnlm-1.5-pro-experimental", "name": "LearnLM 1.5 Pro (Experimental)", "limits": gemini_models["learnlm-1.5-pro-experimental"]},
-        {"id": "gemma-3-27b-it", "name": "Gemma 3 27B Instruct", "limits": gemini_models["gemma-3-27b"]},
-        {"id": "gemma-3-12b-it", "name": "Gemma 3 12B Instruct", "limits": gemini_models["gemma-3-12b"]},
-        {"id": "gemma-3-4b-it", "name": "Gemma 3 4B Instruct", "limits": gemini_models["gemma-3-4b"]},
-        {"id": "gemma-3-1b-it", "name": "Gemma 3 1B Instruct", "limits": gemini_models["gemma-3-1b"]},
+        {
+            "id": "gemini-2.5-pro-exp-03-25",
+            "name": "Gemini 2.5 Pro (Experimental)",
+            "limits": gemini_models["gemini-2.0-pro-exp"],
+        },
+        {
+            "id": "gemini-2.0-flash",
+            "name": "Gemini 2.0 Flash",
+            "limits": gemini_models["gemini-2.0-flash"],
+        },
+        {
+            "id": "gemini-2.0-flash-lite",
+            "name": "Gemini 2.0 Flash-Lite",
+            "limits": gemini_models["gemini-2.0-flash-lite"],
+        },
+        {
+            "id": "gemini-2.0-flash-exp",
+            "name": "Gemini 2.0 Flash (Experimental)",
+            "limits": gemini_models["gemini-2.0-flash-exp"],
+        },
+        {
+            "id": "gemini-1.5-flash",
+            "name": "Gemini 1.5 Flash",
+            "limits": gemini_models["gemini-1.5-flash"],
+        },
+        {
+            "id": "gemini-1.5-flash-8b",
+            "name": "Gemini 1.5 Flash-8B",
+            "limits": gemini_models["gemini-1.5-flash-8b"],
+        },
+        {
+            "id": "gemini-1.5-pro",
+            "name": "Gemini 1.5 Pro",
+            "limits": gemini_models["gemini-1.5-pro"],
+        },
+        {
+            "id": "learnlm-1.5-pro-experimental",
+            "name": "LearnLM 1.5 Pro (Experimental)",
+            "limits": gemini_models["learnlm-1.5-pro-experimental"],
+        },
+        {
+            "id": "gemma-3-27b-it",
+            "name": "Gemma 3 27B Instruct",
+            "limits": gemini_models["gemma-3-27b"],
+        },
+        {
+            "id": "gemma-3-12b-it",
+            "name": "Gemma 3 12B Instruct",
+            "limits": gemini_models["gemma-3-12b"],
+        },
+        {
+            "id": "gemma-3-4b-it",
+            "name": "Gemma 3 4B Instruct",
+            "limits": gemini_models["gemma-3-4b"],
+        },
+        {
+            "id": "gemma-3-1b-it",
+            "name": "Gemma 3 1B Instruct",
+            "limits": gemini_models["gemma-3-1b"],
+        },
     ]
     gemini_embedding_models = [
-        {"id": "text-embedding-004", "name": "text-embedding-004", "limits": gemini_models["project-embedding"]},
-        {"id": "embedding-001", "name": "embedding-001", "limits": gemini_models["project-embedding"]},
+        {
+            "id": "text-embedding-004",
+            "name": "text-embedding-004",
+            "limits": gemini_models["project-embedding"],
+        },
+        {
+            "id": "embedding-001",
+            "name": "embedding-001",
+            "limits": gemini_models["project-embedding"],
+        },
     ]
 
     for idx, model in enumerate(gemini_text_models):
@@ -688,48 +745,59 @@ def main():
         table += f"<td>{get_human_limits(model)}</td>"
         table += "</tr>\n"
 
-    table += """<tr>
-        <td rowspan="3"><a href="https://together.ai">Together</a></td>
-        <td rowspan="3"></td>
-        <td><a href="https://www.together.ai/models/llama-3-2-11b-free" target="_blank">Llama 3.2 11B Vision Instruct</a></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="https://www.together.ai/models/llama-3-3-70b-free" target="_blank">Llama 3.3 70B Instruct</a></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="https://www.together.ai/models/deepseek-r1-distilled-llama-70b-free" target="_blank">DeepSeek R1 Distil Llama 70B</a></td>
-        <td></td>
-    </tr>"""
+    together_models = [
+        {
+            "id": "meta-llama/Llama-Vision-Free",
+            "name": "Llama 3.2 11B Vision Instruct",
+            "urlId": "llama-3-2-11b-free",
+        },
+        {
+            "id": "llmeta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
+            "name": "Llama 3.3 70B Instruct",
+            "urlId": "llama-3-3-70b-free",
+        },
+        {
+            "id": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
+            "name": "DeepSeek R1 Distil Llama 70B",
+            "urlId": "deepseek-r1-distilled-llama-70b-free",
+        },
+    ]
 
-    table += """<tr>
-            <td rowspan="8"><a href="https://cohere.com" target="_blank">Cohere</a></td>
-            <td rowspan="8"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/minute<br>1,000 requests/month</a></td>
-            <td>Command-R</td>
-            <td rowspan="8">Shared Limit</td>
-        </tr>
-        <tr>
-            <td>Command-R+</td>
-        </tr>
-        <tr>
-            <td>Command-R7B</td>
-        </tr>
-        <tr>
-            <td>Command-A</td>
-        </tr>
-        <tr>
-            <td>Aya Expanse 8B</td>
-        </tr>
-        <tr>
-            <td>Aya Expanse 32B</td>
-        </tr>
-        <tr>
-            <td>Aya Vision 8B</td>
-        </tr>
-        <tr>
-            <td>Aya Vision 32B</td>
-        </tr>"""
+    for idx, model in enumerate(together_models):
+        table += "<tr>"
+        if idx == 0:
+            table += f'<td rowspan="{len(together_models)}">'
+            table += '<a href="https://together.ai" target="_blank">Together</a>'
+            table += "</td>"
+            table += (
+                f'<td rowspan="{len(together_models)}">Up to 60 requests/minute</td>'
+            )
+        table += f"<td><a href='https://together.ai/{model['urlId']}' target='_blank'>{model['name']}</a></td>"
+        table += f"<td>{get_human_limits(model)}</td>"
+        table += "</tr>\n"
+
+    cohere_models = [
+        {"id": "command-a-03-2025", "name": "Command-A"},
+        {"id": "command-r7b-12-2024", "name": "Command-R7B"},
+        {"id": "command-r-plus", "name": "Command-R+"},
+        {"id": "command-r", "name": "Command-R"},
+        {"id": "c4ai-aya-expanse-8b", "name": "Aya Expanse 8B"},
+        {"id": "c4ai-aya-expanse-32b", "name": "Aya Expanse 32B"},
+        {"id": "c4ai-aya-vision-8b", "name": "Aya Vision 8B"},
+        {"id": "c4ai-aya-vision-32b", "name": "Aya Vision 32B"},
+    ]
+
+    for idx, model in enumerate(cohere_models):
+        table += "<tr>"
+        if idx == 0:
+            table += f'<td rowspan="{len(cohere_models)}">'
+            table += '<a href="https://cohere.com" target="_blank">Cohere</a>'
+            table += "</td>"
+            table += f'<td rowspan="{len(cohere_models)}"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/minute<br>1,000 requests/month</a></td>'
+        table += f"<td>{model['name']}</td>"
+        if idx == 0:
+            table += '<td rowspan="{len(cohere_models)}">Shared Limit</td>'
+        table += "</tr>\n"
 
     for idx, model in enumerate(github_models):
         table += "<tr>"
@@ -775,45 +843,86 @@ def main():
         table += "<td></td>"
         table += "</tr>\n"
 
-    table += """<tr>
-        <td rowspan="10"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td rowspan="10">Very stringent payment verification for Google Cloud.</td>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-4-maverick-17b-128e-instruct-maas" target="_blank">Llama 4 Maverick Instruct</a></td>
-        <td>Llama 4 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-4-scout-70b-instruct-maas" target="_blank">Llama 4 Scout Instruct</a></td>
-        <td>Llama 4 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
-        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.1-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td>
-        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td>
-        <td>Llama 3.2 API Service free during preview.<br>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.3-70b-instruct-maas" target="_blank">Llama 3.3 70B Instruct</a></td>
-        <td>Llama 3.3 API Service free during preview.<br>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.5 Pro Experimental</a></td>
-        <td rowspan="4">Experimental Gemini model.<br>10 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Experimental</a></td>
-    </tr>
-    <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Thinking Experimental</a></td>
-    </tr>
-    <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Pro Experimental</a></td>
-    </tr>"""
+    vertex_llama_models = [
+        {
+            "id": "llama-4-maverick-17b-128e-instruct-maas",
+            "name": "Llama 4 Maverick Instruct",
+            "urlId": "llama-4-maverick-17b-128e-instruct-maas",
+            "limits": {"requests/minute": 60},
+        },
+        {
+            "id": "llama-4-scout-17b-16e-instruct-maas",
+            "name": "Llama 4 Scout Instruct",
+            "urlId": "llama-4-maverick-17b-128e-instruct-maas",
+            "limits": {"requests/minute": 60},
+        },
+        {
+            "id": "llama-3.3-70b-instruct-maas",
+            "name": "Llama 3.3 70B Instruct",
+            "urlId": "llama-3-3-70b-instruct-maas",
+            "limits": {"requests/minute": 30},
+        },
+        {
+            "id": "llama-3.2-90b-vision-instruct-maas",
+            "name": "Llama 3.2 90B Vision Instruct",
+            "urlId": "llama-3-2-90b-vision-instruct-maas",
+            "limits": {"requests/minute": 30},
+        },
+        {
+            "id": "llama-3.1-70b-instruct-maas",
+            "name": "Llama 3.1 70B Instruct",
+            "urlId": "llama-3-1-405b-instruct-maas",
+            "limits": {"requests/minute": 60},
+        },
+        {
+            "id": "llama-3.1-8b-instruct-maas",
+            "name": "Llama 3.1 8B Instruct",
+            "urlId": "llama-3-1-405b-instruct-maas",
+            "limits": {"requests/minute": 60},
+        },
+    ]
+    vertex_gemini_models = [
+        {
+            "id": "gemini-2.5-pro-exp-03-25",
+            "name": "Gemini 2.5 Pro (Experimental)",
+            "limits": {"requests/minute": 10},
+        },
+        {
+            "id": "gemini-2.0-flash-exp",
+            "name": "Gemini 2.0 Flash (Experimental)",
+            "limits": {"requests/minute": 10},
+        },
+        {
+            "id": "gemini-2.0-flash-thinking-exp-01-21",
+            "name": "Gemini 2.0 Flash Thinking (Experimental)",
+            "limits": {"requests/minute": 10},
+        },
+        {
+            "id": "gemini-exp-1206",
+            "name": "Gemini 2.0 Pro (Experimental)",
+            "limits": {"requests/minute": 10},
+        },
+    ]
+
+    for idx, model in enumerate(vertex_gemini_models):
+        table += "<tr>"
+        if idx == 0:
+            table += (
+                f'<td rowspan="{len(vertex_llama_models) + len(vertex_gemini_models)}">'
+            )
+            table += '<a href="https://console.cloud.google.com/vertex-ai/model-garden" target="_blank">Google Cloud Vertex AI</a>'
+            table += "</td>"
+            table += f'<td rowspan="{len(vertex_llama_models) + len(vertex_gemini_models)}">Very stringent payment verification for Google Cloud.</td>'
+        table += f'<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">{model['name']}</a></td>'
+        if idx == 0:
+            table += f"<td rowspan='{len(vertex_gemini_models)}'>{get_human_limits(model)}<br>Shared Quota</td>"
+        table += "</tr>\n"
+
+    for idx, model in enumerate(vertex_llama_models):
+        table += "<tr>"
+        table += f"<td><a href='https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/{model['urlId']}' target='_blank'>{model['name']}</a></td>"
+        table += f"<td>{get_human_limits(model)}<br>Free during preview</td>"
+        table += "</tr>\n"
 
     table += "</tbody></table>"
 

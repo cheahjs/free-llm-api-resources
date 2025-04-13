@@ -23,59 +23,59 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="53"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="53"><a href="https://openrouter.ai/docs/api-reference/limits" target="_blank">20 requests/minute<br>50 requests/day<br>1000 requests/day with $10 credit balance</a></td><td><a href='https://openrouter.ai/bytedance-research/ui-tars-72b:free' target='_blank'>Bytedance UI Tars 72B</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/agentica-org/deepcoder-14b-preview:free' target='_blank'>DeepCoder 14B Preview</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/nousresearch/deephermes-3-llama-3-8b-preview:free' target='_blank'>DeepHermes 3 Llama 3 8B Preview</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1:free' target='_blank'>DeepSeek R1</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b:free' target='_blank'>DeepSeek R1 Distill Llama 70B</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1-distill-qwen-14b:free' target='_blank'>DeepSeek R1 Distill Qwen 14B</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1-distill-qwen-32b:free' target='_blank'>DeepSeek R1 Distill Qwen 32B</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1-zero:free' target='_blank'>DeepSeek R1 Zero</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/deepseek/deepseek-chat:free' target='_blank'>DeepSeek V3</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/deepseek/deepseek-chat-v3-0324:free' target='_blank'>DeepSeek V3 0324</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/deepseek/deepseek-v3-base:free' target='_blank'>DeepSeek V3 Base</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/cognitivecomputations/dolphin3.0-mistral-24b:free' target='_blank'>Dolphin 3.0 Mistral 24B</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/cognitivecomputations/dolphin3.0-r1-mistral-24b:free' target='_blank'>Dolphin 3.0 R1 Mistral 24B</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/featherless/qwerky-72b:free' target='_blank'>Featherless Qwerky 72B</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/google/gemini-2.5-pro-exp-03-25:free' target='_blank'>Gemini 2.5 Pro Experimental 03-25</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/google/gemma-2-9b-it:free' target='_blank'>Gemma 2 9B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/google/gemma-3-12b-it:free' target='_blank'>Gemma 3 12B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/google/gemma-3-1b-it:free' target='_blank'>Gemma 3 1B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/google/gemma-3-27b-it:free' target='_blank'>Gemma 3 27B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/google/gemma-3-4b-it:free' target='_blank'>Gemma 3 4B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/moonshotai/kimi-vl-a3b-thinking:free' target='_blank'>Kimi VL A3B Thinking</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/meta-llama/llama-3.1-8b-instruct:free' target='_blank'>Llama 3.1 8B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/nvidia/llama-3.1-nemotron-70b-instruct:free' target='_blank'>Llama 3.1 Nemotron 70B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/nvidia/llama-3.1-nemotron-nano-8b-v1:free' target='_blank'>Llama 3.1 Nemotron Nano 8B v1</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/nvidia/llama-3.1-nemotron-ultra-253b-v1:free' target='_blank'>Llama 3.1 Nemotron Ultra 253B v1</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/meta-llama/llama-3.2-11b-vision-instruct:free' target='_blank'>Llama 3.2 11B Vision Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/meta-llama/llama-3.2-1b-instruct:free' target='_blank'>Llama 3.2 1B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free' target='_blank'>Llama 3.2 3B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free' target='_blank'>Llama 3.3 70B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/nvidia/llama-3.3-nemotron-super-49b-v1:free' target='_blank'>Llama 3.3 Nemotron Super 49B v1</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/meta-llama/llama-4-maverick:free' target='_blank'>Llama 4 Maverick</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/meta-llama/llama-4-scout:free' target='_blank'>Llama 4 Scout</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/mistralai/mistral-7b-instruct:free' target='_blank'>Mistral 7B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/mistralai/mistral-nemo:free' target='_blank'>Mistral Nemo</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/mistralai/mistral-small-24b-instruct-2501:free' target='_blank'>Mistral Small 24B Instruct 2501</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free' target='_blank'>Mistral Small 3.1 24B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/allenai/molmo-7b-d:free' target='_blank'>Molmo 7B D</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/moonshotai/moonlight-16b-a3b-instruct:free' target='_blank'>Moonlight-16B-A3B-Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/open-r1/olympiccoder-32b:free' target='_blank'>OlympicCoder 32B</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/open-r1/olympiccoder-7b:free' target='_blank'>OlympicCoder 7B</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/arliai/qwq-32b-arliai-rpr-v1:free' target='_blank'>QwQ 32B ArliAI RpR v1</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/qwen/qwen-2.5-72b-instruct:free' target='_blank'>Qwen 2.5 72B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/qwen/qwen-2.5-7b-instruct:free' target='_blank'>Qwen 2.5 7B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct:free' target='_blank'>Qwen 2.5 VL 32B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/qwen/qwen2.5-vl-3b-instruct:free' target='_blank'>Qwen 2.5 VL 3B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/qwen/qwen-2.5-vl-7b-instruct:free' target='_blank'>Qwen 2.5 VL 7B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/qwen/qwq-32b:free' target='_blank'>Qwen QwQ 32B</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/qwen/qwq-32b-preview:free' target='_blank'>Qwen QwQ 32B Preview</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/qwen/qwen-2.5-coder-32b-instruct:free' target='_blank'>Qwen2.5 Coder 32B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/qwen/qwen2.5-vl-72b-instruct:free' target='_blank'>Qwen2.5 VL 72B Instruct</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/rekaai/reka-flash-3:free' target='_blank'>Reka Flash 3</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/sophosympatheia/rogue-rose-103b-v0.2:free' target='_blank'>Rogue Rose 103B v0.2</a></td><td></td></tr>
-<tr><td><a href='https://openrouter.ai/huggingfaceh4/zephyr-7b-beta:free' target='_blank'>Zephyr 7B Beta</a></td><td></td></tr>
+<tr><td rowspan="53"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="53"><a href="https://openrouter.ai/docs/api-reference/limits" target="_blank">20 requests/minute<br>50 requests/day<br>1000 requests/day with $10 credit balance</a></td><td><a href='https://openrouter.ai/bytedance-research/ui-tars-72b:free' target='_blank'>Bytedance UI Tars 72B</a></td><td rowspan="53">Shared Quota</td></tr>
+<tr><td><a href='https://openrouter.ai/agentica-org/deepcoder-14b-preview:free' target='_blank'>DeepCoder 14B Preview</a></td></tr>
+<tr><td><a href='https://openrouter.ai/nousresearch/deephermes-3-llama-3-8b-preview:free' target='_blank'>DeepHermes 3 Llama 3 8B Preview</a></td></tr>
+<tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1:free' target='_blank'>DeepSeek R1</a></td></tr>
+<tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b:free' target='_blank'>DeepSeek R1 Distill Llama 70B</a></td></tr>
+<tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1-distill-qwen-14b:free' target='_blank'>DeepSeek R1 Distill Qwen 14B</a></td></tr>
+<tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1-distill-qwen-32b:free' target='_blank'>DeepSeek R1 Distill Qwen 32B</a></td></tr>
+<tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1-zero:free' target='_blank'>DeepSeek R1 Zero</a></td></tr>
+<tr><td><a href='https://openrouter.ai/deepseek/deepseek-chat:free' target='_blank'>DeepSeek V3</a></td></tr>
+<tr><td><a href='https://openrouter.ai/deepseek/deepseek-chat-v3-0324:free' target='_blank'>DeepSeek V3 0324</a></td></tr>
+<tr><td><a href='https://openrouter.ai/deepseek/deepseek-v3-base:free' target='_blank'>DeepSeek V3 Base</a></td></tr>
+<tr><td><a href='https://openrouter.ai/cognitivecomputations/dolphin3.0-mistral-24b:free' target='_blank'>Dolphin 3.0 Mistral 24B</a></td></tr>
+<tr><td><a href='https://openrouter.ai/cognitivecomputations/dolphin3.0-r1-mistral-24b:free' target='_blank'>Dolphin 3.0 R1 Mistral 24B</a></td></tr>
+<tr><td><a href='https://openrouter.ai/featherless/qwerky-72b:free' target='_blank'>Featherless Qwerky 72B</a></td></tr>
+<tr><td><a href='https://openrouter.ai/google/gemini-2.5-pro-exp-03-25:free' target='_blank'>Gemini 2.5 Pro Experimental 03-25</a></td></tr>
+<tr><td><a href='https://openrouter.ai/google/gemma-2-9b-it:free' target='_blank'>Gemma 2 9B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/google/gemma-3-12b-it:free' target='_blank'>Gemma 3 12B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/google/gemma-3-1b-it:free' target='_blank'>Gemma 3 1B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/google/gemma-3-27b-it:free' target='_blank'>Gemma 3 27B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/google/gemma-3-4b-it:free' target='_blank'>Gemma 3 4B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/moonshotai/kimi-vl-a3b-thinking:free' target='_blank'>Kimi VL A3B Thinking</a></td></tr>
+<tr><td><a href='https://openrouter.ai/meta-llama/llama-3.1-8b-instruct:free' target='_blank'>Llama 3.1 8B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/nvidia/llama-3.1-nemotron-70b-instruct:free' target='_blank'>Llama 3.1 Nemotron 70B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/nvidia/llama-3.1-nemotron-nano-8b-v1:free' target='_blank'>Llama 3.1 Nemotron Nano 8B v1</a></td></tr>
+<tr><td><a href='https://openrouter.ai/nvidia/llama-3.1-nemotron-ultra-253b-v1:free' target='_blank'>Llama 3.1 Nemotron Ultra 253B v1</a></td></tr>
+<tr><td><a href='https://openrouter.ai/meta-llama/llama-3.2-11b-vision-instruct:free' target='_blank'>Llama 3.2 11B Vision Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/meta-llama/llama-3.2-1b-instruct:free' target='_blank'>Llama 3.2 1B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free' target='_blank'>Llama 3.2 3B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free' target='_blank'>Llama 3.3 70B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/nvidia/llama-3.3-nemotron-super-49b-v1:free' target='_blank'>Llama 3.3 Nemotron Super 49B v1</a></td></tr>
+<tr><td><a href='https://openrouter.ai/meta-llama/llama-4-maverick:free' target='_blank'>Llama 4 Maverick</a></td></tr>
+<tr><td><a href='https://openrouter.ai/meta-llama/llama-4-scout:free' target='_blank'>Llama 4 Scout</a></td></tr>
+<tr><td><a href='https://openrouter.ai/mistralai/mistral-7b-instruct:free' target='_blank'>Mistral 7B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/mistralai/mistral-nemo:free' target='_blank'>Mistral Nemo</a></td></tr>
+<tr><td><a href='https://openrouter.ai/mistralai/mistral-small-24b-instruct-2501:free' target='_blank'>Mistral Small 24B Instruct 2501</a></td></tr>
+<tr><td><a href='https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free' target='_blank'>Mistral Small 3.1 24B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/allenai/molmo-7b-d:free' target='_blank'>Molmo 7B D</a></td></tr>
+<tr><td><a href='https://openrouter.ai/moonshotai/moonlight-16b-a3b-instruct:free' target='_blank'>Moonlight-16B-A3B-Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/open-r1/olympiccoder-32b:free' target='_blank'>OlympicCoder 32B</a></td></tr>
+<tr><td><a href='https://openrouter.ai/open-r1/olympiccoder-7b:free' target='_blank'>OlympicCoder 7B</a></td></tr>
+<tr><td><a href='https://openrouter.ai/arliai/qwq-32b-arliai-rpr-v1:free' target='_blank'>QwQ 32B ArliAI RpR v1</a></td></tr>
+<tr><td><a href='https://openrouter.ai/qwen/qwen-2.5-72b-instruct:free' target='_blank'>Qwen 2.5 72B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/qwen/qwen-2.5-7b-instruct:free' target='_blank'>Qwen 2.5 7B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct:free' target='_blank'>Qwen 2.5 VL 32B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/qwen/qwen2.5-vl-3b-instruct:free' target='_blank'>Qwen 2.5 VL 3B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/qwen/qwen-2.5-vl-7b-instruct:free' target='_blank'>Qwen 2.5 VL 7B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/qwen/qwq-32b:free' target='_blank'>Qwen QwQ 32B</a></td></tr>
+<tr><td><a href='https://openrouter.ai/qwen/qwq-32b-preview:free' target='_blank'>Qwen QwQ 32B Preview</a></td></tr>
+<tr><td><a href='https://openrouter.ai/qwen/qwen-2.5-coder-32b-instruct:free' target='_blank'>Qwen2.5 Coder 32B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/qwen/qwen2.5-vl-72b-instruct:free' target='_blank'>Qwen2.5 VL 72B Instruct</a></td></tr>
+<tr><td><a href='https://openrouter.ai/rekaai/reka-flash-3:free' target='_blank'>Reka Flash 3</a></td></tr>
+<tr><td><a href='https://openrouter.ai/sophosympatheia/rogue-rose-103b-v0.2:free' target='_blank'>Rogue Rose 103B v0.2</a></td></tr>
+<tr><td><a href='https://openrouter.ai/huggingfaceh4/zephyr-7b-beta:free' target='_blank'>Zephyr 7B Beta</a></td></tr>
 <tr><td rowspan="14"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td><td rowspan="14">Data is used for training (when used outside of the UK/CH/EEA/EU).</td><td>Gemini 2.5 Pro (Experimental)</td><td>5,000,000 tokens/day<br>1,000,000 tokens/minute<br>25 requests/day<br>5 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td></tr>
@@ -157,46 +157,18 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mixtral 8x7B Instruct v0.1</td><td>12 requests/minute</td></tr>
 <tr><td>Qwen 2.5 VL 72B Instruct</td><td>12 requests/minute</td></tr>
 <tr><td>Qwen2.5 Coder 32B Instruct</td><td>12 requests/minute</td></tr>
-<tr>
-        <td rowspan="3"><a href="https://together.ai">Together</a></td>
-        <td rowspan="3"></td>
-        <td><a href="https://www.together.ai/models/llama-3-2-11b-free" target="_blank">Llama 3.2 11B Vision Instruct</a></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="https://www.together.ai/models/llama-3-3-70b-free" target="_blank">Llama 3.3 70B Instruct</a></td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="https://www.together.ai/models/deepseek-r1-distilled-llama-70b-free" target="_blank">DeepSeek R1 Distil Llama 70B</a></td>
-        <td></td>
-    </tr><tr>
-            <td rowspan="8"><a href="https://cohere.com" target="_blank">Cohere</a></td>
-            <td rowspan="8"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/minute<br>1,000 requests/month</a></td>
-            <td>Command-R</td>
-            <td rowspan="8">Shared Limit</td>
-        </tr>
-        <tr>
-            <td>Command-R+</td>
-        </tr>
-        <tr>
-            <td>Command-R7B</td>
-        </tr>
-        <tr>
-            <td>Command-A</td>
-        </tr>
-        <tr>
-            <td>Aya Expanse 8B</td>
-        </tr>
-        <tr>
-            <td>Aya Expanse 32B</td>
-        </tr>
-        <tr>
-            <td>Aya Vision 8B</td>
-        </tr>
-        <tr>
-            <td>Aya Vision 32B</td>
-        </tr><tr><td rowspan="49"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="49">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
+<tr><td rowspan="3"><a href="https://together.ai" target="_blank">Together</a></td><td rowspan="3">Up to 60 requests/minute</td><td><a href='https://together.ai/llama-3-2-11b-free' target='_blank'>Llama 3.2 11B Vision Instruct</a></td><td></td></tr>
+<tr><td><a href='https://together.ai/llama-3-3-70b-free' target='_blank'>Llama 3.3 70B Instruct</a></td><td></td></tr>
+<tr><td><a href='https://together.ai/deepseek-r1-distilled-llama-70b-free' target='_blank'>DeepSeek R1 Distil Llama 70B</a></td><td></td></tr>
+<tr><td rowspan="8"><a href="https://cohere.com" target="_blank">Cohere</a></td><td rowspan="8"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/minute<br>1,000 requests/month</a></td><td>Command-A</td><td rowspan="{len(cohere_models)}">Shared Limit</td></tr>
+<tr><td>Command-R7B</td></tr>
+<tr><td>Command-R+</td></tr>
+<tr><td>Command-R</td></tr>
+<tr><td>Aya Expanse 8B</td></tr>
+<tr><td>Aya Expanse 32B</td></tr>
+<tr><td>Aya Vision 8B</td></tr>
+<tr><td>Aya Vision 32B</td></tr>
+<tr><td rowspan="49"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="49">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
 <tr><td>AI21 Jamba 1.5 Mini</td><td></td></tr>
 <tr><td>Codestral 25.01</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
@@ -317,45 +289,17 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>TinyLlama 1.1B Chat v1.0</td><td></td></tr>
 <tr><td>Una Cybertron 7B v2 (BF16)</td><td></td></tr>
 <tr><td>Zephyr 7B Beta (AWQ)</td><td></td></tr>
-<tr>
-        <td rowspan="10"><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden" target="_blank">Google Cloud Vertex AI</a></td>
-        <td rowspan="10">Very stringent payment verification for Google Cloud.</td>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-4-maverick-17b-128e-instruct-maas" target="_blank">Llama 4 Maverick Instruct</a></td>
-        <td>Llama 4 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-4-scout-70b-instruct-maas" target="_blank">Llama 4 Scout Instruct</a></td>
-        <td>Llama 4 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td>
-        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.1-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td>
-        <td>Llama 3.1 API Service free during preview.<br>60 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td>
-        <td>Llama 3.2 API Service free during preview.<br>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3.3-70b-instruct-maas" target="_blank">Llama 3.3 70B Instruct</a></td>
-        <td>Llama 3.3 API Service free during preview.<br>30 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.5 Pro Experimental</a></td>
-        <td rowspan="4">Experimental Gemini model.<br>10 requests/minute</td>
-    </tr>
-    <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Experimental</a></td>
-    </tr>
-    <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Thinking Experimental</a></td>
-    </tr>
-    <tr>
-        <td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Pro Experimental</a></td>
-    </tr></tbody></table>
+<tr><td rowspan="10"><a href="https://console.cloud.google.com/vertex-ai/model-garden" target="_blank">Google Cloud Vertex AI</a></td><td rowspan="10">Very stringent payment verification for Google Cloud.</td><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.5 Pro (Experimental)</a></td><td rowspan='4'>10 requests/minute<br>Shared Quota</td></tr>
+<tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash (Experimental)</a></td></tr>
+<tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Thinking (Experimental)</a></td></tr>
+<tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Pro (Experimental)</a></td></tr>
+<tr><td><a href='https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-4-maverick-17b-128e-instruct-maas' target='_blank'>Llama 4 Maverick Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
+<tr><td><a href='https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-4-maverick-17b-128e-instruct-maas' target='_blank'>Llama 4 Scout Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
+<tr><td><a href='https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-3-70b-instruct-maas' target='_blank'>Llama 3.3 70B Instruct</a></td><td>30 requests/minute<br>Free during preview</td></tr>
+<tr><td><a href='https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-2-90b-vision-instruct-maas' target='_blank'>Llama 3.2 90B Vision Instruct</a></td><td>30 requests/minute<br>Free during preview</td></tr>
+<tr><td><a href='https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas' target='_blank'>Llama 3.1 70B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
+<tr><td><a href='https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas' target='_blank'>Llama 3.1 8B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
+</tbody></table>
 
 ## Providers with trial credits
 
