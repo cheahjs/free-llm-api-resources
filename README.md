@@ -23,7 +23,8 @@ This lists various services that provide free access or credits towards API-base
         </tr>
     </thead>
     <tbody>
-<tr><td rowspan="51"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="51"><a href="https://openrouter.ai/docs/api-reference/limits" target="_blank">20 requests/minute<br>50 requests/day<br>1000 requests/day with $10 credit balance</a></td><td><a href='https://openrouter.ai/bytedance-research/ui-tars-72b:free' target='_blank'>Bytedance UI Tars 72B</a></td><td></td></tr>
+<tr><td rowspan="53"><a href="https://openrouter.ai" target="_blank">OpenRouter</a></td><td rowspan="53"><a href="https://openrouter.ai/docs/api-reference/limits" target="_blank">20 requests/minute<br>50 requests/day<br>1000 requests/day with $10 credit balance</a></td><td><a href='https://openrouter.ai/bytedance-research/ui-tars-72b:free' target='_blank'>Bytedance UI Tars 72B</a></td><td></td></tr>
+<tr><td><a href='https://openrouter.ai/agentica-org/deepcoder-14b-preview:free' target='_blank'>DeepCoder 14B Preview</a></td><td></td></tr>
 <tr><td><a href='https://openrouter.ai/nousresearch/deephermes-3-llama-3-8b-preview:free' target='_blank'>DeepHermes 3 Llama 3 8B Preview</a></td><td></td></tr>
 <tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1:free' target='_blank'>DeepSeek R1</a></td><td></td></tr>
 <tr><td><a href='https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b:free' target='_blank'>DeepSeek R1 Distill Llama 70B</a></td><td></td></tr>
@@ -62,6 +63,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td><a href='https://openrouter.ai/moonshotai/moonlight-16b-a3b-instruct:free' target='_blank'>Moonlight-16B-A3B-Instruct</a></td><td></td></tr>
 <tr><td><a href='https://openrouter.ai/open-r1/olympiccoder-32b:free' target='_blank'>OlympicCoder 32B</a></td><td></td></tr>
 <tr><td><a href='https://openrouter.ai/open-r1/olympiccoder-7b:free' target='_blank'>OlympicCoder 7B</a></td><td></td></tr>
+<tr><td><a href='https://openrouter.ai/arliai/qwq-32b-arliai-rpr-v1:free' target='_blank'>QwQ 32B ArliAI RpR v1</a></td><td></td></tr>
 <tr><td><a href='https://openrouter.ai/qwen/qwen-2.5-72b-instruct:free' target='_blank'>Qwen 2.5 72B Instruct</a></td><td></td></tr>
 <tr><td><a href='https://openrouter.ai/qwen/qwen-2.5-7b-instruct:free' target='_blank'>Qwen 2.5 7B Instruct</a></td><td></td></tr>
 <tr><td><a href='https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct:free' target='_blank'>Qwen 2.5 VL 32B Instruct</a></td><td></td></tr>
@@ -74,59 +76,21 @@ This lists various services that provide free access or credits towards API-base
 <tr><td><a href='https://openrouter.ai/rekaai/reka-flash-3:free' target='_blank'>Reka Flash 3</a></td><td></td></tr>
 <tr><td><a href='https://openrouter.ai/sophosympatheia/rogue-rose-103b-v0.2:free' target='_blank'>Rogue Rose 103B v0.2</a></td><td></td></tr>
 <tr><td><a href='https://openrouter.ai/huggingfaceh4/zephyr-7b-beta:free' target='_blank'>Zephyr 7B Beta</a></td><td></td></tr>
+<tr><td rowspan="14"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td><td rowspan="14">Data is used for training (when used outside of the UK/CH/EEA/EU).</td><td>Gemini 2.5 Pro (Experimental)</td><td>5,000,000 tokens/day<br>1,000,000 tokens/minute<br>25 requests/day<br>5 requests/minute</td></tr>
+<tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td></tr>
+<tr><td>Gemini 2.0 Flash (Experimental)</td><td>4,000,000 tokens/minute<br>1,500 requests/day<br>10 requests/minute</td></tr>
+<tr><td>Gemini 1.5 Flash</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemini 1.5 Flash-8B</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemini 1.5 Pro</td><td>32,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td></tr>
+<tr><td>LearnLM 1.5 Pro (Experimental)</td><td>1,500 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemma 3 27B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
+<tr><td>Gemma 3 12B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
+<tr><td>Gemma 3 4B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
+<tr><td>Gemma 3 1B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
+<tr><td>text-embedding-004</td><td rowspan="2">150 batch requests/minute<br>1,500 requests/minute<br>100 content/batch<br>Shared Quota</td></tr>
+<tr><td>embedding-001</td></tr>
 <tr>
-            <td rowspan="13"><a href="https://aistudio.google.com" target="_blank">Google AI Studio</a></td>
-            <td rowspan="13">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>
-            <td>Gemini 2.5 Pro (Experimental)</td>
-            <td>5,000,000 tokens/day<br>1,000,000 tokens/minute<br>25 requests/day<br>5 requests/minute</td>
-        </tr>
-        <tr>
-            <td>Gemini 2.0 Flash</td>
-            <td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td>
-        </tr>
-        <tr>
-            <td>Gemini 2.0 Flash-Lite</td>
-            <td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td>
-        </tr>
-        <tr>
-            <td>Gemini 2.0 Flash (Experimental)</td>
-            <td>4,000,000 tokens/minute<br>1,500 requests/day<br>10 requests/minute</td>
-        </tr>
-        <tr>
-            <td>Gemini 1.5 Flash</td>
-            <td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td>
-        </tr>
-        <tr>
-            <td>Gemini 1.5 Flash-8B</td>
-            <td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td>
-        </tr>
-        <tr>
-            <td>Gemini 1.5 Pro</td>
-            <td>32,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td>
-        </tr>
-        <tr>
-            <td>LearnLM 1.5 Pro (Experimental)</td>
-            <td>1,500 requests/day<br>15 requests/minute</td>
-        </tr>
-        <tr>
-            <td>Gemma 3 27B Instruct</td>
-            <td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td>
-        </tr>
-        <tr>
-            <td>Gemma 3 12B Instruct</td>
-            <td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td>
-        </tr>
-        <tr>
-            <td>Gemma 3 4B Instruct</td>
-            <td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td>
-        </tr>
-        <tr>
-            <td>text-embedding-004</td>
-            <td rowspan="2">150 batch requests/minute<br>1,500 requests/minute<br>100 content/batch</td>
-        </tr>
-        <tr>
-            <td>embedding-001</td>
-        </tr><tr>
         <td><a href="https://build.nvidia.com/explore/discover">NVIDIA NIM</a></td>
         <td>Phone number verification required.<br>Models tend to be context window limited.</td>
         <td><a href="https://build.nvidia.com/models" target="_blank">Various open models</a></td>
@@ -232,7 +196,7 @@ This lists various services that provide free access or credits towards API-base
         </tr>
         <tr>
             <td>Aya Vision 32B</td>
-        </tr><tr><td rowspan="47"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="47">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
+        </tr><tr><td rowspan="49"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td><td rowspan="49">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td><td>AI21 Jamba 1.5 Large</td><td></td></tr>
 <tr><td>AI21 Jamba 1.5 Mini</td><td></td></tr>
 <tr><td>Codestral 25.01</td><td></td></tr>
 <tr><td>Cohere Command R</td><td></td></tr>
@@ -244,6 +208,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>DeepSeek-R1</td><td></td></tr>
 <tr><td>DeepSeek-V3-0324</td><td></td></tr>
 <tr><td>JAIS 30b Chat</td><td></td></tr>
+<tr><td>Llama 4 Maverick 17B 128E Instruct FP8</td><td></td></tr>
+<tr><td>Llama 4 Scout 17B 16E Instruct</td><td></td></tr>
 <tr><td>Llama-3.2-11B-Vision-Instruct</td><td></td></tr>
 <tr><td>Llama-3.2-90B-Vision-Instruct</td><td></td></tr>
 <tr><td>Llama-3.3-70B-Instruct</td><td></td></tr>
@@ -279,7 +245,8 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Phi-4</td><td></td></tr>
 <tr><td>Phi-4-mini-instruct</td><td></td></tr>
 <tr><td>Phi-4-multimodal-instruct</td><td></td></tr>
-<tr><td rowspan="22"><a href="https://chutes.ai/" target="_blank">Chutes</a></td><td rowspan="22">Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
+<tr><td rowspan="24"><a href="https://chutes.ai/" target="_blank">Chutes</a></td><td rowspan="24">Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td><td>DeepCoder 14B Preview</td><td></td></tr>
+<tr><td>DeepHermes 3 Llama 3 8B Preview</td><td></td></tr>
 <tr><td>DeepSeek R1</td><td></td></tr>
 <tr><td>DeepSeek R1-Zero</td><td></td></tr>
 <tr><td>DeepSeek V3</td><td></td></tr>
@@ -299,6 +266,7 @@ This lists various services that provide free access or credits towards API-base
 <tr><td>Mistral Small 3.1 24B Instruct 2503</td><td></td></tr>
 <tr><td>OlympicCoder 32B</td><td></td></tr>
 <tr><td>OlympicCoder 7B</td><td></td></tr>
+<tr><td>QwQ 32B ArliAI RpR v1</td><td></td></tr>
 <tr><td>Qwen 2.5 VL 32B Instruct</td><td></td></tr>
 <tr><td>Reka Flash 3</td><td></td></tr>
 <tr><td rowspan="48"><a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a></td><td rowspan="48"><a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 neurons/day</a></td><td>DeepSeek R1 Distill Qwen 32B</td><td></td></tr>

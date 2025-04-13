@@ -3,3 +3,4 @@ venv
 .env
 .aider*
 *.json
+*.pyc
