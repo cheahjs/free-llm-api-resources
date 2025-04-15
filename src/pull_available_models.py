@@ -559,192 +559,176 @@ def main():
         chutes_models = fetch_chutes_models(chutes_logger)
         groq_models = fetch_groq_models(groq_logger)
 
-    table = """<table>
-    <thead>
-        <tr>
-            <th>Provider</th>
-            <th>Provider Limits/Notes</th>
-            <th>Model Name</th>
-            <th>Model Limits</th>
-        </tr>
-    </thead>
-    <tbody>
-"""
+    # Initialize markdown string for free providers
+    model_list_markdown = ""
 
-    for idx, model in enumerate(openrouter_models):
-        table += "<tr>"
+    # --- OpenRouter ---
+    model_list_markdown += "### [OpenRouter](https://openrouter.ai)\n\n"
+    if openrouter_models:
+        provider_limits = get_human_limits(openrouter_models[0]) # Limits are the same for all free models here
+        model_list_markdown += f"[{provider_limits}<br>1000 requests/day with $10 credit balance](https://openrouter.ai/docs/api-reference/limits)\n\n"
+        model_list_markdown += "Models share a common quota.\n\n"
+        for model in openrouter_models:
+            model_list_markdown += f"- [{model['name']}](https://openrouter.ai/{model['id']})\n"
+    model_list_markdown += "\n"
 
-        if idx == 0:
-            table += f'<td rowspan="{len(openrouter_models)}">'
-            table += '<a href="https://openrouter.ai" target="_blank">OpenRouter</a>'
-            table += "</td>"
-            table += f'<td rowspan="{len(openrouter_models)}"><a href="https://openrouter.ai/docs/api-reference/limits" target="_blank">{get_human_limits(model)}<br>1000 requests/day with $10 credit balance</a></td>'
 
-        table += f"<td><a href='https://openrouter.ai/{model['id']}' target='_blank'>{model['name']}</a></td>"
-        if idx == 0:
-            table += f'<td rowspan="{len(openrouter_models)}">Shared Quota</td>'
-        table += "</tr>\n"
+    # --- Google AI Studio ---
+    model_list_markdown += "### [Google AI Studio](https://aistudio.google.com)\n\n"
+    model_list_markdown += "Data is used for training when used outside of the UK/CH/EEA/EU.\n\n"
+    model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
 
     gemini_text_models = [
         {
             "id": "gemini-2.5-pro-exp-03-25",
             "name": "Gemini 2.5 Pro (Experimental)",
-            "limits": gemini_models["gemini-2.0-pro-exp"],
+            "limits": gemini_models.get("gemini-2.0-pro-exp", {}),
         },
         {
             "id": "gemini-2.0-flash",
             "name": "Gemini 2.0 Flash",
-            "limits": gemini_models["gemini-2.0-flash"],
+            "limits": gemini_models.get("gemini-2.0-flash", {}),
         },
         {
             "id": "gemini-2.0-flash-lite",
             "name": "Gemini 2.0 Flash-Lite",
-            "limits": gemini_models["gemini-2.0-flash-lite"],
+            "limits": gemini_models.get("gemini-2.0-flash-lite", {}),
         },
         {
             "id": "gemini-2.0-flash-exp",
             "name": "Gemini 2.0 Flash (Experimental)",
-            "limits": gemini_models["gemini-2.0-flash-exp"],
+            "limits": gemini_models.get("gemini-2.0-flash-exp", {}),
         },
         {
             "id": "gemini-1.5-flash",
             "name": "Gemini 1.5 Flash",
-            "limits": gemini_models["gemini-1.5-flash"],
+            "limits": gemini_models.get("gemini-1.5-flash", {}),
         },
         {
             "id": "gemini-1.5-flash-8b",
             "name": "Gemini 1.5 Flash-8B",
-            "limits": gemini_models["gemini-1.5-flash-8b"],
+            "limits": gemini_models.get("gemini-1.5-flash-8b", {}),
         },
         {
             "id": "gemini-1.5-pro",
             "name": "Gemini 1.5 Pro",
-            "limits": gemini_models["gemini-1.5-pro"],
+            "limits": gemini_models.get("gemini-1.5-pro", {}),
         },
         {
             "id": "learnlm-1.5-pro-experimental",
             "name": "LearnLM 1.5 Pro (Experimental)",
-            "limits": gemini_models["learnlm-1.5-pro-experimental"],
+            "limits": gemini_models.get("learnlm-1.5-pro-experimental", {}),
         },
         {
             "id": "gemma-3-27b-it",
             "name": "Gemma 3 27B Instruct",
-            "limits": gemini_models["gemma-3-27b"],
+            "limits": gemini_models.get("gemma-3-27b", {}),
         },
         {
             "id": "gemma-3-12b-it",
             "name": "Gemma 3 12B Instruct",
-            "limits": gemini_models["gemma-3-12b"],
+            "limits": gemini_models.get("gemma-3-12b", {}),
         },
         {
             "id": "gemma-3-4b-it",
             "name": "Gemma 3 4B Instruct",
-            "limits": gemini_models["gemma-3-4b"],
+            "limits": gemini_models.get("gemma-3-4b", {}),
         },
         {
             "id": "gemma-3-1b-it",
             "name": "Gemma 3 1B Instruct",
-            "limits": gemini_models["gemma-3-1b"],
+            "limits": gemini_models.get("gemma-3-1b", {}),
         },
     ]
     gemini_embedding_models = [
         {
             "id": "text-embedding-004",
             "name": "text-embedding-004",
-            "limits": gemini_models["project-embedding"],
+            "limits": gemini_models.get("project-embedding", {}),
         },
         {
             "id": "embedding-001",
             "name": "embedding-001",
-            "limits": gemini_models["project-embedding"],
+            "limits": gemini_models.get("project-embedding", {}),
         },
     ]
 
-    for idx, model in enumerate(gemini_text_models):
-        table += "<tr>"
-        if idx == 0:
-            table += f'<td rowspan="{len(gemini_text_models) + len(gemini_embedding_models)}">'
-            table += '<a href="https://aistudio.google.com" target="_blank">Google AI Studio</a>'
-            table += "</td>"
-            table += f'<td rowspan="{len(gemini_text_models) + len(gemini_embedding_models)}">Data is used for training (when used outside of the UK/CH/EEA/EU).</td>'
-        table += f"<td>{model['name']}</td>"
-        table += f"<td>{get_human_limits(model)}</td>"
-        table += "</tr>\n"
+    # Write text models to table
+    for model in gemini_text_models:
+        limits_str = get_human_limits(model)
+        model_list_markdown += f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
 
-    for idx, model in enumerate(gemini_embedding_models):
-        table += "<tr>"
-        table += f"<td>{model['name']}</td>"
-        if idx == 0:
-            table += f'<td rowspan="{len(gemini_embedding_models)}">{get_human_limits(model)}<br>100 content/batch<br>Shared Quota</td>'
-        table += "</tr>\n"
+    # Write embedding models to table
+    first_embedding = True
+    for model in gemini_embedding_models:
+        limits_str = get_human_limits(model)
+        model_list_markdown += f"<tr><td>{model['name']}</td>"
+        if first_embedding:
+             model_list_markdown += f'<td rowspan="{len(gemini_embedding_models)}">{limits_str}<br>100 content/batch<br>Shared Quota</td>'
+             first_embedding = False
+        model_list_markdown += "</tr>\n"
 
-    table += """<tr>
-        <td><a href="https://build.nvidia.com/explore/discover">NVIDIA NIM</a></td>
-        <td>Phone number verification required.<br>Models tend to be context window limited.</td>
-        <td><a href="https://build.nvidia.com/models" target="_blank">Various open models</a></td>
-        <td>40 requests/minute</td>
-    </tr>"""
+    model_list_markdown += "</tbody></table>\n\n"
 
-    table += """<tr>
-        <td><a href="https://console.mistral.ai/" target="_blank">Mistral (La Plateforme)</a></td>
-        <td>Free tier (Experiment plan) requires opting into data training, requires phone number verification.</td>
-        <td><a href="https://docs.mistral.ai/getting-started/models/models_overview/" target="_blank">Open and Proprietary Mistral models</a></td>
-        <td>1 request/second<br>500,000 tokens/minute<br>1,000,000,000 tokens/month</td>
-    </tr>"""
+    # --- NVIDIA NIM ---
+    model_list_markdown += "### [NVIDIA NIM](https://build.nvidia.com/explore/discover)\n\n"
+    model_list_markdown += "Phone number verification required. Models tend to be context window limited.\n\n"
+    model_list_markdown += "- [Various open models](https://build.nvidia.com/models) (40 requests/minute)\n"
+    model_list_markdown += "\n"
 
-    table += """<tr>
-        <td><a href="https://codestral.mistral.ai/" target="_blank">Mistral (Codestral)</a></td>
-        <td>Currently free to use, monthly subscription based, requires phone number verification.</td>
-        <td>Codestral</td>
-        <td>30 requests/minute<br>2,000 requests/day</td>
-    </tr>"""
+    # --- Mistral (La Plateforme) ---
+    model_list_markdown += "### [Mistral (La Plateforme)](https://console.mistral.ai/)\n\n"
+    model_list_markdown += "Free tier (Experiment plan) requires opting into data training, requires phone number verification.\n\n"
+    model_list_markdown += "- [Open and Proprietary Mistral models](https://docs.mistral.ai/getting-started/models/models_overview/) (1 request/second, 500,000 tokens/minute, 1,000,000,000 tokens/month)\n"
+    model_list_markdown += "\n"
 
-    table += """<tr>
-            <td><a href="https://huggingface.co/docs/api-inference/en/index" target="_blank">HuggingFace Serverless Inference</a></td>
-            <td>Limited to models smaller than 10GB.<br>Some popular models are supported even if they exceed 10GB.</td>
-            <td>Various open models</td>
-            <td><a href="https://huggingface.co/docs/api-inference/pricing" target="_blank">Variable credits per month, currently $0.10</a></td>
-        </tr>"""
+    # --- Mistral (Codestral) ---
+    model_list_markdown += "### [Mistral (Codestral)](https://codestral.mistral.ai/)\n\n"
+    model_list_markdown += "Currently free to use, monthly subscription based, requires phone number verification.\n\n"
+    model_list_markdown += "- Codestral (30 requests/minute, 2,000 requests/day)\n"
+    model_list_markdown += "\n"
 
-    table += """<tr>
-        <td rowspan="3"><a href="https://cloud.cerebras.ai/" target="_blank">Cerebras</a></td>
-        <td rowspan="3">Free tier restricted to 8K context</td>
-        <td>Llama 4 Scout</td>
-        <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
-    </tr>
-    <tr>
-        <td>Llama 3.1 8B</td>
-        <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
-    </tr>
-    <tr>
-        <td>Llama 3.3 70B</td>
-        <td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td>
-    </tr>"""
+    # --- HuggingFace Serverless Inference ---
+    model_list_markdown += "### [HuggingFace Serverless Inference](https://huggingface.co/docs/api-inference/en/index)\n\n"
+    model_list_markdown += "Limited to models smaller than 10GB. Some popular models are supported even if they exceed 10GB.\n\n"
+    model_list_markdown += "- Various open models ([Variable credits per month, currently $0.10](https://huggingface.co/docs/api-inference/pricing))\n"
+    model_list_markdown += "\n"
 
-    for idx, model in enumerate(groq_models):
-        table += "<tr>"
+    # --- Cerebras ---
+    model_list_markdown += "### [Cerebras](https://cloud.cerebras.ai/)\n\n"
+    model_list_markdown += "Free tier restricted to 8K context.\n\n"
+    model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
+    cerebras_limit_text = "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
+    cerebras_models = [
+        {"name": "Llama 4 Scout", "limits_text": cerebras_limit_text},
+        {"name": "Llama 3.1 8B", "limits_text": cerebras_limit_text},
+        {"name": "Llama 3.3 70B", "limits_text": cerebras_limit_text},
+    ]
+    for model in cerebras_models:
+        model_list_markdown += f"<tr><td>{model['name']}</td><td>{model['limits_text']}</td></tr>\n"
+    model_list_markdown += "</tbody></table>\n\n"
 
-        if idx == 0:
-            table += f'<td rowspan="{len(groq_models)}">'
-            table += '<a href="https://console.groq.com" target="_blank">Groq</a>'
-            table += "</td>"
-            table += f'<td rowspan="{len(groq_models)}"></td>'
+    # --- Groq ---
+    model_list_markdown += "### [Groq](https://console.groq.com)\n\n"
+    if groq_models:
+        model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
+        for model in groq_models:
+            limits_str = get_human_limits(model)
+            model_list_markdown += f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
+        model_list_markdown += "</tbody></table>\n"
+    model_list_markdown += "\n"
 
-        table += f"<td>{model['name']}</td>"
-        table += f"<td>{get_human_limits(model)}</td>"
-        table += "</tr>\n"
+    # --- OVH AI Endpoints ---
+    model_list_markdown += "### [OVH AI Endpoints (Free Beta)](https://endpoints.ai.cloud.ovh.net/)\n\n"
+    if ovh_models:
+        model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
+        for model in ovh_models:
+            limits_str = get_human_limits(model)
+            model_list_markdown += f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
+        model_list_markdown += "</tbody></table>\n"
+    model_list_markdown += "\n"
 
-    for idx, model in enumerate(ovh_models):
-        table += "<tr>"
-        if idx == 0:
-            table += '<td rowspan="' + str(len(ovh_models)) + '">'
-            table += '<a href="https://endpoints.ai.cloud.ovh.net/" target="_blank">OVH AI Endpoints (Free Beta)</a>'
-            table += "</td>"
-            table += '<td rowspan="' + str(len(ovh_models)) + '"></td>'
-        table += f"<td>{model['name']}</td>"
-        table += f"<td>{get_human_limits(model)}</td>"
-        table += "</tr>\n"
-
+    # --- Together ---
     together_models = [
         {
             "id": "meta-llama/Llama-Vision-Free",
@@ -762,20 +746,15 @@ def main():
             "urlId": "deepseek-r1-distilled-llama-70b-free",
         },
     ]
+    model_list_markdown += "### [Together](https://together.ai)\n\n"
+    model_list_markdown += "Up to 60 requests/minute.\n\n"
+    if together_models:
+        for model in together_models:
+            model_list_markdown += f"- [{model['name']}](https://together.ai/{model['urlId']})\n"
+    model_list_markdown += "\n"
 
-    for idx, model in enumerate(together_models):
-        table += "<tr>"
-        if idx == 0:
-            table += f'<td rowspan="{len(together_models)}">'
-            table += '<a href="https://together.ai" target="_blank">Together</a>'
-            table += "</td>"
-            table += (
-                f'<td rowspan="{len(together_models)}">Up to 60 requests/minute</td>'
-            )
-        table += f"<td><a href='https://together.ai/{model['urlId']}' target='_blank'>{model['name']}</a></td>"
-        table += f"<td>{get_human_limits(model)}</td>"
-        table += "</tr>\n"
 
+    # --- Cohere ---
     cohere_models = [
         {"id": "command-a-03-2025", "name": "Command-A"},
         {"id": "command-r7b-12-2024", "name": "Command-R7B"},
@@ -786,63 +765,40 @@ def main():
         {"id": "c4ai-aya-vision-8b", "name": "Aya Vision 8B"},
         {"id": "c4ai-aya-vision-32b", "name": "Aya Vision 32B"},
     ]
+    model_list_markdown += "### [Cohere](https://cohere.com)\n\n"
+    model_list_markdown += "[20 requests/minute<br>1,000 requests/month](https://docs.cohere.com/docs/rate-limits)\n\n"
+    model_list_markdown += "Models share a common quota.\n\n"
+    if cohere_models:
+        for model in cohere_models:
+            model_list_markdown += f"- {model['name']}\n"
+    model_list_markdown += "\n"
 
-    for idx, model in enumerate(cohere_models):
-        table += "<tr>"
-        if idx == 0:
-            table += f'<td rowspan="{len(cohere_models)}">'
-            table += '<a href="https://cohere.com" target="_blank">Cohere</a>'
-            table += "</td>"
-            table += f'<td rowspan="{len(cohere_models)}"><a href="https://docs.cohere.com/docs/rate-limits">20 requests/minute<br>1,000 requests/month</a></td>'
-        table += f"<td>{model['name']}</td>"
-        if idx == 0:
-            table += f'<td rowspan="{len(cohere_models)}">Shared Limit</td>'
-        table += "</tr>\n"
+    # --- GitHub Models ---
+    model_list_markdown += "### [GitHub Models](https://github.com/marketplace/models)\n\n"
+    model_list_markdown += "Extremely restrictive input/output token limits. [Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)](https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits)\n\n"
+    if github_models:
+        for model in github_models:
+            model_list_markdown += f"- {model['name']}\n"
+    model_list_markdown += "\n"
 
-    for idx, model in enumerate(github_models):
-        table += "<tr>"
-        table += (
-            f'<td rowspan="{len(github_models)}"><a href="https://github.com/marketplace/models" target="_blank">GitHub Models</a></td>'
-            if idx == 0
-            else ""
-        )
-        table += (
-            f'<td rowspan="{len(github_models)}">Extremely restrictive input/output token limits.<br><a href="https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits" target="_blank">Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)</a></td>'
-            if idx == 0
-            else ""
-        )
-        table += f"<td>{model['name']}</td>"
-        table += "<td></td>"
-        table += "</tr>\n"
+    # --- Chutes ---
+    model_list_markdown += "### [Chutes](https://chutes.ai/)\n\n"
+    model_list_markdown += "Distributed, decentralized crypto-based compute. Data is sent to individual hosts.\n\n"
+    if chutes_models:
+        for model in chutes_models:
+            model_list_markdown += f"- {model['name']}\n"
+    model_list_markdown += "\n"
 
-    for idx, model in enumerate(chutes_models):
-        table += "<tr>"
-        if idx == 0:
-            table += '<td rowspan="' + str(len(chutes_models)) + '">'
-            table += '<a href="https://chutes.ai/" target="_blank">Chutes</a>'
-            table += "</td>"
-            table += (
-                '<td rowspan="'
-                + str(len(chutes_models))
-                + '">Distributed, decentralized crypto-based compute. Data is sent to individual hosts.</td>'
-            )
-        table += f"<td>{model['name']}</td>"
-        table += "<td></td>"
-        table += "</tr>\n"
+    # --- Cloudflare Workers AI ---
+    model_list_markdown += "### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)\n\n"
+    model_list_markdown += "[10,000 neurons/day](https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation)\n\n"
+    if cloudflare_models:
+        for model in cloudflare_models:
+            model_list_markdown += f"- {model['name']}\n"
+    model_list_markdown += "\n"
 
-    for idx, model in enumerate(cloudflare_models):
-        table += "<tr>"
-        if idx == 0:
-            table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
-            table += '<a href="https://developers.cloudflare.com/workers-ai" target="_blank">Cloudflare Workers AI</a>'
-            table += "</td>"
-            table += '<td rowspan="' + str(len(cloudflare_models)) + '">'
-            table += '<a href="https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation">10,000 neurons/day</a>'
-            table += "</td>"
-        table += f"<td>{model['name']}</td>"
-        table += "<td></td>"
-        table += "</tr>\n"
 
+    # --- Google Cloud Vertex AI ---
     vertex_llama_models = [
         {
             "id": "llama-4-maverick-17b-128e-instruct-maas",
@@ -903,70 +859,148 @@ def main():
             "limits": {"requests/minute": 10},
         },
     ]
+    model_list_markdown += "### [Google Cloud Vertex AI](https://console.cloud.google.com/vertex-ai/model-garden)\n\n"
+    model_list_markdown += "Very stringent payment verification for Google Cloud.\n\n"
+    model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
 
-    for idx, model in enumerate(vertex_gemini_models):
-        table += "<tr>"
-        if idx == 0:
-            table += (
-                f'<td rowspan="{len(vertex_llama_models) + len(vertex_gemini_models)}">'
-            )
-            table += '<a href="https://console.cloud.google.com/vertex-ai/model-garden" target="_blank">Google Cloud Vertex AI</a>'
-            table += "</td>"
-            table += f'<td rowspan="{len(vertex_llama_models) + len(vertex_gemini_models)}">Very stringent payment verification for Google Cloud.</td>'
-        table += f'<td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">{model['name']}</a></td>'
-        if idx == 0:
-            table += f"<td rowspan='{len(vertex_gemini_models)}'>{get_human_limits(model)}<br>Shared Quota</td>"
-        table += "</tr>\n"
+    # Write Gemini models to table
+    first_gemini = True
+    if vertex_gemini_models:
+        for model in vertex_gemini_models:
+            limits_str = get_human_limits(model)
+            model_list_markdown += f'<tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">{model['name']}</a></td>'
+            if first_gemini:
+                model_list_markdown += f'<td rowspan="{len(vertex_gemini_models)}">{limits_str}<br>Shared Quota</td>'
+                first_gemini = False
+            model_list_markdown += "</tr>\n"
 
-    for idx, model in enumerate(vertex_llama_models):
-        table += "<tr>"
-        table += f"<td><a href='https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/{model['urlId']}' target='_blank'>{model['name']}</a></td>"
-        table += f"<td>{get_human_limits(model)}<br>Free during preview</td>"
-        table += "</tr>\n"
+    # Write Llama models to table
+    if vertex_llama_models:
+         for model in vertex_llama_models:
+            limits_str = get_human_limits(model)
+            model_list_markdown += f'<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/{model['urlId']}" target="_blank">{model['name']}</a></td><td>{limits_str}<br>Free during preview</td></tr>\n'
 
-    table += "</tbody></table>"
+    model_list_markdown += "</tbody></table>\n\n"
 
-    trial_table = ""
-    for idx, model in enumerate(hyperbolic_models):
-        trial_table += "<tr>"
-        if idx == 0:
-            trial_table += f'<td rowspan="{len(hyperbolic_models)}">'
-            trial_table += (
-                '<a href="https://app.hyperbolic.xyz/" target="_blank">Hyperbolic</a>'
-            )
-            trial_table += "</td>"
-            trial_table += f'<td rowspan="{len(hyperbolic_models)}">$1</td>'
-            trial_table += f'<td rowspan="{len(hyperbolic_models)}"></td>'
-        trial_table += f"<td>{model['name']}</td>"
-        trial_table += "</tr>\n"
 
-    for idx, model in enumerate(samba_models):
-        trial_table += "<tr>"
+    # --- Trial Providers Section Generation ---
+    trial_list_markdown = ""
 
-        if idx == 0:
-            trial_table += f'<td rowspan="{len(samba_models)}">'
-            trial_table += '<a href="https://cloud.sambanova.ai/" target="_blank">SambaNova Cloud</a>'
-            trial_table += "</td>"
-            trial_table += f'<td rowspan="{len(samba_models)}">$5 for 3 months</td>'
+    # --- Static Trial Providers (Markdown List/Simple Entry) ---
+    trial_providers_static = [
+        {
+            "name": "Together",
+            "url": "https://together.ai",
+            "credits": "$1 when you add a payment method",
+            "requirements": "",
+            "models_desc": "[Various open models](https://together.ai/models)",
+        },
+        {
+            "name": "Fireworks",
+            "url": "https://fireworks.ai/",
+            "credits": "$1",
+            "requirements": "",
+            "models_desc": "[Various open models](https://fireworks.ai/models)",
+        },
+        {
+            "name": "Unify",
+            "url": "https://unify.ai/",
+            "credits": "$5 when you add a payment method",
+            "requirements": "",
+            "models_desc": "Routes to other providers, various open models and proprietary models (OpenAI, Gemini, Anthropic, Mistral, Perplexity, etc)",
+        },
+        {
+            "name": "Baseten",
+            "url": "https://app.baseten.co/",
+            "credits": "$30",
+            "requirements": "",
+            "models_desc": "[Any supported model - pay by compute time](https://www.baseten.co/library/)",
+        },
+        {
+            "name": "Nebius",
+            "url": "https://studio.nebius.com/",
+            "credits": "$1",
+            "requirements": "",
+            "models_desc": "[Various open models](https://studio.nebius.ai/models)",
+        },
+        {
+            "name": "Novita",
+            "url": "https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate",
+            "credits": "$0.5 for 1 year, $20 for 3 months for DeepSeek models with [referral code](https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate) + GitHub account connection",
+            "requirements": "",
+            "models_desc": "[Various open models](https://novita.ai/models)",
+        },
+        {
+            "name": "AI21",
+            "url": "https://studio.ai21.com/",
+            "credits": "$10 for 3 months",
+            "requirements": "",
+            "models_desc": "Jamba family of models",
+        },
+        {
+            "name": "Upstage",
+            "url": "https://console.upstage.ai/",
+            "credits": "$10 for 3 months",
+            "requirements": "",
+            "models_desc": "Solar Pro/Mini",
+        },
+        {
+            "name": "NLP Cloud",
+            "url": "https://nlpcloud.com/home",
+            "credits": "$15",
+            "requirements": "Phone number verification",
+            "models_desc": "Various open models",
+        },
+        {
+            "name": "Alibaba Cloud (International) Model Studio",
+            "url": "https://bailian.console.alibabacloud.com/",
+            "credits": "Token/time-limited trials on a per-model basis",
+            "requirements": "",
+            "models_desc": "[Various open and proprietary Qwen models](https://www.alibabacloud.com/en/product/modelstudio)",
+        },
+        {
+            "name": "Modal",
+            "url": "https://modal.com",
+            "credits": "$30/month",
+            "requirements": "",
+            "models_desc": "Any supported model - pay by compute time",
+        },
+    ]
 
-        trial_table += f"<td></td>"
-        trial_table += f"<td>{model['name']}</td>"
-        trial_table += "</tr>\n"
+    for provider in trial_providers_static:
+        trial_list_markdown += f"### [{provider['name']}]({provider['url']})\n\n"
+        trial_list_markdown += f"**Credits:** {provider['credits']}\n\n"
+        if provider["requirements"]:
+            trial_list_markdown += f"**Requirements:** {provider['requirements']}\n\n"
+        trial_list_markdown += f"**Models:** {provider['models_desc']}\n\n"
 
-    for idx, model in enumerate(scaleway_models):
-        trial_table += "<tr>"
-        if idx == 0:
-            trial_table += '<td rowspan="' + str(len(scaleway_models)) + '">'
-            trial_table += '<a href="https://console.scaleway.com/generative-api/models" target="_blank">Scaleway Generative APIs</a>'
-            trial_table += "</td>"
-            trial_table += (
-                '<td rowspan="'
-                + str(len(scaleway_models))
-                + '">1,000,000 free tokens</td>'
-            )
-        trial_table += f"<td></td>"
-        trial_table += f"<td>{model['name']}</td>"
-        trial_table += "</tr>\n"
+    # --- Hyperbolic (Trial - Table) ---
+    if hyperbolic_models:
+        trial_list_markdown += "### [Hyperbolic](https://app.hyperbolic.xyz/)\n\n"
+        trial_list_markdown += "**Credits:** $1\n\n"
+        trial_list_markdown += "**Models:**\n"
+        for model in hyperbolic_models:
+            trial_list_markdown += f"- {model['name']}\n"
+        trial_list_markdown += "\n"
+
+    # --- SambaNova Cloud (Trial - Table) ---
+    if samba_models:
+        trial_list_markdown += "### [SambaNova Cloud](https://cloud.sambanova.ai/)\n\n"
+        trial_list_markdown += "**Credits:** $5 for 3 months\n\n"
+        trial_list_markdown += "**Models:**\n"
+        for model in samba_models:
+            trial_list_markdown += f"- {model['name']}\n"
+        trial_list_markdown += "\n"
+
+    # --- Scaleway Generative APIs (Trial - Table) ---
+    if scaleway_models:
+        trial_list_markdown += "### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)\n\n"
+        trial_list_markdown += "**Credits:** 1,000,000 free tokens\n\n"
+        trial_list_markdown += "**Models:**\n"
+        for model in scaleway_models:
+            trial_list_markdown += f"- {model['name']}\n"
+        trial_list_markdown += "\n"
+
 
     if MISSING_MODELS:
         logger.warning("Missing models:")
@@ -984,8 +1018,8 @@ WARNING: DO NOT EDIT THIS FILE DIRECTLY. IT IS GENERATED BY src/pull_available_m
     with open(os.path.join(script_dir, "..", "README.md"), "w") as f:
         f.write(
             (warning + readme)
-            .replace("{{MODEL_LIST}}", table)
-            .replace("{{TRIAL_MODEL_LIST}}", trial_table)
+            .replace("{{MODEL_LIST}}", model_list_markdown)
+            .replace("{{TRIAL_LIST_MARKDOWN}}", trial_list_markdown)
         )
     logger.info("Wrote models to README.md")
 
