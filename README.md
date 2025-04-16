@@ -71,15 +71,15 @@ Models share a common quota.
 - [Qwen2.5 VL 72B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-72b-instruct:free)
 - [Reka Flash 3](https://openrouter.ai/rekaai/reka-flash-3:free)
 - [Rogue Rose 103B v0.2](https://openrouter.ai/sophosympatheia/rogue-rose-103b-v0.2:free)
+- [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [Zephyr 7B Beta](https://openrouter.ai/huggingfaceh4/zephyr-7b-beta:free)
-- [shisa-ai/shisa-v2-llama3.3-70b:free](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
 
 Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>Gemini 2.5 Pro (Experimental)</td><td>5,000,000 tokens/day<br>1,000,000 tokens/minute<br>25 requests/day<br>5 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Pro (Experimental)</td><td>1,000,000 tokens/day<br>250,000 tokens/minute<br>25 requests/day<br>5 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash (Experimental)</td><td>4,000,000 tokens/minute<br>1,500 requests/day<br>10 requests/minute</td></tr>
@@ -136,6 +136,8 @@ Free tier restricted to 8K context.
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
+<tr><td>Groq compound-beta</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
+<tr><td>Groq compound-beta-mini</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
@@ -147,8 +149,6 @@ Free tier restricted to 8K context.
 <tr><td>Qwen QwQ 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
-<tr><td>compound-beta</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
-<tr><td>compound-beta-mini</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
 </tbody></table>
 
 ### [OVH AI Endpoints (Free Beta)](https://endpoints.ai.cloud.ovh.net/)
@@ -275,7 +275,7 @@ Distributed, decentralized crypto-based compute. Data is sent to individual host
 - QwQ 32B ArliAI RpR v1
 - Qwen 2.5 VL 32B Instruct
 - Reka Flash 3
-- shisa-ai/shisa-v2-llama3.3-70b
+- Shisa V2 Llama 3.3 70B
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
@@ -450,7 +450,6 @@ Very stringent payment verification for Google Cloud.
 **Models:**
 - E5-Mistral-7B-Instruct
 - Llama 3.1 405B
-- Llama 3.1 70B
 - Llama 3.1 8B
 - Llama 3.2 11B Vision
 - Llama 3.2 1B
@@ -458,19 +457,15 @@ Very stringent payment verification for Google Cloud.
 - Llama 3.2 90B Vision
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
+- Llama-4-Maverick-17B-128E-Instruct-Text
 - Llama-4-Scout-17B-16E-Instruct
 - Llama-Guard-3-8B
 - Qwen/QwQ-32B
 - Qwen/QwQ-32B-Preview
 - Qwen/Qwen2-Audio-7B-Instruct
-- Qwen/Qwen2.5-72B-Instruct
-- Qwen/Qwen2.5-Coder-32B-Instruct
-- allenai/Llama-3.1-Tulu-3-405B
 - deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
-- tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3
-- tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 

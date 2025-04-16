@@ -258,6 +258,10 @@ MODEL_TO_NAME_MAPPING = {
     "agentica-org/deepcoder-14b-preview:free": "DeepCoder 14B Preview",
     "agentica-org/deepcoder-14b-preview": "DeepCoder 14B Preview",
     "arliai/qwq-32b-arliai-rpr-v1": "QwQ 32B ArliAI RpR v1",
+    "shisa-ai/shisa-v2-llama3.3-70b:free": "Shisa V2 Llama 3.3 70B",
+    "compound-beta-mini": "Groq compound-beta-mini",
+    "compound-beta": "Groq compound-beta",
+    "shisa-ai/shisa-v2-llama3.3-70b": "Shisa V2 Llama 3.3 70B",
 }
 
 HYPERBOLIC_IGNORED_MODELS = {
