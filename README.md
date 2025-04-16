@@ -11,9 +11,43 @@ This lists various services that provide free access or credits towards API-base
 > [!WARNING]  
 > This list explicitly excludes any services that are not legitimate (eg reverse engineers an existing chatbot)
 
+- [Free Providers](#free-providers)
+  - [OpenRouter](#openrouter)
+  - [Google AI Studio](#google-ai-studio)
+  - [NVIDIA NIM](#nvidia-nim)
+  - [Mistral (La Plateforme)](#mistral-la-plateforme)
+  - [Mistral (Codestral)](#mistral-codestral)
+  - [HuggingFace Inference Providers](#huggingface-inference-providers)
+  - [Cerebras](#cerebras)
+  - [Groq](#groq)
+  - [OVH AI Endpoints (Free Beta)](#ovh-ai-endpoints-free-beta)
+  - [Together (Free)](#together-free)
+  - [Cohere](#cohere)
+  - [GitHub Models](#github-models)
+  - [Chutes](#chutes)
+  - [Cloudflare Workers AI](#cloudflare-workers-ai)
+  - [Google Cloud Vertex AI](#google-cloud-vertex-ai)
+- [Providers with trial credits](#providers-with-trial-credits)
+  - [Together](#together)
+  - [Fireworks](#fireworks)
+  - [Unify](#unify)
+  - [Baseten](#baseten)
+  - [Nebius](#nebius)
+  - [Novita](#novita)
+  - [AI21](#ai21)
+  - [Upstage](#upstage)
+  - [NLP Cloud](#nlp-cloud)
+  - [Alibaba Cloud (International) Model Studio](#alibaba-cloud-international-model-studio)
+  - [Modal](#modal)
+  - [Hyperbolic](#hyperbolic)
+  - [SambaNova Cloud](#sambanova-cloud)
+  - [Scaleway Generative APIs](#scaleway-generative-apis)
+
 ## Free Providers
 
 ### [OpenRouter](https://openrouter.ai)
+
+**Limits:**
 
 [20 requests/minute<br>50 requests/day<br>1000 requests/day with $10 credit balance](https://openrouter.ai/docs/api-reference/limits)
 
@@ -98,27 +132,39 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 
 ### [NVIDIA NIM](https://build.nvidia.com/explore/discover)
 
-Phone number verification required. Models tend to be context window limited.
+Phone number verification required.
+Models tend to be context window limited.
 
-- [Various open models](https://build.nvidia.com/models) (40 requests/minute)
+**Limits:** 40 requests/minute
+
+- [Various open models](https://build.nvidia.com/models)
 
 ### [Mistral (La Plateforme)](https://console.mistral.ai/)
 
-Free tier (Experiment plan) requires opting into data training, requires phone number verification.
+* Free tier (Experiment plan) requires opting into data training
+* Requires phone number verification.
 
-- [Open and Proprietary Mistral models](https://docs.mistral.ai/getting-started/models/models_overview/) (1 request/second, 500,000 tokens/minute, 1,000,000,000 tokens/month)
+**Limits (per-model):** 1 request/second, 500,000 tokens/minute, 1,000,000,000 tokens/month
+
+- [Open and Proprietary Mistral models](https://docs.mistral.ai/getting-started/models/models_overview/)
 
 ### [Mistral (Codestral)](https://codestral.mistral.ai/)
 
-Currently free to use, monthly subscription based, requires phone number verification.
+* Currently free to use
+* Monthly subscription based
+* Requires phone number verification
 
-- Codestral (30 requests/minute, 2,000 requests/day)
+**Limits:** 30 requests/minute, 2,000 requests/day
 
-### [HuggingFace Serverless Inference](https://huggingface.co/docs/api-inference/en/index)
+- Codestral
 
-Limited to models smaller than 10GB. Some popular models are supported even if they exceed 10GB.
+### [HuggingFace Inference Providers](https://huggingface.co/docs/inference-providers/en/index)
 
-- Various open models ([Variable credits per month, currently $0.10](https://huggingface.co/docs/api-inference/pricing))
+HuggingFace Serverless Inference limited to models smaller than 10GB. Some popular models are supported even if they exceed 10GB.
+
+**Limits:** [$0.10/month in credits](https://huggingface.co/docs/inference-providers/en/pricing)
+
+- Various open models across supported providers
 
 ### [Cerebras](https://cloud.cerebras.ai/)
 
@@ -168,15 +214,17 @@ Free tier restricted to 8K context.
 <tr><td>Qwen2.5 Coder 32B Instruct</td><td>12 requests/minute</td></tr>
 </tbody></table>
 
-### [Together](https://together.ai)
+### [Together (Free)](https://together.ai)
 
-Up to 60 requests/minute.
+**Limits:** Up to 60 requests/minute
 
 - [Llama 3.2 11B Vision Instruct](https://together.ai/llama-3-2-11b-free)
 - [Llama 3.3 70B Instruct](https://together.ai/llama-3-3-70b-free)
 - [DeepSeek R1 Distil Llama 70B](https://together.ai/deepseek-r1-distilled-llama-70b-free)
 
 ### [Cohere](https://cohere.com)
+
+**Limits:**
 
 [20 requests/minute<br>1,000 requests/month](https://docs.cohere.com/docs/rate-limits)
 
@@ -193,15 +241,19 @@ Models share a common quota.
 
 ### [GitHub Models](https://github.com/marketplace/models)
 
-Extremely restrictive input/output token limits. [Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)](https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits)
+Extremely restrictive input/output token limits.
+
+**Limits:** [Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)](https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits)
 
 - AI21 Jamba 1.5 Large
 - AI21 Jamba 1.5 Mini
 - Codestral 25.01
+- Cohere Command A
 - Cohere Command R
 - Cohere Command R 08-2024
 - Cohere Command R+
 - Cohere Command R+ 08-2024
+- Cohere Embed 4
 - Cohere Embed v3 English
 - Cohere Embed v3 Multilingual
 - DeepSeek-R1
@@ -218,7 +270,6 @@ Extremely restrictive input/output token limits. [Rate limits dependent on Copil
 - Meta-Llama-3.1-70B-Instruct
 - Meta-Llama-3.1-8B-Instruct
 - Ministral 3B
-- Mistral Large
 - Mistral Large (2407)
 - Mistral Large 24.11
 - Mistral Nemo
@@ -250,7 +301,8 @@ Extremely restrictive input/output token limits. [Rate limits dependent on Copil
 
 ### [Chutes](https://chutes.ai/)
 
-Distributed, decentralized crypto-based compute. Data is sent to individual hosts.
+Distributed, decentralized crypto-based compute.
+Data is sent to individual hosts.
 
 - DeepCoder 14B Preview
 - DeepHermes 3 Llama 3 8B Preview
@@ -280,7 +332,7 @@ Distributed, decentralized crypto-based compute. Data is sent to individual host
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
-[10,000 neurons/day](https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation)
+**Limits:** [10,000 neurons/day](https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation)
 
 - DeepSeek R1 Distill Qwen 32B
 - Deepseek Coder 6.7B Base (AWQ)
@@ -449,8 +501,8 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $5 for 3 months
 
 **Models:**
-- E5-Mistral-7B-Instruct
 - Llama 3.1 405B
+- Llama 3.1 70B
 - Llama 3.1 8B
 - Llama 3.2 11B Vision
 - Llama 3.2 1B
@@ -463,10 +515,14 @@ Very stringent payment verification for Google Cloud.
 - Llama-Guard-3-8B
 - Qwen/QwQ-32B
 - Qwen/QwQ-32B-Preview
-- Qwen/Qwen2-Audio-7B-Instruct
+- Qwen/Qwen2.5-72B-Instruct
+- Qwen/Qwen2.5-Coder-32B-Instruct
+- allenai/Llama-3.1-Tulu-3-405B
 - deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
+- tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3
+- tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 

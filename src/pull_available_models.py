@@ -11,6 +11,7 @@ from google.cloud import cloudquotas_v1
 from mistralai import Mistral
 from concurrent.futures import ThreadPoolExecutor
 import time
+import re
 
 from data import (
     MODEL_TO_NAME_MAPPING,
@@ -412,56 +413,6 @@ def fetch_scaleway_models(logger):
             }
         )
     ret_models = sorted(ret_models, key=lambda x: x["name"])
-    logger.info("Fetching Scaleway rate limits")
-    r = requests.get(
-        "https://www.scaleway.com/en/docs/generative-apis/reference-content/rate-limits/"
-    )
-    r.raise_for_status()
-    # Extract <main> content
-    soup = BeautifulSoup(r.text, "html.parser")
-    body = str(soup.find("main"))
-    prompt = f"""
-Here is the web page to extract data from:
-```html
-{body}
-```
-    """
-    logger.info("Extracting model rate limits from the provided web page...")
-    chat_response = rate_limited_mistral_chat(
-        mistral_client,
-        model="mistral-large-latest",
-        messages=[
-            {
-                "role": "system",
-                "content": """Extract the model rate limits as only integers from the provided web page into JSON of the following format:
-```json
-{
-  "model name here": {
-    "requests/minute": 10,
-    "tokens/minute": 100
-  }
-}
-```
-ONLY OUTPUT JSON!""",
-            },
-            {
-                "role": "user",
-                "content": prompt,
-            },
-        ],
-        response_format={
-            "type": "json_object",
-        },
-        temperature=0,
-    )
-    logger.info(chat_response.choices[0].message.content)
-    extracted_data = json.loads(chat_response.choices[0].message.content)
-    for model in extracted_data:
-        for m in ret_models:
-            if m["id"] == model:
-                m["limits"] = extracted_data[model]
-                break
-
     return ret_models
 
 
@@ -496,11 +447,29 @@ def fetch_chutes_models(logger):
     return sorted(free_models, key=lambda x: x["name"])
 
 
-def get_human_limits(model):
+def get_human_limits(model, seperator="<br>"):
     if "limits" not in model:
         return ""
     limits = model["limits"]
-    return "<br>".join([f"{value:,} {key}" for key, value in limits.items()])
+    return seperator.join([f"{value:,} {key}" for key, value in limits.items()])
+
+
+def generate_toc(markdown):
+    toc_lines = []
+    # Find all ## and ### headings, but skip the main title (# ...)
+    headings = re.findall(r"^(#{2,3}) +(.+)", markdown, re.MULTILINE)
+    for hashes, title in headings:
+        # Remove markdown links for anchor text, keep display text
+        display = re.sub(r"\[(.*?)\]\([^)]*\)", r"\1", title)
+        # Build anchor (GitHub style)
+        anchor = display.lower()
+        anchor = re.sub(r"[^a-z0-9 \-_]", "", anchor)
+        anchor = anchor.replace(" ", "-")
+        anchor = anchor.replace("--", "-")
+        anchor = anchor.strip("-")
+        indent = "  " if len(hashes) == 3 else ""
+        toc_lines.append(f"{indent}- [{display}](#{anchor})")
+    return "\n".join(toc_lines)
 
 
 def main():
@@ -565,17 +534,23 @@ def main():
     # --- OpenRouter ---
     model_list_markdown += "### [OpenRouter](https://openrouter.ai)\n\n"
     if openrouter_models:
-        provider_limits = get_human_limits(openrouter_models[0]) # Limits are the same for all free models here
+        provider_limits = get_human_limits(
+            openrouter_models[0]
+        ) 
+        model_list_markdown += "**Limits:**\n\n"
         model_list_markdown += f"[{provider_limits}<br>1000 requests/day with $10 credit balance](https://openrouter.ai/docs/api-reference/limits)\n\n"
         model_list_markdown += "Models share a common quota.\n\n"
         for model in openrouter_models:
-            model_list_markdown += f"- [{model['name']}](https://openrouter.ai/{model['id']})\n"
+            model_list_markdown += (
+                f"- [{model['name']}](https://openrouter.ai/{model['id']})\n"
+            )
     model_list_markdown += "\n"
-
 
     # --- Google AI Studio ---
     model_list_markdown += "### [Google AI Studio](https://aistudio.google.com)\n\n"
-    model_list_markdown += "Data is used for training when used outside of the UK/CH/EEA/EU.\n\n"
+    model_list_markdown += (
+        "Data is used for training when used outside of the UK/CH/EEA/EU.\n\n"
+    )
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
 
     gemini_text_models = [
@@ -661,7 +636,9 @@ def main():
     # Write text models to table
     for model in gemini_text_models:
         limits_str = get_human_limits(model)
-        model_list_markdown += f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
+        model_list_markdown += (
+            f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
+        )
 
     # Write embedding models to table
     first_embedding = True
@@ -669,34 +646,48 @@ def main():
         limits_str = get_human_limits(model)
         model_list_markdown += f"<tr><td>{model['name']}</td>"
         if first_embedding:
-             model_list_markdown += f'<td rowspan="{len(gemini_embedding_models)}">{limits_str}<br>100 content/batch<br>Shared Quota</td>'
-             first_embedding = False
+            model_list_markdown += f'<td rowspan="{len(gemini_embedding_models)}">{limits_str}<br>100 content/batch<br>Shared Quota</td>'
+            first_embedding = False
         model_list_markdown += "</tr>\n"
 
     model_list_markdown += "</tbody></table>\n\n"
 
     # --- NVIDIA NIM ---
-    model_list_markdown += "### [NVIDIA NIM](https://build.nvidia.com/explore/discover)\n\n"
-    model_list_markdown += "Phone number verification required. Models tend to be context window limited.\n\n"
-    model_list_markdown += "- [Various open models](https://build.nvidia.com/models) (40 requests/minute)\n"
+    model_list_markdown += (
+        "### [NVIDIA NIM](https://build.nvidia.com/explore/discover)\n\n"
+    )
+    model_list_markdown += "Phone number verification required.\n"
+    model_list_markdown += "Models tend to be context window limited.\n\n"
+    model_list_markdown += "**Limits:** 40 requests/minute\n\n"
+    model_list_markdown += "- [Various open models](https://build.nvidia.com/models)\n"
     model_list_markdown += "\n"
 
     # --- Mistral (La Plateforme) ---
-    model_list_markdown += "### [Mistral (La Plateforme)](https://console.mistral.ai/)\n\n"
-    model_list_markdown += "Free tier (Experiment plan) requires opting into data training, requires phone number verification.\n\n"
-    model_list_markdown += "- [Open and Proprietary Mistral models](https://docs.mistral.ai/getting-started/models/models_overview/) (1 request/second, 500,000 tokens/minute, 1,000,000,000 tokens/month)\n"
+    model_list_markdown += (
+        "### [Mistral (La Plateforme)](https://console.mistral.ai/)\n\n"
+    )
+    model_list_markdown += "* Free tier (Experiment plan) requires opting into data training\n"
+    model_list_markdown += "* Requires phone number verification.\n\n"
+    model_list_markdown += "**Limits (per-model):** 1 request/second, 500,000 tokens/minute, 1,000,000,000 tokens/month\n\n"
+    model_list_markdown += "- [Open and Proprietary Mistral models](https://docs.mistral.ai/getting-started/models/models_overview/)\n"
     model_list_markdown += "\n"
 
     # --- Mistral (Codestral) ---
-    model_list_markdown += "### [Mistral (Codestral)](https://codestral.mistral.ai/)\n\n"
-    model_list_markdown += "Currently free to use, monthly subscription based, requires phone number verification.\n\n"
-    model_list_markdown += "- Codestral (30 requests/minute, 2,000 requests/day)\n"
+    model_list_markdown += (
+        "### [Mistral (Codestral)](https://codestral.mistral.ai/)\n\n"
+    )
+    model_list_markdown += "* Currently free to use\n"
+    model_list_markdown += "* Monthly subscription based\n"
+    model_list_markdown += "* Requires phone number verification\n\n"
+    model_list_markdown += "**Limits:** 30 requests/minute, 2,000 requests/day\n\n"
+    model_list_markdown += "- Codestral\n"
     model_list_markdown += "\n"
 
     # --- HuggingFace Serverless Inference ---
-    model_list_markdown += "### [HuggingFace Serverless Inference](https://huggingface.co/docs/api-inference/en/index)\n\n"
-    model_list_markdown += "Limited to models smaller than 10GB. Some popular models are supported even if they exceed 10GB.\n\n"
-    model_list_markdown += "- Various open models ([Variable credits per month, currently $0.10](https://huggingface.co/docs/api-inference/pricing))\n"
+    model_list_markdown += "### [HuggingFace Inference Providers](https://huggingface.co/docs/inference-providers/en/index)\n\n"
+    model_list_markdown += "HuggingFace Serverless Inference limited to models smaller than 10GB. Some popular models are supported even if they exceed 10GB.\n\n"
+    model_list_markdown += "**Limits:** [$0.10/month in credits](https://huggingface.co/docs/inference-providers/en/pricing)\n\n"
+    model_list_markdown += "- Various open models across supported providers\n"
     model_list_markdown += "\n"
 
     # --- Cerebras ---
@@ -710,7 +701,9 @@ def main():
         {"name": "Llama 3.3 70B", "limits_text": cerebras_limit_text},
     ]
     for model in cerebras_models:
-        model_list_markdown += f"<tr><td>{model['name']}</td><td>{model['limits_text']}</td></tr>\n"
+        model_list_markdown += (
+            f"<tr><td>{model['name']}</td><td>{model['limits_text']}</td></tr>\n"
+        )
     model_list_markdown += "</tbody></table>\n\n"
 
     # --- Groq ---
@@ -719,17 +712,23 @@ def main():
         model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
         for model in groq_models:
             limits_str = get_human_limits(model)
-            model_list_markdown += f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
+            model_list_markdown += (
+                f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
+            )
         model_list_markdown += "</tbody></table>\n"
     model_list_markdown += "\n"
 
     # --- OVH AI Endpoints ---
-    model_list_markdown += "### [OVH AI Endpoints (Free Beta)](https://endpoints.ai.cloud.ovh.net/)\n\n"
+    model_list_markdown += (
+        "### [OVH AI Endpoints (Free Beta)](https://endpoints.ai.cloud.ovh.net/)\n\n"
+    )
     if ovh_models:
         model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
         for model in ovh_models:
             limits_str = get_human_limits(model)
-            model_list_markdown += f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
+            model_list_markdown += (
+                f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
+            )
         model_list_markdown += "</tbody></table>\n"
     model_list_markdown += "\n"
 
@@ -751,13 +750,14 @@ def main():
             "urlId": "deepseek-r1-distilled-llama-70b-free",
         },
     ]
-    model_list_markdown += "### [Together](https://together.ai)\n\n"
-    model_list_markdown += "Up to 60 requests/minute.\n\n"
+    model_list_markdown += "### [Together (Free)](https://together.ai)\n\n"
+    model_list_markdown += "**Limits:** Up to 60 requests/minute\n\n"
     if together_models:
         for model in together_models:
-            model_list_markdown += f"- [{model['name']}](https://together.ai/{model['urlId']})\n"
+            model_list_markdown += (
+                f"- [{model['name']}](https://together.ai/{model['urlId']})\n"
+            )
     model_list_markdown += "\n"
-
 
     # --- Cohere ---
     cohere_models = [
@@ -771,6 +771,7 @@ def main():
         {"id": "c4ai-aya-vision-32b", "name": "Aya Vision 32B"},
     ]
     model_list_markdown += "### [Cohere](https://cohere.com)\n\n"
+    model_list_markdown += "**Limits:**\n\n"
     model_list_markdown += "[20 requests/minute<br>1,000 requests/month](https://docs.cohere.com/docs/rate-limits)\n\n"
     model_list_markdown += "Models share a common quota.\n\n"
     if cohere_models:
@@ -779,8 +780,11 @@ def main():
     model_list_markdown += "\n"
 
     # --- GitHub Models ---
-    model_list_markdown += "### [GitHub Models](https://github.com/marketplace/models)\n\n"
-    model_list_markdown += "Extremely restrictive input/output token limits. [Rate limits dependent on Copilot subscription tier (Free/Pro/Business/Enterprise)](https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits)\n\n"
+    model_list_markdown += (
+        "### [GitHub Models](https://github.com/marketplace/models)\n\n"
+    )
+    model_list_markdown += "Extremely restrictive input/output token limits.\n\n"
+    model_list_markdown += "**Limits:** [Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)](https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits)\n\n"
     if github_models:
         for model in github_models:
             model_list_markdown += f"- {model['name']}\n"
@@ -788,20 +792,22 @@ def main():
 
     # --- Chutes ---
     model_list_markdown += "### [Chutes](https://chutes.ai/)\n\n"
-    model_list_markdown += "Distributed, decentralized crypto-based compute. Data is sent to individual hosts.\n\n"
+    model_list_markdown += "Distributed, decentralized crypto-based compute.\n"
+    model_list_markdown += "Data is sent to individual hosts.\n\n"
     if chutes_models:
         for model in chutes_models:
             model_list_markdown += f"- {model['name']}\n"
     model_list_markdown += "\n"
 
     # --- Cloudflare Workers AI ---
-    model_list_markdown += "### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)\n\n"
-    model_list_markdown += "[10,000 neurons/day](https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation)\n\n"
+    model_list_markdown += (
+        "### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)\n\n"
+    )
+    model_list_markdown += "**Limits:** [10,000 neurons/day](https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation)\n\n"
     if cloudflare_models:
         for model in cloudflare_models:
             model_list_markdown += f"- {model['name']}\n"
     model_list_markdown += "\n"
-
 
     # --- Google Cloud Vertex AI ---
     vertex_llama_models = [
@@ -881,12 +887,11 @@ def main():
 
     # Write Llama models to table
     if vertex_llama_models:
-         for model in vertex_llama_models:
+        for model in vertex_llama_models:
             limits_str = get_human_limits(model)
             model_list_markdown += f'<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/{model['urlId']}" target="_blank">{model['name']}</a></td><td>{limits_str}<br>Free during preview</td></tr>\n'
 
     model_list_markdown += "</tbody></table>\n\n"
-
 
     # --- Trial Providers Section Generation ---
     trial_list_markdown = ""
@@ -1006,26 +1011,26 @@ def main():
             trial_list_markdown += f"- {model['name']}\n"
         trial_list_markdown += "\n"
 
-
     if MISSING_MODELS:
         logger.warning("Missing models:")
         logger.warning(
             "\n" + "\n".join([f'"{model}": "{model}",' for model in MISSING_MODELS])
         )
 
-    script_dir = os.path.dirname(os.path.abspath(__file__))
     with open(os.path.join(script_dir, "README_template.md"), "r") as f:
         readme = f.read()
     warning = """<!---
 WARNING: DO NOT EDIT THIS FILE DIRECTLY. IT IS GENERATED BY src/pull_available_models.py
 --->
 """
+    initial_templated = (
+        (warning + readme)
+        .replace("{{MODEL_LIST}}", model_list_markdown)
+        .replace("{{TRIAL_LIST_MARKDOWN}}", trial_list_markdown)
+    )
+    toc_markdown = generate_toc(initial_templated)
     with open(os.path.join(script_dir, "..", "README.md"), "w") as f:
-        f.write(
-            (warning + readme)
-            .replace("{{MODEL_LIST}}", model_list_markdown)
-            .replace("{{TRIAL_LIST_MARKDOWN}}", trial_list_markdown)
-        )
+        f.write(initial_templated.replace("{{TOC}}", toc_markdown))
     logger.info("Wrote models to README.md")
 
 
