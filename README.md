@@ -72,6 +72,7 @@ Models share a common quota.
 - [Reka Flash 3](https://openrouter.ai/rekaai/reka-flash-3:free)
 - [Rogue Rose 103B v0.2](https://openrouter.ai/sophosympatheia/rogue-rose-103b-v0.2:free)
 - [Zephyr 7B Beta](https://openrouter.ai/huggingfaceh4/zephyr-7b-beta:free)
+- [shisa-ai/shisa-v2-llama3.3-70b:free](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
 
@@ -138,14 +139,16 @@ Free tier restricted to 8K context.
 <tr><td>Llama 3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Mistral Saba 24B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Qwen QwQ 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
+<tr><td>compound-beta</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
+<tr><td>compound-beta-mini</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
 </tbody></table>
 
 ### [OVH AI Endpoints (Free Beta)](https://endpoints.ai.cloud.ovh.net/)
@@ -221,6 +224,8 @@ Extremely restrictive input/output token limits. [Rate limits dependent on Copil
 - Mistral Small
 - Mistral Small 3.1
 - OpenAI GPT-4.1
+- OpenAI GPT-4.1-mini
+- OpenAI GPT-4.1-nano
 - OpenAI GPT-4o
 - OpenAI GPT-4o mini
 - OpenAI Text Embedding 3 (large)
@@ -270,6 +275,7 @@ Distributed, decentralized crypto-based compute. Data is sent to individual host
 - QwQ 32B ArliAI RpR v1
 - Qwen 2.5 VL 32B Instruct
 - Reka Flash 3
+- shisa-ai/shisa-v2-llama3.3-70b
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
@@ -444,6 +450,7 @@ Very stringent payment verification for Google Cloud.
 **Models:**
 - E5-Mistral-7B-Instruct
 - Llama 3.1 405B
+- Llama 3.1 70B
 - Llama 3.1 8B
 - Llama 3.2 11B Vision
 - Llama 3.2 1B
@@ -456,9 +463,14 @@ Very stringent payment verification for Google Cloud.
 - Qwen/QwQ-32B
 - Qwen/QwQ-32B-Preview
 - Qwen/Qwen2-Audio-7B-Instruct
+- Qwen/Qwen2.5-72B-Instruct
+- Qwen/Qwen2.5-Coder-32B-Instruct
+- allenai/Llama-3.1-Tulu-3-405B
 - deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
+- tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3
+- tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 
