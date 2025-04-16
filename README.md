@@ -80,6 +80,7 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
 <tr><td>Gemini 2.5 Pro (Experimental)</td><td>1,000,000 tokens/day<br>250,000 tokens/minute<br>25 requests/day<br>5 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Flash (Preview)</td><td>4,000,000 tokens/minute<br>1,500 requests/day<br>10 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash (Experimental)</td><td>4,000,000 tokens/minute<br>1,500 requests/day<br>10 requests/minute</td></tr>

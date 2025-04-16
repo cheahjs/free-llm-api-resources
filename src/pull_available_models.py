@@ -585,6 +585,11 @@ def main():
             "limits": gemini_models.get("gemini-2.0-pro-exp", {}),
         },
         {
+            "id": "gemini-2.5-flash-preview-04-17",
+            "name": "Gemini 2.5 Flash (Preview)",
+            "limits": gemini_models.get("gemini-2.5-flash-preview", {}),
+        },
+        {
             "id": "gemini-2.0-flash",
             "name": "Gemini 2.0 Flash",
             "limits": gemini_models.get("gemini-2.0-flash", {}),
