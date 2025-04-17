@@ -286,6 +286,7 @@ Extremely restrictive input/output token limits.
 - OpenAI o1-mini
 - OpenAI o1-preview
 - OpenAI o3-mini
+- OpenAI o4-mini
 - Phi-3-medium instruct (128k)
 - Phi-3-medium instruct (4k)
 - Phi-3-mini instruct (128k)
@@ -501,8 +502,8 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $5 for 3 months
 
 **Models:**
+- E5-Mistral-7B-Instruct
 - Llama 3.1 405B
-- Llama 3.1 70B
 - Llama 3.1 8B
 - Llama 3.2 11B Vision
 - Llama 3.2 1B
@@ -515,14 +516,10 @@ Very stringent payment verification for Google Cloud.
 - Llama-Guard-3-8B
 - Qwen/QwQ-32B
 - Qwen/QwQ-32B-Preview
-- Qwen/Qwen2.5-72B-Instruct
-- Qwen/Qwen2.5-Coder-32B-Instruct
-- allenai/Llama-3.1-Tulu-3-405B
+- Qwen/Qwen2-Audio-7B-Instruct
 - deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
-- tokyotech-llm/Llama-3.1-Swallow-70B-Instruct-v0.3
-- tokyotech-llm/Llama-3.1-Swallow-8B-Instruct-v0.3
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 
