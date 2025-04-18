@@ -107,6 +107,8 @@ Models share a common quota.
 - [Rogue Rose 103B v0.2](https://openrouter.ai/sophosympatheia/rogue-rose-103b-v0.2:free)
 - [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [Zephyr 7B Beta](https://openrouter.ai/huggingfaceh4/zephyr-7b-beta:free)
+- [thudm/glm-4-32b:free](https://openrouter.ai/thudm/glm-4-32b:free)
+- [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
 
@@ -114,7 +116,7 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
 <tr><td>Gemini 2.5 Pro (Experimental)</td><td>1,000,000 tokens/day<br>250,000 tokens/minute<br>25 requests/day<br>5 requests/minute</td></tr>
-<tr><td>Gemini 2.5 Flash (Preview)</td><td>4,000,000 tokens/minute<br>1,500 requests/day<br>10 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Flash (Preview)</td><td></td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash (Experimental)</td><td>4,000,000 tokens/minute<br>1,500 requests/day<br>10 requests/minute</td></tr>
@@ -264,6 +266,7 @@ Extremely restrictive input/output token limits.
 - Llama-3.2-11B-Vision-Instruct
 - Llama-3.2-90B-Vision-Instruct
 - Llama-3.3-70B-Instruct
+- MAI-DS-R1
 - Meta-Llama-3-70B-Instruct
 - Meta-Llama-3-8B-Instruct
 - Meta-Llama-3.1-405B-Instruct
@@ -285,7 +288,9 @@ Extremely restrictive input/output token limits.
 - OpenAI o1
 - OpenAI o1-mini
 - OpenAI o1-preview
+- OpenAI o3
 - OpenAI o3-mini
+- OpenAI o4-mini
 - Phi-3-medium instruct (128k)
 - Phi-3-medium instruct (4k)
 - Phi-3-mini instruct (128k)
@@ -329,6 +334,8 @@ Data is sent to individual hosts.
 - Qwen 2.5 VL 32B Instruct
 - Reka Flash 3
 - Shisa V2 Llama 3.3 70B
+- thudm/glm-4-32b-0414
+- thudm/glm-z1-32b-0414
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
@@ -501,6 +508,7 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $5 for 3 months
 
 **Models:**
+- E5-Mistral-7B-Instruct
 - Llama 3.1 405B
 - Llama 3.1 70B
 - Llama 3.1 8B
@@ -509,12 +517,14 @@ Very stringent payment verification for Google Cloud.
 - Llama 3.2 3B
 - Llama 3.2 90B Vision
 - Llama 3.3 70B
+- Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
 - Llama-4-Maverick-17B-128E-Instruct-Text
 - Llama-4-Scout-17B-16E-Instruct
 - Llama-Guard-3-8B
 - Qwen/QwQ-32B
 - Qwen/QwQ-32B-Preview
+- Qwen/Qwen2-Audio-7B-Instruct
 - Qwen/Qwen2.5-72B-Instruct
 - Qwen/Qwen2.5-Coder-32B-Instruct
 - allenai/Llama-3.1-Tulu-3-405B
