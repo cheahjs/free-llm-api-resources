@@ -477,6 +477,8 @@ Very stringent payment verification for Google Cloud.
 
 **Credits:** $30/month
 
+**Requirements:** Get $5 in credits upon Sign Up. Add a default payment method to unlock an additional $25.
+
 **Models:** Any supported model - pay by compute time
 
 ### [Hyperbolic](https://app.hyperbolic.xyz/)
