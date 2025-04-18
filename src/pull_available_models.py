@@ -562,7 +562,7 @@ def main():
         {
             "id": "gemini-2.5-flash-preview-04-17",
             "name": "Gemini 2.5 Flash (Preview)",
-            "limits": gemini_models.get("gemini-2.5-flash-preview", {}),
+            "limits": gemini_models.get("gemini-2.5-flash", {}),
         },
         {
             "id": "gemini-2.0-flash",
