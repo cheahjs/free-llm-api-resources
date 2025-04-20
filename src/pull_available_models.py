@@ -971,7 +971,7 @@ def main():
         {
             "name": "Modal",
             "url": "https://modal.com",
-            "credits": "$30/month",
+            "credits": "$5/month upon sign up, $30/month with payment method added",
             "requirements": "",
             "models_desc": "Any supported model - pay by compute time",
         },

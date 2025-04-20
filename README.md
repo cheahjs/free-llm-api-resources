@@ -475,7 +475,7 @@ Very stringent payment verification for Google Cloud.
 
 ### [Modal](https://modal.com)
 
-**Credits:** $30/month
+**Credits:** $5/month upon sign up, $30/month with payment method added
 
 **Models:** Any supported model - pay by compute time
 
