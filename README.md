@@ -107,6 +107,7 @@ Models share a common quota.
 - [Rogue Rose 103B v0.2](https://openrouter.ai/sophosympatheia/rogue-rose-103b-v0.2:free)
 - [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [Zephyr 7B Beta](https://openrouter.ai/huggingfaceh4/zephyr-7b-beta:free)
+- [meta-llama/llama-3.1-405b:free](https://openrouter.ai/meta-llama/llama-3.1-405b:free)
 - [thudm/glm-4-32b:free](https://openrouter.ai/thudm/glm-4-32b:free)
 - [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
 
@@ -334,6 +335,8 @@ Data is sent to individual hosts.
 - Qwen 2.5 VL 32B Instruct
 - Reka Flash 3
 - Shisa V2 Llama 3.3 70B
+- chutesai/llama-3.1-405b-fp8
+- microsoft/mai-ds-r1-fp8
 - thudm/glm-4-32b-0414
 - thudm/glm-z1-32b-0414
 
