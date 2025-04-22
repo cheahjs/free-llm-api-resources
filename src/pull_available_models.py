@@ -936,7 +936,7 @@ def main():
         {
             "name": "Novita",
             "url": "https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate",
-            "credits": "$0.5 for 1 year, $20 for 3 months for DeepSeek models with [referral code](https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate) + GitHub account connection",
+            "credits": "$0.5 for 1 year, $10 for 3 months for LLMs with [referral code](https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate) + GitHub account connection",
             "requirements": "",
             "models_desc": "[Various open models](https://novita.ai/models)",
         },
