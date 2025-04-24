@@ -92,7 +92,6 @@ Models share a common quota.
 - [Molmo 7B D](https://openrouter.ai/allenai/molmo-7b-d:free)
 - [Moonlight-16B-A3B-Instruct](https://openrouter.ai/moonshotai/moonlight-16b-a3b-instruct:free)
 - [OlympicCoder 32B](https://openrouter.ai/open-r1/olympiccoder-32b:free)
-- [OlympicCoder 7B](https://openrouter.ai/open-r1/olympiccoder-7b:free)
 - [QwQ 32B ArliAI RpR v1](https://openrouter.ai/arliai/qwq-32b-arliai-rpr-v1:free)
 - [Qwen 2.5 72B Instruct](https://openrouter.ai/qwen/qwen-2.5-72b-instruct:free)
 - [Qwen 2.5 7B Instruct](https://openrouter.ai/qwen/qwen-2.5-7b-instruct:free)
@@ -312,7 +311,6 @@ Distributed, decentralized crypto-based compute.
 Data is sent to individual hosts.
 
 - DeepCoder 14B Preview
-- DeepHermes 3 Llama 3 8B Preview
 - DeepSeek R1
 - DeepSeek R1-Zero
 - DeepSeek V3
@@ -320,21 +318,13 @@ Data is sent to individual hosts.
 - DeepSeek V3 Base
 - Dolphin 3.0 Mistral 24B
 - Dolphin 3.0 R1 Mistral 24B
-- Gemma 3 12B Instruct
-- Gemma 3 1B Instruct
-- Gemma 3 4B Instruct
 - Kimi VL A3B Thinking
-- Llama 3.1 Nemotron Nano 8B v1
 - Llama 3.1 Nemotron Ultra 253B v1
-- Llama 3.3 Nemotron Super 49B v1
 - Llama 4 Maverick 17B 128E Instruct FP8
 - Llama 4 Scout 17B 16E Instruct
 - Mistral Small 3.1 24B Instruct 2503
-- OlympicCoder 32B
-- OlympicCoder 7B
 - QwQ 32B ArliAI RpR v1
 - Qwen 2.5 VL 32B Instruct
-- Reka Flash 3
 - Shisa V2 Llama 3.3 70B
 - chutesai/llama-3.1-405b-fp8
 - microsoft/mai-ds-r1-fp8
