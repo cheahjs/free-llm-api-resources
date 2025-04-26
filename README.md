@@ -67,7 +67,6 @@ Models share a common quota.
 - [Dolphin 3.0 Mistral 24B](https://openrouter.ai/cognitivecomputations/dolphin3.0-mistral-24b:free)
 - [Dolphin 3.0 R1 Mistral 24B](https://openrouter.ai/cognitivecomputations/dolphin3.0-r1-mistral-24b:free)
 - [Featherless Qwerky 72B](https://openrouter.ai/featherless/qwerky-72b:free)
-- [Gemini 2.5 Pro Experimental 03-25](https://openrouter.ai/google/gemini-2.5-pro-exp-03-25:free)
 - [Gemma 2 9B Instruct](https://openrouter.ai/google/gemma-2-9b-it:free)
 - [Gemma 3 12B Instruct](https://openrouter.ai/google/gemma-3-12b-it:free)
 - [Gemma 3 1B Instruct](https://openrouter.ai/google/gemma-3-1b-it:free)
@@ -75,7 +74,6 @@ Models share a common quota.
 - [Gemma 3 4B Instruct](https://openrouter.ai/google/gemma-3-4b-it:free)
 - [Kimi VL A3B Thinking](https://openrouter.ai/moonshotai/kimi-vl-a3b-thinking:free)
 - [Llama 3.1 8B Instruct](https://openrouter.ai/meta-llama/llama-3.1-8b-instruct:free)
-- [Llama 3.1 Nemotron 70B Instruct](https://openrouter.ai/nvidia/llama-3.1-nemotron-70b-instruct:free)
 - [Llama 3.1 Nemotron Nano 8B v1](https://openrouter.ai/nvidia/llama-3.1-nemotron-nano-8b-v1:free)
 - [Llama 3.1 Nemotron Ultra 253B v1](https://openrouter.ai/nvidia/llama-3.1-nemotron-ultra-253b-v1:free)
 - [Llama 3.2 11B Vision Instruct](https://openrouter.ai/meta-llama/llama-3.2-11b-vision-instruct:free)
@@ -109,7 +107,9 @@ Models share a common quota.
 - [meta-llama/llama-3.1-405b:free](https://openrouter.ai/meta-llama/llama-3.1-405b:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
 - [thudm/glm-4-32b:free](https://openrouter.ai/thudm/glm-4-32b:free)
+- [thudm/glm-4-9b:free](https://openrouter.ai/thudm/glm-4-9b:free)
 - [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
+- [thudm/glm-z1-9b:free](https://openrouter.ai/thudm/glm-z1-9b:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
 
@@ -318,7 +318,6 @@ Data is sent to individual hosts.
 - DeepSeek V3 Base
 - Dolphin 3.0 Mistral 24B
 - Dolphin 3.0 R1 Mistral 24B
-- Kimi VL A3B Thinking
 - Llama 3.1 Nemotron Ultra 253B v1
 - Llama 4 Maverick 17B 128E Instruct FP8
 - Llama 4 Scout 17B 16E Instruct
