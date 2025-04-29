@@ -74,7 +74,6 @@ Models share a common quota.
 - [Gemma 3 4B Instruct](https://openrouter.ai/google/gemma-3-4b-it:free)
 - [Kimi VL A3B Thinking](https://openrouter.ai/moonshotai/kimi-vl-a3b-thinking:free)
 - [Llama 3.1 8B Instruct](https://openrouter.ai/meta-llama/llama-3.1-8b-instruct:free)
-- [Llama 3.1 Nemotron Nano 8B v1](https://openrouter.ai/nvidia/llama-3.1-nemotron-nano-8b-v1:free)
 - [Llama 3.1 Nemotron Ultra 253B v1](https://openrouter.ai/nvidia/llama-3.1-nemotron-ultra-253b-v1:free)
 - [Llama 3.2 11B Vision Instruct](https://openrouter.ai/meta-llama/llama-3.2-11b-vision-instruct:free)
 - [Llama 3.2 1B Instruct](https://openrouter.ai/meta-llama/llama-3.2-1b-instruct:free)
@@ -106,10 +105,16 @@ Models share a common quota.
 - [Zephyr 7B Beta](https://openrouter.ai/huggingfaceh4/zephyr-7b-beta:free)
 - [meta-llama/llama-3.1-405b:free](https://openrouter.ai/meta-llama/llama-3.1-405b:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
+- [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
+- [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
+- [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
+- [qwen/qwen3-32b:free](https://openrouter.ai/qwen/qwen3-32b:free)
+- [qwen/qwen3-8b:free](https://openrouter.ai/qwen/qwen3-8b:free)
 - [thudm/glm-4-32b:free](https://openrouter.ai/thudm/glm-4-32b:free)
 - [thudm/glm-4-9b:free](https://openrouter.ai/thudm/glm-4-9b:free)
 - [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
 - [thudm/glm-z1-9b:free](https://openrouter.ai/thudm/glm-z1-9b:free)
+- [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
 
@@ -329,6 +334,7 @@ Data is sent to individual hosts.
 - microsoft/mai-ds-r1-fp8
 - thudm/glm-4-32b-0414
 - thudm/glm-z1-32b-0414
+- tngtech/deepseek-r1t-chimera
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
