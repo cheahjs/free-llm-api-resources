@@ -100,7 +100,6 @@ Models share a common quota.
 - [Qwen2.5 Coder 32B Instruct](https://openrouter.ai/qwen/qwen-2.5-coder-32b-instruct:free)
 - [Qwen2.5 VL 72B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-72b-instruct:free)
 - [Reka Flash 3](https://openrouter.ai/rekaai/reka-flash-3:free)
-- [Rogue Rose 103B v0.2](https://openrouter.ai/sophosympatheia/rogue-rose-103b-v0.2:free)
 - [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [Zephyr 7B Beta](https://openrouter.ai/huggingfaceh4/zephyr-7b-beta:free)
 - [meta-llama/llama-3.1-405b:free](https://openrouter.ai/meta-llama/llama-3.1-405b:free)
@@ -332,6 +331,11 @@ Data is sent to individual hosts.
 - Shisa V2 Llama 3.3 70B
 - chutesai/llama-3.1-405b-fp8
 - microsoft/mai-ds-r1-fp8
+- qwen/qwen3-14b
+- qwen/qwen3-235b-a22b
+- qwen/qwen3-30b-a3b
+- qwen/qwen3-32b
+- qwen/qwen3-8b
 - thudm/glm-4-32b-0414
 - thudm/glm-z1-32b-0414
 - tngtech/deepseek-r1t-chimera
@@ -518,6 +522,7 @@ Very stringent payment verification for Google Cloud.
 - Llama-Guard-3-8B
 - Qwen/QwQ-32B
 - Qwen/Qwen2-Audio-7B-Instruct
+- Qwen/Qwen3-32B
 - deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
