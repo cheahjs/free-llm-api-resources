@@ -102,12 +102,17 @@ Models share a common quota.
 - [Reka Flash 3](https://openrouter.ai/rekaai/reka-flash-3:free)
 - [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [Zephyr 7B Beta](https://openrouter.ai/huggingfaceh4/zephyr-7b-beta:free)
+- [deepseek/deepseek-prover-v2:free](https://openrouter.ai/deepseek/deepseek-prover-v2:free)
 - [meta-llama/llama-3.1-405b:free](https://openrouter.ai/meta-llama/llama-3.1-405b:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
+- [opengvlab/internvl3-14b:free](https://openrouter.ai/opengvlab/internvl3-14b:free)
+- [opengvlab/internvl3-2b:free](https://openrouter.ai/opengvlab/internvl3-2b:free)
+- [qwen/qwen3-1.7b:free](https://openrouter.ai/qwen/qwen3-1.7b:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
 - [qwen/qwen3-32b:free](https://openrouter.ai/qwen/qwen3-32b:free)
+- [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
 - [qwen/qwen3-8b:free](https://openrouter.ai/qwen/qwen3-8b:free)
 - [thudm/glm-4-32b:free](https://openrouter.ai/thudm/glm-4-32b:free)
 - [thudm/glm-4-9b:free](https://openrouter.ai/thudm/glm-4-9b:free)
@@ -281,7 +286,6 @@ Extremely restrictive input/output token limits.
 - Mistral Large (2407)
 - Mistral Large 24.11
 - Mistral Nemo
-- Mistral Small
 - Mistral Small 3.1
 - OpenAI GPT-4.1
 - OpenAI GPT-4.1-mini
@@ -330,6 +334,7 @@ Data is sent to individual hosts.
 - Qwen 2.5 VL 32B Instruct
 - Shisa V2 Llama 3.3 70B
 - chutesai/llama-3.1-405b-fp8
+- deepseek-ai/deepseek-prover-v2-671b
 - microsoft/mai-ds-r1-fp8
 - qwen/qwen3-14b
 - qwen/qwen3-235b-a22b
@@ -402,9 +407,6 @@ Very stringent payment verification for Google Cloud.
 <tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash (Experimental)</a></td></tr>
 <tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Thinking (Experimental)</a></td></tr>
 <tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Pro (Experimental)</a></td></tr>
-<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-4-maverick-17b-128e-instruct-maas" target="_blank">Llama 4 Maverick Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
-<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-4-maverick-17b-128e-instruct-maas" target="_blank">Llama 4 Scout Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
-<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-3-70b-instruct-maas" target="_blank">Llama 3.3 70B Instruct</a></td><td>30 requests/minute<br>Free during preview</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td><td>30 requests/minute<br>Free during preview</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
@@ -543,6 +545,5 @@ Very stringent payment verification for Google Cloud.
 - Mistral Small 3.1 24B Instruct 2503
 - Pixtral 12B (2409)
 - Qwen2.5 Coder 32B Instruct
-- sentence-t5-xxl
 
 

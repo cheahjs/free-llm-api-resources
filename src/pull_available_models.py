@@ -812,24 +812,6 @@ def main():
     # --- Google Cloud Vertex AI ---
     vertex_llama_models = [
         {
-            "id": "llama-4-maverick-17b-128e-instruct-maas",
-            "name": "Llama 4 Maverick Instruct",
-            "urlId": "llama-4-maverick-17b-128e-instruct-maas",
-            "limits": {"requests/minute": 60},
-        },
-        {
-            "id": "llama-4-scout-17b-16e-instruct-maas",
-            "name": "Llama 4 Scout Instruct",
-            "urlId": "llama-4-maverick-17b-128e-instruct-maas",
-            "limits": {"requests/minute": 60},
-        },
-        {
-            "id": "llama-3.3-70b-instruct-maas",
-            "name": "Llama 3.3 70B Instruct",
-            "urlId": "llama-3-3-70b-instruct-maas",
-            "limits": {"requests/minute": 30},
-        },
-        {
             "id": "llama-3.2-90b-vision-instruct-maas",
             "name": "Llama 3.2 90B Vision Instruct",
             "urlId": "llama-3-2-90b-vision-instruct-maas",
