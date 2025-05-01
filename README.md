@@ -107,6 +107,7 @@ Models share a common quota.
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
 - [opengvlab/internvl3-14b:free](https://openrouter.ai/opengvlab/internvl3-14b:free)
 - [opengvlab/internvl3-2b:free](https://openrouter.ai/opengvlab/internvl3-2b:free)
+- [qwen/qwen3-0.6b-04-28:free](https://openrouter.ai/qwen/qwen3-0.6b-04-28:free)
 - [qwen/qwen3-1.7b:free](https://openrouter.ai/qwen/qwen3-1.7b:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
@@ -310,7 +311,9 @@ Extremely restrictive input/output token limits.
 - Phi-3.5-mini instruct (128k)
 - Phi-3.5-vision instruct (128k)
 - Phi-4
+- Phi-4-Reasoning
 - Phi-4-mini-instruct
+- Phi-4-mini-reasoning
 - Phi-4-multimodal-instruct
 
 ### [Chutes](https://chutes.ai/)
