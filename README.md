@@ -105,8 +105,11 @@ Models share a common quota.
 - [deepseek/deepseek-prover-v2:free](https://openrouter.ai/deepseek/deepseek-prover-v2:free)
 - [meta-llama/llama-3.1-405b:free](https://openrouter.ai/meta-llama/llama-3.1-405b:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
+- [microsoft/phi-4-reasoning-plus:free](https://openrouter.ai/microsoft/phi-4-reasoning-plus:free)
+- [microsoft/phi-4-reasoning:free](https://openrouter.ai/microsoft/phi-4-reasoning:free)
 - [opengvlab/internvl3-14b:free](https://openrouter.ai/opengvlab/internvl3-14b:free)
 - [opengvlab/internvl3-2b:free](https://openrouter.ai/opengvlab/internvl3-2b:free)
+- [qwen/qwen3-0.6b-04-28:free](https://openrouter.ai/qwen/qwen3-0.6b-04-28:free)
 - [qwen/qwen3-1.7b:free](https://openrouter.ai/qwen/qwen3-1.7b:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
@@ -129,7 +132,7 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 <tr><td>Gemini 2.5 Flash (Preview)</td><td>250,000 tokens/minute<br>500 requests/day<br>10 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td></tr>
-<tr><td>Gemini 2.0 Flash (Experimental)</td><td>4,000,000 tokens/minute<br>1,500 requests/day<br>10 requests/minute</td></tr>
+<tr><td>Gemini 2.0 Flash (Experimental)</td><td>250,000 tokens/minute<br>500 requests/day<br>10 requests/minute</td></tr>
 <tr><td>Gemini 1.5 Flash</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 1.5 Flash-8B</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 1.5 Pro</td><td>32,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td></tr>
@@ -310,7 +313,9 @@ Extremely restrictive input/output token limits.
 - Phi-3.5-mini instruct (128k)
 - Phi-3.5-vision instruct (128k)
 - Phi-4
+- Phi-4-Reasoning
 - Phi-4-mini-instruct
+- Phi-4-mini-reasoning
 - Phi-4-multimodal-instruct
 
 ### [Chutes](https://chutes.ai/)
