@@ -946,7 +946,7 @@ def main():
         {
             "name": "Alibaba Cloud (International) Model Studio",
             "url": "https://bailian.console.alibabacloud.com/",
-            "credits": "Token/time-limited trials on a per-model basis",
+            "credits": "1 million tokens/model",
             "requirements": "",
             "models_desc": "[Various open and proprietary Qwen models](https://www.alibabacloud.com/en/product/modelstudio)",
         },
@@ -956,6 +956,34 @@ def main():
             "credits": "$5/month upon sign up, $30/month with payment method added",
             "requirements": "",
             "models_desc": "Any supported model - pay by compute time",
+        },
+        {
+            "name": "Inference.net",
+            "url": "https://inference.net",
+            "credits": "$1, $25 on responding to email survey",
+            "requirements": "",
+            "models_desc": "Various open models",
+        },
+        {
+            "name": "CentML",
+            "url": "https://centml.com",
+            "credits": "$1",
+            "requirements": "",
+            "models_desc": "Various open models",
+        },
+        {
+            "name": "Kluster",
+            "url": "https://kluster.ai",
+            "credits": "$5",
+            "requirements": "",
+            "models_desc": "Various open models",
+        },
+        {
+            "name": "nCompass",
+            "url": "https://ncompass.tech",
+            "credits": "$1",
+            "requirements": "",
+            "models_desc": "Various open models",
         },
     ]
 

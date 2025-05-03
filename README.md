@@ -39,6 +39,10 @@ This lists various services that provide free access or credits towards API-base
   - [NLP Cloud](#nlp-cloud)
   - [Alibaba Cloud (International) Model Studio](#alibaba-cloud-international-model-studio)
   - [Modal](#modal)
+  - [Inference.net](#inferencenet)
+  - [CentML](#centml)
+  - [Kluster](#kluster)
+  - [nCompass](#ncompass)
   - [Hyperbolic](#hyperbolic)
   - [SambaNova Cloud](#sambanova-cloud)
   - [Scaleway Generative APIs](#scaleway-generative-apis)
@@ -479,7 +483,7 @@ Very stringent payment verification for Google Cloud.
 
 ### [Alibaba Cloud (International) Model Studio](https://bailian.console.alibabacloud.com/)
 
-**Credits:** Token/time-limited trials on a per-model basis
+**Credits:** 1 million tokens/model
 
 **Models:** [Various open and proprietary Qwen models](https://www.alibabacloud.com/en/product/modelstudio)
 
@@ -488,6 +492,30 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $5/month upon sign up, $30/month with payment method added
 
 **Models:** Any supported model - pay by compute time
+
+### [Inference.net](https://inference.net)
+
+**Credits:** $1, $25 on responding to email survey
+
+**Models:** Various open models
+
+### [CentML](https://centml.com)
+
+**Credits:** $1
+
+**Models:** Various open models
+
+### [Kluster](https://kluster.ai)
+
+**Credits:** $5
+
+**Models:** Various open models
+
+### [nCompass](https://ncompass.tech)
+
+**Credits:** $1
+
+**Models:** Various open models
 
 ### [Hyperbolic](https://app.hyperbolic.xyz/)
 
