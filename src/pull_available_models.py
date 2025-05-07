@@ -101,7 +101,7 @@ def get_groq_limits_for_model(model_id, script_dir, logger):
     except Exception as e:
         logger.error(f"Failed to get limits for model {model_id}: {e}")
         logger.error(r.text)
-        return {"requests/day": "Unknown", "tokens/minute": "Unknown"}
+        return {}
 
 
 def fetch_groq_models(logger):
@@ -272,25 +272,70 @@ def fetch_hyperbolic_models(logger):
 
 def fetch_github_models(logger):
     logger.info("Fetching GitHub models...")
-    r = requests.get(
-        "https://github.com/marketplace/models",
-        headers={
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "x-requested-with": "XMLHttpRequest",
-        },
-    )
-    r.raise_for_status()
-    models = r.json()
-    logger.info(f"Fetched {len(models)} models from GitHub")
+    all_models_data = []
+    page = 1
+    total_pages = 1 # Initialize with 1 to start the loop
+
+    while page <= total_pages:
+        try:
+            url = f"https://github.com/marketplace?type=models&page={page}"
+            logger.info(f"Fetching from {url}")
+            r = requests.get(
+                url,
+                headers={
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    "x-requested-with": "XMLHttpRequest",
+                },
+            )
+            r.raise_for_status()
+            data = r.json()
+            
+            current_page_models = data.get("results", [])
+            if not current_page_models:
+                logger.info(f"No models found on page {page}. Stopping.")
+                break
+                
+            all_models_data.extend(current_page_models)
+            
+            total_pages = data.get("totalPages", 0)
+            logger.info(f"Fetched page {page}/{total_pages}. Found {len(current_page_models)} models on this page.")
+
+            if page >= total_pages:
+                break
+            page += 1
+            time.sleep(0.5) # Be respectful to the API
+
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Error fetching GitHub models on page {page}: {e}")
+            if r.status_code == 404 and page == 1: # If first page is 404, likely endpoint changed or no models
+                logger.error("Initial request failed (404), assuming no models or endpoint issue.")
+                return []
+            elif r.status_code == 404: # If a subsequent page is 404, means we've gone past the last page
+                logger.info(f"Reached end of pages (404 on page {page}).")
+                break
+            # For other errors, break or implement retry logic if desired
+            break 
+        except json.JSONDecodeError as e:
+            logger.error(f"Error decoding JSON from GitHub models API on page {page}: {e}")
+            logger.error(f"Response text: {r.text}")
+            break
+
+
+    logger.info(f"Fetched a total of {len(all_models_data)} models from GitHub over {page-1 if page > 1 else 1} page(s).")
     ret_models = []
-    for model in models:
-        ret_models.append(
-            {
-                "id": model["name"],
-                "name": model["friendly_name"],
-            }
-        )
+    for model_data in all_models_data:
+        # Ensure model_data is a dictionary and has the required keys
+        if isinstance(model_data, dict) and "name" in model_data and "friendly_name" in model_data:
+            ret_models.append(
+                {
+                    "id": model_data["name"], # Using 'name' as id, can be changed if another field is more suitable
+                    "name": model_data["friendly_name"],
+                }
+            )
+        else:
+            logger.warning(f"Skipping malformed model data: {model_data}")
+
     ret_models = sorted(ret_models, key=lambda x: x["name"])
     return ret_models
 
@@ -588,11 +633,6 @@ def main():
             "id": "gemini-1.5-flash-8b",
             "name": "Gemini 1.5 Flash-8B",
             "limits": gemini_models.get("gemini-1.5-flash-8b", {}),
-        },
-        {
-            "id": "gemini-1.5-pro",
-            "name": "Gemini 1.5 Pro",
-            "limits": gemini_models.get("gemini-1.5-pro", {}),
         },
         {
             "id": "learnlm-1.5-pro-experimental",

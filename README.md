@@ -116,7 +116,6 @@ Models share a common quota.
 - [qwen/qwen3-0.6b-04-28:free](https://openrouter.ai/qwen/qwen3-0.6b-04-28:free)
 - [qwen/qwen3-1.7b:free](https://openrouter.ai/qwen/qwen3-1.7b:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
-- [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
 - [qwen/qwen3-32b:free](https://openrouter.ai/qwen/qwen3-32b:free)
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
@@ -134,12 +133,11 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
 <tr><td>Gemini 2.5 Pro (Experimental)</td><td>1,000,000 tokens/day<br>250,000 tokens/minute<br>25 requests/day<br>5 requests/minute</td></tr>
 <tr><td>Gemini 2.5 Flash (Preview)</td><td>250,000 tokens/minute<br>500 requests/day<br>10 requests/minute</td></tr>
-<tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>1,000 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash (Experimental)</td><td>250,000 tokens/minute<br>500 requests/day<br>10 requests/minute</td></tr>
-<tr><td>Gemini 1.5 Flash</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
-<tr><td>Gemini 1.5 Flash-8B</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
-<tr><td>Gemini 1.5 Pro</td><td>32,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td></tr>
+<tr><td>Gemini 1.5 Flash</td><td>250,000 tokens/minute<br>500 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemini 1.5 Flash-8B</td><td>250,000 tokens/minute<br>500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>LearnLM 1.5 Pro (Experimental)</td><td>1,500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemma 3 27B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 12B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
@@ -208,7 +206,7 @@ Free tier restricted to 8K context.
 <tr><td>Llama 3 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
-<tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>Llama 4 Maverick 17B 128E Instruct</td><td></td></tr>
 <tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Mistral Saba 24B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
@@ -338,7 +336,6 @@ Data is sent to individual hosts.
 - Llama 3.1 Nemotron Ultra 253B v1
 - Llama 4 Maverick 17B 128E Instruct FP8
 - Llama 4 Scout 17B 16E Instruct
-- Mistral Small 3.1 24B Instruct 2503
 - QwQ 32B ArliAI RpR v1
 - Qwen 2.5 VL 32B Instruct
 - Shisa V2 Llama 3.3 70B
