@@ -105,7 +105,6 @@ Models share a common quota.
 - [Qwen2.5 VL 72B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-72b-instruct:free)
 - [Reka Flash 3](https://openrouter.ai/rekaai/reka-flash-3:free)
 - [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
-- [Zephyr 7B Beta](https://openrouter.ai/huggingfaceh4/zephyr-7b-beta:free)
 - [deepseek/deepseek-prover-v2:free](https://openrouter.ai/deepseek/deepseek-prover-v2:free)
 - [meta-llama/llama-3.1-405b:free](https://openrouter.ai/meta-llama/llama-3.1-405b:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
@@ -116,6 +115,7 @@ Models share a common quota.
 - [qwen/qwen3-0.6b-04-28:free](https://openrouter.ai/qwen/qwen3-0.6b-04-28:free)
 - [qwen/qwen3-1.7b:free](https://openrouter.ai/qwen/qwen3-1.7b:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
+- [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
 - [qwen/qwen3-32b:free](https://openrouter.ai/qwen/qwen3-32b:free)
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
@@ -206,7 +206,7 @@ Free tier restricted to 8K context.
 <tr><td>Llama 3 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
-<tr><td>Llama 4 Maverick 17B 128E Instruct</td><td></td></tr>
+<tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Mistral Saba 24B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
