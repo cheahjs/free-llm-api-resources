@@ -336,6 +336,7 @@ Data is sent to individual hosts.
 - Llama 3.1 Nemotron Ultra 253B v1
 - Llama 4 Maverick 17B 128E Instruct FP8
 - Llama 4 Scout 17B 16E Instruct
+- Mistral Small 3.1 24B Instruct 2503
 - QwQ 32B ArliAI RpR v1
 - Qwen 2.5 VL 32B Instruct
 - Shisa V2 Llama 3.3 70B
