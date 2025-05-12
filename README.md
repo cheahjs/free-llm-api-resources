@@ -110,6 +110,7 @@ Models share a common quota.
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
 - [microsoft/phi-4-reasoning-plus:free](https://openrouter.ai/microsoft/phi-4-reasoning-plus:free)
 - [microsoft/phi-4-reasoning:free](https://openrouter.ai/microsoft/phi-4-reasoning:free)
+- [nousresearch/deephermes-3-mistral-24b-preview:free](https://openrouter.ai/nousresearch/deephermes-3-mistral-24b-preview:free)
 - [opengvlab/internvl3-14b:free](https://openrouter.ai/opengvlab/internvl3-14b:free)
 - [opengvlab/internvl3-2b:free](https://openrouter.ai/opengvlab/internvl3-2b:free)
 - [qwen/qwen3-0.6b-04-28:free](https://openrouter.ai/qwen/qwen3-0.6b-04-28:free)
@@ -213,6 +214,7 @@ Free tier restricted to 8K context.
 <tr><td>Qwen QwQ 32B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
+<tr><td>meta-llama/llama-guard-4-12b</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 </tbody></table>
 
 ### [OVH AI Endpoints (Free Beta)](https://endpoints.ai.cloud.ovh.net/)
