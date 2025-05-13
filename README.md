@@ -90,7 +90,6 @@ Models share a common quota.
 - [Mistral Nemo](https://openrouter.ai/mistralai/mistral-nemo:free)
 - [Mistral Small 24B Instruct 2501](https://openrouter.ai/mistralai/mistral-small-24b-instruct-2501:free)
 - [Mistral Small 3.1 24B Instruct](https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free)
-- [Molmo 7B D](https://openrouter.ai/allenai/molmo-7b-d:free)
 - [Moonlight-16B-A3B-Instruct](https://openrouter.ai/moonshotai/moonlight-16b-a3b-instruct:free)
 - [OlympicCoder 32B](https://openrouter.ai/open-r1/olympiccoder-32b:free)
 - [QwQ 32B ArliAI RpR v1](https://openrouter.ai/arliai/qwq-32b-arliai-rpr-v1:free)
