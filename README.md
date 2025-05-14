@@ -131,7 +131,7 @@ Models share a common quota.
 Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>Gemini 2.5 Pro (Experimental)</td><td>1,000,000 tokens/day<br>250,000 tokens/minute<br>25 requests/day<br>5 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Pro (Experimental)</td><td>0 tokens/day<br>0 tokens/minute<br>0 requests/day<br>0 requests/minute</td></tr>
 <tr><td>Gemini 2.5 Flash (Preview)</td><td>250,000 tokens/minute<br>500 requests/day<br>10 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>1,000 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td></tr>
@@ -271,7 +271,6 @@ Extremely restrictive input/output token limits.
 - Cohere Command R 08-2024
 - Cohere Command R+
 - Cohere Command R+ 08-2024
-- Cohere Embed 4
 - Cohere Embed v3 English
 - Cohere Embed v3 Multilingual
 - DeepSeek-R1
@@ -289,7 +288,6 @@ Extremely restrictive input/output token limits.
 - Meta-Llama-3.1-70B-Instruct
 - Meta-Llama-3.1-8B-Instruct
 - Ministral 3B
-- Mistral Large (2407)
 - Mistral Large 24.11
 - Mistral Nemo
 - Mistral Small 3.1
