@@ -289,6 +289,7 @@ Extremely restrictive input/output token limits.
 - Meta-Llama-3.1-8B-Instruct
 - Ministral 3B
 - Mistral Large 24.11
+- Mistral Medium 3 (25.05)
 - Mistral Nemo
 - Mistral Small 3.1
 - OpenAI GPT-4.1
@@ -339,6 +340,7 @@ Data is sent to individual hosts.
 - QwQ 32B ArliAI RpR v1
 - Qwen 2.5 VL 32B Instruct
 - Shisa V2 Llama 3.3 70B
+- bytedance-seed/seed-coder-8b-reasoning-bf16
 - chutesai/llama-3.1-405b-fp8
 - deepseek-ai/deepseek-prover-v2-671b
 - microsoft/mai-ds-r1-fp8
@@ -347,6 +349,7 @@ Data is sent to individual hosts.
 - qwen/qwen3-30b-a3b
 - qwen/qwen3-32b
 - qwen/qwen3-8b
+- salesforce/xgen-small-9b-instruct-r
 - thudm/glm-4-32b-0414
 - thudm/glm-z1-32b-0414
 - tngtech/deepseek-r1t-chimera
@@ -373,7 +376,6 @@ Data is sent to individual hosts.
 - Llama 3 8B Instruct
 - Llama 3 8B Instruct
 - Llama 3 8B Instruct (AWQ)
-- Llama 3.1 8B Instruct
 - Llama 3.1 8B Instruct (AWQ)
 - Llama 3.1 8B Instruct (FP8)
 - Llama 3.2 11B Vision Instruct
