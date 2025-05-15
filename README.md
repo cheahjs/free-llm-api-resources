@@ -20,7 +20,6 @@ This lists various services that provide free access or credits towards API-base
   - [HuggingFace Inference Providers](#huggingface-inference-providers)
   - [Cerebras](#cerebras)
   - [Groq](#groq)
-  - [OVH AI Endpoints (Free Beta)](#ovh-ai-endpoints-free-beta)
   - [Together (Free)](#together-free)
   - [Cohere](#cohere)
   - [GitHub Models](#github-models)
@@ -53,7 +52,7 @@ This lists various services that provide free access or credits towards API-base
 
 **Limits:**
 
-[20 requests/minute<br>50 requests/day<br>1000 requests/day with $10 credit balance](https://openrouter.ai/docs/api-reference/limits)
+[20 requests/minute<br>50 requests/day<br>1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api-reference/limits)
 
 Models share a common quota.
 
@@ -131,7 +130,6 @@ Models share a common quota.
 Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>Gemini 2.5 Pro (Experimental)</td><td>0 tokens/day<br>0 tokens/minute<br>0 requests/day<br>0 requests/minute</td></tr>
 <tr><td>Gemini 2.5 Flash (Preview)</td><td>250,000 tokens/minute<br>500 requests/day<br>10 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>1,000 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td></tr>
@@ -216,22 +214,6 @@ Free tier restricted to 8K context.
 <tr><td>meta-llama/llama-guard-4-12b</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 </tbody></table>
 
-### [OVH AI Endpoints (Free Beta)](https://endpoints.ai.cloud.ovh.net/)
-
-<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>DeepSeek R1 Distill Llama 70B</td><td>12 requests/minute</td></tr>
-<tr><td>Llama 3.1 70B Instruct</td><td>12 requests/minute</td></tr>
-<tr><td>Llama 3.1 8B Instruct</td><td>12 requests/minute</td></tr>
-<tr><td>Llama 3.3 70B Instruct</td><td>12 requests/minute</td></tr>
-<tr><td>Llava Next Mistral 7B</td><td>12 requests/minute</td></tr>
-<tr><td>Mamba Codestral 7B v0.1</td><td>12 requests/minute</td></tr>
-<tr><td>Mistral 7B Instruct v0.3</td><td>12 requests/minute</td></tr>
-<tr><td>Mistral Nemo 2407</td><td>12 requests/minute</td></tr>
-<tr><td>Mixtral 8x7B Instruct v0.1</td><td>12 requests/minute</td></tr>
-<tr><td>Qwen 2.5 VL 72B Instruct</td><td>12 requests/minute</td></tr>
-<tr><td>Qwen2.5 Coder 32B Instruct</td><td>12 requests/minute</td></tr>
-</tbody></table>
-
 ### [Together (Free)](https://together.ai)
 
 **Limits:** Up to 60 requests/minute
@@ -289,6 +271,7 @@ Extremely restrictive input/output token limits.
 - Meta-Llama-3.1-8B-Instruct
 - Ministral 3B
 - Mistral Large 24.11
+- Mistral Medium 3 (25.05)
 - Mistral Nemo
 - Mistral Small 3.1
 - OpenAI GPT-4.1
@@ -339,6 +322,7 @@ Data is sent to individual hosts.
 - QwQ 32B ArliAI RpR v1
 - Qwen 2.5 VL 32B Instruct
 - Shisa V2 Llama 3.3 70B
+- bytedance-seed/seed-coder-8b-reasoning-bf16
 - chutesai/llama-3.1-405b-fp8
 - deepseek-ai/deepseek-prover-v2-671b
 - microsoft/mai-ds-r1-fp8
@@ -347,6 +331,7 @@ Data is sent to individual hosts.
 - qwen/qwen3-30b-a3b
 - qwen/qwen3-32b
 - qwen/qwen3-8b
+- salesforce/xgen-small-9b-instruct-r
 - thudm/glm-4-32b-0414
 - thudm/glm-z1-32b-0414
 - tngtech/deepseek-r1t-chimera
@@ -373,7 +358,6 @@ Data is sent to individual hosts.
 - Llama 3 8B Instruct
 - Llama 3 8B Instruct
 - Llama 3 8B Instruct (AWQ)
-- Llama 3.1 8B Instruct
 - Llama 3.1 8B Instruct (AWQ)
 - Llama 3.1 8B Instruct (FP8)
 - Llama 3.2 11B Vision Instruct

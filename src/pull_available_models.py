@@ -522,11 +522,9 @@ def main():
     groq_logger = create_logger("Groq")
     openrouter_logger = create_logger("OpenRouter")
     google_ai_studio_logger = create_logger("Google AI Studio")
-    ovh_logger = create_logger("OVH")
     cloudflare_logger = create_logger("Cloudflare")
     github_logger = create_logger("GitHub")
     hyperbolic_logger = create_logger("Hyperbolic")
-    # lambda_logger = create_logger("Lambda Labs")
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
     chutes_logger = create_logger("Chutes")
@@ -539,7 +537,6 @@ def main():
                 executor.submit(fetch_gemini_limits, google_ai_studio_logger),
                 executor.submit(fetch_openrouter_models, openrouter_logger),
                 executor.submit(fetch_hyperbolic_models, hyperbolic_logger),
-                executor.submit(fetch_ovh_models, ovh_logger),
                 executor.submit(fetch_cloudflare_models, cloudflare_logger),
                 executor.submit(fetch_github_models, github_logger),
                 executor.submit(fetch_samba_models, samba_logger),
@@ -550,7 +547,6 @@ def main():
                 gemini_models,
                 openrouter_models,
                 hyperbolic_models,
-                ovh_models,
                 cloudflare_models,
                 github_models,
                 samba_models,
@@ -564,10 +560,8 @@ def main():
         gemini_models = fetch_gemini_limits(google_ai_studio_logger)
         openrouter_models = fetch_openrouter_models(openrouter_logger)
         hyperbolic_models = fetch_hyperbolic_models(hyperbolic_logger)
-        ovh_models = fetch_ovh_models(ovh_logger)
         cloudflare_models = fetch_cloudflare_models(cloudflare_logger)
         github_models = fetch_github_models(github_logger)
-        # lambda_models = fetch_lambda_models(lambda_logger)
         samba_models = fetch_samba_models(samba_logger)
         scaleway_models = fetch_scaleway_models(scaleway_logger)
         chutes_models = fetch_chutes_models(chutes_logger)
@@ -583,7 +577,7 @@ def main():
             openrouter_models[0]
         ) 
         model_list_markdown += "**Limits:**\n\n"
-        model_list_markdown += f"[{provider_limits}<br>1000 requests/day with $10 credit balance](https://openrouter.ai/docs/api-reference/limits)\n\n"
+        model_list_markdown += f"[{provider_limits}<br>1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api-reference/limits)\n\n"
         model_list_markdown += "Models share a common quota.\n\n"
         for model in openrouter_models:
             model_list_markdown += (
@@ -599,11 +593,6 @@ def main():
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
 
     gemini_text_models = [
-        {
-            "id": "gemini-2.5-pro-exp-03-25",
-            "name": "Gemini 2.5 Pro (Experimental)",
-            "limits": gemini_models.get("gemini-2.0-pro-exp", {}),
-        },
         {
             "id": "gemini-2.5-flash-preview-04-17",
             "name": "Gemini 2.5 Flash (Preview)",
@@ -751,20 +740,6 @@ def main():
     if groq_models:
         model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
         for model in groq_models:
-            limits_str = get_human_limits(model)
-            model_list_markdown += (
-                f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
-            )
-        model_list_markdown += "</tbody></table>\n"
-    model_list_markdown += "\n"
-
-    # --- OVH AI Endpoints ---
-    model_list_markdown += (
-        "### [OVH AI Endpoints (Free Beta)](https://endpoints.ai.cloud.ovh.net/)\n\n"
-    )
-    if ovh_models:
-        model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
-        for model in ovh_models:
             limits_str = get_human_limits(model)
             model_list_markdown += (
                 f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
