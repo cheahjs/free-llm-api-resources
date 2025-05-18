@@ -98,13 +98,13 @@ Models share a common quota.
 - [Qwen 2.5 VL 3B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-3b-instruct:free)
 - [Qwen 2.5 VL 7B Instruct](https://openrouter.ai/qwen/qwen-2.5-vl-7b-instruct:free)
 - [Qwen QwQ 32B](https://openrouter.ai/qwen/qwq-32b:free)
-- [Qwen QwQ 32B Preview](https://openrouter.ai/qwen/qwq-32b-preview:free)
 - [Qwen2.5 Coder 32B Instruct](https://openrouter.ai/qwen/qwen-2.5-coder-32b-instruct:free)
 - [Qwen2.5 VL 72B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-72b-instruct:free)
 - [Reka Flash 3](https://openrouter.ai/rekaai/reka-flash-3:free)
 - [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [deepseek/deepseek-prover-v2:free](https://openrouter.ai/deepseek/deepseek-prover-v2:free)
 - [meta-llama/llama-3.1-405b:free](https://openrouter.ai/meta-llama/llama-3.1-405b:free)
+- [meta-llama/llama-3.3-8b-instruct:free](https://openrouter.ai/meta-llama/llama-3.3-8b-instruct:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
 - [microsoft/phi-4-reasoning-plus:free](https://openrouter.ai/microsoft/phi-4-reasoning-plus:free)
 - [microsoft/phi-4-reasoning:free](https://openrouter.ai/microsoft/phi-4-reasoning:free)
@@ -136,7 +136,7 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 <tr><td>Gemini 2.0 Flash (Experimental)</td><td>250,000 tokens/minute<br>500 requests/day<br>10 requests/minute</td></tr>
 <tr><td>Gemini 1.5 Flash</td><td>250,000 tokens/minute<br>500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 1.5 Flash-8B</td><td>250,000 tokens/minute<br>500 requests/day<br>15 requests/minute</td></tr>
-<tr><td>LearnLM 1.5 Pro (Experimental)</td><td>1,500 requests/day<br>15 requests/minute</td></tr>
+<tr><td>LearnLM 1.5 Pro (Experimental)</td><td></td></tr>
 <tr><td>Gemma 3 27B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 12B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 4B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
