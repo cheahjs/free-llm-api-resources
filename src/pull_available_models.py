@@ -624,9 +624,9 @@ def main():
             "limits": gemini_models.get("gemini-1.5-flash-8b", {}),
         },
         {
-            "id": "learnlm-1.5-pro-experimental",
-            "name": "LearnLM 1.5 Pro (Experimental)",
-            "limits": gemini_models.get("learnlm-1.5-pro-experimental", {}),
+            "id": "learnlm-2.0-flash-experimental",
+            "name": "LearnLM 2.0 Flash (Experimental)",
+            "limits": gemini_models.get("learnlm-2.0-flash-experimental", {}),
         },
         {
             "id": "gemma-3-27b-it",
@@ -725,6 +725,7 @@ def main():
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
     cerebras_limit_text = "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
     cerebras_models = [
+        {"name": "Qwen 3 32B", "limits_text": cerebras_limit_text},
         {"name": "Llama 4 Scout", "limits_text": cerebras_limit_text},
         {"name": "Llama 3.1 8B", "limits_text": cerebras_limit_text},
         {"name": "Llama 3.3 70B", "limits_text": cerebras_limit_text},
