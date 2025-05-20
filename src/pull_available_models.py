@@ -139,6 +139,60 @@ def fetch_groq_models(logger):
     return ret_models
 
 
+def fetch_kluster_models(logger):
+    logger.info("Fetching Kluster models...")
+    try:
+        r = requests.get(
+            "https://api.kluster.ai/v1/models",
+            headers={
+                "Content-Type": "application/json",
+            },
+            timeout=10,
+        )
+        r.raise_for_status()
+
+        # Parse the JSON response
+        response = r.json()
+
+        # Based on the paste-2.txt example, the structure should be:
+        # {"object":"list","data":[{model1}, {model2}, ...]}
+        if isinstance(response, dict) and "data" in response:
+            models = response["data"]
+        else:
+            models = response
+
+        logger.info(f"Fetched {len(models)} models from Kluster")
+
+        ret_models = []
+        for model in models:
+            # Extract fields from the model object
+            model_id = model.get("id")
+            model_name = model.get("name", model_id)
+
+            # Skip models without an ID
+            if not model_id:
+                continue
+
+            ret_models.append(
+                {
+                    "id": model_id,
+                    "name": model_name,  # Use actual name rather than lookup, as these are official names
+                }
+            )
+
+        logger.debug(json.dumps(ret_models, indent=4))
+        ret_models = sorted(ret_models, key=lambda x: x["name"])
+        return ret_models
+
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Error fetching Kluster models: {e}")
+        return []
+    except json.JSONDecodeError as e:
+        logger.error(f"Error decoding JSON from Kluster API: {e}")
+        logger.error(f"Response text: {r.text}")
+        return []
+
+
 def fetch_openrouter_models(logger):
     logger.info("Fetching OpenRouter models...")
     r = requests.get(
@@ -544,6 +598,7 @@ def main():
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
     chutes_logger = create_logger("Chutes")
+    kluster_logger = create_logger("Kluster")
 
     fetch_concurrently = os.getenv("FETCH_CONCURRENTLY", "false").lower() == "true"
 
@@ -558,6 +613,7 @@ def main():
                 executor.submit(fetch_samba_models, samba_logger),
                 executor.submit(fetch_scaleway_models, scaleway_logger),
                 executor.submit(fetch_chutes_models, chutes_logger),
+                executor.submit(fetch_kluster_models, kluster_logger),
             ]
             (
                 gemini_models,
@@ -568,6 +624,7 @@ def main():
                 samba_models,
                 scaleway_models,
                 chutes_models,
+                kluster_models,
             ) = [f.result() for f in futures]
 
             # Fetch groq models after others complete
@@ -581,6 +638,7 @@ def main():
         samba_models = fetch_samba_models(samba_logger)
         scaleway_models = fetch_scaleway_models(scaleway_logger)
         chutes_models = fetch_chutes_models(chutes_logger)
+        kluster_models = fetch_kluster_models(kluster_logger)
         groq_models = fetch_groq_models(groq_logger)
 
     # Initialize markdown string for free providers
@@ -1004,13 +1062,6 @@ def main():
             "models_desc": "Various open models",
         },
         {
-            "name": "Kluster",
-            "url": "https://kluster.ai",
-            "credits": "$5",
-            "requirements": "",
-            "models_desc": "Various open models",
-        },
-        {
             "name": "nCompass",
             "url": "https://ncompass.tech",
             "credits": "$1",
@@ -1025,6 +1076,15 @@ def main():
         if provider["requirements"]:
             trial_list_markdown += f"**Requirements:** {provider['requirements']}\n\n"
         trial_list_markdown += f"**Models:** {provider['models_desc']}\n\n"
+
+    # --- Kluster ---
+    if kluster_models:
+        trial_list_markdown += "### [Kluster](https://kluster.ai)\n\n"
+        trial_list_markdown += "**Credits:** $5\n\n"
+        trial_list_markdown += "**Models:**\n"
+        for model in kluster_models:
+            trial_list_markdown += f"- {model['name']}\n"
+        trial_list_markdown += "\n"
 
     # --- Hyperbolic (Trial - Table) ---
     if hyperbolic_models:
