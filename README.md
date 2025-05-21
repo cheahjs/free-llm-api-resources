@@ -56,7 +56,6 @@ This lists various services that provide free access or credits towards API-base
 
 Models share a common quota.
 
-- [Bytedance UI Tars 72B](https://openrouter.ai/bytedance-research/ui-tars-72b:free)
 - [DeepCoder 14B Preview](https://openrouter.ai/agentica-org/deepcoder-14b-preview:free)
 - [DeepHermes 3 Llama 3 8B Preview](https://openrouter.ai/nousresearch/deephermes-3-llama-3-8b-preview:free)
 - [DeepSeek R1](https://openrouter.ai/deepseek/deepseek-r1:free)
@@ -103,6 +102,7 @@ Models share a common quota.
 - [Reka Flash 3](https://openrouter.ai/rekaai/reka-flash-3:free)
 - [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [deepseek/deepseek-prover-v2:free](https://openrouter.ai/deepseek/deepseek-prover-v2:free)
+- [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
 - [meta-llama/llama-3.1-405b:free](https://openrouter.ai/meta-llama/llama-3.1-405b:free)
 - [meta-llama/llama-3.3-8b-instruct:free](https://openrouter.ai/meta-llama/llama-3.3-8b-instruct:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
@@ -258,6 +258,7 @@ Extremely restrictive input/output token limits.
 - Cohere Embed v3 Multilingual
 - DeepSeek-R1
 - DeepSeek-V3-0324
+- Grok 3
 - JAIS 30b Chat
 - Llama 4 Maverick 17B 128E Instruct FP8
 - Llama 4 Scout 17B 16E Instruct
