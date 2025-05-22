@@ -108,6 +108,7 @@ Models share a common quota.
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
 - [microsoft/phi-4-reasoning-plus:free](https://openrouter.ai/microsoft/phi-4-reasoning-plus:free)
 - [microsoft/phi-4-reasoning:free](https://openrouter.ai/microsoft/phi-4-reasoning:free)
+- [mistralai/devstral-small:free](https://openrouter.ai/mistralai/devstral-small:free)
 - [nousresearch/deephermes-3-mistral-24b-preview:free](https://openrouter.ai/nousresearch/deephermes-3-mistral-24b-preview:free)
 - [opengvlab/internvl3-14b:free](https://openrouter.ai/opengvlab/internvl3-14b:free)
 - [opengvlab/internvl3-2b:free](https://openrouter.ai/opengvlab/internvl3-2b:free)
@@ -259,6 +260,7 @@ Extremely restrictive input/output token limits.
 - DeepSeek-R1
 - DeepSeek-V3-0324
 - Grok 3
+- Grok 3 Mini
 - JAIS 30b Chat
 - Llama 4 Maverick 17B 128E Instruct FP8
 - Llama 4 Scout 17B 16E Instruct
@@ -325,6 +327,7 @@ Data is sent to individual hosts.
 - Qwen 2.5 VL 32B Instruct
 - Shisa V2 Llama 3.3 70B
 - bytedance-seed/seed-coder-8b-reasoning-bf16
+- chutesai/devstral-small-2505
 - chutesai/llama-3.1-405b-fp8
 - deepseek-ai/deepseek-prover-v2-671b
 - microsoft/mai-ds-r1-fp8
