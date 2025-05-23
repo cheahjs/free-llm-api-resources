@@ -112,8 +112,6 @@ Models share a common quota.
 - [nousresearch/deephermes-3-mistral-24b-preview:free](https://openrouter.ai/nousresearch/deephermes-3-mistral-24b-preview:free)
 - [opengvlab/internvl3-14b:free](https://openrouter.ai/opengvlab/internvl3-14b:free)
 - [opengvlab/internvl3-2b:free](https://openrouter.ai/opengvlab/internvl3-2b:free)
-- [qwen/qwen3-0.6b-04-28:free](https://openrouter.ai/qwen/qwen3-0.6b-04-28:free)
-- [qwen/qwen3-1.7b:free](https://openrouter.ai/qwen/qwen3-1.7b:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
@@ -327,7 +325,6 @@ Data is sent to individual hosts.
 - Qwen 2.5 VL 32B Instruct
 - Shisa V2 Llama 3.3 70B
 - bytedance-seed/seed-coder-8b-reasoning-bf16
-- chutesai/devstral-small-2505
 - chutesai/llama-3.1-405b-fp8
 - deepseek-ai/deepseek-prover-v2-671b
 - microsoft/mai-ds-r1-fp8
@@ -338,7 +335,6 @@ Data is sent to individual hosts.
 - qwen/qwen3-8b
 - salesforce/xgen-small-9b-instruct-r
 - thudm/glm-4-32b-0414
-- thudm/glm-z1-32b-0414
 - tngtech/deepseek-r1t-chimera
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
