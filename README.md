@@ -40,8 +40,8 @@ This lists various services that provide free access or credits towards API-base
   - [Modal](#modal)
   - [Inference.net](#inferencenet)
   - [CentML](#centml)
-  - [Kluster](#kluster)
   - [nCompass](#ncompass)
+  - [Kluster](#kluster)
   - [Hyperbolic](#hyperbolic)
   - [SambaNova Cloud](#sambanova-cloud)
   - [Scaleway Generative APIs](#scaleway-generative-apis)
@@ -484,17 +484,28 @@ Very stringent payment verification for Google Cloud.
 
 **Models:** Various open models
 
-### [Kluster](https://kluster.ai)
-
-**Credits:** $5
-
-**Models:** Various open models
-
 ### [nCompass](https://ncompass.tech)
 
 **Credits:** $1
 
 **Models:** Various open models
+
+### [Kluster](https://kluster.ai)
+
+**Credits:** $5
+
+**Models:**
+- BGE-M3
+- DeepSeek-R1
+- DeepSeek-V3-0324
+- Gemma 3 27B
+- Meta Llama 3.1 8B
+- Meta Llama 3.3 70B
+- Meta Llama 4 Maverick
+- Meta Llama 4 Scout
+- Mistral NeMo
+- Qwen2.5-VL 7B
+- Qwen3-235B-A22B
 
 ### [Hyperbolic](https://app.hyperbolic.xyz/)
 
