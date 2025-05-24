@@ -3,7 +3,6 @@
 from collections import defaultdict
 import logging
 import json
-from bs4 import BeautifulSoup
 import requests
 import os
 from dotenv import load_dotenv
@@ -274,7 +273,7 @@ def fetch_github_models(logger):
     logger.info("Fetching GitHub models...")
     all_models_data = []
     page = 1
-    total_pages = 1 # Initialize with 1 to start the loop
+    total_pages = 1  # Initialize with 1 to start the loop
 
     while page <= total_pages:
         try:
@@ -290,46 +289,63 @@ def fetch_github_models(logger):
             )
             r.raise_for_status()
             data = r.json()
-            
+
             current_page_models = data.get("results", [])
             if not current_page_models:
                 logger.info(f"No models found on page {page}. Stopping.")
                 break
-                
+
             all_models_data.extend(current_page_models)
-            
+
             total_pages = data.get("totalPages", 0)
-            logger.info(f"Fetched page {page}/{total_pages}. Found {len(current_page_models)} models on this page.")
+            logger.info(
+                f"Fetched page {page}/{total_pages}. Found {len(current_page_models)} models on this page."
+            )
 
             if page >= total_pages:
                 break
             page += 1
-            time.sleep(0.5) # Be respectful to the API
+            time.sleep(0.5)  # Be respectful to the API
 
         except requests.exceptions.RequestException as e:
             logger.error(f"Error fetching GitHub models on page {page}: {e}")
-            if r.status_code == 404 and page == 1: # If first page is 404, likely endpoint changed or no models
-                logger.error("Initial request failed (404), assuming no models or endpoint issue.")
+            if (
+                r.status_code == 404 and page == 1
+            ):  # If first page is 404, likely endpoint changed or no models
+                logger.error(
+                    "Initial request failed (404), assuming no models or endpoint issue."
+                )
                 return []
-            elif r.status_code == 404: # If a subsequent page is 404, means we've gone past the last page
+            elif (
+                r.status_code == 404
+            ):  # If a subsequent page is 404, means we've gone past the last page
                 logger.info(f"Reached end of pages (404 on page {page}).")
                 break
             # For other errors, break or implement retry logic if desired
-            break 
+            break
         except json.JSONDecodeError as e:
-            logger.error(f"Error decoding JSON from GitHub models API on page {page}: {e}")
+            logger.error(
+                f"Error decoding JSON from GitHub models API on page {page}: {e}"
+            )
             logger.error(f"Response text: {r.text}")
             break
 
-
-    logger.info(f"Fetched a total of {len(all_models_data)} models from GitHub over {page-1 if page > 1 else 1} page(s).")
+    logger.info(
+        f"Fetched a total of {len(all_models_data)} models from GitHub over {page-1 if page > 1 else 1} page(s)."
+    )
     ret_models = []
     for model_data in all_models_data:
         # Ensure model_data is a dictionary and has the required keys
-        if isinstance(model_data, dict) and "name" in model_data and "friendly_name" in model_data:
+        if (
+            isinstance(model_data, dict)
+            and "name" in model_data
+            and "friendly_name" in model_data
+        ):
             ret_models.append(
                 {
-                    "id": model_data["name"], # Using 'name' as id, can be changed if another field is more suitable
+                    "id": model_data[
+                        "name"
+                    ],  # Using 'name' as id, can be changed if another field is more suitable
                     "name": model_data["friendly_name"],
                 }
             )
@@ -573,9 +589,7 @@ def main():
     # --- OpenRouter ---
     model_list_markdown += "### [OpenRouter](https://openrouter.ai)\n\n"
     if openrouter_models:
-        provider_limits = get_human_limits(
-            openrouter_models[0]
-        ) 
+        provider_limits = get_human_limits(openrouter_models[0])
         model_list_markdown += "**Limits:**\n\n"
         model_list_markdown += f"[{provider_limits}<br>1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api-reference/limits)\n\n"
         model_list_markdown += "Models share a common quota.\n\n"
@@ -695,7 +709,9 @@ def main():
     model_list_markdown += (
         "### [Mistral (La Plateforme)](https://console.mistral.ai/)\n\n"
     )
-    model_list_markdown += "* Free tier (Experiment plan) requires opting into data training\n"
+    model_list_markdown += (
+        "* Free tier (Experiment plan) requires opting into data training\n"
+    )
     model_list_markdown += "* Requires phone number verification.\n\n"
     model_list_markdown += "**Limits (per-model):** 1 request/second, 500,000 tokens/minute, 1,000,000,000 tokens/month\n\n"
     model_list_markdown += "- [Open and Proprietary Mistral models](https://docs.mistral.ai/getting-started/models/models_overview/)\n"
