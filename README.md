@@ -116,12 +116,9 @@ Models share a common quota.
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
 - [qwen/qwen3-32b:free](https://openrouter.ai/qwen/qwen3-32b:free)
-- [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
 - [qwen/qwen3-8b:free](https://openrouter.ai/qwen/qwen3-8b:free)
 - [thudm/glm-4-32b:free](https://openrouter.ai/thudm/glm-4-32b:free)
-- [thudm/glm-4-9b:free](https://openrouter.ai/thudm/glm-4-9b:free)
 - [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
-- [thudm/glm-z1-9b:free](https://openrouter.ai/thudm/glm-z1-9b:free)
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
@@ -528,6 +525,7 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $5 for 3 months
 
 **Models:**
+- 
 - E5-Mistral-7B-Instruct
 - Llama 3.1 405B
 - Llama 3.1 8B
