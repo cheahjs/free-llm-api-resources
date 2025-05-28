@@ -333,6 +333,7 @@ Data is sent to individual hosts.
 - salesforce/xgen-small-9b-instruct-r
 - thudm/glm-4-32b-0414
 - tngtech/deepseek-r1t-chimera
+- tplr/templar-i
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
@@ -536,7 +537,6 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $5 for 3 months
 
 **Models:**
-- 
 - E5-Mistral-7B-Instruct
 - Llama 3.1 405B
 - Llama 3.1 8B
