@@ -102,6 +102,7 @@ Models share a common quota.
 - [Reka Flash 3](https://openrouter.ai/rekaai/reka-flash-3:free)
 - [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [deepseek/deepseek-prover-v2:free](https://openrouter.ai/deepseek/deepseek-prover-v2:free)
+- [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
 - [meta-llama/llama-3.1-405b:free](https://openrouter.ai/meta-llama/llama-3.1-405b:free)
 - [meta-llama/llama-3.3-8b-instruct:free](https://openrouter.ai/meta-llama/llama-3.3-8b-instruct:free)
@@ -117,6 +118,7 @@ Models share a common quota.
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
 - [qwen/qwen3-32b:free](https://openrouter.ai/qwen/qwen3-32b:free)
 - [qwen/qwen3-8b:free](https://openrouter.ai/qwen/qwen3-8b:free)
+- [sarvamai/sarvam-m:free](https://openrouter.ai/sarvamai/sarvam-m:free)
 - [thudm/glm-4-32b:free](https://openrouter.ai/thudm/glm-4-32b:free)
 - [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
@@ -324,6 +326,7 @@ Data is sent to individual hosts.
 - bytedance-seed/seed-coder-8b-reasoning-bf16
 - chutesai/llama-3.1-405b-fp8
 - deepseek-ai/deepseek-prover-v2-671b
+- deepseek-ai/deepseek-r1-0528
 - microsoft/mai-ds-r1-fp8
 - qwen/qwen3-14b
 - qwen/qwen3-235b-a22b
@@ -498,6 +501,7 @@ Very stringent payment verification for Google Cloud.
 **Models:**
 - BGE-M3
 - DeepSeek-R1
+- DeepSeek-R1-0528
 - DeepSeek-V3-0324
 - Gemma 3 27B
 - Meta Llama 3.1 8B
