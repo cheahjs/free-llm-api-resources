@@ -102,6 +102,7 @@ Models share a common quota.
 - [Reka Flash 3](https://openrouter.ai/rekaai/reka-flash-3:free)
 - [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [deepseek/deepseek-prover-v2:free](https://openrouter.ai/deepseek/deepseek-prover-v2:free)
+- [deepseek/deepseek-r1-0528-qwen3-8b:free](https://openrouter.ai/deepseek/deepseek-r1-0528-qwen3-8b:free)
 - [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
 - [meta-llama/llama-3.1-405b:free](https://openrouter.ai/meta-llama/llama-3.1-405b:free)
@@ -327,6 +328,7 @@ Data is sent to individual hosts.
 - chutesai/llama-3.1-405b-fp8
 - deepseek-ai/deepseek-prover-v2-671b
 - deepseek-ai/deepseek-r1-0528
+- deepseek-ai/deepseek-r1-0528-qwen3-8b
 - microsoft/mai-ds-r1-fp8
 - qwen/qwen3-14b
 - qwen/qwen3-235b-a22b
@@ -541,6 +543,7 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $5 for 3 months
 
 **Models:**
+- 
 - E5-Mistral-7B-Instruct
 - Llama 3.1 405B
 - Llama 3.1 8B
