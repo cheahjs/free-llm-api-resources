@@ -212,6 +212,8 @@ Free tier restricted to 8K context.
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>meta-llama/llama-guard-4-12b</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
+<tr><td>meta-llama/llama-prompt-guard-2-22m</td><td></td></tr>
+<tr><td>meta-llama/llama-prompt-guard-2-86m</td><td></td></tr>
 </tbody></table>
 
 ### [Together (Free)](https://together.ai)
