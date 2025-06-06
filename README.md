@@ -199,10 +199,10 @@ Free tier restricted to 8K context.
 <tr><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Groq compound-beta</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
-<tr><td>Groq compound-beta-mini</td><td></td></tr>
+<tr><td>Groq compound-beta-mini</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 3.1 8B</td><td></td></tr>
+<tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
@@ -514,6 +514,7 @@ Very stringent payment verification for Google Cloud.
 - Meta Llama 4 Maverick
 - Meta Llama 4 Scout
 - Mistral NeMo
+- Mistral Small
 - Qwen2.5-VL 7B
 - Qwen3-235B-A22B
 - kluster reliability check
