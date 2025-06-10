@@ -45,6 +45,7 @@ This lists various services that provide free access or credits towards API-base
   - [Hyperbolic](#hyperbolic)
   - [SambaNova Cloud](#sambanova-cloud)
   - [Scaleway Generative APIs](#scaleway-generative-apis)
+  - [Gravix Layer](#gravixlayer)
 
 ## Free Providers
 
@@ -580,5 +581,19 @@ Very stringent payment verification for Google Cloud.
 - Mistral Small 3.1 24B Instruct 2503
 - Pixtral 12B (2409)
 - Qwen2.5 Coder 32B Instruct
+
+### [Gravix Layer](https://gravixlayer.com/)
+
+**Credits:** $10 and Free Pro Trial
+
+**Models:**
+- Llama 3.1 8B
+- Llama 3.2 1B
+- Qwen/Qwen3-8B
+- Qwen/Qwen3-0.6B
+- IBM-Granite/granite-3.3-2b
+- BAAI/bge-m3
+
+
 
 
