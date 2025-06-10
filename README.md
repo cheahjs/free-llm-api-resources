@@ -45,7 +45,7 @@ This lists various services that provide free access or credits towards API-base
   - [Hyperbolic](#hyperbolic)
   - [SambaNova Cloud](#sambanova-cloud)
   - [Scaleway Generative APIs](#scaleway-generative-apis)
-  - [Gravix Layer](#gravixlayer)
+  - [Gravix Layer](#gravix-layer)
 
 ## Free Providers
 
