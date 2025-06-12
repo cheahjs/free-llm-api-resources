@@ -214,6 +214,7 @@ Free tier restricted to 8K context.
 <tr><td>meta-llama/llama-guard-4-12b</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>meta-llama/llama-prompt-guard-2-22m</td><td></td></tr>
 <tr><td>meta-llama/llama-prompt-guard-2-86m</td><td></td></tr>
+<tr><td>qwen/qwen3-32b</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 </tbody></table>
 
 ### [Together (Free)](https://together.ai)
@@ -508,6 +509,7 @@ Very stringent payment verification for Google Cloud.
 - DeepSeek-R1-0528
 - DeepSeek-V3-0324
 - Gemma 3 27B
+- Magistral Small
 - Meta Llama 3.1 8B
 - Meta Llama 3.3 70B
 - Meta Llama 4 Maverick
@@ -547,6 +549,7 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $5 for 3 months
 
 **Models:**
+- 
 - E5-Mistral-7B-Instruct
 - Llama 3.1 405B
 - Llama 3.1 8B
@@ -559,7 +562,6 @@ Very stringent payment verification for Google Cloud.
 - Qwen/QwQ-32B
 - Qwen/Qwen2-Audio-7B-Instruct
 - Qwen/Qwen3-32B
-- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
@@ -571,7 +573,6 @@ Very stringent payment verification for Google Cloud.
 **Models:**
 - BGE-Multilingual-Gemma2
 - DeepSeek R1 Distill Llama 70B
-- DeepSeek R1 Distill Llama 8B
 - Gemma 3 27B Instruct
 - Llama 3.1 70B Instruct
 - Llama 3.1 8B Instruct
