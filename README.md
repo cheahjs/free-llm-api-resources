@@ -505,7 +505,6 @@ Very stringent payment verification for Google Cloud.
 
 **Models:**
 - BGE-M3
-- DeepSeek-R1
 - DeepSeek-R1-0528
 - DeepSeek-V3-0324
 - Gemma 3 27B
