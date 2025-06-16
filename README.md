@@ -88,13 +88,11 @@ Models share a common quota.
 - [Mistral Nemo](https://openrouter.ai/mistralai/mistral-nemo:free)
 - [Mistral Small 24B Instruct 2501](https://openrouter.ai/mistralai/mistral-small-24b-instruct-2501:free)
 - [Mistral Small 3.1 24B Instruct](https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free)
-- [Moonlight-16B-A3B-Instruct](https://openrouter.ai/moonshotai/moonlight-16b-a3b-instruct:free)
 - [OlympicCoder 32B](https://openrouter.ai/open-r1/olympiccoder-32b:free)
 - [QwQ 32B ArliAI RpR v1](https://openrouter.ai/arliai/qwq-32b-arliai-rpr-v1:free)
 - [Qwen 2.5 72B Instruct](https://openrouter.ai/qwen/qwen-2.5-72b-instruct:free)
 - [Qwen 2.5 7B Instruct](https://openrouter.ai/qwen/qwen-2.5-7b-instruct:free)
 - [Qwen 2.5 VL 32B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct:free)
-- [Qwen 2.5 VL 3B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-3b-instruct:free)
 - [Qwen 2.5 VL 7B Instruct](https://openrouter.ai/qwen/qwen-2.5-vl-7b-instruct:free)
 - [Qwen QwQ 32B](https://openrouter.ai/qwen/qwq-32b:free)
 - [Qwen2.5 Coder 32B Instruct](https://openrouter.ai/qwen/qwen-2.5-coder-32b-instruct:free)
@@ -194,7 +192,7 @@ Free tier restricted to 8K context.
 ### [Groq](https://console.groq.com)
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>Allam 2 7B</td><td>7,000 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>Allam 2 7B</td><td></td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Distil Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
@@ -203,7 +201,7 @@ Free tier restricted to 8K context.
 <tr><td>Llama 3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
+<tr><td>Llama 3.3 70B</td><td></td></tr>
 <tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
 <tr><td>Llama Guard 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
@@ -333,6 +331,7 @@ Data is sent to individual hosts.
 - deepseek-ai/deepseek-r1-0528
 - deepseek-ai/deepseek-r1-0528-qwen3-8b
 - microsoft/mai-ds-r1-fp8
+- moonshotai/kimi-dev-72b
 - qwen/qwen3-14b
 - qwen/qwen3-235b-a22b
 - qwen/qwen3-30b-a3b
@@ -400,13 +399,11 @@ Data is sent to individual hosts.
 Very stringent payment verification for Google Cloud.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.5 Pro (Experimental)</a></td><td rowspan="4">10 requests/minute<br>Shared Quota</td></tr>
-<tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash (Experimental)</a></td></tr>
-<tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Flash Thinking (Experimental)</a></td></tr>
-<tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.0 Pro (Experimental)</a></td></tr>
+<tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.5 Pro (Experimental)</a></td><td rowspan="1">10 requests/minute<br>Shared Quota</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td><td>30 requests/minute<br>Free during preview</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
+<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/deepseek-ai/model-garden/deepseek-r1-0528-maas" target="_blank">DeepSeek R1-0528</a></td><td>60 requests/minute<br>Free during preview</td></tr>
 </tbody></table>
 
 
@@ -548,6 +545,7 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $5 for 3 months
 
 **Models:**
+- 
 - E5-Mistral-7B-Instruct
 - Llama 3.1 405B
 - Llama 3.1 8B
@@ -560,7 +558,6 @@ Very stringent payment verification for Google Cloud.
 - Qwen/QwQ-32B
 - Qwen/Qwen2-Audio-7B-Instruct
 - Qwen/Qwen3-32B
-- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324

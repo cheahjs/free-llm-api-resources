@@ -51,19 +51,28 @@ def get_model_name(id):
 
 def get_groq_limits_for_stt_model(model_id, logger):
     logger.info(f"Getting limits for STT model {model_id}...")
-    r = requests.post(
-        "https://api.groq.com/openai/v1/audio/transcriptions",
-        headers={
-            "Authorization": f'Bearer {os.environ["GROQ_API_KEY"]}',
-        },
-        data={
-            "model": model_id,
-        },
-        files={
-            "file": open(os.path.join(script_dir, "1-second-of-silence.mp3"), "rb"),
-        },
-    )
-    r.raise_for_status()
+    try:
+        r = requests.post(
+            "https://api.groq.com/openai/v1/audio/transcriptions",
+            headers={
+                "Authorization": f'Bearer {os.environ["GROQ_API_KEY"]}',
+            },
+            data={
+                "model": model_id,
+            },
+            files={
+                "file": open(os.path.join(script_dir, "1-second-of-silence.mp3"), "rb"),
+            },
+        )
+    except Exception as e:
+        logger.error(f"Failed to get limits for model {model_id}: {e}")
+        return {}
+    try:
+        r.raise_for_status()
+    except Exception as e:
+        logger.error(f"Failed to get limits for model {model_id}: {e}")
+        logger.error(r.text)
+        return {}
     audio_seconds_per_minute = int(r.headers["x-ratelimit-limit-audio-seconds"])
     rpd = int(r.headers["x-ratelimit-limit-requests"])
     return {
@@ -78,20 +87,25 @@ def get_groq_limits_for_model(model_id, script_dir, logger):
     if "tts" in model_id:
         return None
     logger.info(f"Getting limits for chat model {model_id}...")
-    r = requests.post(
-        "https://api.groq.com/openai/v1/chat/completions",
-        headers={
-            "Authorization": f'Bearer {os.environ["GROQ_API_KEY"]}',
-            "Content-Type": "application/json",
-        },
-        json={
-            "model": model_id,
-            "messages": [{"role": "user", "content": "Hi!"}],
-            "max_tokens": 1,
-            "stream": True,
-        },
-        stream=True,
-    )
+
+    try:
+        r = requests.post(
+            "https://api.groq.com/openai/v1/chat/completions",
+            headers={
+                "Authorization": f'Bearer {os.environ["GROQ_API_KEY"]}',
+                "Content-Type": "application/json",
+            },
+            json={
+                "model": model_id,
+                "messages": [{"role": "user", "content": "Hi!"}],
+                "max_tokens": 1,
+                "stream": True,
+            },
+            stream=True,
+        )
+    except Exception as e:
+        logger.error(f"Failed to get limits for model {model_id}: {e}")
+        return {}
     try:
         r.raise_for_status()
         rpd = int(r.headers["x-ratelimit-limit-requests"])
@@ -925,22 +939,15 @@ def main():
             "id": "gemini-2.5-pro-exp-03-25",
             "name": "Gemini 2.5 Pro (Experimental)",
             "limits": {"requests/minute": 10},
-        },
+        }
+    ]
+    vertex_deepseek_models = [
         {
-            "id": "gemini-2.0-flash-exp",
-            "name": "Gemini 2.0 Flash (Experimental)",
-            "limits": {"requests/minute": 10},
-        },
-        {
-            "id": "gemini-2.0-flash-thinking-exp-01-21",
-            "name": "Gemini 2.0 Flash Thinking (Experimental)",
-            "limits": {"requests/minute": 10},
-        },
-        {
-            "id": "gemini-exp-1206",
-            "name": "Gemini 2.0 Pro (Experimental)",
-            "limits": {"requests/minute": 10},
-        },
+            "id": "deepseek-r1-0528-maas",
+            "name": "DeepSeek R1-0528",
+            "urlId": "deepseek-r1-0528-maas",
+            "limits": {"requests/minute": 60},
+        }
     ]
     model_list_markdown += "### [Google Cloud Vertex AI](https://console.cloud.google.com/vertex-ai/model-garden)\n\n"
     model_list_markdown += "Very stringent payment verification for Google Cloud.\n\n"
@@ -962,6 +969,12 @@ def main():
         for model in vertex_llama_models:
             limits_str = get_human_limits(model)
             model_list_markdown += f'<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/{model['urlId']}" target="_blank">{model['name']}</a></td><td>{limits_str}<br>Free during preview</td></tr>\n'
+
+    # Write DeepSeek models to table
+    if vertex_deepseek_models:
+        for model in vertex_deepseek_models:
+            limits_str = get_human_limits(model)
+            model_list_markdown += f'<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/deepseek-ai/model-garden/{model['urlId']}" target="_blank">{model['name']}</a></td><td>{limits_str}<br>Free during preview</td></tr>\n'
 
     model_list_markdown += "</tbody></table>\n\n"
 
