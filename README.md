@@ -70,7 +70,6 @@ Models share a common quota.
 - [Featherless Qwerky 72B](https://openrouter.ai/featherless/qwerky-72b:free)
 - [Gemma 2 9B Instruct](https://openrouter.ai/google/gemma-2-9b-it:free)
 - [Gemma 3 12B Instruct](https://openrouter.ai/google/gemma-3-12b-it:free)
-- [Gemma 3 1B Instruct](https://openrouter.ai/google/gemma-3-1b-it:free)
 - [Gemma 3 27B Instruct](https://openrouter.ai/google/gemma-3-27b-it:free)
 - [Gemma 3 4B Instruct](https://openrouter.ai/google/gemma-3-4b-it:free)
 - [Kimi VL A3B Thinking](https://openrouter.ai/moonshotai/kimi-vl-a3b-thinking:free)
@@ -87,11 +86,9 @@ Models share a common quota.
 - [Mistral Nemo](https://openrouter.ai/mistralai/mistral-nemo:free)
 - [Mistral Small 24B Instruct 2501](https://openrouter.ai/mistralai/mistral-small-24b-instruct-2501:free)
 - [Mistral Small 3.1 24B Instruct](https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free)
-- [OlympicCoder 32B](https://openrouter.ai/open-r1/olympiccoder-32b:free)
 - [QwQ 32B ArliAI RpR v1](https://openrouter.ai/arliai/qwq-32b-arliai-rpr-v1:free)
 - [Qwen 2.5 72B Instruct](https://openrouter.ai/qwen/qwen-2.5-72b-instruct:free)
 - [Qwen 2.5 VL 32B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct:free)
-- [Qwen 2.5 VL 7B Instruct](https://openrouter.ai/qwen/qwen-2.5-vl-7b-instruct:free)
 - [Qwen QwQ 32B](https://openrouter.ai/qwen/qwq-32b:free)
 - [Qwen2.5 Coder 32B Instruct](https://openrouter.ai/qwen/qwen-2.5-coder-32b-instruct:free)
 - [Qwen2.5 VL 72B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-72b-instruct:free)
@@ -106,7 +103,6 @@ Models share a common quota.
 - [microsoft/phi-4-reasoning:free](https://openrouter.ai/microsoft/phi-4-reasoning:free)
 - [mistralai/devstral-small:free](https://openrouter.ai/mistralai/devstral-small:free)
 - [moonshotai/kimi-dev-72b:free](https://openrouter.ai/moonshotai/kimi-dev-72b:free)
-- [nousresearch/deephermes-3-mistral-24b-preview:free](https://openrouter.ai/nousresearch/deephermes-3-mistral-24b-preview:free)
 - [opengvlab/internvl3-14b:free](https://openrouter.ai/opengvlab/internvl3-14b:free)
 - [opengvlab/internvl3-2b:free](https://openrouter.ai/opengvlab/internvl3-2b:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
@@ -117,7 +113,6 @@ Models share a common quota.
 - [sarvamai/sarvam-m:free](https://openrouter.ai/sarvamai/sarvam-m:free)
 - [thudm/glm-4-32b:free](https://openrouter.ai/thudm/glm-4-32b:free)
 - [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
-- [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
 
@@ -325,7 +320,6 @@ Data is sent to individual hosts.
 - microsoft/mai-ds-r1-fp8
 - moonshotai/kimi-dev-72b
 - qwen/qwen3-14b
-- qwen/qwen3-235b-a22b
 - qwen/qwen3-30b-a3b
 - qwen/qwen3-32b
 - qwen/qwen3-8b
