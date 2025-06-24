@@ -121,12 +121,12 @@ Models share a common quota.
 Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>Gemini 2.5 Flash (Preview)</td><td>250,000 tokens/minute<br>500 requests/day<br>10 requests/minute</td></tr>
-<tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>1,000 requests/day<br>15 requests/minute</td></tr>
-<tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>1,500 requests/day<br>30 requests/minute</td></tr>
-<tr><td>Gemini 2.0 Flash (Experimental)</td><td>250,000 tokens/minute<br>500 requests/day<br>10 requests/minute</td></tr>
-<tr><td>Gemini 1.5 Flash</td><td>250,000 tokens/minute<br>500 requests/day<br>15 requests/minute</td></tr>
-<tr><td>Gemini 1.5 Flash-8B</td><td>250,000 tokens/minute<br>500 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Flash (Preview)</td><td>250,000 tokens/minute<br>250 requests/day<br>10 requests/minute</td></tr>
+<tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>200 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>200 requests/day<br>30 requests/minute</td></tr>
+<tr><td>Gemini 2.0 Flash (Experimental)</td><td>250,000 tokens/minute<br>50 requests/day<br>10 requests/minute</td></tr>
+<tr><td>Gemini 1.5 Flash</td><td>250,000 tokens/minute<br>50 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemini 1.5 Flash-8B</td><td>250,000 tokens/minute<br>50 requests/day<br>15 requests/minute</td></tr>
 <tr><td>LearnLM 2.0 Flash (Experimental)</td><td>1,500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemma 3 27B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 12B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
@@ -321,6 +321,7 @@ Data is sent to individual hosts.
 - deepseek-ai/deepseek-r1-0528
 - deepseek-ai/deepseek-r1-0528-qwen3-8b
 - microsoft/mai-ds-r1-fp8
+- minimaxai/minimax-m1-80k
 - moonshotai/kimi-dev-72b
 - qwen/qwen3-14b
 - qwen/qwen3-30b-a3b
@@ -547,6 +548,7 @@ Very stringent payment verification for Google Cloud.
 - Qwen/QwQ-32B
 - Qwen/Qwen2-Audio-7B-Instruct
 - Qwen/Qwen3-32B
+- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
