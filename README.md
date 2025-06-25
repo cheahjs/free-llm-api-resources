@@ -97,7 +97,6 @@ Models share a common quota.
 - [deepseek/deepseek-r1-0528-qwen3-8b:free](https://openrouter.ai/deepseek/deepseek-r1-0528-qwen3-8b:free)
 - [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
-- [meta-llama/llama-3.3-8b-instruct:free](https://openrouter.ai/meta-llama/llama-3.3-8b-instruct:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
 - [microsoft/phi-4-reasoning-plus:free](https://openrouter.ai/microsoft/phi-4-reasoning-plus:free)
 - [microsoft/phi-4-reasoning:free](https://openrouter.ai/microsoft/phi-4-reasoning:free)
@@ -548,7 +547,6 @@ Very stringent payment verification for Google Cloud.
 - Qwen/QwQ-32B
 - Qwen/Qwen2-Audio-7B-Instruct
 - Qwen/Qwen3-32B
-- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
