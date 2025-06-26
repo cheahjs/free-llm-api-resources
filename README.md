@@ -61,7 +61,6 @@ Models share a common quota.
 - [DeepSeek R1](https://openrouter.ai/deepseek/deepseek-r1:free)
 - [DeepSeek R1 Distill Llama 70B](https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b:free)
 - [DeepSeek R1 Distill Qwen 14B](https://openrouter.ai/deepseek/deepseek-r1-distill-qwen-14b:free)
-- [DeepSeek R1 Distill Qwen 32B](https://openrouter.ai/deepseek/deepseek-r1-distill-qwen-32b:free)
 - [DeepSeek V3](https://openrouter.ai/deepseek/deepseek-chat:free)
 - [DeepSeek V3 0324](https://openrouter.ai/deepseek/deepseek-chat-v3-0324:free)
 - [DeepSeek V3 Base](https://openrouter.ai/deepseek/deepseek-v3-base:free)
@@ -77,7 +76,6 @@ Models share a common quota.
 - [Llama 3.1 Nemotron Ultra 253B v1](https://openrouter.ai/nvidia/llama-3.1-nemotron-ultra-253b-v1:free)
 - [Llama 3.2 11B Vision Instruct](https://openrouter.ai/meta-llama/llama-3.2-11b-vision-instruct:free)
 - [Llama 3.2 1B Instruct](https://openrouter.ai/meta-llama/llama-3.2-1b-instruct:free)
-- [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
 - [Llama 3.3 Nemotron Super 49B v1](https://openrouter.ai/nvidia/llama-3.3-nemotron-super-49b-v1:free)
 - [Llama 4 Maverick](https://openrouter.ai/meta-llama/llama-4-maverick:free)
@@ -98,13 +96,9 @@ Models share a common quota.
 - [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
-- [microsoft/phi-4-reasoning-plus:free](https://openrouter.ai/microsoft/phi-4-reasoning-plus:free)
-- [microsoft/phi-4-reasoning:free](https://openrouter.ai/microsoft/phi-4-reasoning:free)
 - [mistralai/devstral-small:free](https://openrouter.ai/mistralai/devstral-small:free)
 - [mistralai/mistral-small-3.2-24b-instruct:free](https://openrouter.ai/mistralai/mistral-small-3.2-24b-instruct:free)
 - [moonshotai/kimi-dev-72b:free](https://openrouter.ai/moonshotai/kimi-dev-72b:free)
-- [opengvlab/internvl3-14b:free](https://openrouter.ai/opengvlab/internvl3-14b:free)
-- [opengvlab/internvl3-2b:free](https://openrouter.ai/opengvlab/internvl3-2b:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
@@ -536,16 +530,9 @@ Very stringent payment verification for Google Cloud.
 **Models:**
 - 
 - E5-Mistral-7B-Instruct
-- Llama 3.1 405B
 - Llama 3.1 8B
-- Llama 3.2 1B
-- Llama 3.2 3B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
-- Llama-4-Scout-17B-16E-Instruct
-- Llama-Guard-3-8B
-- Qwen/QwQ-32B
-- Qwen/Qwen2-Audio-7B-Instruct
 - Qwen/Qwen3-32B
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
