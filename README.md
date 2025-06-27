@@ -297,33 +297,6 @@ Extremely restrictive input/output token limits.
 Distributed, decentralized crypto-based compute.
 Data is sent to individual hosts.
 
-- DeepCoder 14B Preview
-- DeepSeek R1
-- DeepSeek V3
-- DeepSeek V3 0324
-- DeepSeek V3 Base
-- Dolphin 3.0 Mistral 24B
-- Llama 4 Maverick 17B 128E Instruct FP8
-- Llama 4 Scout 17B 16E Instruct
-- Mistral Small 3.1 24B Instruct 2503
-- QwQ 32B ArliAI RpR v1
-- Qwen 2.5 VL 32B Instruct
-- Shisa V2 Llama 3.3 70B
-- bytedance-seed/seed-coder-8b-reasoning-bf16
-- chutesai/mistral-small-3.2-24b-instruct-2506
-- deepseek-ai/deepseek-r1-0528
-- deepseek-ai/deepseek-r1-0528-qwen3-8b
-- microsoft/mai-ds-r1-fp8
-- minimaxai/minimax-m1-80k
-- moonshotai/kimi-dev-72b
-- qwen/qwen3-14b
-- qwen/qwen3-30b-a3b
-- qwen/qwen3-32b
-- qwen/qwen3-8b
-- salesforce/xgen-small-9b-instruct-r
-- thudm/glm-4-32b-0414
-- tngtech/deepseek-r1t-chimera
-- tplr/templar-i
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
