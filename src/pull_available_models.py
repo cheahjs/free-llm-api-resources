@@ -517,7 +517,7 @@ def fetch_samba_models(logger):
         ret_models.append(
             {
                 "id": model["model_id"],
-                "name": model["model_name"],
+                "name": model["model_name"] or model["model_id"],
             }
         )
     ret_models = sorted(ret_models, key=lambda x: x["name"])
@@ -680,8 +680,8 @@ def main():
 
     gemini_text_models = [
         {
-            "id": "gemini-2.5-flash-preview-04-17",
-            "name": "Gemini 2.5 Flash (Preview)",
+            "id": "gemini-2.5-flash",
+            "name": "Gemini 2.5 Flash",
             "limits": gemini_models.get("gemini-2.5-flash", {}),
         },
         {
@@ -807,6 +807,12 @@ def main():
     model_list_markdown += "- Various open models across supported providers\n"
     model_list_markdown += "\n"
 
+    # --- Vercel AI Gateway ---
+    model_list_markdown += "### [Vercel AI Gateway](https://vercel.com/docs/ai-gateway)\n\n"
+    model_list_markdown += "Routes to various supported providers.\n\n"
+    model_list_markdown += "**Limits:** [$5/month](https://vercel.com/docs/ai-gateway/pricing)\n\n"
+    model_list_markdown += "\n"
+
     # --- Cerebras ---
     model_list_markdown += "### [Cerebras](https://cloud.cerebras.ai/)\n\n"
     model_list_markdown += "Free tier restricted to 8K context.\n\n"
@@ -897,7 +903,9 @@ def main():
     # --- Chutes ---
     model_list_markdown += "### [Chutes](https://chutes.ai/)\n\n"
     model_list_markdown += "Distributed, decentralized crypto-based compute.\n"
-    model_list_markdown += "Data is sent to individual hosts.\n\n"
+    model_list_markdown += "Data is sent to individual hosts.\n"
+    model_list_markdown += "**Limits:** [200 requests/day](https://chutes.ai/pricing)\n\n"
+    model_list_markdown += "- Various open models\n"
     if chutes_models:
         for model in chutes_models:
             model_list_markdown += f"- {model['name']}\n"
@@ -934,13 +942,7 @@ def main():
             "limits": {"requests/minute": 60},
         },
     ]
-    vertex_gemini_models = [
-        {
-            "id": "gemini-2.5-pro-exp-03-25",
-            "name": "Gemini 2.5 Pro (Experimental)",
-            "limits": {"requests/minute": 10},
-        }
-    ]
+    vertex_gemini_models = []
     vertex_deepseek_models = [
         {
             "id": "deepseek-r1-0528-maas",
@@ -1068,13 +1070,6 @@ def main():
             "models_desc": "Various open models",
         },
         {
-            "name": "CentML",
-            "url": "https://centml.com",
-            "credits": "$1",
-            "requirements": "",
-            "models_desc": "Various open models",
-        },
-        {
             "name": "nCompass",
             "url": "https://ncompass.tech",
             "credits": "$1",
@@ -1114,7 +1109,7 @@ def main():
         trial_list_markdown += "**Credits:** $5 for 3 months\n\n"
         trial_list_markdown += "**Models:**\n"
         for model in samba_models:
-            trial_list_markdown += f"- {model['name']}\n"
+            trial_list_markdown += f"- {model['name']}\n"   
         trial_list_markdown += "\n"
 
     # --- Scaleway Generative APIs (Trial - Table) ---

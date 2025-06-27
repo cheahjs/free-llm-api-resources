@@ -18,6 +18,7 @@ This lists various services that provide free access or credits towards API-base
   - [Mistral (La Plateforme)](#mistral-la-plateforme)
   - [Mistral (Codestral)](#mistral-codestral)
   - [HuggingFace Inference Providers](#huggingface-inference-providers)
+  - [Vercel AI Gateway](#vercel-ai-gateway)
   - [Cerebras](#cerebras)
   - [Groq](#groq)
   - [Together (Free)](#together-free)
@@ -39,7 +40,6 @@ This lists various services that provide free access or credits towards API-base
   - [Alibaba Cloud (International) Model Studio](#alibaba-cloud-international-model-studio)
   - [Modal](#modal)
   - [Inference.net](#inferencenet)
-  - [CentML](#centml)
   - [nCompass](#ncompass)
   - [Kluster](#kluster)
   - [Hyperbolic](#hyperbolic)
@@ -114,7 +114,7 @@ Models share a common quota.
 Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>Gemini 2.5 Flash (Preview)</td><td>250,000 tokens/minute<br>250 requests/day<br>10 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Flash</td><td>250,000 tokens/minute<br>250 requests/day<br>10 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>200 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>200 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash (Experimental)</td><td>250,000 tokens/minute<br>50 requests/day<br>10 requests/minute</td></tr>
@@ -164,6 +164,13 @@ HuggingFace Serverless Inference limited to models smaller than 10GB. Some popul
 **Limits:** [$0.10/month in credits](https://huggingface.co/docs/inference-providers/en/pricing)
 
 - Various open models across supported providers
+
+### [Vercel AI Gateway](https://vercel.com/docs/ai-gateway)
+
+Routes to various supported providers.
+
+**Limits:** [$5/month](https://vercel.com/docs/ai-gateway/pricing)
+
 
 ### [Cerebras](https://cloud.cerebras.ai/)
 
@@ -296,7 +303,9 @@ Extremely restrictive input/output token limits.
 
 Distributed, decentralized crypto-based compute.
 Data is sent to individual hosts.
+**Limits:** [200 requests/day](https://chutes.ai/pricing)
 
+- Various open models
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
@@ -355,7 +364,6 @@ Data is sent to individual hosts.
 Very stringent payment verification for Google Cloud.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td><a href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/gemini-experimental" target="_blank">Gemini 2.5 Pro (Experimental)</a></td><td rowspan="1">10 requests/minute<br>Shared Quota</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td><td>30 requests/minute<br>Free during preview</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
@@ -440,12 +448,6 @@ Very stringent payment verification for Google Cloud.
 
 **Models:** Various open models
 
-### [CentML](https://centml.com)
-
-**Credits:** $1
-
-**Models:** Various open models
-
 ### [nCompass](https://ncompass.tech)
 
 **Credits:** $1
@@ -501,12 +503,19 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $5 for 3 months
 
 **Models:**
-- 
 - E5-Mistral-7B-Instruct
+- Llama 3.1 405B
 - Llama 3.1 8B
+- Llama 3.2 1B
+- Llama 3.2 3B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
+- Llama-4-Scout-17B-16E-Instruct
+- Llama-Guard-3-8B
+- Qwen/QwQ-32B
+- Qwen/Qwen2-Audio-7B-Instruct
 - Qwen/Qwen3-32B
+- Whisper-Large-v3
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
