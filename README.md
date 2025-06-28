@@ -113,6 +113,7 @@ Models share a common quota.
 Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
+<tr><td>Gemini 2.5 Pro</td><td>0 tokens/day<br>250,000 tokens/minute<br>100 requests/day<br>5 requests/minute</td></tr>
 <tr><td>Gemini 2.5 Flash</td><td>250,000 tokens/minute<br>250 requests/day<br>10 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>200 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>200 requests/day<br>30 requests/minute</td></tr>
@@ -302,7 +303,7 @@ Extremely restrictive input/output token limits.
 
 Distributed, decentralized crypto-based compute.
 Data is sent to individual hosts.
-**Limits:** [200 requests/day](https://chutes.ai/pricing)
+**Limits:** 200 requests/day
 
 - Various open models
 

@@ -680,6 +680,11 @@ def main():
 
     gemini_text_models = [
         {
+            "id": "gemini-2.5-pro",
+            "name": "Gemini 2.5 Pro",
+            "limits": gemini_models.get("gemini-2.5-pro", {}),
+        },
+        {
             "id": "gemini-2.5-flash",
             "name": "Gemini 2.5 Flash",
             "limits": gemini_models.get("gemini-2.5-flash", {}),
@@ -904,7 +909,7 @@ def main():
     model_list_markdown += "### [Chutes](https://chutes.ai/)\n\n"
     model_list_markdown += "Distributed, decentralized crypto-based compute.\n"
     model_list_markdown += "Data is sent to individual hosts.\n"
-    model_list_markdown += "**Limits:** [200 requests/day](https://chutes.ai/pricing)\n\n"
+    model_list_markdown += "**Limits:** 200 requests/day\n\n"
     model_list_markdown += "- Various open models\n"
     if chutes_models:
         for model in chutes_models:
