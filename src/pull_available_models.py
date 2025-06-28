@@ -1000,13 +1000,6 @@ def main():
             "models_desc": "[Various open models](https://fireworks.ai/models)",
         },
         {
-            "name": "Unify",
-            "url": "https://unify.ai/",
-            "credits": "$5 when you add a payment method",
-            "requirements": "",
-            "models_desc": "Routes to other providers, various open models and proprietary models (OpenAI, Gemini, Anthropic, Mistral, Perplexity, etc)",
-        },
-        {
             "name": "Baseten",
             "url": "https://app.baseten.co/",
             "credits": "$30",

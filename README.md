@@ -30,7 +30,6 @@ This lists various services that provide free access or credits towards API-base
 - [Providers with trial credits](#providers-with-trial-credits)
   - [Together](#together)
   - [Fireworks](#fireworks)
-  - [Unify](#unify)
   - [Baseten](#baseten)
   - [Nebius](#nebius)
   - [Novita](#novita)
@@ -385,12 +384,6 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $1
 
 **Models:** [Various open models](https://fireworks.ai/models)
-
-### [Unify](https://unify.ai/)
-
-**Credits:** $5 when you add a payment method
-
-**Models:** Routes to other providers, various open models and proprietary models (OpenAI, Gemini, Anthropic, Mistral, Perplexity, etc)
 
 ### [Baseten](https://app.baseten.co/)
 
