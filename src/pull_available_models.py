@@ -870,7 +870,7 @@ def main():
     if together_models:
         for model in together_models:
             model_list_markdown += (
-                f"- [{model['name']}](https://together.ai/{model['urlId']})\n"
+                f"- [{model['name']}](https://together.ai/models/{model['urlId']})\n"
             )
     model_list_markdown += "\n"
 

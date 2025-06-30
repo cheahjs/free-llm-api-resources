@@ -212,9 +212,9 @@ Free tier restricted to 8K context.
 
 **Limits:** Up to 60 requests/minute
 
-- [Llama 3.2 11B Vision Instruct](https://together.ai/llama-3-2-11b-free)
-- [Llama 3.3 70B Instruct](https://together.ai/llama-3-3-70b-free)
-- [DeepSeek R1 Distil Llama 70B](https://together.ai/deepseek-r1-distilled-llama-70b-free)
+- [Llama 3.2 11B Vision Instruct](https://together.ai/models/llama-3-2-11b-free)
+- [Llama 3.3 70B Instruct](https://together.ai/models/llama-3-3-70b-free)
+- [DeepSeek R1 Distil Llama 70B](https://together.ai/models/deepseek-r1-distilled-llama-70b-free)
 
 ### [Cohere](https://cohere.com)
 
@@ -243,9 +243,7 @@ Extremely restrictive input/output token limits.
 - AI21 Jamba 1.5 Mini
 - Codestral 25.01
 - Cohere Command A
-- Cohere Command R
 - Cohere Command R 08-2024
-- Cohere Command R+
 - Cohere Command R+ 08-2024
 - Cohere Embed v3 English
 - Cohere Embed v3 Multilingual
@@ -261,10 +259,7 @@ Extremely restrictive input/output token limits.
 - Llama-3.2-90B-Vision-Instruct
 - Llama-3.3-70B-Instruct
 - MAI-DS-R1
-- Meta-Llama-3-70B-Instruct
-- Meta-Llama-3-8B-Instruct
 - Meta-Llama-3.1-405B-Instruct
-- Meta-Llama-3.1-70B-Instruct
 - Meta-Llama-3.1-8B-Instruct
 - Ministral 3B
 - Mistral Large 24.11
