@@ -98,6 +98,7 @@ Models share a common quota.
 - [mistralai/devstral-small:free](https://openrouter.ai/mistralai/devstral-small:free)
 - [mistralai/mistral-small-3.2-24b-instruct:free](https://openrouter.ai/mistralai/mistral-small-3.2-24b-instruct:free)
 - [moonshotai/kimi-dev-72b:free](https://openrouter.ai/moonshotai/kimi-dev-72b:free)
+- [openrouter/cypher-alpha:free](https://openrouter.ai/openrouter/cypher-alpha:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
