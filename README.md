@@ -71,10 +71,8 @@ Models share a common quota.
 - [Gemma 3 27B Instruct](https://openrouter.ai/google/gemma-3-27b-it:free)
 - [Gemma 3 4B Instruct](https://openrouter.ai/google/gemma-3-4b-it:free)
 - [Kimi VL A3B Thinking](https://openrouter.ai/moonshotai/kimi-vl-a3b-thinking:free)
-- [Llama 3.1 8B Instruct](https://openrouter.ai/meta-llama/llama-3.1-8b-instruct:free)
 - [Llama 3.1 Nemotron Ultra 253B v1](https://openrouter.ai/nvidia/llama-3.1-nemotron-ultra-253b-v1:free)
 - [Llama 3.2 11B Vision Instruct](https://openrouter.ai/meta-llama/llama-3.2-11b-vision-instruct:free)
-- [Llama 3.2 1B Instruct](https://openrouter.ai/meta-llama/llama-3.2-1b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
 - [Llama 3.3 Nemotron Super 49B v1](https://openrouter.ai/nvidia/llama-3.3-nemotron-super-49b-v1:free)
 - [Llama 4 Maverick](https://openrouter.ai/meta-llama/llama-4-maverick:free)
@@ -494,16 +492,9 @@ Very stringent payment verification for Google Cloud.
 
 **Models:**
 - E5-Mistral-7B-Instruct
-- Llama 3.1 405B
 - Llama 3.1 8B
-- Llama 3.2 1B
-- Llama 3.2 3B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
-- Llama-4-Scout-17B-16E-Instruct
-- Llama-Guard-3-8B
-- Qwen/QwQ-32B
-- Qwen/Qwen2-Audio-7B-Instruct
 - Qwen/Qwen3-32B
 - Whisper-Large-v3
 - deepseek-ai/DeepSeek-R1-0528
