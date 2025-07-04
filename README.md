@@ -492,11 +492,18 @@ Very stringent payment verification for Google Cloud.
 
 **Models:**
 - E5-Mistral-7B-Instruct
+- Llama 3.1 405B
 - Llama 3.1 8B
+- Llama 3.2 1B
+- Llama 3.2 3B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
+- Llama-4-Scout-17B-16E-Instruct
+- Llama-Guard-3-8B
+- Qwen/QwQ-32B
+- Qwen/Qwen2-Audio-7B-Instruct
 - Qwen/Qwen3-32B
-- Whisper-Large-v3
+- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
