@@ -297,7 +297,7 @@ Extremely restrictive input/output token limits.
 
 Distributed, decentralized crypto-based compute.
 Data is sent to individual hosts.
-**Limits:** 200 requests/day
+**Limits:** [200 requests/day](https://x.com/rayon_labs/status/1938176081976037505). [**Requires a one time $5 top up to access the free tier.**](https://x.com/rayon_labs/status/1940416866104545608)
 
 - Various open models
 
@@ -497,6 +497,7 @@ Very stringent payment verification for Google Cloud.
 - Llama-4-Maverick-17B-128E-Instruct
 - Qwen/Qwen3-32B
 - Whisper-Large-v3
+- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324

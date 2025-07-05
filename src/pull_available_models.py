@@ -909,7 +909,7 @@ def main():
     model_list_markdown += "### [Chutes](https://chutes.ai/)\n\n"
     model_list_markdown += "Distributed, decentralized crypto-based compute.\n"
     model_list_markdown += "Data is sent to individual hosts.\n"
-    model_list_markdown += "**Limits:** 200 requests/day\n\n"
+    model_list_markdown += "**Limits:** [200 requests/day](https://x.com/rayon_labs/status/1938176081976037505). [**Requires a one time $5 top up to access the free tier.**](https://x.com/rayon_labs/status/1940416866104545608)\n\n"
     model_list_markdown += "- Various open models\n"
     if chutes_models:
         for model in chutes_models:
