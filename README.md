@@ -297,7 +297,8 @@ Extremely restrictive input/output token limits.
 
 Distributed, decentralized crypto-based compute.
 Data is sent to individual hosts.
-**Limits:** [200 requests/day](https://x.com/rayon_labs/status/1938176081976037505). [**Requires a one time $5 top up to access the free tier.**](https://x.com/rayon_labs/status/1940416866104545608)
+**Limits:** [200 requests/day](https://x.com/rayon_labs/status/1938176081976037505), 180/minute. 
+“Free” limits apply to all models available, but to use them, [**you need to deposit at least $5**](https://x.com/rayon_labs/status/1940416866104545608).
 
 - Various open models
 
