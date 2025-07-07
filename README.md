@@ -12,6 +12,7 @@ This lists various services that provide free access or credits towards API-base
 > This list explicitly excludes any services that are not legitimate (eg reverse engineers an existing chatbot)
 
 - [Free Providers](#free-providers)
+  - [AI/ML API](#aiml-api--free)
   - [OpenRouter](#openrouter)
   - [Google AI Studio](#google-ai-studio)
   - [NVIDIA NIM](#nvidia-nim)
@@ -30,6 +31,7 @@ This lists various services that provide free access or credits towards API-base
 - [Providers with trial credits](#providers-with-trial-credits)
   - [Together](#together)
   - [Fireworks](#fireworks)
+  - [AI/ML API](#aiml-api--trial)
   - [Baseten](#baseten)
   - [Nebius](#nebius)
   - [Novita](#novita)
@@ -46,6 +48,11 @@ This lists various services that provide free access or credits towards API-base
   - [Scaleway Generative APIs](#scaleway-generative-apis)
 
 ## Free Providers
+
+### [AI/ML API | Free](https://aimlapi.com/app/?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration)
+**Limits:**
+
+[10 requests / hour<br><br>Free Playground](https://aimlapi.com/app/?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration)
 
 ### [OpenRouter](https://openrouter.ai)
 
@@ -379,6 +386,12 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $1
 
 **Models:** [Various open models](https://fireworks.ai/models)
+
+### [AI/ML API | Trial](https://aimlapi.com/app/?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration)
+
+**Credits:** Free 10 requests / hour
+
+**Models:** [AI/ML API provides 300+ AI models including Deepseek, Gemini, ChatGPT. The models run at enterprise-grade rate limits and uptimes.](https://aimlapi.com/models?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration)
 
 ### [Baseten](https://app.baseten.co/)
 
