@@ -244,6 +244,38 @@ def fetch_openrouter_models(logger):
     return ret_models
 
 
+def fetch_aimlapi_models(logger):
+    logger.info("Fetching AI/ML API models...")
+    r = requests.get(
+        "https://api.aimlapi.com/v1/models",
+        headers={
+            "Content-Type": "application/json",
+        },
+    )
+    r.raise_for_status()
+    models = r.json()["data"]
+    logger.info(f"Fetched {len(models)} models from AI/ML API")
+    ret_models = []
+    for model in models:
+        try:
+            link = model.get('info').get('url')
+        except AttributeError:
+            link = ''
+
+        ret_models.append(
+            {
+                "id": model["id"],
+                "name": model["info"]["name"],
+                "link": link,
+                "limits": {
+                    "FREE requests / hour": 10,
+                },
+            }
+        )
+    ret_models = sorted(ret_models, key=lambda x: x["name"])
+    return ret_models
+
+
 def fetch_cloudflare_models(logger):
     logger.info("Fetching Cloudflare models...")
     r = requests.get(
@@ -465,6 +497,18 @@ def fetch_gemini_limits(logger):
     logger.debug(json.dumps(models, indent=4))
     return models
 
+AI_ML_API_MODELS = [
+    {
+        "id": "ai-ml-api",
+        "name": "AI/ML API",
+        "limits": {
+            "requests / hour": 10,
+        },
+        "description": "Provides 300+ AI models including Deepseek, Gemini, ChatGPT",
+        "url": "https://aimlapi.com/app/?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration",
+        "models_url": "https://aimlapi.com/models?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration"
+    }
+]
 
 def fetch_lambda_models(logger):
     logger.info("Fetching Lambda Labs models...")
@@ -605,6 +649,7 @@ def main():
     logger = create_logger("Main")
     groq_logger = create_logger("Groq")
     openrouter_logger = create_logger("OpenRouter")
+    aimlapi_logger = create_logger("AI/ML API")
     google_ai_studio_logger = create_logger("Google AI Studio")
     cloudflare_logger = create_logger("Cloudflare")
     github_logger = create_logger("GitHub")
@@ -621,6 +666,7 @@ def main():
             futures = [
                 executor.submit(fetch_gemini_limits, google_ai_studio_logger),
                 executor.submit(fetch_openrouter_models, openrouter_logger),
+                executor.submit(fetch_aimlapi_models, aimlapi_logger),
                 executor.submit(fetch_hyperbolic_models, hyperbolic_logger),
                 executor.submit(fetch_cloudflare_models, cloudflare_logger),
                 executor.submit(fetch_github_models, github_logger),
@@ -632,6 +678,7 @@ def main():
             (
                 gemini_models,
                 openrouter_models,
+                aimlapi_models,
                 hyperbolic_models,
                 cloudflare_models,
                 github_models,
@@ -646,6 +693,7 @@ def main():
     else:
         gemini_models = fetch_gemini_limits(google_ai_studio_logger)
         openrouter_models = fetch_openrouter_models(openrouter_logger)
+        aimlapi_models = fetch_aimlapi_models(aimlapi_logger)
         hyperbolic_models = fetch_hyperbolic_models(hyperbolic_logger)
         cloudflare_models = fetch_cloudflare_models(cloudflare_logger)
         github_models = fetch_github_models(github_logger)
@@ -670,6 +718,28 @@ def main():
                 f"- [{model['name']}](https://openrouter.ai/{model['id']})\n"
             )
     model_list_markdown += "\n"
+
+    # --- AI/ML API ---
+    model_list_markdown += f"### [AI/ML API](https://aimlapi.com/models/?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration)\n\n"
+    if aimlapi_models:
+        provider_limits = get_human_limits(aimlapi_models[0])
+        model_list_markdown += "**Limits:**\n\n"
+        model_list_markdown += f"[{provider_limits}<br>](https://aimlapi.com/app/?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration)\n\n"
+        model_list_markdown += "Models share a common quota.\n\n"
+        for model in aimlapi_models:
+            if model['link']:
+                model_list_markdown += (
+                    f"- [{model['name']}]({model['link']})\n"
+                )
+
+    model_list_markdown += "\n"
+    model_list_markdown += "**Limits:**\n"
+    model_list_markdown += "10 requests / hour\n\n"
+    model_list_markdown += "**Features:**\n"
+    model_list_markdown += "- Provides 300+ AI models including Deepseek, Gemini, ChatGPT\n"
+    model_list_markdown += "- Enterprise-grade rate limits and uptimes\n\n"
+    model_list_markdown += "[Free Playground](https://aimlapi.com/app/?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration) | "
+    model_list_markdown += "[Model List](https://aimlapi.com/models?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration)\n\n"
 
     # --- Google AI Studio ---
     model_list_markdown += "### [Google AI Studio](https://aistudio.google.com)\n\n"
