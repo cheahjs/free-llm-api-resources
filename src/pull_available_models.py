@@ -908,7 +908,7 @@ def main():
     # --- Chutes ---
     model_list_markdown += "### [Chutes](https://chutes.ai/)\n\n"
     model_list_markdown += "Distributed, decentralized crypto-based compute.\n"
-    model_list_markdown += "Data is sent to individual hosts.\n"
+    model_list_markdown += "Data is sent to individual hosts.\n\n"
     model_list_markdown += "**Limits:** [200 requests/day](https://x.com/rayon_labs/status/1938176081976037505). [**Requires a one time $5 top up to access the free tier.**](https://x.com/rayon_labs/status/1940416866104545608)\n\n"
     model_list_markdown += "- Various open models\n"
     if chutes_models:
@@ -948,14 +948,7 @@ def main():
         },
     ]
     vertex_gemini_models = []
-    vertex_deepseek_models = [
-        {
-            "id": "deepseek-r1-0528-maas",
-            "name": "DeepSeek R1-0528",
-            "urlId": "deepseek-r1-0528-maas",
-            "limits": {"requests/minute": 60},
-        }
-    ]
+    vertex_deepseek_models = []
     model_list_markdown += "### [Google Cloud Vertex AI](https://console.cloud.google.com/vertex-ai/model-garden)\n\n"
     model_list_markdown += "Very stringent payment verification for Google Cloud.\n\n"
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"

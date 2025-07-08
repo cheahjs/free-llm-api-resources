@@ -103,9 +103,11 @@ Models share a common quota.
 - [qwen/qwen3-32b:free](https://openrouter.ai/qwen/qwen3-32b:free)
 - [qwen/qwen3-8b:free](https://openrouter.ai/qwen/qwen3-8b:free)
 - [sarvamai/sarvam-m:free](https://openrouter.ai/sarvamai/sarvam-m:free)
+- [tencent/hunyuan-a13b-instruct:free](https://openrouter.ai/tencent/hunyuan-a13b-instruct:free)
 - [thudm/glm-4-32b:free](https://openrouter.ai/thudm/glm-4-32b:free)
 - [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
+- [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
 
@@ -297,6 +299,7 @@ Extremely restrictive input/output token limits.
 
 Distributed, decentralized crypto-based compute.
 Data is sent to individual hosts.
+
 **Limits:** [200 requests/day](https://x.com/rayon_labs/status/1938176081976037505). [**Requires a one time $5 top up to access the free tier.**](https://x.com/rayon_labs/status/1940416866104545608)
 
 - Various open models
@@ -361,7 +364,6 @@ Very stringent payment verification for Google Cloud.
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td><td>30 requests/minute<br>Free during preview</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
-<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/deepseek-ai/model-garden/deepseek-r1-0528-maas" target="_blank">DeepSeek R1-0528</a></td><td>60 requests/minute<br>Free during preview</td></tr>
 </tbody></table>
 
 
@@ -497,7 +499,6 @@ Very stringent payment verification for Google Cloud.
 - Llama-4-Maverick-17B-128E-Instruct
 - Qwen/Qwen3-32B
 - Whisper-Large-v3
-- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
