@@ -253,19 +253,25 @@ def fetch_aimlapi_models(logger):
         },
     )
     r.raise_for_status()
-    models = r.json()["data"]
+    models = r.json().get("data", [])
     logger.info(f"Fetched {len(models)} models from AI/ML API")
     ret_models = []
     for model in models:
-        try:
-            link = model.get('info').get('url')
-        except AttributeError:
-            link = ''
+        info = model.get("info")
+        if not info or not info.get("name"):
+            logger.warning(f"Skipping model with missing name: {model.get('id')}")
+            continue
+
+        link = info.get("url", "")
+
+        if not link:
+            logger.warning(f"Skipping model with missing link: {model.get('id')}")
+            continue
 
         ret_models.append(
             {
                 "id": model["id"],
-                "name": model["info"]["name"],
+                "name": info["name"],
                 "link": link,
                 "limits": {
                     "FREE requests / hour": 10,
@@ -733,8 +739,6 @@ def main():
                 )
 
     model_list_markdown += "\n"
-    model_list_markdown += "**Limits:**\n"
-    model_list_markdown += "10 requests / hour\n\n"
     model_list_markdown += "**Features:**\n"
     model_list_markdown += "- Provides 300+ AI models including Deepseek, Gemini, ChatGPT\n"
     model_list_markdown += "- Enterprise-grade rate limits and uptimes\n\n"
