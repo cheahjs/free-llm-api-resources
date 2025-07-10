@@ -246,31 +246,39 @@ def fetch_openrouter_models(logger):
 
 def fetch_aimlapi_models(logger):
     logger.info("Fetching AI/ML API models...")
+    API_URL = "https://api.aimlapi.com/v1/models"
     r = requests.get(
-        "https://api.aimlapi.com/v1/models",
+        API_URL,
         headers={
             "Content-Type": "application/json",
         },
     )
+
     r.raise_for_status()
     models = r.json().get("data", [])
     logger.info(f"Fetched {len(models)} models from AI/ML API")
     ret_models = []
+
     for model in models:
+        model_id = model.get("id")
+        if not model_id:
+            logger.warning(f"Skipping model with missing id: {model}")
+            continue
+
         info = model.get("info")
         if not info or not info.get("name"):
-            logger.warning(f"Skipping model with missing name: {model.get('id')}")
+            logger.warning(f"Skipping model with missing name: {model_id}")
             continue
 
         link = info.get("url", "")
 
         if not link:
-            logger.warning(f"Skipping model with missing link: {model.get('id')}")
+            logger.warning(f"Skipping model with missing link: {model_id}")
             continue
 
         ret_models.append(
             {
-                "id": model["id"],
+                "id": model_id,
                 "name": info["name"],
                 "link": link,
                 "limits": {
@@ -278,6 +286,7 @@ def fetch_aimlapi_models(logger):
                 },
             }
         )
+
     ret_models = sorted(ret_models, key=lambda x: x["name"])
     return ret_models
 
@@ -502,19 +511,6 @@ def fetch_gemini_limits(logger):
                 ] = dimension.details.value
     logger.debug(json.dumps(models, indent=4))
     return models
-
-AI_ML_API_MODELS = [
-    {
-        "id": "ai-ml-api",
-        "name": "AI/ML API",
-        "limits": {
-            "requests / hour": 10,
-        },
-        "description": "Provides 300+ AI models including Deepseek, Gemini, ChatGPT",
-        "url": "https://aimlapi.com/app/?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration",
-        "models_url": "https://aimlapi.com/models?utm_source=free-llm-api-resources&utm_medium=github&utm_campaign=integration"
-    }
-]
 
 def fetch_lambda_models(logger):
     logger.info("Fetching Lambda Labs models...")
