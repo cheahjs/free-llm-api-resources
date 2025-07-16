@@ -76,9 +76,6 @@ Models share a common quota.
 - [Llama 3.2 11B Vision Instruct](https://openrouter.ai/meta-llama/llama-3.2-11b-vision-instruct:free)
 - [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
-- [Llama 3.3 Nemotron Super 49B v1](https://openrouter.ai/nvidia/llama-3.3-nemotron-super-49b-v1:free)
-- [Llama 4 Maverick](https://openrouter.ai/meta-llama/llama-4-maverick:free)
-- [Llama 4 Scout](https://openrouter.ai/meta-llama/llama-4-scout:free)
 - [Mistral 7B Instruct](https://openrouter.ai/mistralai/mistral-7b-instruct:free)
 - [Mistral Nemo](https://openrouter.ai/mistralai/mistral-nemo:free)
 - [Mistral Small 24B Instruct 2501](https://openrouter.ai/mistralai/mistral-small-24b-instruct-2501:free)
@@ -203,14 +200,14 @@ Free tier restricted to 8K context.
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
+<tr><td>Llama 4 Scout Instruct</td><td></td></tr>
 <tr><td>Mistral Saba 24B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>meta-llama/llama-guard-4-12b</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>meta-llama/llama-prompt-guard-2-22m</td><td></td></tr>
 <tr><td>meta-llama/llama-prompt-guard-2-86m</td><td></td></tr>
-<tr><td>moonshotai/kimi-k2-instruct</td><td>1,000 requests/day<br>15,000 tokens/minute</td></tr>
+<tr><td>moonshotai/kimi-k2-instruct</td><td>1,000 requests/day<br>10,000 tokens/minute</td></tr>
 <tr><td>qwen/qwen3-32b</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 </tbody></table>
 
@@ -505,7 +502,6 @@ Very stringent payment verification for Google Cloud.
 - Llama-4-Maverick-17B-128E-Instruct
 - Qwen/Qwen3-32B
 - Whisper-Large-v3
-- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
