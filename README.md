@@ -40,7 +40,6 @@ This lists various services that provide free access or credits towards API-base
   - [Modal](#modal)
   - [Inference.net](#inferencenet)
   - [nCompass](#ncompass)
-  - [Kluster](#kluster)
   - [Hyperbolic](#hyperbolic)
   - [SambaNova Cloud](#sambanova-cloud)
   - [Scaleway Generative APIs](#scaleway-generative-apis)
@@ -200,7 +199,7 @@ Free tier restricted to 8K context.
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 4 Scout Instruct</td><td></td></tr>
+<tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
 <tr><td>Mistral Saba 24B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
@@ -445,26 +444,6 @@ Very stringent payment verification for Google Cloud.
 **Credits:** $1
 
 **Models:** Various open models
-
-### [Kluster](https://kluster.ai)
-
-**Credits:** $5
-
-**Models:**
-- BGE-M3
-- DeepSeek-R1-0528
-- DeepSeek-V3-0324
-- Gemma 3 27B
-- Magistral Small
-- Meta Llama 3.1 8B
-- Meta Llama 3.3 70B
-- Meta Llama 4 Maverick
-- Meta Llama 4 Scout
-- Mistral NeMo
-- Mistral Small
-- Qwen2.5-VL 7B
-- Qwen3-235B-A22B
-- kluster reliability check
 
 ### [Hyperbolic](https://app.hyperbolic.xyz/)
 
