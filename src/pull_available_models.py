@@ -612,7 +612,6 @@ def main():
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
     chutes_logger = create_logger("Chutes")
-    kluster_logger = create_logger("Kluster")
 
     fetch_concurrently = os.getenv("FETCH_CONCURRENTLY", "false").lower() == "true"
 
@@ -627,7 +626,6 @@ def main():
                 executor.submit(fetch_samba_models, samba_logger),
                 executor.submit(fetch_scaleway_models, scaleway_logger),
                 executor.submit(fetch_chutes_models, chutes_logger),
-                executor.submit(fetch_kluster_models, kluster_logger),
             ]
             (
                 gemini_models,
@@ -638,7 +636,6 @@ def main():
                 samba_models,
                 scaleway_models,
                 chutes_models,
-                kluster_models,
             ) = [f.result() for f in futures]
 
             # Fetch groq models after others complete
@@ -652,7 +649,6 @@ def main():
         samba_models = fetch_samba_models(samba_logger)
         scaleway_models = fetch_scaleway_models(scaleway_logger)
         chutes_models = fetch_chutes_models(chutes_logger)
-        kluster_models = fetch_kluster_models(kluster_logger)
         groq_models = fetch_groq_models(groq_logger)
 
     # Initialize markdown string for free providers
@@ -1075,15 +1071,6 @@ def main():
         if provider["requirements"]:
             trial_list_markdown += f"**Requirements:** {provider['requirements']}\n\n"
         trial_list_markdown += f"**Models:** {provider['models_desc']}\n\n"
-
-    # --- Kluster ---
-    if kluster_models:
-        trial_list_markdown += "### [Kluster](https://kluster.ai)\n\n"
-        trial_list_markdown += "**Credits:** $5\n\n"
-        trial_list_markdown += "**Models:**\n"
-        for model in kluster_models:
-            trial_list_markdown += f"- {model['name']}\n"
-        trial_list_markdown += "\n"
 
     # --- Hyperbolic (Trial - Table) ---
     if hyperbolic_models:
