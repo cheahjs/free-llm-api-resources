@@ -59,9 +59,7 @@ Models share a common quota.
 - [DeepSeek R1](https://openrouter.ai/deepseek/deepseek-r1:free)
 - [DeepSeek R1 Distill Llama 70B](https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b:free)
 - [DeepSeek R1 Distill Qwen 14B](https://openrouter.ai/deepseek/deepseek-r1-distill-qwen-14b:free)
-- [DeepSeek V3](https://openrouter.ai/deepseek/deepseek-chat:free)
 - [DeepSeek V3 0324](https://openrouter.ai/deepseek/deepseek-chat-v3-0324:free)
-- [DeepSeek V3 Base](https://openrouter.ai/deepseek/deepseek-v3-base:free)
 - [Dolphin 3.0 Mistral 24B](https://openrouter.ai/cognitivecomputations/dolphin3.0-mistral-24b:free)
 - [Dolphin 3.0 R1 Mistral 24B](https://openrouter.ai/cognitivecomputations/dolphin3.0-r1-mistral-24b:free)
 - [Featherless Qwerky 72B](https://openrouter.ai/featherless/qwerky-72b:free)
@@ -98,9 +96,9 @@ Models share a common quota.
 - [moonshotai/kimi-dev-72b:free](https://openrouter.ai/moonshotai/kimi-dev-72b:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
+- [qwen/qwen3-235b-a22b-07-25:free](https://openrouter.ai/qwen/qwen3-235b-a22b-07-25:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
-- [qwen/qwen3-32b:free](https://openrouter.ai/qwen/qwen3-32b:free)
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
 - [qwen/qwen3-8b:free](https://openrouter.ai/qwen/qwen3-8b:free)
 - [sarvamai/sarvam-m:free](https://openrouter.ai/sarvamai/sarvam-m:free)
@@ -304,6 +302,16 @@ Data is sent to individual hosts.
 **Limits:** [200 requests/day](https://x.com/rayon_labs/status/1938176081976037505). [**Requires a one time $5 top up to access the free tier.**](https://x.com/rayon_labs/status/1940416866104545608)
 
 - Various open models
+- DeepCoder 14B Preview
+- DeepHermes 3 Llama 3 8B Preview
+- openbmb/minicpm4-8b
+- qwen/qwen3-14b
+- qwen/qwen3-235b-a22b-instruct-2507
+- qwen/qwen3-4b
+- qwen/qwen3-8b
+- tencent/hunyuan-a13b-instruct
+- thudm/glm-4-32b-0414
+- unsloth/llama-3.2-3b-instruct
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
