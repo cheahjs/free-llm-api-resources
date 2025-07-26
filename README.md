@@ -96,11 +96,12 @@ Models share a common quota.
 - [moonshotai/kimi-dev-72b:free](https://openrouter.ai/moonshotai/kimi-dev-72b:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
-- [qwen/qwen3-235b-a22b-07-25:free](https://openrouter.ai/qwen/qwen3-235b-a22b-07-25:free)
+- [qwen/qwen3-235b-a22b-2507:free](https://openrouter.ai/qwen/qwen3-235b-a22b-2507:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
 - [qwen/qwen3-8b:free](https://openrouter.ai/qwen/qwen3-8b:free)
+- [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [sarvamai/sarvam-m:free](https://openrouter.ai/sarvamai/sarvam-m:free)
 - [tencent/hunyuan-a13b-instruct:free](https://openrouter.ai/tencent/hunyuan-a13b-instruct:free)
 - [thudm/glm-4-32b:free](https://openrouter.ai/thudm/glm-4-32b:free)
@@ -125,7 +126,7 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 <tr><td>Gemma 3 12B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 4B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 1B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
-<tr><td>text-embedding-004</td><td rowspan="2">150 batch requests/minute<br>1,500 requests/minute<br>100 content/batch<br>Shared Quota</td></tr>
+<tr><td>text-embedding-004</td><td rowspan="2">10,000 batch requests/minute<br>10,000 requests/minute<br>100 content/batch<br>Shared Quota</td></tr>
 <tr><td>embedding-001</td></tr>
 </tbody></table>
 
@@ -311,7 +312,6 @@ Data is sent to individual hosts.
 - qwen/qwen3-8b
 - tencent/hunyuan-a13b-instruct
 - thudm/glm-4-32b-0414
-- unsloth/llama-3.2-3b-instruct
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
@@ -508,5 +508,6 @@ Very stringent payment verification for Google Cloud.
 - Mistral Small 3.1 24B Instruct 2503
 - Pixtral 12B (2409)
 - Qwen2.5 Coder 32B Instruct
+- devstral-small-2505
 
 
