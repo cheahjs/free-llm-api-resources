@@ -312,6 +312,7 @@ Data is sent to individual hosts.
 - qwen/qwen3-8b
 - tencent/hunyuan-a13b-instruct
 - thudm/glm-4-32b-0414
+- zai-org/glm-4.5-air
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
@@ -489,6 +490,7 @@ Very stringent payment verification for Google Cloud.
 - Llama-4-Maverick-17B-128E-Instruct
 - Qwen/Qwen3-32B
 - Whisper-Large-v3
+- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
@@ -501,7 +503,6 @@ Very stringent payment verification for Google Cloud.
 - BGE-Multilingual-Gemma2
 - DeepSeek R1 Distill Llama 70B
 - Gemma 3 27B Instruct
-- Llama 3.1 70B Instruct
 - Llama 3.1 8B Instruct
 - Llama 3.3 70B Instruct
 - Mistral Nemo 2407
