@@ -96,7 +96,6 @@ Models share a common quota.
 - [moonshotai/kimi-dev-72b:free](https://openrouter.ai/moonshotai/kimi-dev-72b:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
-- [qwen/qwen3-235b-a22b-2507:free](https://openrouter.ai/qwen/qwen3-235b-a22b-2507:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
@@ -200,7 +199,6 @@ Free tier restricted to 8K context.
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
-<tr><td>Mistral Saba 24B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>meta-llama/llama-guard-4-12b</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
@@ -308,12 +306,12 @@ Data is sent to individual hosts.
 - DeepHermes 3 Llama 3 8B Preview
 - openbmb/minicpm4-8b
 - qwen/qwen3-14b
-- qwen/qwen3-235b-a22b-instruct-2507
 - qwen/qwen3-4b
 - qwen/qwen3-8b
 - tencent/hunyuan-a13b-instruct
 - thudm/glm-4-32b-0414
 - zai-org/glm-4.5-air
+- zai-org/glm-4.5-fp8
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
@@ -491,7 +489,6 @@ Very stringent payment verification for Google Cloud.
 - Llama-4-Maverick-17B-128E-Instruct
 - Qwen/Qwen3-32B
 - Whisper-Large-v3
-- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
