@@ -103,7 +103,6 @@ Models share a common quota.
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [sarvamai/sarvam-m:free](https://openrouter.ai/sarvamai/sarvam-m:free)
 - [tencent/hunyuan-a13b-instruct:free](https://openrouter.ai/tencent/hunyuan-a13b-instruct:free)
-- [thudm/glm-4-32b:free](https://openrouter.ai/thudm/glm-4-32b:free)
 - [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 - [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
@@ -175,13 +174,15 @@ Routes to various supported providers.
 
 ### [Cerebras](https://cloud.cerebras.ai/)
 
-Free tier restricted to 8K context.
-
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>Qwen 3 32B</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
-<tr><td>Llama 4 Scout</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
+<tr><td>Qwen 3 235B A22B Instruct</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
+<tr><td>Qwen 3 235B A22B Thinking</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
+<tr><td>Qwen 3 Coder 480B</td><td>10 requests/minute<br>150,000 tokens/minute<br>100 requests/hour<br>1,000,000 tokens/hour<br>100 requests/day<br>1,000,000 tokens/day</td></tr>
+<tr><td>Llama 3.3 70B</td><td>30 requests/minute<br>64,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
+<tr><td>Qwen 3 32B</td><td>30 requests/minute<br>64,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Llama 3.1 8B</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
-<tr><td>Llama 3.3 70B</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
+<tr><td>Llama 4 Scout</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
+<tr><td>Llama 4 Maverick</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 </tbody></table>
 
 ### [Groq](https://console.groq.com)
@@ -194,9 +195,9 @@ Free tier restricted to 8K context.
 <tr><td>Groq compound-beta</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
 <tr><td>Groq compound-beta-mini</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 3 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
+<tr><td>Llama 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
+<tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>20,000 tokens/minute</td></tr>
+<tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
@@ -302,16 +303,6 @@ Data is sent to individual hosts.
 **Limits:** [200 requests/day](https://x.com/rayon_labs/status/1938176081976037505). [**Requires a one time $5 top up to access the free tier.**](https://x.com/rayon_labs/status/1940416866104545608)
 
 - Various open models
-- DeepCoder 14B Preview
-- DeepHermes 3 Llama 3 8B Preview
-- openbmb/minicpm4-8b
-- qwen/qwen3-14b
-- qwen/qwen3-4b
-- qwen/qwen3-8b
-- tencent/hunyuan-a13b-instruct
-- thudm/glm-4-32b-0414
-- zai-org/glm-4.5-air
-- zai-org/glm-4.5-fp8
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
@@ -403,9 +394,9 @@ Very stringent payment verification for Google Cloud.
 
 **Models:** [Various open models](https://studio.nebius.ai/models)
 
-### [Novita](https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate)
+### [Novita](https://novita.ai/?ref=ytblmjc&utm_source=affiliate)
 
-**Credits:** $0.5 for 1 year, $10 for 3 months for LLMs with [referral code](https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate) + GitHub account connection
+**Credits:** $0.5 for 1 year
 
 **Models:** [Various open models](https://novita.ai/models)
 
@@ -489,6 +480,7 @@ Very stringent payment verification for Google Cloud.
 - Llama-4-Maverick-17B-128E-Instruct
 - Qwen/Qwen3-32B
 - Whisper-Large-v3
+- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
@@ -508,5 +500,6 @@ Very stringent payment verification for Google Cloud.
 - Pixtral 12B (2409)
 - Qwen2.5 Coder 32B Instruct
 - devstral-small-2505
+- qwen3-235b-a22b-instruct-2507
 
 

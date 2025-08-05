@@ -816,14 +816,40 @@ def main():
 
     # --- Cerebras ---
     model_list_markdown += "### [Cerebras](https://cloud.cerebras.ai/)\n\n"
-    model_list_markdown += "Free tier restricted to 8K context.\n\n"
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
-    cerebras_limit_text = "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
     cerebras_models = [
-        {"name": "Qwen 3 32B", "limits_text": cerebras_limit_text},
-        {"name": "Llama 4 Scout", "limits_text": cerebras_limit_text},
-        {"name": "Llama 3.1 8B", "limits_text": cerebras_limit_text},
-        {"name": "Llama 3.3 70B", "limits_text": cerebras_limit_text},
+        {
+            "name": "Qwen 3 235B A22B Instruct",
+            "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
+        },
+        {
+            "name": "Qwen 3 235B A22B Thinking",
+            "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
+        },
+        {
+            "name": "Qwen 3 Coder 480B",
+            "limits_text": "10 requests/minute<br>150,000 tokens/minute<br>100 requests/hour<br>1,000,000 tokens/hour<br>100 requests/day<br>1,000,000 tokens/day"
+        },
+        {
+            "name": "Llama 3.3 70B",
+            "limits_text": "30 requests/minute<br>64,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
+        },
+        {
+            "name": "Qwen 3 32B",
+            "limits_text": "30 requests/minute<br>64,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
+        },
+        {
+            "name": "Llama 3.1 8B",
+            "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
+        },
+        {
+            "name": "Llama 4 Scout",
+            "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
+        },
+        {
+            "name": "Llama 4 Maverick",
+            "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
+        },
     ]
     for model in cerebras_models:
         model_list_markdown += (
@@ -1009,8 +1035,8 @@ def main():
         },
         {
             "name": "Novita",
-            "url": "https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate",
-            "credits": "$0.5 for 1 year, $10 for 3 months for LLMs with [referral code](https://novita.ai/referral?invited_code=E5R0CA&ref=ytblmjc&utm_source=affiliate) + GitHub account connection",
+            "url": "https://novita.ai/?ref=ytblmjc&utm_source=affiliate",
+            "credits": "$0.5 for 1 year",
             "requirements": "",
             "models_desc": "[Various open models](https://novita.ai/models)",
         },
