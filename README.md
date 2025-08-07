@@ -95,12 +95,12 @@ Models share a common quota.
 - [mistralai/mistral-small-3.2-24b-instruct:free](https://openrouter.ai/mistralai/mistral-small-3.2-24b-instruct:free)
 - [moonshotai/kimi-dev-72b:free](https://openrouter.ai/moonshotai/kimi-dev-72b:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
+- [openai/gpt-oss-20b:free](https://openrouter.ai/openai/gpt-oss-20b:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
 - [qwen/qwen3-8b:free](https://openrouter.ai/qwen/qwen3-8b:free)
-- [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [sarvamai/sarvam-m:free](https://openrouter.ai/sarvamai/sarvam-m:free)
 - [tencent/hunyuan-a13b-instruct:free](https://openrouter.ai/tencent/hunyuan-a13b-instruct:free)
 - [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
@@ -195,9 +195,9 @@ Routes to various supported providers.
 <tr><td>Groq compound-beta</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
 <tr><td>Groq compound-beta-mini</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
 <tr><td>Llama 3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 3 8B</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
-<tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>20,000 tokens/minute</td></tr>
-<tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>Llama 3 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
@@ -206,6 +206,8 @@ Routes to various supported providers.
 <tr><td>meta-llama/llama-prompt-guard-2-22m</td><td></td></tr>
 <tr><td>meta-llama/llama-prompt-guard-2-86m</td><td></td></tr>
 <tr><td>moonshotai/kimi-k2-instruct</td><td>1,000 requests/day<br>10,000 tokens/minute</td></tr>
+<tr><td>openai/gpt-oss-120b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
+<tr><td>openai/gpt-oss-20b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 <tr><td>qwen/qwen3-32b</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 </tbody></table>
 
@@ -308,6 +310,8 @@ Data is sent to individual hosts.
 
 **Limits:** [10,000 neurons/day](https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation)
 
+- @cf/openai/gpt-oss-120b
+- @cf/openai/gpt-oss-20b
 - DeepSeek R1 Distill Qwen 32B
 - Deepseek Coder 6.7B Base (AWQ)
 - Deepseek Coder 6.7B Instruct (AWQ)
@@ -480,7 +484,6 @@ Very stringent payment verification for Google Cloud.
 - Llama-4-Maverick-17B-128E-Instruct
 - Qwen/Qwen3-32B
 - Whisper-Large-v3
-- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
