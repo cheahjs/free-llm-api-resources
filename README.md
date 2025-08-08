@@ -24,7 +24,6 @@ This lists various services that provide free access or credits towards API-base
   - [Together (Free)](#together-free)
   - [Cohere](#cohere)
   - [GitHub Models](#github-models)
-  - [Chutes](#chutes)
   - [Cloudflare Workers AI](#cloudflare-workers-ai)
   - [Google Cloud Vertex AI](#google-cloud-vertex-ai)
 - [Providers with trial credits](#providers-with-trial-credits)
@@ -302,15 +301,6 @@ Extremely restrictive input/output token limits.
 - Phi-4-mini-reasoning
 - Phi-4-multimodal-instruct
 
-### [Chutes](https://chutes.ai/)
-
-Distributed, decentralized crypto-based compute.
-Data is sent to individual hosts.
-
-**Limits:** [200 requests/day](https://x.com/rayon_labs/status/1938176081976037505). [**Requires a one time $5 top up to access the free tier.**](https://x.com/rayon_labs/status/1940416866104545608)
-
-- Various open models
-
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
 **Limits:** [10,000 neurons/day](https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation)
@@ -476,6 +466,8 @@ Very stringent payment verification for Google Cloud.
 - Qwen2.5 Coder 32B Instruct
 - Qwen2.5 VL 72B Instruct
 - Qwen2.5 VL 7B Instruct
+- qwen/qwen3-235b-a22b-instruct-2507-fp8
+- qwen/qwen3-coder-480b-a35b-instruct-fp8
 
 ### [SambaNova Cloud](https://cloud.sambanova.ai/)
 

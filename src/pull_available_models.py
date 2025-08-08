@@ -625,7 +625,6 @@ def main():
                 executor.submit(fetch_github_models, github_logger),
                 executor.submit(fetch_samba_models, samba_logger),
                 executor.submit(fetch_scaleway_models, scaleway_logger),
-                executor.submit(fetch_chutes_models, chutes_logger),
             ]
             (
                 gemini_models,
@@ -635,7 +634,6 @@ def main():
                 github_models,
                 samba_models,
                 scaleway_models,
-                chutes_models,
             ) = [f.result() for f in futures]
 
             # Fetch groq models after others complete
@@ -648,7 +646,6 @@ def main():
         github_models = fetch_github_models(github_logger)
         samba_models = fetch_samba_models(samba_logger)
         scaleway_models = fetch_scaleway_models(scaleway_logger)
-        chutes_models = fetch_chutes_models(chutes_logger)
         groq_models = fetch_groq_models(groq_logger)
 
     # Initialize markdown string for free providers
@@ -924,17 +921,6 @@ def main():
     model_list_markdown += "**Limits:** [Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)](https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits)\n\n"
     if github_models:
         for model in github_models:
-            model_list_markdown += f"- {model['name']}\n"
-    model_list_markdown += "\n"
-
-    # --- Chutes ---
-    model_list_markdown += "### [Chutes](https://chutes.ai/)\n\n"
-    model_list_markdown += "Distributed, decentralized crypto-based compute.\n"
-    model_list_markdown += "Data is sent to individual hosts.\n\n"
-    model_list_markdown += "**Limits:** [200 requests/day](https://x.com/rayon_labs/status/1938176081976037505). [**Requires a one time $5 top up to access the free tier.**](https://x.com/rayon_labs/status/1940416866104545608)\n\n"
-    model_list_markdown += "- Various open models\n"
-    if chutes_models:
-        for model in chutes_models:
             model_list_markdown += f"- {model['name']}\n"
     model_list_markdown += "\n"
 
