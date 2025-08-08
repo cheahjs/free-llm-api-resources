@@ -101,6 +101,7 @@ Models share a common quota.
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
 - [qwen/qwen3-8b:free](https://openrouter.ai/qwen/qwen3-8b:free)
+- [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [sarvamai/sarvam-m:free](https://openrouter.ai/sarvamai/sarvam-m:free)
 - [tencent/hunyuan-a13b-instruct:free](https://openrouter.ai/tencent/hunyuan-a13b-instruct:free)
 - [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
@@ -276,6 +277,10 @@ Extremely restrictive input/output token limits.
 - OpenAI GPT-4o mini
 - OpenAI Text Embedding 3 (large)
 - OpenAI Text Embedding 3 (small)
+- OpenAI gpt-5
+- OpenAI gpt-5-chat (preview)
+- OpenAI gpt-5-mini
+- OpenAI gpt-5-nano
 - OpenAI o1
 - OpenAI o1-mini
 - OpenAI o1-preview
