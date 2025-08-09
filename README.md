@@ -466,8 +466,6 @@ Very stringent payment verification for Google Cloud.
 - Qwen2.5 Coder 32B Instruct
 - Qwen2.5 VL 72B Instruct
 - Qwen2.5 VL 7B Instruct
-- qwen/qwen3-235b-a22b-instruct-2507-fp8
-- qwen/qwen3-coder-480b-a35b-instruct-fp8
 
 ### [SambaNova Cloud](https://cloud.sambanova.ai/)
 
