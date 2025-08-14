@@ -103,7 +103,6 @@ Models share a common quota.
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [sarvamai/sarvam-m:free](https://openrouter.ai/sarvamai/sarvam-m:free)
 - [tencent/hunyuan-a13b-instruct:free](https://openrouter.ai/tencent/hunyuan-a13b-instruct:free)
-- [thudm/glm-z1-32b:free](https://openrouter.ai/thudm/glm-z1-32b:free)
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 - [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
 - [z-ai/glm-4.5-air:free](https://openrouter.ai/z-ai/glm-4.5-air:free)
@@ -466,6 +465,8 @@ Very stringent payment verification for Google Cloud.
 - Qwen2.5 Coder 32B Instruct
 - Qwen2.5 VL 72B Instruct
 - Qwen2.5 VL 7B Instruct
+- qwen/qwen3-235b-a22b-instruct-2507-fp8
+- qwen/qwen3-coder-480b-a35b-instruct-fp8
 
 ### [SambaNova Cloud](https://cloud.sambanova.ai/)
 
@@ -498,6 +499,9 @@ Very stringent payment verification for Google Cloud.
 - Pixtral 12B (2409)
 - Qwen2.5 Coder 32B Instruct
 - devstral-small-2505
+- gpt-oss-120b
+- mistral-small-3.2-24b-instruct-2506
 - qwen3-235b-a22b-instruct-2507
+- qwen3-coder-30b-a3b-instruct
 
 
