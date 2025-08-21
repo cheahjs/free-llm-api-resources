@@ -19,6 +19,7 @@ This lists various services that provide free access or credits towards API-base
   - [Mistral (Codestral)](#mistral-codestral)
   - [HuggingFace Inference Providers](#huggingface-inference-providers)
   - [Vercel AI Gateway](#vercel-ai-gateway)
+  - [TrueFoundry AI Gateway](#truefoundry-ai-gateway)
   - [Cerebras](#cerebras)
   - [Groq](#groq)
   - [Together (Free)](#together-free)
@@ -170,6 +171,34 @@ Routes to various supported providers.
 
 **Limits:** [$5/month](https://vercel.com/docs/ai-gateway/pricing)
 
+### [TrueFoundry AI Gateway](https://www.truefoundry.com/ai-gateway)
+
+Seamlessly change between different models and model providers in one interface.
+
+**Limits:** $1/month [TrueFoundry](https://platform.live-demo.truefoundry.cloud/llm-gateway/?_mt=chat&tab=playground&_sm=cm4rc7h7f005a01tsfq0gbrxv)
+
+<table><thead><tr><th>Model Name</th></tr></thead><tbody>
+<tr><td>gpt-4o</td></tr>
+<tr><td>gpt-4-1 (GPT-4.1)</td></tr>
+<tr><td>o4-mini</td></tr>
+<tr><td>o3-mini</td></tr>
+<tr><td>gpt-4-turbo</td></tr>
+<tr><td>gpt-4</td></tr>
+<tr><td>gpt-4-1-mini</td></tr>
+<tr><td>gpt-3-5-turbo</td></tr>
+<tr><td>claude-3-5-sonnet-latest</td></tr>
+<tr><td>claude-3-opus-latest</td></tr>
+<tr><td>claude-3-5-haiku-latest</td></tr>
+<tr><td>claude-2-1</td></tr>
+<tr><td>sonar-reasoning-pro</td></tr>
+<tr><td>sonar-pro</td></tr>
+<tr><td>sonar-deep-research</td></tr>
+<tr><td>mistral-large-latest</td></tr>
+<tr><td>pixtral-large-latest</td></tr>
+<tr><td>codestral-latest</td></tr>
+<tr><td>llama-3b-instruct-cloud-service</td></tr>
+<tr><td>llama-3b-instruct-on-prem</td></tr>
+</tbody></table>
 
 ### [Cerebras](https://cloud.cerebras.ai/)
 
