@@ -811,6 +811,41 @@ def main():
     model_list_markdown += "**Limits:** [$5/month](https://vercel.com/docs/ai-gateway/pricing)\n\n"
     model_list_markdown += "\n"
 
+    # --- TrueFoundry AI Gateway ---
+    model_list_markdown += "### [TrueFoundry AI Gateway](https://www.truefoundry.com/ai-gateway)\n\n"
+    model_list_markdown += "Seamlessly change between different models and model providers in one interface.\n\n"
+    # Note: Need to clarify pricing - main page mentions $10 free credits vs $1/month
+    model_list_markdown += "**Limits:** $10 free credits [TrueFoundry Documentation](https://www.truefoundry.com/ai-gateway)\n\n"
+    model_list_markdown += "<table><thead><tr><th>Model Name</th></tr></thead><tbody>\n"
+    
+    # TrueFoundry models (sorted alphabetically)
+    truefoundry_models = [
+        "claude-2-1",
+        "claude-3-5-haiku-latest",
+        "claude-3-5-sonnet-latest",
+        "claude-3-opus-latest",
+        "codestral-latest",
+        "gpt-3-5-turbo",
+        "gpt-4",
+        "gpt-4-1 (GPT-4.1)",
+        "gpt-4-1-mini",
+        "gpt-4-turbo",
+        "gpt-4o",
+        "llama-3b-instruct-cloud-service",
+        "llama-3b-instruct-on-prem",
+        "mistral-large-latest",
+        "o3-mini",
+        "o4-mini",
+        "pixtral-large-latest",
+        "sonar-deep-research",
+        "sonar-pro",
+        "sonar-reasoning-pro",
+    ]
+    
+    for model in truefoundry_models:
+        model_list_markdown += f"<tr><td>{model}</td></tr>\n"
+    model_list_markdown += "</tbody></table>\n\n"
+
     # --- Cerebras ---
     model_list_markdown += "### [Cerebras](https://cloud.cerebras.ai/)\n\n"
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
