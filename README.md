@@ -72,6 +72,8 @@ Models share a common quota.
 - [Llama 3.2 11B Vision Instruct](https://openrouter.ai/meta-llama/llama-3.2-11b-vision-instruct:free)
 - [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
+- [Llama 4 Maverick](https://openrouter.ai/meta-llama/llama-4-maverick:free)
+- [Llama 4 Scout](https://openrouter.ai/meta-llama/llama-4-scout:free)
 - [Mistral 7B Instruct](https://openrouter.ai/mistralai/mistral-7b-instruct:free)
 - [Mistral Nemo](https://openrouter.ai/mistralai/mistral-nemo:free)
 - [Mistral Small 24B Instruct 2501](https://openrouter.ai/mistralai/mistral-small-24b-instruct-2501:free)
@@ -89,6 +91,7 @@ Models share a common quota.
 - [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
 - [google/gemma-3n-e2b-it:free](https://openrouter.ai/google/gemma-3n-e2b-it:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
+- [meta-llama/llama-3.3-8b-instruct:free](https://openrouter.ai/meta-llama/llama-3.3-8b-instruct:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
 - [mistralai/devstral-small-2505:free](https://openrouter.ai/mistralai/devstral-small-2505:free)
 - [mistralai/mistral-small-3.2-24b-instruct:free](https://openrouter.ai/mistralai/mistral-small-3.2-24b-instruct:free)
@@ -483,6 +486,7 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
+- deepseek-ai/DeepSeek-V3.1
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 
