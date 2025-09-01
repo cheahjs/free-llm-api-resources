@@ -196,8 +196,6 @@ Routes to various supported providers.
 <tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Groq compound-beta</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
 <tr><td>Groq compound-beta-mini</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
-<tr><td>Llama 3 70B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 3 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
