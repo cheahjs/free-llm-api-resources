@@ -574,7 +574,35 @@ def fetch_chutes_models(logger):
 
     logger.info(f"Found {len(free_models)} free models from Chutes")
     return sorted(free_models, key=lambda x: x["name"])
+    
+def fetch_submodel_models(logger):
+    logger.info("Fetching SubModel models...")
+    r = requests.get(
+        "https://llm.submodel.ai/v1/models?type=llm",
+        headers={
+            "Content-Type": "application/json",
+        },
+    )
+    r.raise_for_status()
+    models = r.json()["data"]
+    logger.info(f"Fetched {len(models)} models from SubMoel")
 
+    # Filter for free models based on free_quota object
+    free_models = []
+    for model in models:
+        free_quota = model.get("free_quota", {})
+        if free_quota.get("day_token", 0) != 0:
+            model_name = model.get("id", "Unknown model")
+            free_models.append(
+                {
+                    "id": model_name,
+                    "name": get_model_name(model_name),
+                    "free_quota": free_quota,
+                }
+            )
+
+    logger.info(f"Found {len(free_models)} free models from SubModel")
+    return sorted(free_models, key=lambda x: x["name"])
 
 def get_human_limits(model, seperator="<br>"):
     if "limits" not in model:
@@ -612,6 +640,7 @@ def main():
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
     chutes_logger = create_logger("Chutes")
+    submodel_logger = create_logger("SubModel")
 
     fetch_concurrently = os.getenv("FETCH_CONCURRENTLY", "false").lower() == "true"
 
@@ -625,6 +654,7 @@ def main():
                 executor.submit(fetch_github_models, github_logger),
                 executor.submit(fetch_samba_models, samba_logger),
                 executor.submit(fetch_scaleway_models, scaleway_logger),
+                executor.submit(fetch_submodel_models, submodel_logger),
             ]
             (
                 gemini_models,
@@ -634,6 +664,7 @@ def main():
                 github_models,
                 samba_models,
                 scaleway_models,
+                submodel_models,
             ) = [f.result() for f in futures]
 
             # Fetch groq models after others complete
@@ -646,6 +677,7 @@ def main():
         github_models = fetch_github_models(github_logger)
         samba_models = fetch_samba_models(samba_logger)
         scaleway_models = fetch_scaleway_models(scaleway_logger)
+        submodel_models = fetch_submodel_models(submodel_logger)
         groq_models = fetch_groq_models(groq_logger)
 
     # Initialize markdown string for free providers
@@ -984,6 +1016,15 @@ def main():
             limits_str = get_human_limits(model)
             model_list_markdown += f'<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/deepseek-ai/model-garden/{model['urlId']}" target="_blank">{model['name']}</a></td><td>{limits_str}<br>Free during preview</td></tr>\n'
 
+    model_list_markdown += "</tbody></table>\n\n"
+
+    # --- SubModel InstaGen APIs (Trial - Table) ---
+    model_list_markdown += "### [SubModel InstaGen APIs](https://submodel.ai)\n\n"
+    model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
+    if submodel_models:
+        limits_str = f'{free_quota['day_token']} tokens/day<br> {free_quota['day_request']} requests/day'
+        for model in submodel_models:
+            model_list_markdown += f'<tr><td><a href="https://submodel.ai/#/modelservice/model/{model['name']}" target="_blank">{model['name']}</a></td><td>{limits_str}</td></tr>\n'
     model_list_markdown += "</tbody></table>\n\n"
 
     # --- Trial Providers Section Generation ---
