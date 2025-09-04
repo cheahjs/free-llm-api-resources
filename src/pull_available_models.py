@@ -585,7 +585,7 @@ def fetch_submodel_models(logger):
     )
     r.raise_for_status()
     models = r.json()["data"]
-    logger.info(f"Fetched {len(models)} models from SubMoel")
+    logger.info(f"Fetched {len(models)} models from SubModel")
 
     # Filter for free models based on free_quota object
     free_models = []
