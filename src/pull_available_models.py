@@ -1022,9 +1022,10 @@ def main():
     model_list_markdown += "### [SubModel InstaGen APIs](https://submodel.ai)\n\n"
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
     if submodel_models:
-        limits_str = f'{free_quota['day_token']} tokens/day<br> {free_quota['day_request']} requests/day'
         for model in submodel_models:
-            model_list_markdown += f'<tr><td><a href="https://submodel.ai/#/modelservice/model/{model['name']}" target="_blank">{model['name']}</a></td><td>{limits_str}</td></tr>\n'
+            free_quota = model.get("free_quota", {})
+            limits_str = f"{free_quota.get('day_token', 0):,} tokens/day<br> {free_quota.get('day_request', 0):,} requests/day"
+            model_list_markdown += f'<tr><td><a href="https://submodel.ai/#/modelservice/model/{model["id"]}" target="_blank">{model["name"]}</a></td><td>{limits_str}</td></tr>\n'
     model_list_markdown += "</tbody></table>\n\n"
 
     # --- Trial Providers Section Generation ---
