@@ -585,13 +585,13 @@ def fetch_submodel_models(logger):
     )
     r.raise_for_status()
     models = r.json()["data"]
-    logger.info(f"Fetched {len(models)} models from SubModel")
+    logger.info(f"Fetched {len(models)} models from SubMoel")
 
     # Filter for free models based on free_quota object
     free_models = []
     for model in models:
-        free_quota = model.get("free_quota", {})
-        if free_quota.get("day_token", 0) != 0:
+        free_quota = model.get("free_quota", 0)
+        if free_quota != None and free_quota.get("day_token", 0) != 0:
             model_name = model.get("id", "Unknown model")
             free_models.append(
                 {
@@ -1023,9 +1023,8 @@ def main():
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
     if submodel_models:
         for model in submodel_models:
-            free_quota = model.get("free_quota", {})
-            limits_str = f"{free_quota.get('day_token', 0):,} tokens/day<br> {free_quota.get('day_request', 0):,} requests/day"
-            model_list_markdown += f'<tr><td><a href="https://submodel.ai/#/modelservice/model/{model["id"]}" target="_blank">{model["name"]}</a></td><td>{limits_str}</td></tr>\n'
+            limits_str = f'{model["free_quota"]["day_token"]} tokens/day<br>{model["free_quota"]["day_request"]} requests/day'
+            model_list_markdown += f'<tr><td><a href="https://submodel.ai/#/modelservice/model/{model["name"]}" target="_blank">{model["name"]}</a></td><td>{limits_str}</td></tr>\n'
     model_list_markdown += "</tbody></table>\n\n"
 
     # --- Trial Providers Section Generation ---
@@ -1152,7 +1151,7 @@ def main():
         for model in scaleway_models:
             trial_list_markdown += f"- {model['name']}\n"
         trial_list_markdown += "\n"
-
+    
     if MISSING_MODELS:
         logger.warning("Missing models:")
         logger.warning(
