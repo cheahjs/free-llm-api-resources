@@ -449,19 +449,6 @@ def fetch_gemini_limits(logger):
                 models[dimension.dimensions.get("model")][
                     f"requests/{quota.refresh_interval}"
                 ] = dimension.details.value
-        elif quota.metric == "generativelanguage.googleapis.com/embed_text_requests":
-            for dimension in quota.dimensions_infos:
-                models["project-embedding"][f"requests/{quota.refresh_interval}"] = (
-                    dimension.details.value
-                )
-        elif (
-            quota.metric
-            == "generativelanguage.googleapis.com/batch_embed_text_requests"
-        ):
-            for dimension in quota.dimensions_infos:
-                models["project-embedding"][
-                    f"batch requests/{quota.refresh_interval}"
-                ] = dimension.details.value
     logger.debug(json.dumps(models, indent=4))
     return models
 
@@ -639,7 +626,6 @@ def main():
     hyperbolic_logger = create_logger("Hyperbolic")
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
-    chutes_logger = create_logger("Chutes")
     submodel_logger = create_logger("SubModel")
 
     fetch_concurrently = os.getenv("FETCH_CONCURRENTLY", "false").lower() == "true"
@@ -715,6 +701,16 @@ def main():
             "limits": gemini_models.get("gemini-2.5-flash", {}),
         },
         {
+            "id": "gemini-2.5-flash-lite",
+            "name": "Gemini 2.5 Flash-Lite",
+            "limits": gemini_models.get("gemini-2.5-flash-lite", {}),
+        },
+        {
+            "id": "gemini-2.5-flash-image-preview",
+            "name": "Gemini 2.5 Flash Image Preview (Nano Banana)",
+            "limits": gemini_models.get("gemini-2.5-flash-image-preview", {}),
+        },
+        {
             "id": "gemini-2.0-flash",
             "name": "Gemini 2.0 Flash",
             "limits": gemini_models.get("gemini-2.0-flash", {}),
@@ -765,18 +761,6 @@ def main():
             "limits": gemini_models.get("gemma-3-1b", {}),
         },
     ]
-    gemini_embedding_models = [
-        {
-            "id": "text-embedding-004",
-            "name": "text-embedding-004",
-            "limits": gemini_models.get("project-embedding", {}),
-        },
-        {
-            "id": "embedding-001",
-            "name": "embedding-001",
-            "limits": gemini_models.get("project-embedding", {}),
-        },
-    ]
 
     # Write text models to table
     for model in gemini_text_models:
@@ -784,16 +768,6 @@ def main():
         model_list_markdown += (
             f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
         )
-
-    # Write embedding models to table
-    first_embedding = True
-    for model in gemini_embedding_models:
-        limits_str = get_human_limits(model)
-        model_list_markdown += f"<tr><td>{model['name']}</td>"
-        if first_embedding:
-            model_list_markdown += f'<td rowspan="{len(gemini_embedding_models)}">{limits_str}<br>100 content/batch<br>Shared Quota</td>'
-            first_embedding = False
-        model_list_markdown += "</tr>\n"
 
     model_list_markdown += "</tbody></table>\n\n"
 
@@ -848,6 +822,10 @@ def main():
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
     cerebras_models = [
         {
+            "name": "gpt-oss-120b",
+            "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
+        },
+        {
             "name": "Qwen 3 235B A22B Instruct",
             "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
         },
@@ -900,11 +878,6 @@ def main():
 
     # --- Together ---
     together_models = [
-        {
-            "id": "meta-llama/Llama-Vision-Free",
-            "name": "Llama 3.2 11B Vision Instruct",
-            "urlId": "llama-3-2-11b-free",
-        },
         {
             "id": "llmeta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
             "name": "Llama 3.3 70B Instruct",

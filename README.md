@@ -88,7 +88,6 @@ Models share a common quota.
 - [deepseek/deepseek-chat-v3.1:free](https://openrouter.ai/deepseek/deepseek-chat-v3.1:free)
 - [deepseek/deepseek-r1-0528-qwen3-8b:free](https://openrouter.ai/deepseek/deepseek-r1-0528-qwen3-8b:free)
 - [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
-- [google/gemini-2.5-flash-image-preview:free](https://openrouter.ai/google/gemini-2.5-flash-image-preview:free)
 - [google/gemma-3n-e2b-it:free](https://openrouter.ai/google/gemma-3n-e2b-it:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
 - [meta-llama/llama-3.3-8b-instruct:free](https://openrouter.ai/meta-llama/llama-3.3-8b-instruct:free)
@@ -105,7 +104,6 @@ Models share a common quota.
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
 - [qwen/qwen3-8b:free](https://openrouter.ai/qwen/qwen3-8b:free)
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
-- [sarvamai/sarvam-m:free](https://openrouter.ai/sarvamai/sarvam-m:free)
 - [tencent/hunyuan-a13b-instruct:free](https://openrouter.ai/tencent/hunyuan-a13b-instruct:free)
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 - [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
@@ -118,6 +116,8 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
 <tr><td>Gemini 2.5 Pro</td><td>3,000,000 tokens/day<br>125,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td></tr>
 <tr><td>Gemini 2.5 Flash</td><td>250,000 tokens/minute<br>250 requests/day<br>10 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Flash-Lite</td><td>250,000 tokens/minute<br>1,000 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Flash Image Preview (Nano Banana)</td><td></td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>200 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>200 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash (Experimental)</td><td>250,000 tokens/minute<br>50 requests/day<br>10 requests/minute</td></tr>
@@ -128,8 +128,6 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 <tr><td>Gemma 3 12B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 4B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 1B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
-<tr><td>text-embedding-004</td><td rowspan="2">100 batch requests/minute<br>100 requests/minute<br>100 content/batch<br>Shared Quota</td></tr>
-<tr><td>embedding-001</td></tr>
 </tbody></table>
 
 ### [NVIDIA NIM](https://build.nvidia.com/explore/discover)
@@ -178,6 +176,7 @@ Routes to various supported providers.
 ### [Cerebras](https://cloud.cerebras.ai/)
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
+<tr><td>gpt-oss-120b</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Qwen 3 235B A22B Instruct</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Qwen 3 235B A22B Thinking</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Qwen 3 Coder 480B</td><td>10 requests/minute<br>150,000 tokens/minute<br>100 requests/hour<br>1,000,000 tokens/hour<br>100 requests/day<br>1,000,000 tokens/day</td></tr>
@@ -194,18 +193,19 @@ Routes to various supported providers.
 <tr><td>Allam 2 7B</td><td>7,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>DeepSeek R1 Distill Llama 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
-<tr><td>Groq compound-beta</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
-<tr><td>Groq compound-beta-mini</td><td>200 requests/day<br>70,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
+<tr><td>groq/compound</td><td>250 requests/day<br>70,000 tokens/minute</td></tr>
+<tr><td>groq/compound-mini</td><td>250 requests/day<br>70,000 tokens/minute</td></tr>
 <tr><td>meta-llama/llama-guard-4-12b</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>meta-llama/llama-prompt-guard-2-22m</td><td></td></tr>
 <tr><td>meta-llama/llama-prompt-guard-2-86m</td><td></td></tr>
 <tr><td>moonshotai/kimi-k2-instruct</td><td>1,000 requests/day<br>10,000 tokens/minute</td></tr>
+<tr><td>moonshotai/kimi-k2-instruct-0905</td><td>1,000 requests/day<br>10,000 tokens/minute</td></tr>
 <tr><td>openai/gpt-oss-120b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 <tr><td>openai/gpt-oss-20b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 <tr><td>qwen/qwen3-32b</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
@@ -215,7 +215,6 @@ Routes to various supported providers.
 
 **Limits:** Up to 60 requests/minute
 
-- [Llama 3.2 11B Vision Instruct](https://together.ai/models/llama-3-2-11b-free)
 - [Llama 3.3 70B Instruct](https://together.ai/models/llama-3-3-70b-free)
 - [DeepSeek R1 Distil Llama 70B](https://together.ai/models/deepseek-r1-distilled-llama-70b-free)
 
