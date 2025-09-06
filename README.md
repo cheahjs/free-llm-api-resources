@@ -116,6 +116,8 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
 <tr><td>Gemini 2.5 Pro</td><td>3,000,000 tokens/day<br>125,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td></tr>
 <tr><td>Gemini 2.5 Flash</td><td>250,000 tokens/minute<br>250 requests/day<br>10 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Flash-Lite</td><td>250,000 tokens/minute<br>1,000 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Flash Image Preview (Nano Banana)</td><td></td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>200 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>200 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash (Experimental)</td><td>250,000 tokens/minute<br>50 requests/day<br>10 requests/minute</td></tr>
@@ -126,8 +128,6 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 <tr><td>Gemma 3 12B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 4B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 1B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
-<tr><td>text-embedding-004</td><td rowspan="2">100 batch requests/minute<br>100 requests/minute<br>100 content/batch<br>Shared Quota</td></tr>
-<tr><td>embedding-001</td></tr>
 </tbody></table>
 
 ### [NVIDIA NIM](https://build.nvidia.com/explore/discover)
@@ -176,6 +176,7 @@ Routes to various supported providers.
 ### [Cerebras](https://cloud.cerebras.ai/)
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
+<tr><td>gpt-oss-120b</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Qwen 3 235B A22B Instruct</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Qwen 3 235B A22B Thinking</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Qwen 3 Coder 480B</td><td>10 requests/minute<br>150,000 tokens/minute<br>100 requests/hour<br>1,000,000 tokens/hour<br>100 requests/day<br>1,000,000 tokens/day</td></tr>
@@ -214,7 +215,6 @@ Routes to various supported providers.
 
 **Limits:** Up to 60 requests/minute
 
-- [Llama 3.2 11B Vision Instruct](https://together.ai/models/llama-3-2-11b-free)
 - [Llama 3.3 70B Instruct](https://together.ai/models/llama-3-3-70b-free)
 - [DeepSeek R1 Distil Llama 70B](https://together.ai/models/deepseek-r1-distilled-llama-70b-free)
 
