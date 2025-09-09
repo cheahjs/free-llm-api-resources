@@ -285,15 +285,6 @@ Extremely restrictive input/output token limits.
 - OpenAI o3
 - OpenAI o3-mini
 - OpenAI o4-mini
-- Phi-3-medium instruct (128k)
-- Phi-3-medium instruct (4k)
-- Phi-3-mini instruct (128k)
-- Phi-3-mini instruct (4k)
-- Phi-3-small instruct (128k)
-- Phi-3-small instruct (8k)
-- Phi-3.5-MoE instruct (128k)
-- Phi-3.5-mini instruct (128k)
-- Phi-3.5-vision instruct (128k)
 - Phi-4
 - Phi-4-mini-instruct
 - Phi-4-mini-reasoning
@@ -484,6 +475,7 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
 - deepseek-ai/DeepSeek-V3.1
+- openai/gpt-oss-120b
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 
