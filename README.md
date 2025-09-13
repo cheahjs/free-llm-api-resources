@@ -96,6 +96,7 @@ Models share a common quota.
 - [mistralai/mistral-small-3.2-24b-instruct:free](https://openrouter.ai/mistralai/mistral-small-3.2-24b-instruct:free)
 - [moonshotai/kimi-dev-72b:free](https://openrouter.ai/moonshotai/kimi-dev-72b:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
+- [nvidia/nemotron-nano-9b-v2:free](https://openrouter.ai/nvidia/nemotron-nano-9b-v2:free)
 - [openai/gpt-oss-120b:free](https://openrouter.ai/openai/gpt-oss-120b:free)
 - [openai/gpt-oss-20b:free](https://openrouter.ai/openai/gpt-oss-20b:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
@@ -456,8 +457,13 @@ Very stringent payment verification for Google Cloud.
 - Qwen2.5 Coder 32B Instruct
 - Qwen2.5 VL 72B Instruct
 - Qwen2.5 VL 7B Instruct
+- openai/gpt-oss-120b
+- openai/gpt-oss-120b-turbo
+- openai/gpt-oss-20b
 - qwen/qwen3-235b-a22b-instruct-2507-fp8
 - qwen/qwen3-coder-480b-a35b-instruct-fp8
+- qwen/qwen3-next-80b-a3b-instruct
+- qwen/qwen3-next-80b-a3b-thinking
 
 ### [SambaNova Cloud](https://cloud.sambanova.ai/)
 
@@ -465,17 +471,23 @@ Very stringent payment verification for Google Cloud.
 
 **Models:**
 - E5-Mistral-7B-Instruct
+- Llama 3.1 405B
 - Llama 3.1 8B
-- Llama 3.3 70B
+- Llama 3.2 1B
+- Llama 3.2 3B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
+- Llama-4-Scout-17B-16E-Instruct
+- Llama-Guard-3-8B
+- Qwen/QwQ-32B
+- Qwen/Qwen2-Audio-7B-Instruct
 - Qwen/Qwen3-32B
-- Whisper-Large-v3
+- deepseek-ai/DeepSeek-R1
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
 - deepseek-ai/DeepSeek-V3.1
-- openai/gpt-oss-120b
+- test-model
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 
@@ -496,5 +508,6 @@ Very stringent payment verification for Google Cloud.
 - mistral-small-3.2-24b-instruct-2506
 - qwen3-235b-a22b-instruct-2507
 - qwen3-coder-30b-a3b-instruct
+- voxtral-small-24b-2507
 
 
