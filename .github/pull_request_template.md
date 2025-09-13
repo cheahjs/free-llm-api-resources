@@ -9,4 +9,6 @@ Before adding a new provider, there's a few general guidelines as to what provid
    For example, providing commercial models such as Anthropic or OpenAI models for free or at steep discounts can suggest questionable business practices, such as chatbot reverse engineering, API credit resale/theft, or other similar practices.
 
 These guidelines are not exhaustive, but attempts to put into writing what sort of providers might be included in the list.
+
+For providers that are trying to add themselves to the list, please note that you are very likely going to see abusive traffic, as free APIs are very common abuse targets.
 --->
