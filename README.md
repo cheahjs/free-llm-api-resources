@@ -26,6 +26,7 @@ This lists various services that provide free access or credits towards API-base
   - [GitHub Models](#github-models)
   - [Cloudflare Workers AI](#cloudflare-workers-ai)
   - [Google Cloud Vertex AI](#google-cloud-vertex-ai)
+  - [LLM7.io](#llm7io)
 - [Providers with trial credits](#providers-with-trial-credits)
   - [Together](#together)
   - [Fireworks](#fireworks)
@@ -355,6 +356,61 @@ Very stringent payment verification for Google Cloud.
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
 </tbody></table>
+
+### [LLM7.io](https://llm7.io) {#llm7io}
+
+An affordable LLM provider. Just start using powerful models instantly.
+
+**Last update:** September 2025
+
+**Limits:**
+- 30 requests/min (anonymous, no sign-up)
+- 120 requests/min (free token via https://token.llm7.io/)
+- Up to ~1,300 requests/min on paid tiers
+
+**Example Usage (Python):**
+```python
+import openai
+
+client = openai.OpenAI(
+    base_url="https://api.llm7.io/v1",
+    api_key="unused"  # Or get it for free at https://token.llm7.io/ for higher rate limits.
+)
+
+response = client.chat.completions.create(
+    model="gpt-4.1-nano-2025-04-14",
+    messages=[
+        {"role": "user", "content": "Tell me a short story about a brave squirrel."}
+    ]
+)
+
+print(response.choices[0].message.content)
+```
+
+**Models (selection):**
+
+* `deepseek-r1-0528`
+* `gemini-2.5-flash-lite` (text, image)
+* `mistral-small-3.1-24b-instruct-2503`
+* `nova-fast`
+* `gpt-4o-mini-2024-07-18` (text, image)
+* `gpt-4.1-nano-2025-04-14` (text, image)
+* `gpt-o4-mini-2025-04-16` (text, image)
+* `qwen2.5-coder-32b-instruct`
+* `roblox-rp`
+* `bidara` (text, image)
+* `mirexa` (text, image)
+* `rtist`
+* `mistral-small-2503`
+* `open-mixtral-8x7b`
+* `deepseek-ai/DeepSeek-R1-0528`
+* `deepseek-v3-0324`
+* `deepseek-r1`
+* `l3.3-ms-nevoria-70b`
+* `midnight-rose-70b-v2.0.3`
+* `l3-70b-euryale-v2.1`
+* `l3-8b-stheno-v3.2`
+* `gemma-2-2b-it`
 
 
 
