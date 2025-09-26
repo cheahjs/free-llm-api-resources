@@ -42,7 +42,6 @@ This lists various services that provide free access or credits towards API-base
   - [Hyperbolic](#hyperbolic)
   - [SambaNova Cloud](#sambanova-cloud)
   - [Scaleway Generative APIs](#scaleway-generative-apis)
-  - [Ollama-Cloud-APIs](#ollama-cloud-apis)
 
 ## Free Providers
 
@@ -511,12 +510,4 @@ Very stringent payment verification for Google Cloud.
 - qwen3-coder-30b-a3b-instruct
 - voxtral-small-24b-2507
 
-### [Ollama-Cloud-APIs](https://ollama.com/cloud)
 
-**Credits:** The Free API tier offers generous usage limits, and no restrictions have been mentioned anywhere as of today.
-
-**Models:**
-- gpt-oss:20b-cloud
-- gpt-oss:120b-cloud
-- deepseek-v3.1:671b-cloud
-- qwen3-coder:480b-cloud
