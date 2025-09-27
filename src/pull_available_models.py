@@ -674,11 +674,6 @@ def main():
             "limits": gemini_models.get("gemini-2.5-flash-lite", {}),
         },
         {
-            "id": "gemini-2.5-flash-image-preview",
-            "name": "Gemini 2.5 Flash Image Preview (Nano Banana)",
-            "limits": gemini_models.get("gemini-2.5-flash-image-preview", {}),
-        },
-        {
             "id": "gemini-2.0-flash",
             "name": "Gemini 2.0 Flash",
             "limits": gemini_models.get("gemini-2.0-flash", {}),
@@ -692,16 +687,6 @@ def main():
             "id": "gemini-2.0-flash-exp",
             "name": "Gemini 2.0 Flash (Experimental)",
             "limits": gemini_models.get("gemini-2.0-flash-exp", {}),
-        },
-        {
-            "id": "gemini-1.5-flash",
-            "name": "Gemini 1.5 Flash",
-            "limits": gemini_models.get("gemini-1.5-flash", {}),
-        },
-        {
-            "id": "gemini-1.5-flash-8b",
-            "name": "Gemini 1.5 Flash-8B",
-            "limits": gemini_models.get("gemini-1.5-flash-8b", {}),
         },
         {
             "id": "learnlm-2.0-flash-experimental",
