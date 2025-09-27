@@ -57,7 +57,6 @@ Models share a common quota.
 - [DeepHermes 3 Llama 3 8B Preview](https://openrouter.ai/nousresearch/deephermes-3-llama-3-8b-preview:free)
 - [DeepSeek R1](https://openrouter.ai/deepseek/deepseek-r1:free)
 - [DeepSeek R1 Distill Llama 70B](https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b:free)
-- [DeepSeek R1 Distill Qwen 14B](https://openrouter.ai/deepseek/deepseek-r1-distill-qwen-14b:free)
 - [DeepSeek V3 0324](https://openrouter.ai/deepseek/deepseek-chat-v3-0324:free)
 - [Dolphin 3.0 Mistral 24B](https://openrouter.ai/cognitivecomputations/dolphin3.0-mistral-24b:free)
 - [Dolphin 3.0 R1 Mistral 24B](https://openrouter.ai/cognitivecomputations/dolphin3.0-r1-mistral-24b:free)
@@ -66,8 +65,6 @@ Models share a common quota.
 - [Gemma 3 27B Instruct](https://openrouter.ai/google/gemma-3-27b-it:free)
 - [Gemma 3 4B Instruct](https://openrouter.ai/google/gemma-3-4b-it:free)
 - [Kimi VL A3B Thinking](https://openrouter.ai/moonshotai/kimi-vl-a3b-thinking:free)
-- [Llama 3.1 405B Instruct](https://openrouter.ai/meta-llama/llama-3.1-405b-instruct:free)
-- [Llama 3.1 Nemotron Ultra 253B v1](https://openrouter.ai/nvidia/llama-3.1-nemotron-ultra-253b-v1:free)
 - [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
 - [Llama 4 Maverick](https://openrouter.ai/meta-llama/llama-4-maverick:free)
@@ -79,10 +76,8 @@ Models share a common quota.
 - [QwQ 32B ArliAI RpR v1](https://openrouter.ai/arliai/qwq-32b-arliai-rpr-v1:free)
 - [Qwen 2.5 72B Instruct](https://openrouter.ai/qwen/qwen-2.5-72b-instruct:free)
 - [Qwen 2.5 VL 32B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct:free)
-- [Qwen QwQ 32B](https://openrouter.ai/qwen/qwq-32b:free)
 - [Qwen2.5 Coder 32B Instruct](https://openrouter.ai/qwen/qwen-2.5-coder-32b-instruct:free)
 - [Qwen2.5 VL 72B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-72b-instruct:free)
-- [Reka Flash 3](https://openrouter.ai/rekaai/reka-flash-3:free)
 - [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
 - [deepseek/deepseek-chat-v3.1:free](https://openrouter.ai/deepseek/deepseek-chat-v3.1:free)
@@ -108,6 +103,7 @@ Models share a common quota.
 - [tencent/hunyuan-a13b-instruct:free](https://openrouter.ai/tencent/hunyuan-a13b-instruct:free)
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 - [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
+- [x-ai/grok-4-fast:free](https://openrouter.ai/x-ai/grok-4-fast:free)
 - [z-ai/glm-4.5-air:free](https://openrouter.ai/z-ai/glm-4.5-air:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
@@ -296,6 +292,7 @@ Extremely restrictive input/output token limits.
 
 **Limits:** [10,000 neurons/day](https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation)
 
+- @cf/aisingapore/gemma-sea-lion-v4-27b-it
 - @cf/openai/gpt-oss-120b
 - @cf/openai/gpt-oss-20b
 - DeepSeek R1 Distill Qwen 32B
@@ -313,7 +310,6 @@ Extremely restrictive input/output token limits.
 - Llama 2 7B Chat (FP16)
 - Llama 2 7B Chat (INT8)
 - Llama 2 7B Chat (LoRA)
-- Llama 3 8B Instruct
 - Llama 3 8B Instruct
 - Llama 3 8B Instruct (AWQ)
 - Llama 3.1 8B Instruct (AWQ)
@@ -443,7 +439,6 @@ Very stringent payment verification for Google Cloud.
 - DeepSeek V3 0324
 - Hermes 3 Llama 3.1 70B
 - Llama 3 70B Instruct
-- Llama 3.1 405B Base
 - Llama 3.1 405B Base (FP8)
 - Llama 3.1 405B Instruct
 - Llama 3.1 70B Instruct
@@ -452,14 +447,15 @@ Very stringent payment verification for Google Cloud.
 - Llama 3.3 70B Instruct
 - Pixtral 12B (2409)
 - Qwen QwQ 32B
-- Qwen QwQ 32B Preview
 - Qwen2.5 72B Instruct
 - Qwen2.5 Coder 32B Instruct
 - Qwen2.5 VL 72B Instruct
 - Qwen2.5 VL 7B Instruct
+- deepseek-ai/deepseek-r1-0528
 - openai/gpt-oss-120b
 - openai/gpt-oss-120b-turbo
 - openai/gpt-oss-20b
+- qwen/qwen3-235b-a22b
 - qwen/qwen3-235b-a22b-instruct-2507-fp8
 - qwen/qwen3-coder-480b-a35b-instruct-fp8
 - qwen/qwen3-next-80b-a3b-instruct
@@ -471,23 +467,17 @@ Very stringent payment verification for Google Cloud.
 
 **Models:**
 - E5-Mistral-7B-Instruct
-- Llama 3.1 405B
 - Llama 3.1 8B
-- Llama 3.2 1B
-- Llama 3.2 3B
+- Llama 3.3 70B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
-- Llama-4-Scout-17B-16E-Instruct
-- Llama-Guard-3-8B
-- Qwen/QwQ-32B
-- Qwen/Qwen2-Audio-7B-Instruct
 - Qwen/Qwen3-32B
-- deepseek-ai/DeepSeek-R1
+- Whisper-Large-v3
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
 - deepseek-ai/DeepSeek-V3.1
-- test-model
+- openai/gpt-oss-120b
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 
