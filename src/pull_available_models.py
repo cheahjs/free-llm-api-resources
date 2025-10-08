@@ -642,7 +642,7 @@ def main():
     if openrouter_models:
         provider_limits = get_human_limits(openrouter_models[0])
         model_list_markdown += "**Limits:**\n\n"
-        model_list_markdown += f"[{provider_limits}<br>1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api-reference/limits)\n\n"
+        model_list_markdown += f"[{provider_limits}<br>Up to 1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api-reference/limits)\n\n"
         model_list_markdown += "Models share a common quota.\n\n"
         for model in openrouter_models:
             model_list_markdown += (
@@ -827,28 +827,6 @@ def main():
                 f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
             )
         model_list_markdown += "</tbody></table>\n"
-    model_list_markdown += "\n"
-
-    # --- Together ---
-    together_models = [
-        {
-            "id": "llmeta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
-            "name": "Llama 3.3 70B Instruct",
-            "urlId": "llama-3-3-70b-free",
-        },
-        {
-            "id": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
-            "name": "DeepSeek R1 Distil Llama 70B",
-            "urlId": "deepseek-r1-distilled-llama-70b-free",
-        },
-    ]
-    model_list_markdown += "### [Together (Free)](https://together.ai)\n\n"
-    model_list_markdown += "**Limits:** Up to 60 requests/minute\n\n"
-    if together_models:
-        for model in together_models:
-            model_list_markdown += (
-                f"- [{model['name']}](https://together.ai/models/{model['urlId']})\n"
-            )
     model_list_markdown += "\n"
 
     # --- Cohere ---

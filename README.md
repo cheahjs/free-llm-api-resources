@@ -21,7 +21,6 @@ This lists various services that provide free access or credits towards API-base
   - [Vercel AI Gateway](#vercel-ai-gateway)
   - [Cerebras](#cerebras)
   - [Groq](#groq)
-  - [Together (Free)](#together-free)
   - [Cohere](#cohere)
   - [GitHub Models](#github-models)
   - [Cloudflare Workers AI](#cloudflare-workers-ai)
@@ -49,7 +48,7 @@ This lists various services that provide free access or credits towards API-base
 
 **Limits:**
 
-[20 requests/minute<br>50 requests/day<br>1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api-reference/limits)
+[20 requests/minute<br>50 requests/day<br>Up to 1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api-reference/limits)
 
 Models share a common quota.
 
@@ -202,13 +201,6 @@ Routes to various supported providers.
 <tr><td>openai/gpt-oss-20b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 <tr><td>qwen/qwen3-32b</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 </tbody></table>
-
-### [Together (Free)](https://together.ai)
-
-**Limits:** Up to 60 requests/minute
-
-- [Llama 3.3 70B Instruct](https://together.ai/models/llama-3-3-70b-free)
-- [DeepSeek R1 Distil Llama 70B](https://together.ai/models/deepseek-r1-distilled-llama-70b-free)
 
 ### [Cohere](https://cohere.com)
 
