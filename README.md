@@ -182,8 +182,6 @@ Routes to various supported providers.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
 <tr><td>Allam 2 7B</td><td>7,000 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>DeepSeek R1 Distill Llama 70B</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Gemma 2 9B Instruct</td><td>14,400 requests/day<br>15,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Maverick 17B 128E Instruct</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
@@ -280,6 +278,7 @@ Extremely restrictive input/output token limits.
 **Limits:** [10,000 neurons/day](https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation)
 
 - @cf/aisingapore/gemma-sea-lion-v4-27b-it
+- @cf/ibm-granite/granite-4.0-h-micro
 - @cf/openai/gpt-oss-120b
 - @cf/openai/gpt-oss-20b
 - DeepSeek R1 Distill Qwen 32B
