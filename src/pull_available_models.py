@@ -1011,6 +1011,13 @@ def main():
             "requirements": "",
             "models_desc": "Various open models",
         },
+        {
+            "name": "Gravix Layer",
+            "url": "https://gravixlayer.com",
+            "credits": "$10",
+            "requirements": "",
+            "models_desc": "[Various open-source models](https://gravixlayer.com/models)",
+        },
     ]
 
     for provider in trial_providers_static:
