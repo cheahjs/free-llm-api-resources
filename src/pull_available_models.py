@@ -928,13 +928,6 @@ def main():
     # --- Static Trial Providers (Markdown List/Simple Entry) ---
     trial_providers_static = [
         {
-            "name": "Together",
-            "url": "https://together.ai",
-            "credits": "$1 when you add a payment method",
-            "requirements": "",
-            "models_desc": "[Various open models](https://together.ai/models)",
-        },
-        {
             "name": "Fireworks",
             "url": "https://fireworks.ai/",
             "credits": "$1",
@@ -1001,13 +994,6 @@ def main():
             "name": "Inference.net",
             "url": "https://inference.net",
             "credits": "$1, $25 on responding to email survey",
-            "requirements": "",
-            "models_desc": "Various open models",
-        },
-        {
-            "name": "nCompass",
-            "url": "https://ncompass.tech",
-            "credits": "$1",
             "requirements": "",
             "models_desc": "Various open models",
         },
