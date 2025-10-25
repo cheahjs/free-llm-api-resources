@@ -62,6 +62,7 @@ Models share a common quota.
 - [Gemma 3 12B Instruct](https://openrouter.ai/google/gemma-3-12b-it:free)
 - [Gemma 3 27B Instruct](https://openrouter.ai/google/gemma-3-27b-it:free)
 - [Gemma 3 4B Instruct](https://openrouter.ai/google/gemma-3-4b-it:free)
+- [Hermes 3 Llama 3.1 405B](https://openrouter.ai/nousresearch/hermes-3-llama-3.1-405b:free)
 - [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
 - [Llama 4 Maverick](https://openrouter.ai/meta-llama/llama-4-maverick:free)
@@ -74,7 +75,6 @@ Models share a common quota.
 - [Qwen 2.5 72B Instruct](https://openrouter.ai/qwen/qwen-2.5-72b-instruct:free)
 - [Qwen 2.5 VL 32B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct:free)
 - [Qwen2.5 Coder 32B Instruct](https://openrouter.ai/qwen/qwen-2.5-coder-32b-instruct:free)
-- [Qwen2.5 VL 72B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-72b-instruct:free)
 - [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [alibaba/tongyi-deepresearch-30b-a3b:free](https://openrouter.ai/alibaba/tongyi-deepresearch-30b-a3b:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
@@ -86,6 +86,7 @@ Models share a common quota.
 - [meituan/longcat-flash-chat:free](https://openrouter.ai/meituan/longcat-flash-chat:free)
 - [meta-llama/llama-3.3-8b-instruct:free](https://openrouter.ai/meta-llama/llama-3.3-8b-instruct:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
+- [minimax/minimax-m2:free](https://openrouter.ai/minimax/minimax-m2:free)
 - [mistralai/devstral-small-2505:free](https://openrouter.ai/mistralai/devstral-small-2505:free)
 - [mistralai/mistral-small-3.2-24b-instruct:free](https://openrouter.ai/mistralai/mistral-small-3.2-24b-instruct:free)
 - [moonshotai/kimi-dev-72b:free](https://openrouter.ai/moonshotai/kimi-dev-72b:free)
@@ -480,6 +481,7 @@ Very stringent payment verification for Google Cloud.
 - Mistral Small 3.1 24B Instruct 2503
 - Pixtral 12B (2409)
 - Qwen2.5 Coder 32B Instruct
+- Whisper Large v3
 - devstral-small-2505
 - gpt-oss-120b
 - mistral-small-3.2-24b-instruct-2506
