@@ -207,14 +207,18 @@ Routes to various supported providers.
 
 Models share a common quota.
 
-- Command-A
-- Command-R7B
-- Command-R+
-- Command-R
-- Aya Expanse 8B
-- Aya Expanse 32B
-- Aya Vision 8B
-- Aya Vision 32B
+- c4ai-aya-expanse-32b
+- c4ai-aya-expanse-8b
+- c4ai-aya-vision-32b
+- c4ai-aya-vision-8b
+- command-a-03-2025
+- command-a-reasoning-08-2025
+- command-a-translate-08-2025
+- command-a-vision-07-2025
+- command-r-08-2024
+- command-r-plus-08-2024
+- command-r7b-12-2024
+- command-r7b-arabic-02-2025
 
 ### [GitHub Models](https://github.com/marketplace/models)
 

@@ -532,6 +532,66 @@ def fetch_scaleway_models(logger):
     return ret_models
 
 
+def fetch_cohere_models(logger):
+    logger.info("Fetching Cohere models...")
+    headers = {
+        "accept": "application/json",
+        "Authorization": f"Bearer {os.environ['COHERE_API_KEY']}",
+    }
+    params = {}
+    all_models = []
+    page = 1
+
+    try:
+        while True:
+            response = requests.get(
+                "https://api.cohere.com/v1/models",
+                headers=headers,
+                params=params or None,
+                timeout=10,
+            )
+            response.raise_for_status()
+            payload = response.json()
+            models = payload.get("models", [])
+            logger.info(f"Fetched {len(models)} models from Cohere (page {page})")
+            all_models.extend(models)
+            next_token = payload.get("next_page_token")
+            if not next_token:
+                break
+            params["page_token"] = next_token
+            page += 1
+    except requests.exceptions.RequestException as exc:
+        logger.error(f"Error fetching Cohere models: {exc}")
+        return []
+    except json.JSONDecodeError as exc:
+        logger.error(f"Error decoding Cohere API response: {exc}")
+        return []
+
+    ret_models = []
+    for model in all_models:
+        model_id = model.get("name")
+        if not model_id:
+            continue
+        if model.get("is_deprecated"):
+            logger.debug(f"Skipping deprecated Cohere model {model_id}")
+            continue
+        endpoints = set(model.get("endpoints") or []) | set(
+            model.get("default_endpoints") or []
+        )
+        if "chat" not in endpoints:
+            logger.debug(f"Skipping non-chat Cohere model {model_id}")
+            continue
+        ret_models.append(
+            {
+                "id": model_id,
+                "name": get_model_name(model_id),
+            }
+        )
+
+    logger.info(f"Found {len(ret_models)} Cohere chat models")
+    return sorted(ret_models, key=lambda x: x["name"])
+
+
 def fetch_chutes_models(logger):
     logger.info("Fetching Chutes models...")
     r = requests.get(
@@ -598,6 +658,7 @@ def main():
     hyperbolic_logger = create_logger("Hyperbolic")
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
+    cohere_logger = create_logger("Cohere")
 
     fetch_concurrently = os.getenv("FETCH_CONCURRENTLY", "false").lower() == "true"
 
@@ -611,6 +672,7 @@ def main():
                 executor.submit(fetch_github_models, github_logger),
                 executor.submit(fetch_samba_models, samba_logger),
                 executor.submit(fetch_scaleway_models, scaleway_logger),
+                executor.submit(fetch_cohere_models, cohere_logger),
             ]
             (
                 gemini_models,
@@ -620,6 +682,7 @@ def main():
                 github_models,
                 samba_models,
                 scaleway_models,
+                cohere_models,
             ) = [f.result() for f in futures]
 
             # Fetch groq models after others complete
@@ -632,6 +695,7 @@ def main():
         github_models = fetch_github_models(github_logger)
         samba_models = fetch_samba_models(samba_logger)
         scaleway_models = fetch_scaleway_models(scaleway_logger)
+        cohere_models = fetch_cohere_models(cohere_logger)
         groq_models = fetch_groq_models(groq_logger)
 
     # Initialize markdown string for free providers
@@ -830,16 +894,6 @@ def main():
     model_list_markdown += "\n"
 
     # --- Cohere ---
-    cohere_models = [
-        {"id": "command-a-03-2025", "name": "Command-A"},
-        {"id": "command-r7b-12-2024", "name": "Command-R7B"},
-        {"id": "command-r-plus", "name": "Command-R+"},
-        {"id": "command-r", "name": "Command-R"},
-        {"id": "c4ai-aya-expanse-8b", "name": "Aya Expanse 8B"},
-        {"id": "c4ai-aya-expanse-32b", "name": "Aya Expanse 32B"},
-        {"id": "c4ai-aya-vision-8b", "name": "Aya Vision 8B"},
-        {"id": "c4ai-aya-vision-32b", "name": "Aya Vision 32B"},
-    ]
     model_list_markdown += "### [Cohere](https://cohere.com)\n\n"
     model_list_markdown += "**Limits:**\n\n"
     model_list_markdown += "[20 requests/minute<br>1,000 requests/month](https://docs.cohere.com/docs/rate-limits)\n\n"
@@ -847,6 +901,8 @@ def main():
     if cohere_models:
         for model in cohere_models:
             model_list_markdown += f"- {model['name']}\n"
+    else:
+        model_list_markdown += "- No chat models available right now.\n"
     model_list_markdown += "\n"
 
     # --- GitHub Models ---
