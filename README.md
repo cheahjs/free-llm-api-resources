@@ -51,12 +51,9 @@ This lists various services that provide free access or credits towards API-base
 Models share a common quota.
 
 - [DeepCoder 14B Preview](https://openrouter.ai/agentica-org/deepcoder-14b-preview:free)
-- [DeepHermes 3 Llama 3 8B Preview](https://openrouter.ai/nousresearch/deephermes-3-llama-3-8b-preview:free)
 - [DeepSeek R1](https://openrouter.ai/deepseek/deepseek-r1:free)
 - [DeepSeek R1 Distill Llama 70B](https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b:free)
 - [DeepSeek V3 0324](https://openrouter.ai/deepseek/deepseek-chat-v3-0324:free)
-- [Dolphin 3.0 Mistral 24B](https://openrouter.ai/cognitivecomputations/dolphin3.0-mistral-24b:free)
-- [Gemma 2 9B Instruct](https://openrouter.ai/google/gemma-2-9b-it:free)
 - [Gemma 3 12B Instruct](https://openrouter.ai/google/gemma-3-12b-it:free)
 - [Gemma 3 27B Instruct](https://openrouter.ai/google/gemma-3-27b-it:free)
 - [Gemma 3 4B Instruct](https://openrouter.ai/google/gemma-3-4b-it:free)
@@ -73,7 +70,6 @@ Models share a common quota.
 - [Qwen 2.5 72B Instruct](https://openrouter.ai/qwen/qwen-2.5-72b-instruct:free)
 - [Qwen 2.5 VL 32B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct:free)
 - [Qwen2.5 Coder 32B Instruct](https://openrouter.ai/qwen/qwen-2.5-coder-32b-instruct:free)
-- [Shisa V2 Llama 3.3 70B](https://openrouter.ai/shisa-ai/shisa-v2-llama3.3-70b:free)
 - [alibaba/tongyi-deepresearch-30b-a3b:free](https://openrouter.ai/alibaba/tongyi-deepresearch-30b-a3b:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
 - [deepseek/deepseek-chat-v3.1:free](https://openrouter.ai/deepseek/deepseek-chat-v3.1:free)
@@ -85,19 +81,16 @@ Models share a common quota.
 - [meta-llama/llama-3.3-8b-instruct:free](https://openrouter.ai/meta-llama/llama-3.3-8b-instruct:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
 - [minimax/minimax-m2:free](https://openrouter.ai/minimax/minimax-m2:free)
-- [mistralai/devstral-small-2505:free](https://openrouter.ai/mistralai/devstral-small-2505:free)
 - [mistralai/mistral-small-3.2-24b-instruct:free](https://openrouter.ai/mistralai/mistral-small-3.2-24b-instruct:free)
-- [moonshotai/kimi-dev-72b:free](https://openrouter.ai/moonshotai/kimi-dev-72b:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
+- [nvidia/nemotron-nano-12b-v2-vl:free](https://openrouter.ai/nvidia/nemotron-nano-12b-v2-vl:free)
 - [nvidia/nemotron-nano-9b-v2:free](https://openrouter.ai/nvidia/nemotron-nano-9b-v2:free)
 - [openai/gpt-oss-20b:free](https://openrouter.ai/openai/gpt-oss-20b:free)
 - [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
-- [qwen/qwen3-8b:free](https://openrouter.ai/qwen/qwen3-8b:free)
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
-- [tencent/hunyuan-a13b-instruct:free](https://openrouter.ai/tencent/hunyuan-a13b-instruct:free)
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 - [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
 - [z-ai/glm-4.5-air:free](https://openrouter.ai/z-ai/glm-4.5-air:free)
@@ -196,6 +189,7 @@ Routes to various supported providers.
 <tr><td>moonshotai/kimi-k2-instruct-0905</td><td>1,000 requests/day<br>10,000 tokens/minute</td></tr>
 <tr><td>openai/gpt-oss-120b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 <tr><td>openai/gpt-oss-20b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
+<tr><td>openai/gpt-oss-safeguard-20b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 <tr><td>qwen/qwen3-32b</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 </tbody></table>
 
@@ -239,7 +233,6 @@ Extremely restrictive input/output token limits.
 - DeepSeek-V3-0324
 - Grok 3
 - Grok 3 Mini
-- JAIS 30b Chat
 - Llama 4 Maverick 17B 128E Instruct FP8
 - Llama 4 Scout 17B 16E Instruct
 - Llama-3.2-11B-Vision-Instruct
@@ -249,9 +242,7 @@ Extremely restrictive input/output token limits.
 - Meta-Llama-3.1-405B-Instruct
 - Meta-Llama-3.1-8B-Instruct
 - Ministral 3B
-- Mistral Large 24.11
 - Mistral Medium 3 (25.05)
-- Mistral Nemo
 - Mistral Small 3.1
 - OpenAI GPT-4.1
 - OpenAI GPT-4.1-mini
@@ -456,6 +447,7 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1-Terminus
 - openai/gpt-oss-120b
+- tbd
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 
