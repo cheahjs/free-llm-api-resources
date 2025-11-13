@@ -77,10 +77,10 @@ Models share a common quota.
 - [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
 - [google/gemma-3n-e2b-it:free](https://openrouter.ai/google/gemma-3n-e2b-it:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
+- [kwaipilot/kat-coder-pro:free](https://openrouter.ai/kwaipilot/kat-coder-pro:free)
 - [meituan/longcat-flash-chat:free](https://openrouter.ai/meituan/longcat-flash-chat:free)
 - [meta-llama/llama-3.3-8b-instruct:free](https://openrouter.ai/meta-llama/llama-3.3-8b-instruct:free)
 - [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
-- [minimax/minimax-m2:free](https://openrouter.ai/minimax/minimax-m2:free)
 - [mistralai/mistral-small-3.2-24b-instruct:free](https://openrouter.ai/mistralai/mistral-small-3.2-24b-instruct:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
 - [nvidia/nemotron-nano-12b-v2-vl:free](https://openrouter.ai/nvidia/nemotron-nano-12b-v2-vl:free)
@@ -105,7 +105,7 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 <tr><td>Gemini 2.5 Flash-Lite</td><td>250,000 tokens/minute<br>1,000 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>200 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>200 requests/day<br>30 requests/minute</td></tr>
-<tr><td>Gemini 2.0 Flash (Experimental)</td><td>250,000 tokens/minute<br>50 requests/day<br>10 requests/minute</td></tr>
+<tr><td>Gemini 2.0 Flash (Experimental)</td><td>0 tokens/minute<br>50 requests/day<br>0 requests/minute</td></tr>
 <tr><td>LearnLM 2.0 Flash (Experimental)</td><td>1,500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemma 3 27B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 12B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
@@ -221,13 +221,10 @@ Extremely restrictive input/output token limits.
 **Limits:** [Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)](https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits)
 
 - AI21 Jamba 1.5 Large
-- AI21 Jamba 1.5 Mini
 - Codestral 25.01
 - Cohere Command A
 - Cohere Command R 08-2024
 - Cohere Command R+ 08-2024
-- Cohere Embed v3 English
-- Cohere Embed v3 Multilingual
 - DeepSeek-R1
 - DeepSeek-R1-0528
 - DeepSeek-V3-0324
