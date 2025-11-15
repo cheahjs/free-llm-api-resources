@@ -272,6 +272,7 @@ Extremely restrictive input/output token limits.
 - @cf/ibm-granite/granite-4.0-h-micro
 - @cf/openai/gpt-oss-120b
 - @cf/openai/gpt-oss-20b
+- @cf/qwen/qwen3-30b-a3b-fp8
 - DeepSeek R1 Distill Qwen 32B
 - Deepseek Coder 6.7B Base (AWQ)
 - Deepseek Coder 6.7B Instruct (AWQ)
@@ -444,7 +445,6 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1-Terminus
 - openai/gpt-oss-120b
-- tbd
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 
