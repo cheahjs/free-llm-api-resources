@@ -88,6 +88,7 @@ Models share a common quota.
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 - [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
+- [x-ai/grok-4.1-fast:free](https://openrouter.ai/x-ai/grok-4.1-fast:free)
 - [z-ai/glm-4.5-air:free](https://openrouter.ai/z-ai/glm-4.5-air:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
@@ -398,7 +399,6 @@ Very stringent payment verification for Google Cloud.
 **Models:**
 - DeepSeek V3
 - DeepSeek V3 0324
-- Hermes 3 Llama 3.1 70B
 - Llama 3 70B Instruct
 - Llama 3.1 405B Base
 - Llama 3.1 405B Instruct
@@ -453,11 +453,8 @@ Very stringent payment verification for Google Cloud.
 - Llama 3.1 8B Instruct
 - Llama 3.3 70B Instruct
 - Mistral Nemo 2407
-- Mistral Small 3.1 24B Instruct 2503
 - Pixtral 12B (2409)
-- Qwen2.5 Coder 32B Instruct
 - Whisper Large v3
-- devstral-small-2505
 - gpt-oss-120b
 - mistral-small-3.2-24b-instruct-2506
 - qwen3-235b-a22b-instruct-2507
