@@ -50,9 +50,6 @@ This lists various services that provide free access or credits towards API-base
 
 Models share a common quota.
 
-- [DeepSeek R1](https://openrouter.ai/deepseek/deepseek-r1:free)
-- [DeepSeek R1 Distill Llama 70B](https://openrouter.ai/deepseek/deepseek-r1-distill-llama-70b:free)
-- [DeepSeek V3 0324](https://openrouter.ai/deepseek/deepseek-chat-v3-0324:free)
 - [Gemma 3 12B Instruct](https://openrouter.ai/google/gemma-3-12b-it:free)
 - [Gemma 3 27B Instruct](https://openrouter.ai/google/gemma-3-27b-it:free)
 - [Gemma 3 4B Instruct](https://openrouter.ai/google/gemma-3-4b-it:free)
@@ -60,34 +57,23 @@ Models share a common quota.
 - [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
 - [Mistral 7B Instruct](https://openrouter.ai/mistralai/mistral-7b-instruct:free)
-- [Mistral Nemo](https://openrouter.ai/mistralai/mistral-nemo:free)
-- [Mistral Small 24B Instruct 2501](https://openrouter.ai/mistralai/mistral-small-24b-instruct-2501:free)
 - [Mistral Small 3.1 24B Instruct](https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free)
-- [QwQ 32B ArliAI RpR v1](https://openrouter.ai/arliai/qwq-32b-arliai-rpr-v1:free)
-- [Qwen 2.5 72B Instruct](https://openrouter.ai/qwen/qwen-2.5-72b-instruct:free)
-- [Qwen 2.5 VL 32B Instruct](https://openrouter.ai/qwen/qwen2.5-vl-32b-instruct:free)
-- [Qwen2.5 Coder 32B Instruct](https://openrouter.ai/qwen/qwen-2.5-coder-32b-instruct:free)
 - [alibaba/tongyi-deepresearch-30b-a3b:free](https://openrouter.ai/alibaba/tongyi-deepresearch-30b-a3b:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
-- [deepseek/deepseek-r1-0528-qwen3-8b:free](https://openrouter.ai/deepseek/deepseek-r1-0528-qwen3-8b:free)
-- [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
 - [google/gemma-3n-e2b-it:free](https://openrouter.ai/google/gemma-3n-e2b-it:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
 - [kwaipilot/kat-coder-pro:free](https://openrouter.ai/kwaipilot/kat-coder-pro:free)
 - [meituan/longcat-flash-chat:free](https://openrouter.ai/meituan/longcat-flash-chat:free)
-- [microsoft/mai-ds-r1:free](https://openrouter.ai/microsoft/mai-ds-r1:free)
-- [mistralai/mistral-small-3.2-24b-instruct:free](https://openrouter.ai/mistralai/mistral-small-3.2-24b-instruct:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
 - [nvidia/nemotron-nano-12b-v2-vl:free](https://openrouter.ai/nvidia/nemotron-nano-12b-v2-vl:free)
 - [nvidia/nemotron-nano-9b-v2:free](https://openrouter.ai/nvidia/nemotron-nano-9b-v2:free)
 - [openai/gpt-oss-20b:free](https://openrouter.ai/openai/gpt-oss-20b:free)
-- [qwen/qwen3-14b:free](https://openrouter.ai/qwen/qwen3-14b:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
-- [qwen/qwen3-30b-a3b:free](https://openrouter.ai/qwen/qwen3-30b-a3b:free)
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 - [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
+- [tngtech/tng-r1t-chimera:free](https://openrouter.ai/tngtech/tng-r1t-chimera:free)
 - [x-ai/grok-4.1-fast:free](https://openrouter.ai/x-ai/grok-4.1-fast:free)
 - [z-ai/glm-4.5-air:free](https://openrouter.ai/z-ai/glm-4.5-air:free)
 
@@ -456,9 +442,11 @@ Very stringent payment verification for Google Cloud.
 - Pixtral 12B (2409)
 - Whisper Large v3
 - gpt-oss-120b
+- holo2-30b-a3b
 - mistral-small-3.2-24b-instruct-2506
 - qwen3-235b-a22b-instruct-2507
 - qwen3-coder-30b-a3b-instruct
+- qwen3-embedding-8b
 - voxtral-small-24b-2507
 
 
