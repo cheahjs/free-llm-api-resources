@@ -59,6 +59,9 @@ Models share a common quota.
 - [Mistral 7B Instruct](https://openrouter.ai/mistralai/mistral-7b-instruct:free)
 - [Mistral Small 3.1 24B Instruct](https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free)
 - [alibaba/tongyi-deepresearch-30b-a3b:free](https://openrouter.ai/alibaba/tongyi-deepresearch-30b-a3b:free)
+- [allenai/olmo-3-32b-think:free](https://openrouter.ai/allenai/olmo-3-32b-think:free)
+- [amazon/nova-2-lite-v1:free](https://openrouter.ai/amazon/nova-2-lite-v1:free)
+- [arcee-ai/trinity-mini:free](https://openrouter.ai/arcee-ai/trinity-mini:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
 - [google/gemma-3n-e2b-it:free](https://openrouter.ai/google/gemma-3n-e2b-it:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
@@ -74,7 +77,6 @@ Models share a common quota.
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 - [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
 - [tngtech/tng-r1t-chimera:free](https://openrouter.ai/tngtech/tng-r1t-chimera:free)
-- [x-ai/grok-4.1-fast:free](https://openrouter.ai/x-ai/grok-4.1-fast:free)
 - [z-ai/glm-4.5-air:free](https://openrouter.ai/z-ai/glm-4.5-air:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
@@ -418,6 +420,7 @@ Very stringent payment verification for Google Cloud.
 - Llama 3.3 70B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
+- Qwen/Qwen3-235B
 - Qwen/Qwen3-32B
 - Whisper-Large-v3
 - deepseek-ai/DeepSeek-R1-0528
