@@ -70,6 +70,7 @@ Models share a common quota.
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
 - [nvidia/nemotron-nano-12b-v2-vl:free](https://openrouter.ai/nvidia/nemotron-nano-12b-v2-vl:free)
 - [nvidia/nemotron-nano-9b-v2:free](https://openrouter.ai/nvidia/nemotron-nano-9b-v2:free)
+- [openai/gpt-oss-120b:free](https://openrouter.ai/openai/gpt-oss-120b:free)
 - [openai/gpt-oss-20b:free](https://openrouter.ai/openai/gpt-oss-20b:free)
 - [qwen/qwen3-235b-a22b:free](https://openrouter.ai/qwen/qwen3-235b-a22b:free)
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
