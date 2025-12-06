@@ -85,13 +85,8 @@ Models share a common quota.
 Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>Gemini 2.5 Pro</td><td>3,000,000 tokens/day<br>125,000 tokens/minute<br>50 requests/day<br>2 requests/minute</td></tr>
-<tr><td>Gemini 2.5 Flash</td><td>250,000 tokens/minute<br>250 requests/day<br>10 requests/minute</td></tr>
-<tr><td>Gemini 2.5 Flash-Lite</td><td>250,000 tokens/minute<br>1,000 requests/day<br>15 requests/minute</td></tr>
-<tr><td>Gemini 2.0 Flash</td><td>1,000,000 tokens/minute<br>200 requests/day<br>15 requests/minute</td></tr>
-<tr><td>Gemini 2.0 Flash-Lite</td><td>1,000,000 tokens/minute<br>200 requests/day<br>30 requests/minute</td></tr>
-<tr><td>Gemini 2.0 Flash (Experimental)</td><td>0 tokens/minute<br>50 requests/day<br>0 requests/minute</td></tr>
-<tr><td>LearnLM 2.0 Flash (Experimental)</td><td>1,500 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Flash</td><td>250,000 tokens/minute<br>20 requests/day<br>5 requests/minute</td></tr>
+<tr><td>Gemini 2.5 Flash-Lite</td><td>250,000 tokens/minute<br>20 requests/day<br>10 requests/minute</td></tr>
 <tr><td>Gemma 3 27B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 12B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 4B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>

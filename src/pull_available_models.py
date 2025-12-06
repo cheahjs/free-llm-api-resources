@@ -723,11 +723,6 @@ def main():
 
     gemini_text_models = [
         {
-            "id": "gemini-2.5-pro",
-            "name": "Gemini 2.5 Pro",
-            "limits": gemini_models.get("gemini-2.5-pro", {}),
-        },
-        {
             "id": "gemini-2.5-flash",
             "name": "Gemini 2.5 Flash",
             "limits": gemini_models.get("gemini-2.5-flash", {}),
@@ -736,26 +731,6 @@ def main():
             "id": "gemini-2.5-flash-lite",
             "name": "Gemini 2.5 Flash-Lite",
             "limits": gemini_models.get("gemini-2.5-flash-lite", {}),
-        },
-        {
-            "id": "gemini-2.0-flash",
-            "name": "Gemini 2.0 Flash",
-            "limits": gemini_models.get("gemini-2.0-flash", {}),
-        },
-        {
-            "id": "gemini-2.0-flash-lite",
-            "name": "Gemini 2.0 Flash-Lite",
-            "limits": gemini_models.get("gemini-2.0-flash-lite", {}),
-        },
-        {
-            "id": "gemini-2.0-flash-exp",
-            "name": "Gemini 2.0 Flash (Experimental)",
-            "limits": gemini_models.get("gemini-2.0-flash-exp", {}),
-        },
-        {
-            "id": "learnlm-2.0-flash-experimental",
-            "name": "LearnLM 2.0 Flash (Experimental)",
-            "limits": gemini_models.get("learnlm-2.0-flash-experimental", {}),
         },
         {
             "id": "gemma-3-27b-it",
