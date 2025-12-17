@@ -148,13 +148,10 @@ Routes to various supported providers.
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
 <tr><td>gpt-oss-120b</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Qwen 3 235B A22B Instruct</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
-<tr><td>Qwen 3 235B A22B Thinking</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
-<tr><td>Qwen 3 Coder 480B</td><td>10 requests/minute<br>150,000 tokens/minute<br>100 requests/hour<br>1,000,000 tokens/hour<br>100 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Llama 3.3 70B</td><td>30 requests/minute<br>64,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Qwen 3 32B</td><td>30 requests/minute<br>64,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Llama 3.1 8B</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
-<tr><td>Llama 4 Scout</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
-<tr><td>Llama 4 Maverick</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
+<tr><td>Z.ai GLM-4.6</td><td>10 requests/minute<br>60,000 tokens/minute<br>100 requests/hour<br>100,000 tokens/hour<br>100 requests/day<br>1,000,000 tokens/day</td></tr>
 </tbody></table>
 
 ### [Groq](https://console.groq.com)
@@ -186,7 +183,7 @@ Routes to various supported providers.
 
 [20 requests/minute<br>1,000 requests/month](https://docs.cohere.com/docs/rate-limits)
 
-Models share a common quota.
+Models share a common monthly quota.
 
 - c4ai-aya-expanse-32b
 - c4ai-aya-expanse-8b
