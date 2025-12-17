@@ -438,6 +438,9 @@ def fetch_gemini_limits(logger):
             == "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
         ):
             for dimension in quota.dimensions_infos:
+                if dimension.details.value == -1:
+                    # -1 means unlimited
+                    continue
                 models[dimension.dimensions.get("model")][
                     f"tokens/{quota.refresh_interval}"
                 ] = dimension.details.value
@@ -446,6 +449,9 @@ def fetch_gemini_limits(logger):
             == "generativelanguage.googleapis.com/generate_content_free_tier_requests"
         ):
             for dimension in quota.dimensions_infos:
+                if dimension.details.value == -1:
+                    # -1 means unlimited
+                    continue
                 models[dimension.dimensions.get("model")][
                     f"requests/{quota.refresh_interval}"
                 ] = dimension.details.value
@@ -722,6 +728,11 @@ def main():
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
 
     gemini_text_models = [
+        {
+            "id": "gemini-3-flash-preview",
+            "name": "Gemini 3 Flash",
+            "limits": gemini_models.get("gemini-3-flash", {}),
+        },
         {
             "id": "gemini-2.5-flash",
             "name": "Gemini 2.5 Flash",

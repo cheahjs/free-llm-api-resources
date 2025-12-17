@@ -63,7 +63,6 @@ Models share a common quota.
 - [alibaba/tongyi-deepresearch-30b-a3b:free](https://openrouter.ai/alibaba/tongyi-deepresearch-30b-a3b:free)
 - [allenai/olmo-3-32b-think:free](https://openrouter.ai/allenai/olmo-3-32b-think:free)
 - [allenai/olmo-3.1-32b-think:free](https://openrouter.ai/allenai/olmo-3.1-32b-think:free)
-- [amazon/nova-2-lite-v1:free](https://openrouter.ai/amazon/nova-2-lite-v1:free)
 - [arcee-ai/trinity-mini:free](https://openrouter.ai/arcee-ai/trinity-mini:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
 - [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
@@ -92,6 +91,7 @@ Models share a common quota.
 Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
+<tr><td>Gemini 3 Flash</td><td>250,000 tokens/minute<br>20 requests/day<br>5 requests/minute</td></tr>
 <tr><td>Gemini 2.5 Flash</td><td>250,000 tokens/minute<br>20 requests/day<br>5 requests/minute</td></tr>
 <tr><td>Gemini 2.5 Flash-Lite</td><td>250,000 tokens/minute<br>20 requests/day<br>10 requests/minute</td></tr>
 <tr><td>Gemma 3 27B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
