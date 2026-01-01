@@ -453,4 +453,24 @@ Very stringent payment verification for Google Cloud.
 - qwen3-embedding-8b
 - voxtral-small-24b-2507
 
+### [Together AI](https://www.together.ai)
 
+**Credits:** $25 lifetime
+
+**Limits:** Credit-based consumption, approximately:
+- 50M tokens for smaller models
+- 5-10M tokens for larger models
+
+**Models:**
+* Llama 4 Scout 17B
+* Llama 4 Maverick 17B
+* DeepSeek-R1-0528
+* Qwen3-235B-A22B
+* Gemma 3 (multiple sizes)
+* 200+ other open-source models
+
+**Requirements:** Email verification only
+
+**API Compatibility:** OpenAI-compatible
+
+**Tested:** January 2025
