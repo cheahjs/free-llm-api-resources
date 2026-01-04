@@ -138,6 +138,7 @@ HuggingFace Serverless Inference limited to models smaller than 10GB. Some popul
 ### [Vercel AI Gateway](https://vercel.com/docs/ai-gateway)
 
 Routes to various supported providers.
+Only this credit card.
 
 **Limits:** [$5/month](https://vercel.com/docs/ai-gateway/pricing)
 
