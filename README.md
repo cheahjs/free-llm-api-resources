@@ -60,9 +60,6 @@ Models share a common quota.
 - [Mistral 7B Instruct](https://openrouter.ai/mistralai/mistral-7b-instruct:free)
 - [Mistral Small 3.1 24B Instruct](https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free)
 - [Qwen 2.5 VL 7B Instruct](https://openrouter.ai/qwen/qwen-2.5-vl-7b-instruct:free)
-- [alibaba/tongyi-deepresearch-30b-a3b:free](https://openrouter.ai/alibaba/tongyi-deepresearch-30b-a3b:free)
-- [allenai/olmo-3-32b-think:free](https://openrouter.ai/allenai/olmo-3-32b-think:free)
-- [allenai/olmo-3.1-32b-think:free](https://openrouter.ai/allenai/olmo-3.1-32b-think:free)
 - [arcee-ai/trinity-mini:free](https://openrouter.ai/arcee-ai/trinity-mini:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
 - [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
@@ -428,6 +425,7 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
 - deepseek-ai/DeepSeek-V3.1
+- deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1-Terminus
 - openai/gpt-oss-120b
 - tbd
@@ -445,6 +443,7 @@ Very stringent payment verification for Google Cloud.
 - Mistral Nemo 2407
 - Pixtral 12B (2409)
 - Whisper Large v3
+- devstral-2-123b-instruct-2512
 - gpt-oss-120b
 - holo2-30b-a3b
 - mistral-small-3.2-24b-instruct-2506
