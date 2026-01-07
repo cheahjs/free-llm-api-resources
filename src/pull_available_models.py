@@ -438,6 +438,9 @@ def fetch_gemini_limits(logger):
             == "generativelanguage.googleapis.com/generate_content_free_tier_input_token_count"
         ):
             for dimension in quota.dimensions_infos:
+                if dimension.details.value == -1:
+                    # -1 means unlimited
+                    continue
                 models[dimension.dimensions.get("model")][
                     f"tokens/{quota.refresh_interval}"
                 ] = dimension.details.value
@@ -446,6 +449,9 @@ def fetch_gemini_limits(logger):
             == "generativelanguage.googleapis.com/generate_content_free_tier_requests"
         ):
             for dimension in quota.dimensions_infos:
+                if dimension.details.value == -1:
+                    # -1 means unlimited
+                    continue
                 models[dimension.dimensions.get("model")][
                     f"requests/{quota.refresh_interval}"
                 ] = dimension.details.value
@@ -532,6 +538,66 @@ def fetch_scaleway_models(logger):
     return ret_models
 
 
+def fetch_cohere_models(logger):
+    logger.info("Fetching Cohere models...")
+    headers = {
+        "accept": "application/json",
+        "Authorization": f"Bearer {os.environ['COHERE_API_KEY']}",
+    }
+    params = {}
+    all_models = []
+    page = 1
+
+    try:
+        while True:
+            response = requests.get(
+                "https://api.cohere.com/v1/models",
+                headers=headers,
+                params=params or None,
+                timeout=10,
+            )
+            response.raise_for_status()
+            payload = response.json()
+            models = payload.get("models", [])
+            logger.info(f"Fetched {len(models)} models from Cohere (page {page})")
+            all_models.extend(models)
+            next_token = payload.get("next_page_token")
+            if not next_token:
+                break
+            params["page_token"] = next_token
+            page += 1
+    except requests.exceptions.RequestException as exc:
+        logger.error(f"Error fetching Cohere models: {exc}")
+        return []
+    except json.JSONDecodeError as exc:
+        logger.error(f"Error decoding Cohere API response: {exc}")
+        return []
+
+    ret_models = []
+    for model in all_models:
+        model_id = model.get("name")
+        if not model_id:
+            continue
+        if model.get("is_deprecated"):
+            logger.debug(f"Skipping deprecated Cohere model {model_id}")
+            continue
+        endpoints = set(model.get("endpoints") or []) | set(
+            model.get("default_endpoints") or []
+        )
+        if "chat" not in endpoints:
+            logger.debug(f"Skipping non-chat Cohere model {model_id}")
+            continue
+        ret_models.append(
+            {
+                "id": model_id,
+                "name": get_model_name(model_id),
+            }
+        )
+
+    logger.info(f"Found {len(ret_models)} Cohere chat models")
+    return sorted(ret_models, key=lambda x: x["name"])
+
+
 def fetch_chutes_models(logger):
     logger.info("Fetching Chutes models...")
     r = requests.get(
@@ -598,6 +664,7 @@ def main():
     hyperbolic_logger = create_logger("Hyperbolic")
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
+    cohere_logger = create_logger("Cohere")
 
     fetch_concurrently = os.getenv("FETCH_CONCURRENTLY", "false").lower() == "true"
 
@@ -611,6 +678,7 @@ def main():
                 executor.submit(fetch_github_models, github_logger),
                 executor.submit(fetch_samba_models, samba_logger),
                 executor.submit(fetch_scaleway_models, scaleway_logger),
+                executor.submit(fetch_cohere_models, cohere_logger),
             ]
             (
                 gemini_models,
@@ -620,6 +688,7 @@ def main():
                 github_models,
                 samba_models,
                 scaleway_models,
+                cohere_models,
             ) = [f.result() for f in futures]
 
             # Fetch groq models after others complete
@@ -632,6 +701,7 @@ def main():
         github_models = fetch_github_models(github_logger)
         samba_models = fetch_samba_models(samba_logger)
         scaleway_models = fetch_scaleway_models(scaleway_logger)
+        cohere_models = fetch_cohere_models(cohere_logger)
         groq_models = fetch_groq_models(groq_logger)
 
     # Initialize markdown string for free providers
@@ -642,7 +712,7 @@ def main():
     if openrouter_models:
         provider_limits = get_human_limits(openrouter_models[0])
         model_list_markdown += "**Limits:**\n\n"
-        model_list_markdown += f"[{provider_limits}<br>1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api-reference/limits)\n\n"
+        model_list_markdown += f"[{provider_limits}<br>Up to 1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api-reference/limits)\n\n"
         model_list_markdown += "Models share a common quota.\n\n"
         for model in openrouter_models:
             model_list_markdown += (
@@ -659,9 +729,9 @@ def main():
 
     gemini_text_models = [
         {
-            "id": "gemini-2.5-pro",
-            "name": "Gemini 2.5 Pro",
-            "limits": gemini_models.get("gemini-2.5-pro", {}),
+            "id": "gemini-3-flash-preview",
+            "name": "Gemini 3 Flash",
+            "limits": gemini_models.get("gemini-3-flash", {}),
         },
         {
             "id": "gemini-2.5-flash",
@@ -672,41 +742,6 @@ def main():
             "id": "gemini-2.5-flash-lite",
             "name": "Gemini 2.5 Flash-Lite",
             "limits": gemini_models.get("gemini-2.5-flash-lite", {}),
-        },
-        {
-            "id": "gemini-2.5-flash-image-preview",
-            "name": "Gemini 2.5 Flash Image Preview (Nano Banana)",
-            "limits": gemini_models.get("gemini-2.5-flash-image-preview", {}),
-        },
-        {
-            "id": "gemini-2.0-flash",
-            "name": "Gemini 2.0 Flash",
-            "limits": gemini_models.get("gemini-2.0-flash", {}),
-        },
-        {
-            "id": "gemini-2.0-flash-lite",
-            "name": "Gemini 2.0 Flash-Lite",
-            "limits": gemini_models.get("gemini-2.0-flash-lite", {}),
-        },
-        {
-            "id": "gemini-2.0-flash-exp",
-            "name": "Gemini 2.0 Flash (Experimental)",
-            "limits": gemini_models.get("gemini-2.0-flash-exp", {}),
-        },
-        {
-            "id": "gemini-1.5-flash",
-            "name": "Gemini 1.5 Flash",
-            "limits": gemini_models.get("gemini-1.5-flash", {}),
-        },
-        {
-            "id": "gemini-1.5-flash-8b",
-            "name": "Gemini 1.5 Flash-8B",
-            "limits": gemini_models.get("gemini-1.5-flash-8b", {}),
-        },
-        {
-            "id": "learnlm-2.0-flash-experimental",
-            "name": "LearnLM 2.0 Flash (Experimental)",
-            "limits": gemini_models.get("learnlm-2.0-flash-experimental", {}),
         },
         {
             "id": "gemma-3-27b-it",
@@ -798,14 +833,6 @@ def main():
             "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
         },
         {
-            "name": "Qwen 3 235B A22B Thinking",
-            "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
-        },
-        {
-            "name": "Qwen 3 Coder 480B",
-            "limits_text": "10 requests/minute<br>150,000 tokens/minute<br>100 requests/hour<br>1,000,000 tokens/hour<br>100 requests/day<br>1,000,000 tokens/day"
-        },
-        {
             "name": "Llama 3.3 70B",
             "limits_text": "30 requests/minute<br>64,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
         },
@@ -818,12 +845,8 @@ def main():
             "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
         },
         {
-            "name": "Llama 4 Scout",
-            "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
-        },
-        {
-            "name": "Llama 4 Maverick",
-            "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
+            "name": "Z.ai GLM-4.6",
+            "limits_text": "10 requests/minute<br>60,000 tokens/minute<br>100 requests/hour<br>100,000 tokens/hour<br>100 requests/day<br>1,000,000 tokens/day"
         },
     ]
     for model in cerebras_models:
@@ -844,46 +867,16 @@ def main():
         model_list_markdown += "</tbody></table>\n"
     model_list_markdown += "\n"
 
-    # --- Together ---
-    together_models = [
-        {
-            "id": "llmeta-llama/Llama-3.3-70B-Instruct-Turbo-Free",
-            "name": "Llama 3.3 70B Instruct",
-            "urlId": "llama-3-3-70b-free",
-        },
-        {
-            "id": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B-free",
-            "name": "DeepSeek R1 Distil Llama 70B",
-            "urlId": "deepseek-r1-distilled-llama-70b-free",
-        },
-    ]
-    model_list_markdown += "### [Together (Free)](https://together.ai)\n\n"
-    model_list_markdown += "**Limits:** Up to 60 requests/minute\n\n"
-    if together_models:
-        for model in together_models:
-            model_list_markdown += (
-                f"- [{model['name']}](https://together.ai/models/{model['urlId']})\n"
-            )
-    model_list_markdown += "\n"
-
     # --- Cohere ---
-    cohere_models = [
-        {"id": "command-a-03-2025", "name": "Command-A"},
-        {"id": "command-r7b-12-2024", "name": "Command-R7B"},
-        {"id": "command-r-plus", "name": "Command-R+"},
-        {"id": "command-r", "name": "Command-R"},
-        {"id": "c4ai-aya-expanse-8b", "name": "Aya Expanse 8B"},
-        {"id": "c4ai-aya-expanse-32b", "name": "Aya Expanse 32B"},
-        {"id": "c4ai-aya-vision-8b", "name": "Aya Vision 8B"},
-        {"id": "c4ai-aya-vision-32b", "name": "Aya Vision 32B"},
-    ]
     model_list_markdown += "### [Cohere](https://cohere.com)\n\n"
     model_list_markdown += "**Limits:**\n\n"
     model_list_markdown += "[20 requests/minute<br>1,000 requests/month](https://docs.cohere.com/docs/rate-limits)\n\n"
-    model_list_markdown += "Models share a common quota.\n\n"
+    model_list_markdown += "Models share a common monthly quota.\n\n"
     if cohere_models:
         for model in cohere_models:
             model_list_markdown += f"- {model['name']}\n"
+    else:
+        model_list_markdown += "- No chat models available right now.\n"
     model_list_markdown += "\n"
 
     # --- GitHub Models ---
@@ -965,13 +958,6 @@ def main():
     # --- Static Trial Providers (Markdown List/Simple Entry) ---
     trial_providers_static = [
         {
-            "name": "Together",
-            "url": "https://together.ai",
-            "credits": "$1 when you add a payment method",
-            "requirements": "",
-            "models_desc": "[Various open models](https://together.ai/models)",
-        },
-        {
             "name": "Fireworks",
             "url": "https://fireworks.ai/",
             "credits": "$1",
@@ -1038,13 +1024,6 @@ def main():
             "name": "Inference.net",
             "url": "https://inference.net",
             "credits": "$1, $25 on responding to email survey",
-            "requirements": "",
-            "models_desc": "Various open models",
-        },
-        {
-            "name": "nCompass",
-            "url": "https://ncompass.tech",
-            "credits": "$1",
             "requirements": "",
             "models_desc": "Various open models",
         },
