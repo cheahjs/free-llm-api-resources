@@ -68,7 +68,6 @@ Models share a common quota.
 - [kwaipilot/kat-coder-pro:free](https://openrouter.ai/kwaipilot/kat-coder-pro:free)
 - [mistralai/devstral-2512:free](https://openrouter.ai/mistralai/devstral-2512:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
-- [nex-agi/deepseek-v3.1-nex-n1:free](https://openrouter.ai/nex-agi/deepseek-v3.1-nex-n1:free)
 - [nvidia/nemotron-3-nano-30b-a3b:free](https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free)
 - [nvidia/nemotron-nano-12b-v2-vl:free](https://openrouter.ai/nvidia/nemotron-nano-12b-v2-vl:free)
 - [nvidia/nemotron-nano-9b-v2:free](https://openrouter.ai/nvidia/nemotron-nano-9b-v2:free)
