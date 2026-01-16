@@ -952,6 +952,18 @@ def main():
 
     model_list_markdown += "</tbody></table>\n\n"
 
+    # --- Hetu Protocol ---
+    model_list_markdown += "### [Hetu Protocol](https://parallel.hetu.org/)\n\n"
+    model_list_markdown += "P2P-based inference network using idle GPUs. OpenAI SDK compatible.\n\n"
+    model_list_markdown += "**Limits:** Free tier limited to open-source models only\n\n"
+    model_list_markdown += "- Llama-3-8B-Instruct\n"
+    model_list_markdown += "- Qwen-2-7B-Instruct\n"
+    model_list_markdown += "- Dolphin-Llama-3\n"
+    model_list_markdown += "- Mixtral-8x7B-Instruct\n"
+    model_list_markdown += "- DeepSeek-V3.2\n"
+    model_list_markdown += "- Llama-3-70B-Instruct\n"
+    model_list_markdown += "\n"
+
     # --- Trial Providers Section Generation ---
     trial_list_markdown = ""
 
@@ -1026,6 +1038,13 @@ def main():
             "credits": "$1, $25 on responding to email survey",
             "requirements": "",
             "models_desc": "Various open models",
+        },
+        {
+            "name": "Hetu Protocol",
+            "url": "https://parallel.hetu.org/apikey/pricing",
+            "credits": "5 million tokens (valid 90 days), free debugging mode at 100 tokens/min",
+            "requirements": "",
+            "models_desc": "[Full model library access including GPT-4o, Claude 3.5](https://parallel.hetu.org/apikey/pricing)",
         },
     ]
 
