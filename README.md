@@ -57,15 +57,14 @@ Models share a common quota.
 - [Llama 3.1 405B Instruct](https://openrouter.ai/meta-llama/llama-3.1-405b-instruct:free)
 - [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
-- [Mistral 7B Instruct](https://openrouter.ai/mistralai/mistral-7b-instruct:free)
 - [Mistral Small 3.1 24B Instruct](https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free)
 - [Qwen 2.5 VL 7B Instruct](https://openrouter.ai/qwen/qwen-2.5-vl-7b-instruct:free)
+- [allenai/molmo-2-8b:free](https://openrouter.ai/allenai/molmo-2-8b:free)
 - [arcee-ai/trinity-mini:free](https://openrouter.ai/arcee-ai/trinity-mini:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
 - [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
 - [google/gemma-3n-e2b-it:free](https://openrouter.ai/google/gemma-3n-e2b-it:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
-- [kwaipilot/kat-coder-pro:free](https://openrouter.ai/kwaipilot/kat-coder-pro:free)
 - [mistralai/devstral-2512:free](https://openrouter.ai/mistralai/devstral-2512:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
 - [nvidia/nemotron-3-nano-30b-a3b:free](https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free)
@@ -75,6 +74,7 @@ Models share a common quota.
 - [openai/gpt-oss-20b:free](https://openrouter.ai/openai/gpt-oss-20b:free)
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
+- [qwen/qwen3-next-80b-a3b-instruct:free](https://openrouter.ai/qwen/qwen3-next-80b-a3b-instruct:free)
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 - [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
 - [tngtech/tng-r1t-chimera:free](https://openrouter.ai/tngtech/tng-r1t-chimera:free)
@@ -279,7 +279,6 @@ Extremely restrictive input/output token limits.
 - Llama 3.3 70B Instruct (FP8)
 - Llama 4 Scout Instruct
 - Llama Guard 3 8B
-- LlamaGuard 7B (AWQ)
 - Mistral 7B Instruct v0.1
 - Mistral 7B Instruct v0.1 (AWQ)
 - Mistral 7B Instruct v0.2
@@ -426,6 +425,7 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1-Terminus
+- deepseek-ai/DeepSeek-V3.2
 - openai/gpt-oss-120b
 - tbd
 
