@@ -65,6 +65,8 @@ Models share a common quota.
 - [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
 - [google/gemma-3n-e2b-it:free](https://openrouter.ai/google/gemma-3n-e2b-it:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
+- [liquid/lfm-2.5-1.2b-instruct:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-instruct:free)
+- [liquid/lfm-2.5-1.2b-thinking:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-thinking:free)
 - [mistralai/devstral-2512:free](https://openrouter.ai/mistralai/devstral-2512:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
 - [nvidia/nemotron-3-nano-30b-a3b:free](https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free)
