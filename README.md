@@ -60,6 +60,7 @@ Models share a common quota.
 - [Mistral Small 3.1 24B Instruct](https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free)
 - [Qwen 2.5 VL 7B Instruct](https://openrouter.ai/qwen/qwen-2.5-vl-7b-instruct:free)
 - [allenai/molmo-2-8b:free](https://openrouter.ai/allenai/molmo-2-8b:free)
+- [arcee-ai/trinity-large-preview:free](https://openrouter.ai/arcee-ai/trinity-large-preview:free)
 - [arcee-ai/trinity-mini:free](https://openrouter.ai/arcee-ai/trinity-mini:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
 - [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
@@ -67,7 +68,6 @@ Models share a common quota.
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
 - [liquid/lfm-2.5-1.2b-instruct:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-instruct:free)
 - [liquid/lfm-2.5-1.2b-thinking:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-thinking:free)
-- [mistralai/devstral-2512:free](https://openrouter.ai/mistralai/devstral-2512:free)
 - [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
 - [nvidia/nemotron-3-nano-30b-a3b:free](https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free)
 - [nvidia/nemotron-nano-12b-v2-vl:free](https://openrouter.ai/nvidia/nemotron-nano-12b-v2-vl:free)
@@ -80,7 +80,7 @@ Models share a common quota.
 - [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
 - [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
 - [tngtech/tng-r1t-chimera:free](https://openrouter.ai/tngtech/tng-r1t-chimera:free)
-- [xiaomi/mimo-v2-flash:free](https://openrouter.ai/xiaomi/mimo-v2-flash:free)
+- [upstage/solar-pro-3:free](https://openrouter.ai/upstage/solar-pro-3:free)
 - [z-ai/glm-4.5-air:free](https://openrouter.ai/z-ai/glm-4.5-air:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
@@ -385,7 +385,6 @@ Very stringent payment verification for Google Cloud.
 **Models:**
 - DeepSeek V3
 - DeepSeek V3 0324
-- Llama 3 70B Instruct
 - Llama 3.1 405B Base
 - Llama 3.1 405B Instruct
 - Llama 3.1 70B Instruct
@@ -424,7 +423,6 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
-- deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1-Terminus
 - deepseek-ai/DeepSeek-V3.2
