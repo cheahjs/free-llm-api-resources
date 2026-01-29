@@ -424,6 +424,7 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
 - deepseek-ai/DeepSeek-V3.1
+- deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1-Terminus
 - deepseek-ai/DeepSeek-V3.2
 - openai/gpt-oss-120b
