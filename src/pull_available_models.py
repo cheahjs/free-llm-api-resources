@@ -23,9 +23,20 @@ from data import (
 load_dotenv()
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
-# Global clients
-mistral_client = Mistral(api_key=os.environ["MISTRAL_API_KEY"])
+# Global clients (initialized lazily to avoid requiring all API keys)
+mistral_client = None
 last_mistral_request_time = 0
+
+
+def get_mistral_client():
+    """Lazily initialize Mistral client."""
+    global mistral_client
+    if mistral_client is None:
+        api_key = os.getenv("MISTRAL_API_KEY")
+        if not api_key:
+            raise ValueError("MISTRAL_API_KEY environment variable is required")
+        mistral_client = Mistral(api_key=api_key)
+    return mistral_client
 
 
 def create_logger(provider_name):
@@ -598,6 +609,75 @@ def fetch_cohere_models(logger):
     return sorted(ret_models, key=lambda x: x["name"])
 
 
+def fetch_aihubmix_models(logger):
+    logger.info("Fetching AIHubMix models...")
+    try:
+        r = requests.get(
+            "https://aihubmix.com/api/v1/models",
+            params={"model": "free"},
+            headers={
+                "Authorization": f"Bearer {os.environ['AIHUBMIX_API_KEY']}",
+                "Content-Type": "application/json",
+            },
+            timeout=10,
+        )
+        r.raise_for_status()
+        response = r.json()
+
+        if not response.get("success", False):
+            logger.error(f"AIHubMix API returned success=false: {response.get('message', 'Unknown error')}")
+            return []
+
+        models = response.get("data", [])
+        logger.info(f"Fetched {len(models)} free models from AIHubMix")
+
+        ret_models = []
+        for model in models:
+            model_id = model.get("model_id")
+            if not model_id:
+                continue
+
+            # Extract limits from description using regex
+            desc = model.get("desc", "")
+            limits = {}
+
+            # Extract requests per minute (e.g., "5 requests per minute")
+            rpm_match = re.search(r"(\d+)\s+requests?\s+per\s+minute", desc, re.IGNORECASE)
+            if rpm_match:
+                limits["requests/minute"] = int(rpm_match.group(1))
+
+            # Extract requests per day (e.g., "500 requests per day")
+            rpd_match = re.search(r"(\d+)\s+(?:total\s+)?requests?\s+per\s+day", desc, re.IGNORECASE)
+            if rpd_match:
+                limits["requests/day"] = int(rpd_match.group(1))
+
+            # Extract tokens per day (e.g., "1 million tokens", "500,000 tokens")
+            token_match = re.search(r"([\d,]+)\s+(?:million\s+)?tokens?(?:\s+per\s+day)?", desc, re.IGNORECASE)
+            if token_match:
+                token_str = token_match.group(1).replace(",", "")
+                if "million" in desc.lower():
+                    limits["tokens/day"] = int(token_str) * 1_000_000
+                else:
+                    limits["tokens/day"] = int(token_str)
+
+            ret_models.append({
+                "id": model_id,
+                "name": get_model_name(model_id),
+                "limits": limits if limits else {},
+            })
+
+        logger.debug(json.dumps(ret_models, indent=4))
+        return sorted(ret_models, key=lambda x: x["name"])
+
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Error fetching AIHubMix models: {e}")
+        return []
+    except json.JSONDecodeError as e:
+        logger.error(f"Error decoding JSON from AIHubMix API: {e}")
+        logger.error(f"Response text: {r.text if 'r' in locals() else 'N/A'}")
+        return []
+
+
 def fetch_chutes_models(logger):
     logger.info("Fetching Chutes models...")
     r = requests.get(
@@ -665,6 +745,7 @@ def main():
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
     cohere_logger = create_logger("Cohere")
+    aihubmix_logger = create_logger("AIHubMix")
 
     fetch_concurrently = os.getenv("FETCH_CONCURRENTLY", "false").lower() == "true"
 
@@ -679,6 +760,7 @@ def main():
                 executor.submit(fetch_samba_models, samba_logger),
                 executor.submit(fetch_scaleway_models, scaleway_logger),
                 executor.submit(fetch_cohere_models, cohere_logger),
+                executor.submit(fetch_aihubmix_models, aihubmix_logger),
             ]
             (
                 gemini_models,
@@ -689,6 +771,7 @@ def main():
                 samba_models,
                 scaleway_models,
                 cohere_models,
+                aihubmix_models,
             ) = [f.result() for f in futures]
 
             # Fetch groq models after others complete
@@ -702,6 +785,7 @@ def main():
         samba_models = fetch_samba_models(samba_logger)
         scaleway_models = fetch_scaleway_models(scaleway_logger)
         cohere_models = fetch_cohere_models(cohere_logger)
+        aihubmix_models = fetch_aihubmix_models(aihubmix_logger)
         groq_models = fetch_groq_models(groq_logger)
 
     # Initialize markdown string for free providers
@@ -718,6 +802,21 @@ def main():
             model_list_markdown += (
                 f"- [{model['name']}](https://openrouter.ai/{model['id']})\n"
             )
+    model_list_markdown += "\n"
+
+    # --- AIHubMix ---
+    model_list_markdown += "### [AIHubMix](https://aihubmix.com)\n\n"
+    model_list_markdown += "**Limits:**\n\n"
+    model_list_markdown += "Most free models share common limits: 5 requests/minute, 500 requests/day, 1,000,000 tokens/day.\n\n"
+    model_list_markdown += "Some models may have different limits - see individual model descriptions.\n\n"
+    if aihubmix_models:
+        model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
+        for model in aihubmix_models:
+            limits_str = get_human_limits(model)
+            model_list_markdown += (
+                f"<tr><td>{model['name']}</td><td>{limits_str}</td></tr>\n"
+            )
+        model_list_markdown += "</tbody></table>\n"
     model_list_markdown += "\n"
 
     # --- Google AI Studio ---
