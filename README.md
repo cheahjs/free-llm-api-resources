@@ -54,12 +54,9 @@ Models share a common quota.
 - [Gemma 3 27B Instruct](https://openrouter.ai/google/gemma-3-27b-it:free)
 - [Gemma 3 4B Instruct](https://openrouter.ai/google/gemma-3-4b-it:free)
 - [Hermes 3 Llama 3.1 405B](https://openrouter.ai/nousresearch/hermes-3-llama-3.1-405b:free)
-- [Llama 3.1 405B Instruct](https://openrouter.ai/meta-llama/llama-3.1-405b-instruct:free)
 - [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
 - [Mistral Small 3.1 24B Instruct](https://openrouter.ai/mistralai/mistral-small-3.1-24b-instruct:free)
-- [Qwen 2.5 VL 7B Instruct](https://openrouter.ai/qwen/qwen-2.5-vl-7b-instruct:free)
-- [allenai/molmo-2-8b:free](https://openrouter.ai/allenai/molmo-2-8b:free)
 - [arcee-ai/trinity-large-preview:free](https://openrouter.ai/arcee-ai/trinity-large-preview:free)
 - [arcee-ai/trinity-mini:free](https://openrouter.ai/arcee-ai/trinity-mini:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
@@ -68,7 +65,6 @@ Models share a common quota.
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
 - [liquid/lfm-2.5-1.2b-instruct:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-instruct:free)
 - [liquid/lfm-2.5-1.2b-thinking:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-thinking:free)
-- [moonshotai/kimi-k2:free](https://openrouter.ai/moonshotai/kimi-k2:free)
 - [nvidia/nemotron-3-nano-30b-a3b:free](https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free)
 - [nvidia/nemotron-nano-12b-v2-vl:free](https://openrouter.ai/nvidia/nemotron-nano-12b-v2-vl:free)
 - [nvidia/nemotron-nano-9b-v2:free](https://openrouter.ai/nvidia/nemotron-nano-9b-v2:free)
@@ -77,9 +73,7 @@ Models share a common quota.
 - [qwen/qwen3-4b:free](https://openrouter.ai/qwen/qwen3-4b:free)
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [qwen/qwen3-next-80b-a3b-instruct:free](https://openrouter.ai/qwen/qwen3-next-80b-a3b-instruct:free)
-- [tngtech/deepseek-r1t-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t-chimera:free)
-- [tngtech/deepseek-r1t2-chimera:free](https://openrouter.ai/tngtech/deepseek-r1t2-chimera:free)
-- [tngtech/tng-r1t-chimera:free](https://openrouter.ai/tngtech/tng-r1t-chimera:free)
+- [stepfun/step-3.5-flash:free](https://openrouter.ai/stepfun/step-3.5-flash:free)
 - [upstage/solar-pro-3:free](https://openrouter.ai/upstage/solar-pro-3:free)
 - [z-ai/glm-4.5-air:free](https://openrouter.ai/z-ai/glm-4.5-air:free)
 
@@ -196,6 +190,7 @@ Models share a common monthly quota.
 - command-r-plus-08-2024
 - command-r7b-12-2024
 - command-r7b-arabic-02-2025
+- tiny-aya-global
 
 ### [GitHub Models](https://github.com/marketplace/models)
 
@@ -256,6 +251,7 @@ Extremely restrictive input/output token limits.
 - @cf/openai/gpt-oss-120b
 - @cf/openai/gpt-oss-20b
 - @cf/qwen/qwen3-30b-a3b-fp8
+- @cf/zai-org/glm-4.7-flash
 - DeepSeek R1 Distill Qwen 32B
 - Deepseek Coder 6.7B Base (AWQ)
 - Deepseek Coder 6.7B Instruct (AWQ)
@@ -414,6 +410,7 @@ Very stringent payment verification for Google Cloud.
 **Models:**
 - E5-Mistral-7B-Instruct
 - Llama 3.1 8B
+- Llama 3.3 70B
 - Llama 3.3 70B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
