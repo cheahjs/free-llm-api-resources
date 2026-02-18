@@ -262,6 +262,21 @@ MODEL_TO_NAME_MAPPING = {
     "compound-beta-mini": "Groq compound-beta-mini",
     "compound-beta": "Groq compound-beta",
     "shisa-ai/shisa-v2-llama3.3-70b": "Shisa V2 Llama 3.3 70B",
+    "coding-glm-5-free": "Coding GLM-5 (Free)",
+    "gemini-3-flash-preview-free": "Gemini 3 Flash Preview (Free)",
+    "gemini-2.0-flash-free": "Gemini 2.0 Flash (Free)",
+    "gpt-4.1-free": "GPT-4.1 (Free)",
+    "gpt-4.1-mini-free": "GPT-4.1 Mini (Free)",
+    "gpt-4.1-nano-free": "GPT-4.1 Nano (Free)",
+    "glm-4.7-flash-free": "GLM-4.7 Flash (Free)",
+    "coding-glm-4.7-free": "Coding GLM-4.7 (Free)",
+    "step-3.5-flash-free": "Step 3.5 Flash (Free)",
+    "coding-minimax-m2.1-free": "Coding MiniMax M2.1 (Free)",
+    "coding-glm-4.6-free": "Coding GLM-4.6 (Free)",
+    "coding-minimax-m2-free": "Coding MiniMax M2 (Free)",
+    "kimi-for-coding-free": "Kimi for Coding (Free)",
+    "mimo-v2-flash-free": "MiMo V2 Flash (Free)",
+    "crush-glm-4.6-free": "Crush GLM-4.6 (Free)",
 }
 
 HYPERBOLIC_IGNORED_MODELS = {
