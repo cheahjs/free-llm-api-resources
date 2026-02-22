@@ -423,6 +423,7 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1-Terminus
 - deepseek-ai/DeepSeek-V3.2
+- minimaxai/minimax-m2.5
 - openai/gpt-oss-120b
 - tbd
 
