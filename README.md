@@ -25,6 +25,7 @@ This lists various services that provide free access or credits towards API-base
   - [GitHub Models](#github-models)
   - [Cloudflare Workers AI](#cloudflare-workers-ai)
   - [Google Cloud Vertex AI](#google-cloud-vertex-ai)
+  - [Vivgrid](#vivgrid)
 - [Providers with trial credits](#providers-with-trial-credits)
   - [Fireworks](#fireworks)
   - [Baseten](#baseten)
@@ -310,7 +311,23 @@ Very stringent payment verification for Google Cloud.
 <tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
 </tbody></table>
 
+### [Vivgrid](https://vivgrid.com)
 
+**Limits:**
+
+[5 requests/minute<br>no requests limits/day](https://docs.vivgrid.com/models)
+
+- gpt-5.2-instant
+- gpt-5
+- gpt-5-mini
+- gpt-4.1
+- gpt-4o
+- Gemini-3.0
+- gemini-2.5-pro
+- gemini-2.5-flash
+- deepseek-v3.2-exp
+- deepseek-v3.1
+- deepseek-r1-0528
 
 ## Providers with trial credits
 
