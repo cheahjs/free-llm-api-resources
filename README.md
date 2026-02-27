@@ -60,7 +60,6 @@ Models share a common quota.
 - [arcee-ai/trinity-large-preview:free](https://openrouter.ai/arcee-ai/trinity-large-preview:free)
 - [arcee-ai/trinity-mini:free](https://openrouter.ai/arcee-ai/trinity-mini:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
-- [deepseek/deepseek-r1-0528:free](https://openrouter.ai/deepseek/deepseek-r1-0528:free)
 - [google/gemma-3n-e2b-it:free](https://openrouter.ai/google/gemma-3n-e2b-it:free)
 - [google/gemma-3n-e4b-it:free](https://openrouter.ai/google/gemma-3n-e4b-it:free)
 - [liquid/lfm-2.5-1.2b-instruct:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-instruct:free)
@@ -190,7 +189,10 @@ Models share a common monthly quota.
 - command-r-plus-08-2024
 - command-r7b-12-2024
 - command-r7b-arabic-02-2025
+- tiny-aya-earth
+- tiny-aya-fire
 - tiny-aya-global
+- tiny-aya-water
 
 ### [GitHub Models](https://github.com/marketplace/models)
 
@@ -412,7 +414,6 @@ Very stringent payment verification for Google Cloud.
 - Llama 3.1 8B
 - Llama 3.3 70B
 - Llama 3.3 70B
-- Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
 - Qwen/Qwen3-235B
 - Qwen/Qwen3-32B
@@ -421,8 +422,10 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
 - deepseek-ai/DeepSeek-V3.1
+- deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1-Terminus
 - deepseek-ai/DeepSeek-V3.2
+- minimaxai/minimax-m2.5
 - openai/gpt-oss-120b
 - tbd
 
