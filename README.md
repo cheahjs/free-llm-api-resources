@@ -178,9 +178,7 @@ Routes to various supported providers.
 Models share a common monthly quota.
 
 - c4ai-aya-expanse-32b
-- c4ai-aya-expanse-8b
 - c4ai-aya-vision-32b
-- c4ai-aya-vision-8b
 - command-a-03-2025
 - command-a-reasoning-08-2025
 - command-a-translate-08-2025
@@ -189,7 +187,10 @@ Models share a common monthly quota.
 - command-r-plus-08-2024
 - command-r7b-12-2024
 - command-r7b-arabic-02-2025
+- tiny-aya-earth
+- tiny-aya-fire
 - tiny-aya-global
+- tiny-aya-water
 
 ### [GitHub Models](https://github.com/marketplace/models)
 
@@ -409,7 +410,6 @@ Very stringent payment verification for Google Cloud.
 **Models:**
 - E5-Mistral-7B-Instruct
 - Llama 3.1 8B
-- Llama 3.3 70B
 - Llama 3.3 70B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
