@@ -178,9 +178,7 @@ Routes to various supported providers.
 Models share a common monthly quota.
 
 - c4ai-aya-expanse-32b
-- c4ai-aya-expanse-8b
 - c4ai-aya-vision-32b
-- c4ai-aya-vision-8b
 - command-a-03-2025
 - command-a-reasoning-08-2025
 - command-a-translate-08-2025
@@ -421,7 +419,6 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-R1-0528
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
-- deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1-Terminus
 - deepseek-ai/DeepSeek-V3.2
