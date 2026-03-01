@@ -952,6 +952,21 @@ def main():
 
     model_list_markdown += "</tbody></table>\n\n"
 
+    # --- Ollama-Cloud-APIs ---
+    model_list_markdown += "### [Ollama-Cloud-APIs](https://ollama.com/cloud)\n\n"
+    model_list_markdown += "**Credits:** The Free API tier offers generous usage limits, and no restrictions have been mentioned anywhere as of today.\n\n"
+    model_list_markdown += "**Models:**\n"
+    ollama_cloud_models = [
+        {"id": "gpt-oss:20b-cloud"},
+        {"id": "gpt-oss:120b-cloud"},
+        {"id": "deepseek-v3.1:671b-cloud"},
+        {"id": "qwen3-coder:480b-cloud"},
+    ]
+    if ollama_cloud_models:
+        for model in ollama_cloud_models:
+            model_list_markdown += f"- {get_model_name(model['id'])}\n"
+    model_list_markdown += "\n"
+
     # --- Trial Providers Section Generation ---
     trial_list_markdown = ""
 
