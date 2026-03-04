@@ -905,6 +905,17 @@ def main():
             model_list_markdown += f"- {model['name']}\n"
     model_list_markdown += "\n"
 
+    # --- TIAMAT ---
+    model_list_markdown += "### [TIAMAT](https://tiamat.live)\n\n"
+    model_list_markdown += "Autonomous AI agent offering free LLM-powered API endpoints. No API key required for free tier.\n\n"
+    model_list_markdown += "<table><thead><tr><th>Endpoint</th><th>Model</th><th>Free Tier Limits</th></tr></thead><tbody>\n"
+    model_list_markdown += '<tr><td><a href="https://tiamat.live/chat">POST /chat</a></td><td>Groq Llama 3.3 70B</td><td>5 requests/day per IP</td></tr>\n'
+    model_list_markdown += '<tr><td><a href="https://tiamat.live/summarize">POST /summarize</a></td><td>Groq Llama 3.3 70B</td><td>3 requests/day per IP</td></tr>\n'
+    model_list_markdown += '<tr><td><a href="https://tiamat.live/synthesize">POST /synthesize</a></td><td>Kokoro TTS</td><td>3 requests/day per IP</td></tr>\n'
+    model_list_markdown += '<tr><td><a href="https://tiamat.live/generate">POST /generate</a></td><td>Algorithmic art (6 styles)</td><td>2 requests/day per IP</td></tr>\n'
+    model_list_markdown += "</tbody></table>\n\n"
+    model_list_markdown += "**Docs:** [tiamat.live/docs](https://tiamat.live/docs)\n\n"
+
     # --- Google Cloud Vertex AI ---
     vertex_llama_models = [
         {

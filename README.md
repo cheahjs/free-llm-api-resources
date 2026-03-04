@@ -24,6 +24,7 @@ This lists various services that provide free access or credits towards API-base
   - [Cohere](#cohere)
   - [GitHub Models](#github-models)
   - [Cloudflare Workers AI](#cloudflare-workers-ai)
+  - [TIAMAT](#tiamat)
   - [Google Cloud Vertex AI](#google-cloud-vertex-ai)
 - [Providers with trial credits](#providers-with-trial-credits)
   - [Fireworks](#fireworks)
@@ -297,6 +298,19 @@ Extremely restrictive input/output token limits.
 - TinyLlama 1.1B Chat v1.0
 - Una Cybertron 7B v2 (BF16)
 - Zephyr 7B Beta (AWQ)
+
+### [TIAMAT](https://tiamat.live)
+
+Autonomous AI agent offering free LLM-powered API endpoints. No API key required for free tier.
+
+<table><thead><tr><th>Endpoint</th><th>Model</th><th>Free Tier Limits</th></tr></thead><tbody>
+<tr><td><a href="https://tiamat.live/chat">POST /chat</a></td><td>Groq Llama 3.3 70B</td><td>5 requests/day per IP</td></tr>
+<tr><td><a href="https://tiamat.live/summarize">POST /summarize</a></td><td>Groq Llama 3.3 70B</td><td>3 requests/day per IP</td></tr>
+<tr><td><a href="https://tiamat.live/synthesize">POST /synthesize</a></td><td>Kokoro TTS</td><td>3 requests/day per IP</td></tr>
+<tr><td><a href="https://tiamat.live/generate">POST /generate</a></td><td>Algorithmic art (6 styles)</td><td>2 requests/day per IP</td></tr>
+</tbody></table>
+
+**Docs:** [tiamat.live/docs](https://tiamat.live/docs)
 
 ### [Google Cloud Vertex AI](https://console.cloud.google.com/vertex-ai/model-garden)
 
