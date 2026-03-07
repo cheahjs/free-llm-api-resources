@@ -383,7 +383,6 @@ Very stringent payment verification for Google Cloud.
 - DeepSeek V3 0324
 - Llama 3.1 405B Base
 - Llama 3.1 405B Instruct
-- Llama 3.1 70B Instruct
 - Llama 3.1 8B Instruct
 - Llama 3.2 3B Instruct
 - Llama 3.3 70B Instruct
@@ -422,6 +421,7 @@ Very stringent payment verification for Google Cloud.
 - deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1-Terminus
 - deepseek-ai/DeepSeek-V3.2
+- minimaxai/minimax-m2.5
 - openai/gpt-oss-120b
 - tbd
 
