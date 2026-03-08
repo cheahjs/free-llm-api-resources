@@ -712,7 +712,7 @@ def main():
     if openrouter_models:
         provider_limits = get_human_limits(openrouter_models[0])
         model_list_markdown += "**Limits:**\n\n"
-        model_list_markdown += f"[{provider_limits}<br>Up to 1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api-reference/limits)\n\n"
+        model_list_markdown += f"[{provider_limits}<br>Up to 1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api/reference/limits)\n\n"
         model_list_markdown += "Models share a common quota.\n\n"
         for model in openrouter_models:
             model_list_markdown += (
@@ -834,24 +834,8 @@ def main():
             "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
         },
         {
-            "name": "Qwen 3 235B A22B Instruct",
-            "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
-        },
-        {
-            "name": "Llama 3.3 70B",
-            "limits_text": "30 requests/minute<br>64,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
-        },
-        {
-            "name": "Qwen 3 32B",
-            "limits_text": "30 requests/minute<br>64,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
-        },
-        {
             "name": "Llama 3.1 8B",
             "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
-        },
-        {
-            "name": "Z.ai GLM-4.6",
-            "limits_text": "10 requests/minute<br>60,000 tokens/minute<br>100 requests/hour<br>100,000 tokens/hour<br>100 requests/day<br>1,000,000 tokens/day"
         },
     ]
     for model in cerebras_models:
@@ -906,31 +890,13 @@ def main():
     model_list_markdown += "\n"
 
     # --- Google Cloud Vertex AI ---
-    vertex_llama_models = [
-        {
-            "id": "llama-3.2-90b-vision-instruct-maas",
-            "name": "Llama 3.2 90B Vision Instruct",
-            "urlId": "llama-3-2-90b-vision-instruct-maas",
-            "limits": {"requests/minute": 30},
-        },
-        {
-            "id": "llama-3.1-70b-instruct-maas",
-            "name": "Llama 3.1 70B Instruct",
-            "urlId": "llama-3-1-405b-instruct-maas",
-            "limits": {"requests/minute": 60},
-        },
-        {
-            "id": "llama-3.1-8b-instruct-maas",
-            "name": "Llama 3.1 8B Instruct",
-            "urlId": "llama-3-1-405b-instruct-maas",
-            "limits": {"requests/minute": 60},
-        },
-    ]
+    vertex_llama_models = []
     vertex_gemini_models = []
     vertex_deepseek_models = []
-    model_list_markdown += "### [Google Cloud Vertex AI](https://console.cloud.google.com/vertex-ai/model-garden)\n\n"
-    model_list_markdown += "Very stringent payment verification for Google Cloud.\n\n"
-    model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
+    if vertex_llama_models or vertex_gemini_models or vertex_deepseek_models:
+        model_list_markdown += "### [Google Cloud Vertex AI](https://console.cloud.google.com/vertex-ai/model-garden)\n\n"
+        model_list_markdown += "Very stringent payment verification for Google Cloud.\n\n"
+        model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
 
     # Write Gemini models to table
     first_gemini = True
@@ -978,10 +944,10 @@ def main():
         },
         {
             "name": "Nebius",
-            "url": "https://studio.nebius.com/",
+            "url": "https://tokenfactory.nebius.com/",
             "credits": "$1",
             "requirements": "",
-            "models_desc": "[Various open models](https://studio.nebius.ai/models)",
+            "models_desc": "[Various open models](https://tokenfactory.nebius.com/models)",
         },
         {
             "name": "Novita",
@@ -1043,7 +1009,7 @@ def main():
 
     # --- Hyperbolic (Trial - Table) ---
     if hyperbolic_models:
-        trial_list_markdown += "### [Hyperbolic](https://app.hyperbolic.xyz/)\n\n"
+        trial_list_markdown += "### [Hyperbolic](https://app.hyperbolic.ai/)\n\n"
         trial_list_markdown += "**Credits:** $1\n\n"
         trial_list_markdown += "**Models:**\n"
         for model in hyperbolic_models:
