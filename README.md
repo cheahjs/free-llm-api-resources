@@ -19,12 +19,12 @@ This lists various services that provide free access or credits towards API-base
   - [Mistral (Codestral)](#mistral-codestral)
   - [HuggingFace Inference Providers](#huggingface-inference-providers)
   - [Vercel AI Gateway](#vercel-ai-gateway)
+  - [OpenCode Zen](#opencode-zen)
   - [Cerebras](#cerebras)
   - [Groq](#groq)
   - [Cohere](#cohere)
   - [GitHub Models](#github-models)
   - [Cloudflare Workers AI](#cloudflare-workers-ai)
-  - [Google Cloud Vertex AI](#google-cloud-vertex-ai)
 - [Providers with trial credits](#providers-with-trial-credits)
   - [Fireworks](#fireworks)
   - [Baseten](#baseten)
@@ -46,7 +46,7 @@ This lists various services that provide free access or credits towards API-base
 
 **Limits:**
 
-[20 requests/minute<br>50 requests/day<br>Up to 1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api-reference/limits)
+[20 requests/minute<br>50 requests/day<br>Up to 1000 requests/day with $10 lifetime topup](https://openrouter.ai/docs/api/reference/limits)
 
 Models share a common quota.
 
@@ -133,15 +133,21 @@ Routes to various supported providers.
 **Limits:** [$5/month](https://vercel.com/docs/ai-gateway/pricing)
 
 
+### [OpenCode Zen](https://opencode.ai/docs/zen/)
+
+AI gateway with curated models.
+
+Free models may use data for improvement.
+
+- Big Pickle Stealth
+- MiniMax M2.5 Free
+- Arcee Large Preview Free
+
 ### [Cerebras](https://cloud.cerebras.ai/)
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
 <tr><td>gpt-oss-120b</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
-<tr><td>Qwen 3 235B A22B Instruct</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
-<tr><td>Llama 3.3 70B</td><td>30 requests/minute<br>64,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
-<tr><td>Qwen 3 32B</td><td>30 requests/minute<br>64,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Llama 3.1 8B</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
-<tr><td>Z.ai GLM-4.6</td><td>10 requests/minute<br>60,000 tokens/minute<br>100 requests/hour<br>100,000 tokens/hour<br>100 requests/day<br>1,000,000 tokens/day</td></tr>
 </tbody></table>
 
 ### [Groq](https://console.groq.com)
@@ -298,14 +304,6 @@ Extremely restrictive input/output token limits.
 - Una Cybertron 7B v2 (BF16)
 - Zephyr 7B Beta (AWQ)
 
-### [Google Cloud Vertex AI](https://console.cloud.google.com/vertex-ai/model-garden)
-
-Very stringent payment verification for Google Cloud.
-
-<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-2-90b-vision-instruct-maas" target="_blank">Llama 3.2 90B Vision Instruct</a></td><td>30 requests/minute<br>Free during preview</td></tr>
-<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 70B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
-<tr><td><a href="https://console.cloud.google.com/vertex-ai/publishers/meta/model-garden/llama-3-1-405b-instruct-maas" target="_blank">Llama 3.1 8B Instruct</a></td><td>60 requests/minute<br>Free during preview</td></tr>
 </tbody></table>
 
 
@@ -324,11 +322,11 @@ Very stringent payment verification for Google Cloud.
 
 **Models:** [Any supported model - pay by compute time](https://www.baseten.co/library/)
 
-### [Nebius](https://studio.nebius.com/)
+### [Nebius](https://tokenfactory.nebius.com/)
 
 **Credits:** $1
 
-**Models:** [Various open models](https://studio.nebius.ai/models)
+**Models:** [Various open models](https://tokenfactory.nebius.com/models)
 
 ### [Novita](https://novita.ai/?ref=ytblmjc&utm_source=affiliate)
 
@@ -374,7 +372,7 @@ Very stringent payment verification for Google Cloud.
 
 **Models:** Various open models
 
-### [Hyperbolic](https://app.hyperbolic.xyz/)
+### [Hyperbolic](https://app.hyperbolic.ai/)
 
 **Credits:** $1
 
