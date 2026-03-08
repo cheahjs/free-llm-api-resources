@@ -825,6 +825,15 @@ def main():
     model_list_markdown += "**Limits:** [$5/month](https://vercel.com/docs/ai-gateway/pricing)\n\n"
     model_list_markdown += "\n"
 
+    # --- OpenCode Zen ---
+    model_list_markdown += "### [OpenCode Zen](https://opencode.ai/docs/zen/)\n\n"
+    model_list_markdown += "AI gateway with curated models.\n\n"
+    model_list_markdown += "Free models may use data for improvement.\n\n"
+    model_list_markdown += "- Big Pickle Stealth\n"
+    model_list_markdown += "- MiniMax M2.5 Free\n"
+    model_list_markdown += "- Arcee Large Preview Free\n"
+    model_list_markdown += "\n"
+
     # --- Cerebras ---
     model_list_markdown += "### [Cerebras](https://cloud.cerebras.ai/)\n\n"
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
