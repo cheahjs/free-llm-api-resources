@@ -417,6 +417,7 @@ Extremely restrictive input/output token limits.
 - deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3-0324
 - deepseek-ai/DeepSeek-V3.1
+- deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.1-Terminus
 - deepseek-ai/DeepSeek-V3.2
 - minimaxai/minimax-m2.5
