@@ -318,7 +318,7 @@ Extremely restrictive input/output token limits.
 
 ### [Baseten](https://app.baseten.co/)
 
-**Credits:** $30
+**Credits:** $6
 
 **Models:** [Any supported model - pay by compute time](https://www.baseten.co/library/)
 
