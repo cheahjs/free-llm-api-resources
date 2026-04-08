@@ -84,10 +84,15 @@ Data is used for training when used outside of the UK/CH/EEA/EU.
 <tr><td>Gemini 3.1 Flash-Lite</td><td>250,000 tokens/minute<br>500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.5 Flash</td><td>250,000 tokens/minute<br>20 requests/day<br>5 requests/minute</td></tr>
 <tr><td>Gemini 2.5 Flash-Lite</td><td>250,000 tokens/minute<br>20 requests/day<br>10 requests/minute</td></tr>
+<tr><td>Gemini Embedding 1</td><td>30,000 tokens/minute<br>1,000 requests/day<br>100 requests/minute</td></tr>
+<tr><td>Gemini Embedding 2</td><td>30,000 tokens/minute<br>1,000 requests/day<br>100 requests/minute</td></tr>
+<tr><td>Gemma 4 31B</td><td>Unlimited tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
+<tr><td>Gemma 4 26B</td><td>Unlimited tokens/minute<br>1,500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemma 3 27B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 12B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 4B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 <tr><td>Gemma 3 1B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
+<tr><td>Gemma 3 2B</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
 </tbody></table>
 
 ### [NVIDIA NIM](https://build.nvidia.com/explore/discover)
