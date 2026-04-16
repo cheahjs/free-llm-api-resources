@@ -831,8 +831,10 @@ def main():
     model_list_markdown += "AI gateway with curated models.\n\n"
     model_list_markdown += "Free models may use data for improvement.\n\n"
     model_list_markdown += "- Big Pickle Stealth\n"
+    model_list_markdown += "- Nemotron 3 Super Free\n"
     model_list_markdown += "- MiniMax M2.5 Free\n"
-    model_list_markdown += "- Arcee Large Preview Free\n"
+    model_list_markdown += "- GPT 5 Nano\n"
+    model_list_markdown += "- Arcee Trinity Large Preview\n"
     model_list_markdown += "\n"
 
     # --- Cerebras ---

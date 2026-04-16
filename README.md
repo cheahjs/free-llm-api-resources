@@ -144,8 +144,10 @@ AI gateway with curated models.
 Free models may use data for improvement.
 
 - Big Pickle Stealth
+- Nemotron 3 Super Free
 - MiniMax M2.5 Free
-- Arcee Large Preview Free
+- GPT 5 Nano
+- Arcee Trinity Large Preview
 
 ### [Cerebras](https://cloud.cerebras.ai/)
 
