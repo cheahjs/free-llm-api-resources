@@ -1008,6 +1008,13 @@ def main():
             "requirements": "",
             "models_desc": "Various open models",
         },
+        {
+            "name": "QuickSilver Pro",
+            "url": "https://quicksilverpro.io",
+            "credits": "$0.10 free on sign-up",
+            "requirements": "",
+            "models_desc": "DeepSeek V3, DeepSeek R1, Qwen3.5-35B-A3B (OpenAI-compatible)",
+        },
     ]
 
     for provider in trial_providers_static:
