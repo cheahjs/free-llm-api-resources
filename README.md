@@ -64,7 +64,6 @@ Models share a common quota.
 - [google/gemma-4-31b-it:free](https://openrouter.ai/google/gemma-4-31b-it:free)
 - [liquid/lfm-2.5-1.2b-instruct:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-instruct:free)
 - [liquid/lfm-2.5-1.2b-thinking:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-thinking:free)
-- [meta-llama/llama-guard-4-12b:free](https://openrouter.ai/meta-llama/llama-guard-4-12b:free)
 - [minimax/minimax-m2.5:free](https://openrouter.ai/minimax/minimax-m2.5:free)
 - [nvidia/nemotron-3-nano-30b-a3b:free](https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free)
 - [nvidia/nemotron-3-super-120b-a12b:free](https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free)
@@ -387,12 +386,18 @@ Extremely restrictive input/output token limits.
 **Credits:** $5 for 3 months
 
 **Models:**
+- E5-Mistral-7B-Instruct
+- Llama 3.3 70B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
+- Qwen/Qwen3-235B
+- Qwen/Qwen3-32B
+- deepseek-ai/DeepSeek-R1-Distill-Llama-70B
 - deepseek-ai/DeepSeek-V3.1
-- deepseek-ai/DeepSeek-V3.1
+- deepseek-ai/DeepSeek-V3.1-Terminus
 - deepseek-ai/DeepSeek-V3.2
 - google/gemma-3-12b-it
+- google/gemma-3-27b-it
 - minimaxai/minimax-m2.5
 - openai/gpt-oss-120b
 
