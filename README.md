@@ -403,7 +403,6 @@ AI models from MeiTuan, with respectable performance, though lacking in benchmar
 
 - E5-Mistral-7B-Instruct
 - Llama 3.3 70B
-- Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
 - Qwen/Qwen3-235B
 - Qwen/Qwen3-32B
