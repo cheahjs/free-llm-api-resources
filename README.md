@@ -150,7 +150,7 @@ Free models may use data for improvement.
 ### [Cerebras](https://cloud.cerebras.ai/)
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>gpt-oss-120b</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
+<tr><td>Qwen 3 235B Instruct</td><td>5 requests/minute<br>30,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 <tr><td>Llama 3.1 8B</td><td>30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day</td></tr>
 </tbody></table>
 
