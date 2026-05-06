@@ -704,7 +704,7 @@ def main():
     # --- Google AI Studio ---
     model_list_markdown += "### [Google AI Studio](https://aistudio.google.com)\n\n"
     model_list_markdown += (
-        "Data is used for training when used outside of the UK/CH/EEA/EU.\n\n"
+        "Data is used for training when used outside of the UK/CH/EEA/EU. You must have a Google Account verified 18+.\n\n"
     )
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
 
