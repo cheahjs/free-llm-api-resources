@@ -58,6 +58,7 @@ Models share a common quota.
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
 - [google/gemma-4-26b-a4b-it:free](https://openrouter.ai/google/gemma-4-26b-a4b-it:free)
 - [google/gemma-4-31b-it:free](https://openrouter.ai/google/gemma-4-31b-it:free)
+- [inclusionai/ring-2.6-1t:free](https://openrouter.ai/inclusionai/ring-2.6-1t:free)
 - [liquid/lfm-2.5-1.2b-instruct:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-instruct:free)
 - [liquid/lfm-2.5-1.2b-thinking:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-thinking:free)
 - [minimax/minimax-m2.5:free](https://openrouter.ai/minimax/minimax-m2.5:free)
@@ -72,7 +73,6 @@ Models share a common quota.
 - [poolside/laguna-xs.2:free](https://openrouter.ai/poolside/laguna-xs.2:free)
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [qwen/qwen3-next-80b-a3b-instruct:free](https://openrouter.ai/qwen/qwen3-next-80b-a3b-instruct:free)
-- [tencent/hy3-preview:free](https://openrouter.ai/tencent/hy3-preview:free)
 - [z-ai/glm-4.5-air:free](https://openrouter.ai/z-ai/glm-4.5-air:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
@@ -387,25 +387,15 @@ Extremely restrictive input/output token limits.
 **Credits:** $5 for 3 months
 
 **Models:**
-- E5-Mistral-7B-Instruct
-- Llama 3.1 8B
-- Llama 3.3 70B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
-- Qwen/Qwen3-235B
-- Qwen/Qwen3-235B-A22B-Instruct-2507
-- Qwen/Qwen3-32B
-- Whisper-Large-v3
-- deepseek-ai/DeepSeek-R1-0528
-- deepseek-ai/DeepSeek-R1-Distill-Llama-70B
-- deepseek-ai/DeepSeek-V3-0324
 - deepseek-ai/DeepSeek-V3.1
-- deepseek-ai/DeepSeek-V3.1-Terminus
+- deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.2
 - google/gemma-3-12b-it
-- google/gemma-3-27b-it
+- minimaxai/minimax-m2.5
+- minimaxai/minimax-m2.7
 - openai/gpt-oss-120b
-- tbd
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 
