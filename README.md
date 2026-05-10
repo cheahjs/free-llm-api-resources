@@ -390,7 +390,6 @@ Extremely restrictive input/output token limits.
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
 - deepseek-ai/DeepSeek-V3.1
-- deepseek-ai/DeepSeek-V3.1
 - deepseek-ai/DeepSeek-V3.2
 - google/gemma-3-12b-it
 - minimaxai/minimax-m2.5
