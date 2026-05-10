@@ -39,6 +39,7 @@ This lists various services that provide free access or credits towards API-base
   - [Hyperbolic](#hyperbolic)
   - [SambaNova Cloud](#sambanova-cloud)
   - [Scaleway Generative APIs](#scaleway-generative-apis)
+  - [Northflank](#northflank)
 
 ## Free Providers
 
@@ -417,4 +418,9 @@ Extremely restrictive input/output token limits.
 - qwen3.5-397b-a17b
 - voxtral-small-24b-2507
 
+### [Northflank](https://northflank.com/)
+
+**Credits:** $1
+
+**Models:** Various open models
 
