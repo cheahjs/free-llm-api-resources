@@ -14,6 +14,15 @@ This lists various services that provide free access or credits towards API-base
 
 {{MODEL_LIST}}
 
+### [Astraflow (UCloud)](https://www.umodelverse.ai/)
+
+OpenAI-compatible AI model aggregation platform by UCloud (优刻得) supporting 200+ models. Free tier available upon sign-up.
+
+- **Global endpoint:** `https://api-us-ca.umodelverse.ai/v1` (env: `ASTRAFLOW_API_KEY`)
+- **China endpoint:** `https://api.modelverse.cn/v1` (env: `ASTRAFLOW_CN_API_KEY`)
+
+- Various open and proprietary models (DeepSeek, Qwen, Llama, GLM, Kimi, etc.)
+
 ## Providers with trial credits
 
 {{TRIAL_LIST_MARKDOWN}}
