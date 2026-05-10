@@ -262,6 +262,7 @@ MODEL_TO_NAME_MAPPING = {
     "compound-beta-mini": "Groq compound-beta-mini",
     "compound-beta": "Groq compound-beta",
     "shisa-ai/shisa-v2-llama3.3-70b": "Shisa V2 Llama 3.3 70B",
+    "z-ai/glm-4.7-flash:free": "GLM-4.7-Flash",
 }
 
 HYPERBOLIC_IGNORED_MODELS = {
