@@ -53,12 +53,12 @@ Models share a common quota.
 - [Hermes 3 Llama 3.1 405B](https://openrouter.ai/nousresearch/hermes-3-llama-3.1-405b:free)
 - [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
+- [arcee-ai/trinity-large-thinking:free](https://openrouter.ai/arcee-ai/trinity-large-thinking:free)
 - [baidu/cobuddy:free](https://openrouter.ai/baidu/cobuddy:free)
-- [baidu/qianfan-ocr-fast:free](https://openrouter.ai/baidu/qianfan-ocr-fast:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
+- [deepseek/deepseek-v4-flash:free](https://openrouter.ai/deepseek/deepseek-v4-flash:free)
 - [google/gemma-4-26b-a4b-it:free](https://openrouter.ai/google/gemma-4-26b-a4b-it:free)
 - [google/gemma-4-31b-it:free](https://openrouter.ai/google/gemma-4-31b-it:free)
-- [inclusionai/ring-2.6-1t:free](https://openrouter.ai/inclusionai/ring-2.6-1t:free)
 - [liquid/lfm-2.5-1.2b-instruct:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-instruct:free)
 - [liquid/lfm-2.5-1.2b-thinking:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-thinking:free)
 - [minimax/minimax-m2.5:free](https://openrouter.ai/minimax/minimax-m2.5:free)
@@ -259,17 +259,11 @@ Extremely restrictive input/output token limits.
 - @cf/qwen/qwen3-30b-a3b-fp8
 - @cf/zai-org/glm-4.7-flash
 - DeepSeek R1 Distill Qwen 32B
-- Deepseek Coder 6.7B Base (AWQ)
-- Deepseek Coder 6.7B Instruct (AWQ)
-- Deepseek Math 7B Instruct
-- Discolm German 7B v1 (AWQ)
-- Falcom 7B Instruct
 - Gemma 2B Instruct (LoRA)
 - Gemma 3 12B Instruct
 - Gemma 7B Instruct
 - Gemma 7B Instruct (LoRA)
 - Hermes 2 Pro Mistral 7B
-- Llama 2 13B Chat (AWQ)
 - Llama 2 7B Chat (FP16)
 - Llama 2 7B Chat (INT8)
 - Llama 2 7B Chat (LoRA)
@@ -284,25 +278,13 @@ Extremely restrictive input/output token limits.
 - Llama 4 Scout Instruct
 - Llama Guard 3 8B
 - Mistral 7B Instruct v0.1
-- Mistral 7B Instruct v0.1 (AWQ)
 - Mistral 7B Instruct v0.2
 - Mistral 7B Instruct v0.2 (LoRA)
 - Mistral Small 3.1 24B Instruct
-- Neural Chat 7B v3.1 (AWQ)
-- OpenChat 3.5 0106
-- OpenHermes 2.5 Mistral 7B (AWQ)
 - Phi-2
-- Qwen 1.5 0.5B Chat
-- Qwen 1.5 1.8B Chat
-- Qwen 1.5 14B Chat (AWQ)
-- Qwen 1.5 7B Chat (AWQ)
 - Qwen 2.5 Coder 32B Instruct
 - Qwen QwQ 32B
 - SQLCoder 7B 2
-- Starling LM 7B Beta
-- TinyLlama 1.1B Chat v1.0
-- Una Cybertron 7B v2 (BF16)
-- Zephyr 7B Beta (AWQ)
 
 </tbody></table>
 
@@ -387,14 +369,25 @@ Extremely restrictive input/output token limits.
 **Credits:** $5 for 3 months
 
 **Models:**
+- E5-Mistral-7B-Instruct
+- Llama 3.1 8B
+- Llama 3.3 70B
 - Llama 3.3 70B
 - Llama-4-Maverick-17B-128E-Instruct
+- Qwen/Qwen3-235B
+- Qwen/Qwen3-235B-A22B-Instruct-2507
+- Qwen/Qwen3-32B
+- Whisper-Large-v3
+- deepseek-ai/DeepSeek-R1-0528
+- deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+- deepseek-ai/DeepSeek-V3-0324
 - deepseek-ai/DeepSeek-V3.1
+- deepseek-ai/DeepSeek-V3.1-Terminus
 - deepseek-ai/DeepSeek-V3.2
 - google/gemma-3-12b-it
-- minimaxai/minimax-m2.5
-- minimaxai/minimax-m2.7
+- google/gemma-3-27b-it
 - openai/gpt-oss-120b
+- tbd
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 
@@ -415,6 +408,7 @@ Extremely restrictive input/output token limits.
 - qwen3-coder-30b-a3b-instruct
 - qwen3-embedding-8b
 - qwen3.5-397b-a17b
+- qwen3.6-35b-a3b
 - voxtral-small-24b-2507
 
 
