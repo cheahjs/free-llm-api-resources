@@ -80,6 +80,7 @@ Models share a common quota.
 Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
+<tr><td>Gemini 3.5 Flash</td><td>250,000 tokens/minute<br>20 requests/day<br>5 requests/minute</td></tr>
 <tr><td>Gemini 3 Flash</td><td>250,000 tokens/minute<br>20 requests/day<br>5 requests/minute</td></tr>
 <tr><td>Gemini 3.1 Flash-Lite</td><td>250,000 tokens/minute<br>500 requests/day<br>15 requests/minute</td></tr>
 <tr><td>Gemini 2.5 Flash</td><td>250,000 tokens/minute<br>20 requests/day<br>5 requests/minute</td></tr>
@@ -145,9 +146,7 @@ Free models may use data for improvement.
 
 - Big Pickle Stealth
 - Nemotron 3 Super Free
-- MiniMax M2.5 Free
-- GPT 5 Nano
-- Arcee Trinity Large Preview
+- DeepSeek V4 Flash Free
 
 ### [Cerebras](https://cloud.cerebras.ai/)
 
@@ -163,8 +162,8 @@ Free models may use data for improvement.
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
 <tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
-<tr><td>Whisper Large v3</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
-<tr><td>Whisper Large v3 Turbo</td><td>7,200 audio-seconds/minute<br>2,000 requests/day</td></tr>
+<tr><td>Whisper Large v3</td><td>2,000 requests/day</td></tr>
+<tr><td>Whisper Large v3 Turbo</td><td>2,000 requests/day</td></tr>
 <tr><td>canopylabs/orpheus-arabic-saudi</td><td></td></tr>
 <tr><td>canopylabs/orpheus-v1-english</td><td></td></tr>
 <tr><td>groq/compound</td><td>250 requests/day<br>70,000 tokens/minute</td></tr>
@@ -188,6 +187,7 @@ Models share a common monthly quota.
 - c4ai-aya-expanse-32b
 - c4ai-aya-vision-32b
 - command-a-03-2025
+- command-a-plus-05-2026
 - command-a-reasoning-08-2025
 - command-a-translate-08-2025
 - command-a-vision-07-2025
@@ -371,13 +371,13 @@ Extremely restrictive input/output token limits.
 **Credits:** $5 for 3 months
 
 **Models:**
-- Llama 3.3 70B
-- Llama-4-Maverick-17B-128E-Instruct
-- deepseek-ai/DeepSeek-V3.1
-- deepseek-ai/DeepSeek-V3.2
-- google/gemma-3-12b-it
-- minimaxai/minimax-m2.7
-- openai/gpt-oss-120b
+- deepseek-v3.1
+- deepseek-v3.2
+- gemma-3-12b-it
+- gpt-oss-120b
+- llama-4-maverick-17b-128e-instruct
+- meta-llama-3.3-70b-instruct
+- minimax-m2.7
 
 ### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
 
@@ -393,6 +393,7 @@ Extremely restrictive input/output token limits.
 - gemma-4-26b-a4b-it
 - gpt-oss-120b
 - holo2-30b-a3b
+- mistral-medium-3.5-128b
 - mistral-small-3.2-24b-instruct-2506
 - qwen3-235b-a22b-instruct-2507
 - qwen3-coder-30b-a3b-instruct

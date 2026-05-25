@@ -68,8 +68,17 @@ def get_groq_limits_for_stt_model(model_id, logger):
         logger.error(f"Failed to get limits for model {model_id}: {e}")
         logger.error(r.text)
         return {}
-    audio_seconds_per_minute = int(r.headers["x-ratelimit-limit-audio-seconds"])
-    rpd = int(r.headers["x-ratelimit-limit-requests"])
+    # try to get audio-seconds/minute from the headers
+    audio_seconds_per_minute = r.headers.get("x-ratelimit-limit-audio-seconds")
+    if audio_seconds_per_minute:
+        audio_seconds_per_minute = int(audio_seconds_per_minute)
+    else:
+        audio_seconds_per_minute = None
+    rpd = r.headers.get("x-ratelimit-limit-requests")
+    if rpd:
+        rpd = int(rpd)
+    else:
+        rpd = None
     return {
         "audio-seconds/minute": audio_seconds_per_minute,
         "requests/day": rpd,
@@ -482,16 +491,16 @@ def fetch_lambda_models(logger):
 
 def fetch_samba_models(logger):
     logger.info("Fetching SambaNova models...")
-    r = requests.get("https://cloud.sambanova.ai/api/pricing")
+    r = requests.get("https://api.sambanova.ai/v1/models")
     r.raise_for_status()
-    models = r.json()["prices"]
+    models = r.json()["data"]
     logger.info(f"Fetched {len(models)} models from SambaNova")
     ret_models = []
     for model in models:
         ret_models.append(
             {
-                "id": model["model_id"],
-                "name": model["model_name"] or model["model_id"],
+                "id": model["id"],
+                "name": get_model_name(model["id"]),
             }
         )
     ret_models = sorted(ret_models, key=lambda x: x["name"])
@@ -614,6 +623,8 @@ def get_human_limits(model, seperator="<br>"):
     if "limits" not in model:
         return ""
     limits = model["limits"]
+    # filter None values
+    limits = {key: value for key, value in limits.items() if value is not None}
     return seperator.join([f"{value:,} {key}" for key, value in limits.items()])
 
 
@@ -709,6 +720,11 @@ def main():
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
 
     gemini_text_models = [
+        {
+            "id": "gemini-3-5-flash",
+            "name": "Gemini 3.5 Flash",
+            "limits": gemini_models.get("gemini-3-flash", {}),
+        },
         {
             "id": "gemini-3-flash-preview",
             "name": "Gemini 3 Flash",
@@ -832,9 +848,7 @@ def main():
     model_list_markdown += "Free models may use data for improvement.\n\n"
     model_list_markdown += "- Big Pickle Stealth\n"
     model_list_markdown += "- Nemotron 3 Super Free\n"
-    model_list_markdown += "- MiniMax M2.5 Free\n"
-    model_list_markdown += "- GPT 5 Nano\n"
-    model_list_markdown += "- Arcee Trinity Large Preview\n"
+    model_list_markdown += "- DeepSeek V4 Flash Free\n"
     model_list_markdown += "\n"
 
     # --- Cerebras ---
