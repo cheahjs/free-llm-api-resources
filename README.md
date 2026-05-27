@@ -53,7 +53,6 @@ Models share a common quota.
 - [Hermes 3 Llama 3.1 405B](https://openrouter.ai/nousresearch/hermes-3-llama-3.1-405b:free)
 - [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
-- [arcee-ai/trinity-large-thinking:free](https://openrouter.ai/arcee-ai/trinity-large-thinking:free)
 - [baidu/cobuddy:free](https://openrouter.ai/baidu/cobuddy:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
 - [deepseek/deepseek-v4-flash:free](https://openrouter.ai/deepseek/deepseek-v4-flash:free)
