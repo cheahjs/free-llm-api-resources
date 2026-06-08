@@ -248,6 +248,46 @@ def fetch_openrouter_models(logger):
     return ret_models
 
 
+def fetch_unorouter_models(logger):
+    logger.info("Fetching UnoRouter models...")
+    r = requests.get(
+        "https://api.unorouter.ai/api/pricing",
+        headers={"Content-Type": "application/json"},
+    )
+    r.raise_for_status()
+    models = r.json()["data"]
+    logger.info(f"Fetched {len(models)} models from UnoRouter")
+    skip = (
+        "image",
+        "video",
+        "veo",
+        "seedream",
+        "imagen",
+        "flux",
+        "tts",
+        "whisper",
+        "embed",
+        "rerank",
+        "stable-diffusion",
+        "sora",
+        "kling",
+        "wan",
+    )
+    ret_models = []
+    for model in models:
+        if model.get("model_price", 1) != 0 or model.get("model_ratio", 1) != 0:
+            continue
+        endpoints = model.get("supported_endpoint_types") or []
+        if "openai" not in endpoints:
+            continue
+        name = model.get("model_name", "")
+        if not name or any(s in name.lower() for s in skip):
+            continue
+        ret_models.append({"id": name, "name": get_model_name(name)})
+    ret_models = sorted(ret_models, key=lambda x: x["name"])
+    return ret_models
+
+
 def fetch_cloudflare_models(logger):
     logger.info("Fetching Cloudflare models...")
     r = requests.get(
@@ -657,6 +697,7 @@ def main():
     samba_logger = create_logger("SambaNova")
     scaleway_logger = create_logger("Scaleway")
     cohere_logger = create_logger("Cohere")
+    unorouter_logger = create_logger("UnoRouter")
 
     fetch_concurrently = os.getenv("FETCH_CONCURRENTLY", "false").lower() == "true"
 
@@ -671,6 +712,7 @@ def main():
                 executor.submit(fetch_samba_models, samba_logger),
                 executor.submit(fetch_scaleway_models, scaleway_logger),
                 executor.submit(fetch_cohere_models, cohere_logger),
+                executor.submit(fetch_unorouter_models, unorouter_logger),
             ]
             (
                 gemini_models,
@@ -681,6 +723,7 @@ def main():
                 samba_models,
                 scaleway_models,
                 cohere_models,
+                unorouter_models,
             ) = [f.result() for f in futures]
 
             # Fetch groq models after others complete
@@ -694,6 +737,7 @@ def main():
         samba_models = fetch_samba_models(samba_logger)
         scaleway_models = fetch_scaleway_models(scaleway_logger)
         cohere_models = fetch_cohere_models(cohere_logger)
+        unorouter_models = fetch_unorouter_models(unorouter_logger)
         groq_models = fetch_groq_models(groq_logger)
 
     # Initialize markdown string for free providers
@@ -710,6 +754,18 @@ def main():
             model_list_markdown += (
                 f"- [{model['name']}](https://openrouter.ai/{model['id']})\n"
             )
+    model_list_markdown += "\n"
+
+    # --- UnoRouter ---
+    model_list_markdown += "### [UnoRouter](https://unorouter.ai)\n\n"
+    if unorouter_models:
+        model_list_markdown += (
+            "Free account required (no credit card). Aggregates free models from "
+            "many upstream providers behind one OpenAI-compatible key; no fixed "
+            "per-model rate limit is documented and availability is not guaranteed.\n\n"
+        )
+        for model in unorouter_models:
+            model_list_markdown += f"- {model['name']}\n"
     model_list_markdown += "\n"
 
     # --- Google AI Studio ---
