@@ -54,16 +54,16 @@ Models share a common quota.
 - [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
 - [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
 - [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
-- [deepseek/deepseek-v4-flash:free](https://openrouter.ai/deepseek/deepseek-v4-flash:free)
 - [google/gemma-4-26b-a4b-it:free](https://openrouter.ai/google/gemma-4-26b-a4b-it:free)
 - [google/gemma-4-31b-it:free](https://openrouter.ai/google/gemma-4-31b-it:free)
 - [liquid/lfm-2.5-1.2b-instruct:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-instruct:free)
 - [liquid/lfm-2.5-1.2b-thinking:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-thinking:free)
-- [minimax/minimax-m2.5:free](https://openrouter.ai/minimax/minimax-m2.5:free)
-- [moonshotai/kimi-k2.6:free](https://openrouter.ai/moonshotai/kimi-k2.6:free)
+- [nex-agi/nex-n2-pro:free](https://openrouter.ai/nex-agi/nex-n2-pro:free)
 - [nvidia/nemotron-3-nano-30b-a3b:free](https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free)
 - [nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free](https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free)
 - [nvidia/nemotron-3-super-120b-a12b:free](https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free)
+- [nvidia/nemotron-3-ultra-550b-a55b:free](https://openrouter.ai/nvidia/nemotron-3-ultra-550b-a55b:free)
+- [nvidia/nemotron-3.5-content-safety:free](https://openrouter.ai/nvidia/nemotron-3.5-content-safety:free)
 - [nvidia/nemotron-nano-12b-v2-vl:free](https://openrouter.ai/nvidia/nemotron-nano-12b-v2-vl:free)
 - [nvidia/nemotron-nano-9b-v2:free](https://openrouter.ai/nvidia/nemotron-nano-9b-v2:free)
 - [openai/gpt-oss-120b:free](https://openrouter.ai/openai/gpt-oss-120b:free)
@@ -72,7 +72,6 @@ Models share a common quota.
 - [poolside/laguna-xs.2:free](https://openrouter.ai/poolside/laguna-xs.2:free)
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [qwen/qwen3-next-80b-a3b-instruct:free](https://openrouter.ai/qwen/qwen3-next-80b-a3b-instruct:free)
-- [z-ai/glm-4.5-air:free](https://openrouter.ai/z-ai/glm-4.5-air:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
 
@@ -173,6 +172,7 @@ Free models may use data for improvement.
 <tr><td>openai/gpt-oss-20b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 <tr><td>openai/gpt-oss-safeguard-20b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 <tr><td>qwen/qwen3-32b</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
+<tr><td>qwen/qwen3.6-27b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 </tbody></table>
 
 ### [Cohere](https://cohere.com)
@@ -201,22 +201,16 @@ Extremely restrictive input/output token limits.
 
 **Limits:** [Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)](https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits)
 
-- AI21 Jamba 1.5 Large
 - Codestral 25.01
 - Cohere Command A
-- Cohere Command R 08-2024
-- Cohere Command R+ 08-2024
 - DeepSeek-R1
 - DeepSeek-R1-0528
 - DeepSeek-V3-0324
-- Grok 3
-- Grok 3 Mini
 - Llama 4 Maverick 17B 128E Instruct FP8
 - Llama 4 Scout 17B 16E Instruct
 - Llama-3.2-11B-Vision-Instruct
 - Llama-3.2-90B-Vision-Instruct
 - Llama-3.3-70B-Instruct
-- MAI-DS-R1
 - Meta-Llama-3.1-405B-Instruct
 - Meta-Llama-3.1-8B-Instruct
 - Ministral 3B
@@ -252,25 +246,18 @@ Extremely restrictive input/output token limits.
 - @cf/aisingapore/gemma-sea-lion-v4-27b-it
 - @cf/google/gemma-4-26b-a4b-it
 - @cf/ibm-granite/granite-4.0-h-micro
-- @cf/moonshotai/kimi-k2.5
 - @cf/moonshotai/kimi-k2.6
+- @cf/moonshotai/kimi-k2.7-code
 - @cf/nvidia/nemotron-3-120b-a12b
 - @cf/openai/gpt-oss-120b
 - @cf/openai/gpt-oss-20b
 - @cf/qwen/qwen3-30b-a3b-fp8
 - @cf/zai-org/glm-4.7-flash
+- @cf/zai-org/glm-5.2
 - DeepSeek R1 Distill Qwen 32B
 - Gemma 2B Instruct (LoRA)
-- Gemma 3 12B Instruct
-- Gemma 7B Instruct
 - Gemma 7B Instruct (LoRA)
-- Hermes 2 Pro Mistral 7B
-- Llama 2 7B Chat (FP16)
-- Llama 2 7B Chat (INT8)
 - Llama 2 7B Chat (LoRA)
-- Llama 3 8B Instruct
-- Llama 3 8B Instruct (AWQ)
-- Llama 3.1 8B Instruct (AWQ)
 - Llama 3.1 8B Instruct (FP8)
 - Llama 3.2 11B Vision Instruct
 - Llama 3.2 1B Instruct
@@ -278,14 +265,10 @@ Extremely restrictive input/output token limits.
 - Llama 3.3 70B Instruct (FP8)
 - Llama 4 Scout Instruct
 - Llama Guard 3 8B
-- Mistral 7B Instruct v0.1
-- Mistral 7B Instruct v0.2
 - Mistral 7B Instruct v0.2 (LoRA)
 - Mistral Small 3.1 24B Instruct
-- Phi-2
 - Qwen 2.5 Coder 32B Instruct
 - Qwen QwQ 32B
-- SQLCoder 7B 2
 
 </tbody></table>
 
@@ -372,9 +355,8 @@ Extremely restrictive input/output token limits.
 **Models:**
 - deepseek-v3.1
 - deepseek-v3.2
-- gemma-3-12b-it
+- gemma-4-31b-it
 - gpt-oss-120b
-- llama-4-maverick-17b-128e-instruct
 - meta-llama-3.3-70b-instruct
 - minimax-m2.7
 
