@@ -11,6 +11,7 @@ This lists various services that provide free access or credits towards API-base
 > [!WARNING]  
 > This list explicitly excludes any services that are not legitimate (eg reverse engineers an existing chatbot)
 
+- [Tools for combining free tiers](#tools-for-combining-free-tiers)
 - [Free Providers](#free-providers)
   - [OpenRouter](#openrouter)
   - [Google AI Studio](#google-ai-studio)
@@ -39,6 +40,10 @@ This lists various services that provide free access or credits towards API-base
   - [Hyperbolic](#hyperbolic)
   - [SambaNova Cloud](#sambanova-cloud)
   - [Scaleway Generative APIs](#scaleway-generative-apis)
+
+## Tools for combining free tiers
+
+- [freellmpool](https://github.com/0xzr/freellmpool) — pools free-tier providers behind one OpenAI-compatible endpoint with a CLI, Python library, local proxy, and MCP server. It has keyless providers for a no-setup first run and can use API keys from many providers on this list for failover and per-day quota tracking.
 
 ## Free Providers
 
@@ -400,5 +405,4 @@ Extremely restrictive input/output token limits.
 - qwen3.5-397b-a17b
 - qwen3.6-35b-a3b
 - voxtral-small-24b-2507
-
 

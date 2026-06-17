@@ -10,6 +10,10 @@ This lists various services that provide free access or credits towards API-base
 
 {{TOC}}
 
+## Tools for combining free tiers
+
+- [freellmpool](https://github.com/0xzr/freellmpool) — pools free-tier providers behind one OpenAI-compatible endpoint with a CLI, Python library, local proxy, and MCP server. It has keyless providers for a no-setup first run and can use API keys from many providers on this list for failover and per-day quota tracking.
+
 ## Free Providers
 
 {{MODEL_LIST}}
