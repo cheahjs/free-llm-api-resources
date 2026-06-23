@@ -59,7 +59,6 @@ Models share a common quota.
 - [google/gemma-4-31b-it:free](https://openrouter.ai/google/gemma-4-31b-it:free)
 - [liquid/lfm-2.5-1.2b-instruct:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-instruct:free)
 - [liquid/lfm-2.5-1.2b-thinking:free](https://openrouter.ai/liquid/lfm-2.5-1.2b-thinking:free)
-- [nex-agi/nex-n2-pro:free](https://openrouter.ai/nex-agi/nex-n2-pro:free)
 - [nvidia/nemotron-3-nano-30b-a3b:free](https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free)
 - [nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free](https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free)
 - [nvidia/nemotron-3-super-120b-a12b:free](https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free)
