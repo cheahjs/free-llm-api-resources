@@ -19,6 +19,7 @@ This lists various services that provide free access or credits towards API-base
   - [Mistral (Codestral)](#mistral-codestral)
   - [HuggingFace Inference Providers](#huggingface-inference-providers)
   - [Vercel AI Gateway](#vercel-ai-gateway)
+  - [DGrid Free Models Router](#dgrid-free-models-router)
   - [OpenCode Zen](#opencode-zen)
   - [Cerebras](#cerebras)
   - [Groq](#groq)
@@ -135,6 +136,25 @@ Routes to various supported providers.
 
 **Limits:** [$5/month](https://vercel.com/docs/ai-gateway/pricing)
 
+
+### [DGrid Free Models Router](https://dgrid.ai/models/dgridai/free)
+
+DGrid Free Models Router is DGrid's free intelligent inference gateway. It combines multiple models into a seamless router and dynamically selects the best-fit model for each request, helping optimize speed, reliability, and task efficiency without requiring users to manage model selection directly.
+
+**Limits:** 10 requests/minute and 100 requests/day. With a $5 lifetime top-up, limits increase to up to 20 requests/minute and 1,000 requests/day.
+
+**Links:** [DGrid](https://dgrid.ai/), [Documentation](https://docs.dgrid.ai/), [API reference](https://docs.dgrid.ai/api-reference/introduction), [API base URL](https://api.dgrid.ai/v1)
+
+Currently supported free auto-routing models:
+
+- llama-3.2-1b-instruct
+- glm-4.7-flash
+- deepseek-r1-distill-qwen-32b
+- llama-3.3-70b-instruct-fp8-fast
+- Kimi-K2.6
+- GLM-5.2
+
+More free models will be added over time.
 
 ### [OpenCode Zen](https://opencode.ai/docs/zen/)
 
@@ -382,5 +402,3 @@ Extremely restrictive input/output token limits.
 - qwen3.5-397b-a17b
 - qwen3.6-35b-a3b
 - voxtral-small-24b-2507
-
-
