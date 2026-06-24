@@ -157,6 +157,59 @@ def fetch_groq_models(logger):
     return ret_models
 
 
+def fetch_astraflow_models(base_url, api_key, region_label, logger):
+    logger.info(f"Fetching Astraflow models ({region_label})...")
+    try:
+        r = requests.get(
+            f"{base_url}/models",
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+            timeout=10,
+        )
+        r.raise_for_status()
+        models = r.json()["data"]
+        logger.info(f"Fetched {len(models)} models from Astraflow ({region_label})")
+        ret_models = []
+        for model in models:
+            model_id = model.get("id")
+            if not model_id:
+                continue
+            ret_models.append(
+                {
+                    "id": model_id,
+                    "name": get_model_name(model_id),
+                }
+            )
+        ret_models = sorted(ret_models, key=lambda x: x["name"])
+        return ret_models
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Error fetching Astraflow models ({region_label}): {e}")
+        return []
+    except json.JSONDecodeError as e:
+        logger.error(f"Error decoding JSON from Astraflow API ({region_label}): {e}")
+        return []
+
+
+def fetch_astraflow_global_models(logger):
+    return fetch_astraflow_models(
+        "https://api-us-ca.umodelverse.ai/v1",
+        os.environ["ASTRAFLOW_API_KEY"],
+        "global",
+        logger,
+    )
+
+
+def fetch_astraflow_cn_models(logger):
+    return fetch_astraflow_models(
+        "https://api.modelverse.cn/v1",
+        os.environ["ASTRAFLOW_CN_API_KEY"],
+        "China",
+        logger,
+    )
+
+
 def fetch_kluster_models(logger):
     logger.info("Fetching Kluster models...")
     try:
