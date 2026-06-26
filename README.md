@@ -338,6 +338,12 @@ Extremely restrictive input/output token limits.
 
 **Models:** Various open models
 
+### [Starveri API](https://api.starveri.net/docs)
+
+**Credits:** 5 text-only demo requests before purchase; paid usage requires prepaid credits
+
+**Models:** [OpenAI-compatible GPT/Codex API gateway](https://api.starveri.net/models)
+
 ### [Hyperbolic](https://app.hyperbolic.ai/)
 
 **Credits:** $1
@@ -382,5 +388,4 @@ Extremely restrictive input/output token limits.
 - qwen3.5-397b-a17b
 - qwen3.6-35b-a3b
 - voxtral-small-24b-2507
-
 
