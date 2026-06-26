@@ -372,6 +372,7 @@ Extremely restrictive input/output token limits.
 - Whisper Large v3
 - devstral-2-123b-instruct-2512
 - gemma-4-26b-a4b-it
+- glm-5.2
 - gpt-oss-120b
 - holo2-30b-a3b
 - mistral-medium-3.5-128b
