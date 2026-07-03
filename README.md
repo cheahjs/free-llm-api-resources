@@ -69,6 +69,7 @@ Models share a common quota.
 - [openai/gpt-oss-120b:free](https://openrouter.ai/openai/gpt-oss-120b:free)
 - [openai/gpt-oss-20b:free](https://openrouter.ai/openai/gpt-oss-20b:free)
 - [poolside/laguna-m.1:free](https://openrouter.ai/poolside/laguna-m.1:free)
+- [poolside/laguna-xs-2.1:free](https://openrouter.ai/poolside/laguna-xs-2.1:free)
 - [poolside/laguna-xs.2:free](https://openrouter.ai/poolside/laguna-xs.2:free)
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [qwen/qwen3-next-80b-a3b-instruct:free](https://openrouter.ai/qwen/qwen3-next-80b-a3b-instruct:free)
@@ -372,6 +373,7 @@ Extremely restrictive input/output token limits.
 - Whisper Large v3
 - devstral-2-123b-instruct-2512
 - gemma-4-26b-a4b-it
+- glm-5.2
 - gpt-oss-120b
 - holo2-30b-a3b
 - mistral-medium-3.5-128b
