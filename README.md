@@ -196,49 +196,57 @@ Models share a common monthly quota.
 - command-r7b-12-2024
 - command-r7b-arabic-02-2025
 
-### [GitHub Models](https://github.com/marketplace/models)
+Here’s how you can add a notice with the URL to the changelog:
 
-Extremely restrictive input/output token limits.
+---
 
-**Limits:** [Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)](https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits)
+### ~~[GitHub Models](https://github.com/marketplace/models)~~
 
-- Codestral 25.01
-- Cohere Command A
-- DeepSeek-R1
-- DeepSeek-R1-0528
-- DeepSeek-V3-0324
-- Llama 4 Maverick 17B 128E Instruct FP8
-- Llama 4 Scout 17B 16E Instruct
-- Llama-3.2-11B-Vision-Instruct
-- Llama-3.2-90B-Vision-Instruct
-- Llama-3.3-70B-Instruct
-- Meta-Llama-3.1-405B-Instruct
-- Meta-Llama-3.1-8B-Instruct
-- Ministral 3B
-- Mistral Medium 3 (25.05)
-- Mistral Small 3.1
-- OpenAI GPT-4.1
-- OpenAI GPT-4.1-mini
-- OpenAI GPT-4.1-nano
-- OpenAI GPT-4o
-- OpenAI GPT-4o mini
-- OpenAI Text Embedding 3 (large)
-- OpenAI Text Embedding 3 (small)
-- OpenAI gpt-5
-- OpenAI gpt-5-chat (preview)
-- OpenAI gpt-5-mini
-- OpenAI gpt-5-nano
-- OpenAI o1
-- OpenAI o1-mini
-- OpenAI o1-preview
-- OpenAI o3
-- OpenAI o3-mini
-- OpenAI o4-mini
-- Phi-4
-- Phi-4-mini-instruct
-- Phi-4-mini-reasoning
-- Phi-4-multimodal-instruct
-- Phi-4-reasoning
+~~Extremely restrictive input/output token limits.~~
+
+~~**Limits:** [Dependent on Copilot subscription tier (Free/Pro/Pro+/Business/Enterprise)](https://docs.github.com/en/github-models/prototyping-with-ai-models#rate-limits)~~
+
+~~- Codestral 25.01~~
+~~- Cohere Command A~~
+~~- DeepSeek-R1~~
+~~- DeepSeek-R1-0528~~
+~~- DeepSeek-V3-0324~~
+~~- Llama 4 Maverick 17B 128E Instruct FP8~~
+~~- Llama 4 Scout 17B 16E Instruct~~
+~~- Llama-3.2-11B-Vision-Instruct~~
+~~- Llama-3.2-90B-Vision-Instruct~~
+~~- Llama-3.3-70B-Instruct~~
+~~- Meta-Llama-3.1-405B-Instruct~~
+~~- Meta-Llama-3.1-8B-Instruct~~
+~~- Ministral 3B~~
+~~- Mistral Medium 3 (25.05)~~
+~~- Mistral Small 3.1~~
+~~- OpenAI GPT-4.1~~
+~~- OpenAI GPT-4.1-mini~~
+~~- OpenAI GPT-4.1-nano~~
+~~- OpenAI GPT-4o~~
+~~- OpenAI GPT-4o mini~~
+~~- OpenAI Text Embedding 3 (large)~~
+~~- OpenAI Text Embedding 3 (small)~~
+~~- OpenAI gpt-5~~
+~~- OpenAI gpt-5-chat (preview)~~
+~~- OpenAI gpt-5-mini~~
+~~- OpenAI gpt-5-nano~~
+~~- OpenAI o1~~
+~~- OpenAI o1-mini~~
+~~- OpenAI o1-preview~~
+~~- OpenAI o3~~
+~~- OpenAI o3-mini~~
+~~- OpenAI o4-mini~~
+~~- Phi-4~~
+~~- Phi-4-mini-instruct~~
+~~- Phi-4-mini-reasoning~~
+~~- Phi-4-multimodal-instruct~~
+~~- Phi-4-reasoning~~
+
+> **Notice:** GitHub Models is being fully retired on **July 30, 2026**.
+> For details, see the [official changelog](https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/).
+---
 
 ### [Cloudflare Workers AI](https://developers.cloudflare.com/workers-ai)
 
