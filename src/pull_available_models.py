@@ -1024,6 +1024,13 @@ def main():
             "requirements": "",
             "models_desc": "Various open models",
         },
+        {
+            "name": "AI Router",
+            "url": "https://ai-router.dev",
+            "credits": "20U total: 5U available after registration; up to 15U unlocked 1:1 with eligible top-ups. Daily check-in: $1 plus 2% of the previous day's spend",
+            "requirements": "Registration; top-up is required only to unlock the additional 15U",
+            "models_desc": "Independent, non-OpenAI-operated managed API relay with an OpenAI-compatible interface; query `/v1/models` for current availability",
+        },
     ]
 
     for provider in trial_providers_static:

@@ -339,6 +339,14 @@ Extremely restrictive input/output token limits.
 
 **Models:** Various open models
 
+### [AI Router](https://ai-router.dev)
+
+**Credits:** 20U total: 5U available after registration; up to 15U unlocked 1:1 with eligible top-ups. Daily check-in: $1 plus 2% of the previous day's spend
+
+**Requirements:** Registration; top-up is required only to unlock the additional 15U
+
+**Models:** Independent, non-OpenAI-operated managed API relay with an OpenAI-compatible interface; query `/v1/models` for current availability
+
 ### [Hyperbolic](https://app.hyperbolic.ai/)
 
 **Credits:** $1
