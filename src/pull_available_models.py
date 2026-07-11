@@ -124,15 +124,24 @@ def get_groq_limits_for_model(model_id, script_dir, logger):
 
 def fetch_groq_models(logger):
     logger.info("Fetching Groq models...")
-    r = requests.get(
-        "https://api.groq.com/openai/v1/models",
-        headers={
-            "Authorization": f'Bearer {os.environ["GROQ_API_KEY"]}',
-            "Content-Type": "application/json",
-        },
-    )
-    r.raise_for_status()
-    models = r.json()["data"]
+    if "GROQ_API_KEY" not in os.environ:
+        logger.warning("GROQ_API_KEY not set; skipping Groq models")
+        return []
+
+    try:
+        r = requests.get(
+            "https://api.groq.com/openai/v1/models",
+            headers={
+                "Authorization": f'Bearer {os.environ["GROQ_API_KEY"]}',
+                "Content-Type": "application/json",
+            },
+        )
+        r.raise_for_status()
+        models = r.json()["data"]
+    except Exception as exc:
+        logger.warning(f"Unable to fetch Groq models: {exc}")
+        return []
+
     logger.debug(json.dumps(models, indent=4))
     ret_models = []
     with ThreadPoolExecutor() as executor:
@@ -251,15 +260,24 @@ def fetch_openrouter_models(logger):
 
 def fetch_cloudflare_models(logger):
     logger.info("Fetching Cloudflare models...")
-    r = requests.get(
-        f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CLOUDFLARE_ACCOUNT_ID']}/ai/models/search?search=Text+Generation",
-        headers={
-            "Authorization": f'Bearer {os.environ["CLOUDFLARE_API_KEY"]}',
-            "Content-Type": "application/json",
-        },
-    )
-    r.raise_for_status()
-    models = r.json()["result"]
+    if "CLOUDFLARE_ACCOUNT_ID" not in os.environ or "CLOUDFLARE_API_KEY" not in os.environ:
+        logger.warning("Cloudflare credentials not set; skipping Cloudflare models")
+        return []
+
+    try:
+        r = requests.get(
+            f"https://api.cloudflare.com/client/v4/accounts/{os.environ['CLOUDFLARE_ACCOUNT_ID']}/ai/models/search?search=Text+Generation",
+            headers={
+                "Authorization": f'Bearer {os.environ["CLOUDFLARE_API_KEY"]}',
+                "Content-Type": "application/json",
+            },
+        )
+        r.raise_for_status()
+        models = r.json()["result"]
+    except Exception as exc:
+        logger.warning(f"Unable to fetch Cloudflare models: {exc}")
+        return []
+
     logger.info(f"Fetched {len(models)} models from Cloudflare")
     ret_models = []
     for model in models:
@@ -314,15 +332,24 @@ def fetch_ovh_models(logger):
 
 def fetch_hyperbolic_models(logger):
     logger.info("Fetching Hyperbolic models from API...")
-    r = requests.get(
-        "https://api.hyperbolic.xyz/v1/models",
-        headers={
-            "accept": "application/json",
-            "authorization": f"Bearer {os.environ['HYPERBOLIC_API_KEY']}",
-        },
-    )
-    r.raise_for_status()
-    models = r.json()["data"]
+    if "HYPERBOLIC_API_KEY" not in os.environ:
+        logger.warning("HYPERBOLIC_API_KEY not set; skipping Hyperbolic models")
+        return []
+
+    try:
+        r = requests.get(
+            "https://api.hyperbolic.xyz/v1/models",
+            headers={
+                "accept": "application/json",
+                "authorization": f"Bearer {os.environ['HYPERBOLIC_API_KEY']}",
+            },
+        )
+        r.raise_for_status()
+        models = r.json()["data"]
+    except Exception as exc:
+        logger.warning(f"Unable to fetch Hyperbolic models: {exc}")
+        return []
+
     logger.info(f"Fetched {len(models)} models from Hyperbolic's API")
     ret_models = []
     for model in models:
@@ -431,11 +458,16 @@ def fetch_github_models(logger):
 
 def fetch_gemini_limits(logger):
     logger.info("Fetching Gemini limits...")
-    client = cloudquotas_v1.CloudQuotasClient()
-    request = cloudquotas_v1.ListQuotaInfosRequest(
-        parent=f"projects/{os.environ["GCP_PROJECT_ID"]}/locations/global/services/generativelanguage.googleapis.com"
-    )
-    pager = client.list_quota_infos(request=request)
+    try:
+        client = cloudquotas_v1.CloudQuotasClient()
+        request = cloudquotas_v1.ListQuotaInfosRequest(
+            parent=f"projects/{os.environ['GCP_PROJECT_ID']}/locations/global/services/generativelanguage.googleapis.com"
+        )
+        pager = client.list_quota_infos(request=request)
+    except Exception as exc:
+        logger.warning(f"Unable to fetch Gemini limits: {exc}")
+        return {}
+
     models = defaultdict(dict)
     for quota in pager:
         if (
@@ -510,12 +542,21 @@ def fetch_samba_models(logger):
 
 def fetch_scaleway_models(logger):
     logger.info("Fetching Scaleway models...")
-    r = requests.get(
-        "https://api.scaleway.ai/v1/models",
-        headers={"Authorization": f"Bearer {os.environ['SCALEWAY_API_KEY']}"},
-    )
-    r.raise_for_status()
-    models = r.json()["data"]
+    if "SCALEWAY_API_KEY" not in os.environ:
+        logger.warning("SCALEWAY_API_KEY not set; skipping Scaleway models")
+        return []
+
+    try:
+        r = requests.get(
+            "https://api.scaleway.ai/v1/models",
+            headers={"Authorization": f"Bearer {os.environ['SCALEWAY_API_KEY']}"},
+        )
+        r.raise_for_status()
+        models = r.json()["data"]
+    except Exception as exc:
+        logger.warning(f"Unable to fetch Scaleway models: {exc}")
+        return []
+
     logger.info(f"Fetched {len(models)} models from Scaleway")
     ret_models = []
     for model in models:
@@ -531,6 +572,10 @@ def fetch_scaleway_models(logger):
 
 def fetch_cohere_models(logger):
     logger.info("Fetching Cohere models...")
+    if "COHERE_API_KEY" not in os.environ:
+        logger.warning("COHERE_API_KEY not set; skipping Cohere models")
+        return []
+
     headers = {
         "accept": "application/json",
         "Authorization": f"Bearer {os.environ['COHERE_API_KEY']}",

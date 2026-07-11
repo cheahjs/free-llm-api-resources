@@ -36,9 +36,7 @@ This lists various services that provide free access or credits towards API-base
   - [Alibaba Cloud (International) Model Studio](#alibaba-cloud-international-model-studio)
   - [Modal](#modal)
   - [Inference.net](#inferencenet)
-  - [Hyperbolic](#hyperbolic)
   - [SambaNova Cloud](#sambanova-cloud)
-  - [Scaleway Generative APIs](#scaleway-generative-apis)
 
 ## Free Providers
 
@@ -70,28 +68,28 @@ Models share a common quota.
 - [openai/gpt-oss-20b:free](https://openrouter.ai/openai/gpt-oss-20b:free)
 - [poolside/laguna-m.1:free](https://openrouter.ai/poolside/laguna-m.1:free)
 - [poolside/laguna-xs-2.1:free](https://openrouter.ai/poolside/laguna-xs-2.1:free)
-- [poolside/laguna-xs.2:free](https://openrouter.ai/poolside/laguna-xs.2:free)
 - [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
 - [qwen/qwen3-next-80b-a3b-instruct:free](https://openrouter.ai/qwen/qwen3-next-80b-a3b-instruct:free)
+- [tencent/hy3:free](https://openrouter.ai/tencent/hy3:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
 
 Data is used for training when used outside of the UK/CH/EEA/EU.
 
 <table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>Gemini 3.5 Flash</td><td>250,000 tokens/minute<br>20 requests/day<br>5 requests/minute</td></tr>
-<tr><td>Gemini 3 Flash</td><td>250,000 tokens/minute<br>20 requests/day<br>5 requests/minute</td></tr>
-<tr><td>Gemini 3.1 Flash-Lite</td><td>250,000 tokens/minute<br>500 requests/day<br>15 requests/minute</td></tr>
-<tr><td>Gemini 2.5 Flash</td><td>250,000 tokens/minute<br>20 requests/day<br>5 requests/minute</td></tr>
-<tr><td>Gemini 2.5 Flash-Lite</td><td>250,000 tokens/minute<br>20 requests/day<br>10 requests/minute</td></tr>
-<tr><td>Gemini 3.1 Flash TTS</td><td>10,000 tokens/minute<br>10 requests/day<br>3 requests/minute</td></tr>
-<tr><td>Gemini 2.5 Flash TTS</td><td>10,000 tokens/minute<br>10 requests/day<br>3 requests/minute</td></tr>
-<tr><td>Gemini Robotics-ER 1.6</td><td>250,000 tokens/minute<br>20 requests/day<br>5 requests/minute</td></tr>
-<tr><td>Gemini Robotics-ER 1.5</td><td>250,000 tokens/minute<br>20 requests/day<br>10 requests/minute</td></tr>
-<tr><td>Gemma 3 27B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
-<tr><td>Gemma 3 12B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
-<tr><td>Gemma 3 4B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
-<tr><td>Gemma 3 1B Instruct</td><td>15,000 tokens/minute<br>14,400 requests/day<br>30 requests/minute</td></tr>
+<tr><td>Gemini 3.5 Flash</td><td></td></tr>
+<tr><td>Gemini 3 Flash</td><td></td></tr>
+<tr><td>Gemini 3.1 Flash-Lite</td><td></td></tr>
+<tr><td>Gemini 2.5 Flash</td><td></td></tr>
+<tr><td>Gemini 2.5 Flash-Lite</td><td></td></tr>
+<tr><td>Gemini 3.1 Flash TTS</td><td></td></tr>
+<tr><td>Gemini 2.5 Flash TTS</td><td></td></tr>
+<tr><td>Gemini Robotics-ER 1.6</td><td></td></tr>
+<tr><td>Gemini Robotics-ER 1.5</td><td></td></tr>
+<tr><td>Gemma 3 27B Instruct</td><td></td></tr>
+<tr><td>Gemma 3 12B Instruct</td><td></td></tr>
+<tr><td>Gemma 3 4B Instruct</td><td></td></tr>
+<tr><td>Gemma 3 1B Instruct</td><td></td></tr>
 </tbody></table>
 
 ### [NVIDIA NIM](https://build.nvidia.com/explore/discover)
@@ -156,25 +154,6 @@ Free models may use data for improvement.
 
 ### [Groq](https://console.groq.com)
 
-<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>
-<tr><td>Allam 2 7B</td><td>7,000 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
-<tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
-<tr><td>Whisper Large v3</td><td>2,000 requests/day</td></tr>
-<tr><td>Whisper Large v3 Turbo</td><td>2,000 requests/day</td></tr>
-<tr><td>canopylabs/orpheus-arabic-saudi</td><td></td></tr>
-<tr><td>canopylabs/orpheus-v1-english</td><td></td></tr>
-<tr><td>groq/compound</td><td>250 requests/day<br>70,000 tokens/minute</td></tr>
-<tr><td>groq/compound-mini</td><td>250 requests/day<br>70,000 tokens/minute</td></tr>
-<tr><td>meta-llama/llama-prompt-guard-2-22m</td><td></td></tr>
-<tr><td>meta-llama/llama-prompt-guard-2-86m</td><td></td></tr>
-<tr><td>openai/gpt-oss-120b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
-<tr><td>openai/gpt-oss-20b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
-<tr><td>openai/gpt-oss-safeguard-20b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
-<tr><td>qwen/qwen3-32b</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
-<tr><td>qwen/qwen3.6-27b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
-</tbody></table>
 
 ### [Cohere](https://cohere.com)
 
@@ -184,17 +163,7 @@ Free models may use data for improvement.
 
 Models share a common monthly quota.
 
-- c4ai-aya-expanse-32b
-- c4ai-aya-vision-32b
-- command-a-03-2025
-- command-a-plus-05-2026
-- command-a-reasoning-08-2025
-- command-a-translate-08-2025
-- command-a-vision-07-2025
-- command-r-08-2024
-- command-r-plus-08-2024
-- command-r7b-12-2024
-- command-r7b-arabic-02-2025
+- No chat models available right now.
 
 ### [GitHub Models](https://github.com/marketplace/models)
 
@@ -244,32 +213,6 @@ Extremely restrictive input/output token limits.
 
 **Limits:** [10,000 neurons/day](https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation)
 
-- @cf/aisingapore/gemma-sea-lion-v4-27b-it
-- @cf/google/gemma-4-26b-a4b-it
-- @cf/ibm-granite/granite-4.0-h-micro
-- @cf/moonshotai/kimi-k2.6
-- @cf/moonshotai/kimi-k2.7-code
-- @cf/nvidia/nemotron-3-120b-a12b
-- @cf/openai/gpt-oss-120b
-- @cf/openai/gpt-oss-20b
-- @cf/qwen/qwen3-30b-a3b-fp8
-- @cf/zai-org/glm-4.7-flash
-- @cf/zai-org/glm-5.2
-- DeepSeek R1 Distill Qwen 32B
-- Gemma 2B Instruct (LoRA)
-- Gemma 7B Instruct (LoRA)
-- Llama 2 7B Chat (LoRA)
-- Llama 3.1 8B Instruct (FP8)
-- Llama 3.2 11B Vision Instruct
-- Llama 3.2 1B Instruct
-- Llama 3.2 3B Instruct
-- Llama 3.3 70B Instruct (FP8)
-- Llama 4 Scout Instruct
-- Llama Guard 3 8B
-- Mistral 7B Instruct v0.2 (LoRA)
-- Mistral Small 3.1 24B Instruct
-- Qwen 2.5 Coder 32B Instruct
-- Qwen QwQ 32B
 
 </tbody></table>
 
@@ -339,16 +282,6 @@ Extremely restrictive input/output token limits.
 
 **Models:** Various open models
 
-### [Hyperbolic](https://app.hyperbolic.ai/)
-
-**Credits:** $1
-
-**Models:**
-- DeepSeek V3 0324
-- Llama 3.3 70B Instruct
-- deepseek-ai/deepseek-r1-0528
-- qwen/qwen3-coder-480b-a35b-instruct
-
 ### [SambaNova Cloud](https://cloud.sambanova.ai/)
 
 **Credits:** $5 for 3 months
@@ -360,29 +293,5 @@ Extremely restrictive input/output token limits.
 - gpt-oss-120b
 - meta-llama-3.3-70b-instruct
 - minimax-m2.7
-
-### [Scaleway Generative APIs](https://console.scaleway.com/generative-api/models)
-
-**Credits:** 1,000,000 free tokens
-
-**Models:**
-- BGE-Multilingual-Gemma2
-- Gemma 3 27B Instruct
-- Llama 3.3 70B Instruct
-- Pixtral 12B (2409)
-- Whisper Large v3
-- devstral-2-123b-instruct-2512
-- gemma-4-26b-a4b-it
-- glm-5.2
-- gpt-oss-120b
-- holo2-30b-a3b
-- mistral-medium-3.5-128b
-- mistral-small-3.2-24b-instruct-2506
-- qwen3-235b-a22b-instruct-2507
-- qwen3-coder-30b-a3b-instruct
-- qwen3-embedding-8b
-- qwen3.5-397b-a17b
-- qwen3.6-35b-a3b
-- voxtral-small-24b-2507
 
 
