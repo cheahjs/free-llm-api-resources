@@ -36,6 +36,7 @@ This lists various services that provide free access or credits towards API-base
   - [Alibaba Cloud (International) Model Studio](#alibaba-cloud-international-model-studio)
   - [Modal](#modal)
   - [Inference.net](#inferencenet)
+  - [QuickSilver Pro](#quicksilver-pro)
   - [Hyperbolic](#hyperbolic)
   - [SambaNova Cloud](#sambanova-cloud)
   - [Scaleway Generative APIs](#scaleway-generative-apis)
@@ -335,6 +336,12 @@ Extremely restrictive input/output token limits.
 **Credits:** $1, $25 on responding to email survey
 
 **Models:** Various open models
+
+### [QuickSilver Pro](https://quicksilverpro.io)
+
+**Credits:** $0.10 free on sign-up
+
+**Models:** DeepSeek V3, DeepSeek R1, Qwen3.5-35B-A3B (OpenAI-compatible)
 
 ### [Hyperbolic](https://app.hyperbolic.ai/)
 
