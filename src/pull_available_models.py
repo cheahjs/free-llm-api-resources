@@ -856,8 +856,8 @@ def main():
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
     cerebras_models = [
         {
-            "name": "gpt-oss-120b",
-            "limits_text": "30 requests/minute<br>60,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
+            "name": "Qwen 3 235B Instruct",
+            "limits_text": "5 requests/minute<br>30,000 tokens/minute<br>900 requests/hour<br>1,000,000 tokens/hour<br>14,400 requests/day<br>1,000,000 tokens/day"
         },
         {
             "name": "Llama 3.1 8B",
