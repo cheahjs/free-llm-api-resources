@@ -248,6 +248,35 @@ def fetch_openrouter_models(logger):
     return ret_models
 
 
+def fetch_ofoxai_models(logger):
+    logger.info("Fetching OfoxAI models...")
+    api_key = os.environ.get("OFOXAI_API_KEY", "")
+    headers = {"Content-Type": "application/json"}
+    if api_key:
+        headers["Authorization"] = f"Bearer {api_key}"
+    r = requests.get("https://api.ofox.ai/v1/models", headers=headers)
+    r.raise_for_status()
+    models = r.json()["data"]
+    logger.info(f"Fetched {len(models)} models from OfoxAI")
+    ret_models = []
+    for model in models:
+        if ":free" not in model["id"]:
+            continue
+        pricing = float(model.get("pricing", {}).get("completion", "1")) + float(
+            model.get("pricing", {}).get("prompt", "1")
+        )
+        if pricing != 0:
+            continue
+        ret_models.append(
+            {
+                "id": model["id"],
+                "name": get_model_name(model["id"]),
+            }
+        )
+    ret_models = sorted(ret_models, key=lambda x: x["name"])
+    return ret_models
+
+
 def fetch_cloudflare_models(logger):
     logger.info("Fetching Cloudflare models...")
     r = requests.get(
@@ -650,6 +679,7 @@ def main():
     logger = create_logger("Main")
     groq_logger = create_logger("Groq")
     openrouter_logger = create_logger("OpenRouter")
+    ofoxai_logger = create_logger("OfoxAI")
     google_ai_studio_logger = create_logger("Google AI Studio")
     cloudflare_logger = create_logger("Cloudflare")
     github_logger = create_logger("GitHub")
@@ -665,6 +695,7 @@ def main():
             futures = [
                 executor.submit(fetch_gemini_limits, google_ai_studio_logger),
                 executor.submit(fetch_openrouter_models, openrouter_logger),
+                executor.submit(fetch_ofoxai_models, ofoxai_logger),
                 executor.submit(fetch_hyperbolic_models, hyperbolic_logger),
                 executor.submit(fetch_cloudflare_models, cloudflare_logger),
                 executor.submit(fetch_github_models, github_logger),
@@ -675,6 +706,7 @@ def main():
             (
                 gemini_models,
                 openrouter_models,
+                ofoxai_models,
                 hyperbolic_models,
                 cloudflare_models,
                 github_models,
@@ -688,6 +720,7 @@ def main():
     else:
         gemini_models = fetch_gemini_limits(google_ai_studio_logger)
         openrouter_models = fetch_openrouter_models(openrouter_logger)
+        ofoxai_models = fetch_ofoxai_models(ofoxai_logger)
         hyperbolic_models = fetch_hyperbolic_models(hyperbolic_logger)
         cloudflare_models = fetch_cloudflare_models(cloudflare_logger)
         github_models = fetch_github_models(github_logger)
@@ -710,6 +743,15 @@ def main():
             model_list_markdown += (
                 f"- [{model['name']}](https://openrouter.ai/{model['id']})\n"
             )
+    model_list_markdown += "\n"
+
+    # --- OfoxAI ---
+    model_list_markdown += "### [OfoxAI](https://ofox.ai)\n\n"
+    model_list_markdown += "Unified API gateway for 100+ LLMs. OpenAI and Anthropic SDK-compatible. China-friendly with Hong Kong direct access routes.\n\n"
+    if ofoxai_models:
+        model_list_markdown += "**Limits:** Not published\n\n"
+        for model in ofoxai_models:
+            model_list_markdown += f"- [{model['name']}](https://ofox.ai/models/{model['id']})\n"
     model_list_markdown += "\n"
 
     # --- Google AI Studio ---
