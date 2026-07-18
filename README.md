@@ -157,7 +157,6 @@ Free models may use data for improvement.
 <tr><td>Allam 2 7B</td><td>7,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.1 8B</td><td>14,400 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>Llama 3.3 70B</td><td>1,000 requests/day<br>12,000 tokens/minute</td></tr>
-<tr><td>Llama 4 Scout Instruct</td><td>1,000 requests/day<br>30,000 tokens/minute</td></tr>
 <tr><td>Whisper Large v3</td><td>2,000 requests/day</td></tr>
 <tr><td>Whisper Large v3 Turbo</td><td>2,000 requests/day</td></tr>
 <tr><td>canopylabs/orpheus-arabic-saudi</td><td></td></tr>
@@ -169,7 +168,6 @@ Free models may use data for improvement.
 <tr><td>openai/gpt-oss-120b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 <tr><td>openai/gpt-oss-20b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 <tr><td>openai/gpt-oss-safeguard-20b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
-<tr><td>qwen/qwen3-32b</td><td>1,000 requests/day<br>6,000 tokens/minute</td></tr>
 <tr><td>qwen/qwen3.6-27b</td><td>1,000 requests/day<br>8,000 tokens/minute</td></tr>
 </tbody></table>
 
