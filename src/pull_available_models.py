@@ -842,6 +842,21 @@ def main():
     model_list_markdown += "**Limits:** [$5/month](https://vercel.com/docs/ai-gateway/pricing)\n\n"
     model_list_markdown += "\n"
 
+    # --- DGrid Free Models Router ---
+    model_list_markdown += "### [DGrid Free Models Router](https://dgrid.ai/models/dgridai/free)\n\n"
+    model_list_markdown += "DGrid Free Models Router is DGrid's free intelligent inference gateway. It combines multiple models into a seamless router and dynamically selects the best-fit model for each request, helping optimize speed, reliability, and task efficiency without requiring users to manage model selection directly.\n\n"
+    model_list_markdown += "**Limits:** 10 requests/minute and 100 requests/day. With a $5 lifetime top-up, limits increase to up to 20 requests/minute and 1,000 requests/day.\n\n"
+    model_list_markdown += "**Links:** [DGrid](https://dgrid.ai/), [Documentation](https://docs.dgrid.ai/), [API reference](https://docs.dgrid.ai/api-reference/introduction), [API base URL](https://api.dgrid.ai/v1)\n\n"
+    model_list_markdown += "Currently supported free auto-routing models:\n\n"
+    model_list_markdown += "- llama-3.2-1b-instruct\n"
+    model_list_markdown += "- glm-4.7-flash\n"
+    model_list_markdown += "- deepseek-r1-distill-qwen-32b\n"
+    model_list_markdown += "- llama-3.3-70b-instruct-fp8-fast\n"
+    model_list_markdown += "- Kimi-K2.6\n"
+    model_list_markdown += "- GLM-5.2\n"
+    model_list_markdown += "\nMore free models will be added over time.\n"
+    model_list_markdown += "\n"
+
     # --- OpenCode Zen ---
     model_list_markdown += "### [OpenCode Zen](https://opencode.ai/docs/zen/)\n\n"
     model_list_markdown += "AI gateway with curated models.\n\n"
