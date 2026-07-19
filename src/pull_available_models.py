@@ -851,6 +851,14 @@ def main():
     model_list_markdown += "- DeepSeek V4 Flash Free\n"
     model_list_markdown += "\n"
 
+    # --- AnyAPI ---
+    model_list_markdown += "### [AnyAPI](https://anyapi.ai)\n\n"
+    model_list_markdown += "Free LLM API provider with access to curated open-source models.\n\n"
+    model_list_markdown += "**Limits:** [20 requests/minute, 200 requests/day](https://dash.anyapi.ai/)\n\n"
+    model_list_markdown += "No credit card required. Obtain an API key at [dash.anyapi.ai](https://dash.anyapi.ai/).\n\n"
+    model_list_markdown += "Models available via the API key at `https://api.anyapi.ai/v1`.\n\n"
+    model_list_markdown += "\n"
+
     # --- Cerebras ---
     model_list_markdown += "### [Cerebras](https://cloud.cerebras.ai/)\n\n"
     model_list_markdown += "<table><thead><tr><th>Model Name</th><th>Model Limits</th></tr></thead><tbody>\n"
