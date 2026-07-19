@@ -1024,6 +1024,13 @@ def main():
             "requirements": "",
             "models_desc": "Various open models",
         },
+        {
+            "name": "Starveri API",
+            "url": "https://api.starveri.net/docs",
+            "credits": "5 text-only demo requests before purchase; paid usage requires prepaid credits",
+            "requirements": "",
+            "models_desc": "[OpenAI-compatible GPT/Codex API gateway](https://api.starveri.net/models)",
+        },
     ]
 
     for provider in trial_providers_static:
