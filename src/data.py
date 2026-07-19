@@ -262,6 +262,10 @@ MODEL_TO_NAME_MAPPING = {
     "compound-beta-mini": "Groq compound-beta-mini",
     "compound-beta": "Groq compound-beta",
     "shisa-ai/shisa-v2-llama3.3-70b": "Shisa V2 Llama 3.3 70B",
+    "gpt-oss:20b-cloud": "gpt-oss:20b-cloud",
+    "gpt-oss:120b-cloud": "gpt-oss:120b-cloud",
+    "deepseek-v3.1:671b-cloud": "deepseek-v3.1:671b-cloud",
+    "qwen3-coder:480b-cloud": "qwen3-coder:480b-cloud",
 }
 
 HYPERBOLIC_IGNORED_MODELS = {
