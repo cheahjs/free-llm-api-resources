@@ -1024,6 +1024,13 @@ def main():
             "requirements": "",
             "models_desc": "Various open models",
         },
+        {
+            "name": "KeepRouter",
+            "url": "https://keeprouter.com/",
+            "credits": "$0.20",
+            "requirements": "Email verification; not available in mainland China",
+            "models_desc": "[50+ models via an OpenAI- and Anthropic-compatible gateway, plus a permanent $0 `free` model that keeps working after trial credit is used](https://keeprouter.com/models)",
+        },
     ]
 
     for provider in trial_providers_static:
