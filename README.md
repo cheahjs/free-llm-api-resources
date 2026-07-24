@@ -50,13 +50,10 @@ This lists various services that provide free access or credits towards API-base
 
 Models share a common quota.
 
-- [Hermes 3 Llama 3.1 405B](https://openrouter.ai/nousresearch/hermes-3-llama-3.1-405b:free)
-- [Llama 3.2 3B Instruct](https://openrouter.ai/meta-llama/llama-3.2-3b-instruct:free)
-- [Llama 3.3 70B Instruct](https://openrouter.ai/meta-llama/llama-3.3-70b-instruct:free)
-- [cognitivecomputations/dolphin-mistral-24b-venice-edition:free](https://openrouter.ai/cognitivecomputations/dolphin-mistral-24b-venice-edition:free)
 - [cohere/north-mini-code:free](https://openrouter.ai/cohere/north-mini-code:free)
 - [google/gemma-4-26b-a4b-it:free](https://openrouter.ai/google/gemma-4-26b-a4b-it:free)
 - [google/gemma-4-31b-it:free](https://openrouter.ai/google/gemma-4-31b-it:free)
+- [inclusionai/ling-3.0-flash:free](https://openrouter.ai/inclusionai/ling-3.0-flash:free)
 - [nvidia/nemotron-3-nano-30b-a3b:free](https://openrouter.ai/nvidia/nemotron-3-nano-30b-a3b:free)
 - [nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free](https://openrouter.ai/nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free)
 - [nvidia/nemotron-3-super-120b-a12b:free](https://openrouter.ai/nvidia/nemotron-3-super-120b-a12b:free)
@@ -66,10 +63,8 @@ Models share a common quota.
 - [nvidia/nemotron-nano-9b-v2:free](https://openrouter.ai/nvidia/nemotron-nano-9b-v2:free)
 - [openai/gpt-oss-20b:free](https://openrouter.ai/openai/gpt-oss-20b:free)
 - [poolside/laguna-m.1:free](https://openrouter.ai/poolside/laguna-m.1:free)
+- [poolside/laguna-s-2.1:free](https://openrouter.ai/poolside/laguna-s-2.1:free)
 - [poolside/laguna-xs-2.1:free](https://openrouter.ai/poolside/laguna-xs-2.1:free)
-- [qwen/qwen3-coder:free](https://openrouter.ai/qwen/qwen3-coder:free)
-- [qwen/qwen3-next-80b-a3b-instruct:free](https://openrouter.ai/qwen/qwen3-next-80b-a3b-instruct:free)
-- [tencent/hy3:free](https://openrouter.ai/tencent/hy3:free)
 
 ### [Google AI Studio](https://aistudio.google.com)
 
